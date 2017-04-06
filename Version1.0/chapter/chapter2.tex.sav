@@ -1,0 +1,390 @@
+
+\chapter{多个线性系统的分布式模型预测调节控制}
+\section{引言}
+车载组合定位系统是采用车载传感器进行组合定位的实时系统，随着MEMS 惯性器件工程化及其精度的提升，其小型化、低成本、低功耗抗稳定性好的应用特点在航姿测量系统得到广泛的应用。本文基于MEMS传感器，通过合理的布局设计及系统设计，将惯性测量、惯性导航、卫星导航、姿态解算、组合导航集成在一块单板上。
+
+本章首先介绍导航系统研究中几种常见的坐标系及相互之间的转换，分析车载定位系统的定位原理并给出基于四元数和旋转矢量法的MEMS惯导姿态、位置和速度更新方程。最后给出车载组合定位系统的总体方案设计。
+
+\section{车载组合导航系统坐标定义及转换换}
+宇宙中的物体小到分子原子大到行星恒星都在不停地运动，但运动是相对的，单个没有参考的物体是无运动可言的。一个物体在空间的位置只能相对另一个物体确定，后一个物体就是描述前一个物体运动的参考系，可以在该物体上建立直角坐标系。在导航定位过程中，运动体的姿态、速度、位置等信息的确定都必须建立在相应的参考坐标系中。对于不同的研究对象和任务要求，需要选择不同的坐标系。
+
+\subsection{导航坐标系定义}
+在陆地车辆组合导航系统中，常见的坐标系有：惯性坐标系、地球坐标系、地理坐标系、机体坐标系、导航坐标系。
+
+(1)惯性坐标系(i系)
+
+惯性坐标系(以下简称惯性系)是遵循牛顿定律的坐标系，即相对于惯性空间做匀速直线运动或绝对静止的坐标系，惯性坐标系为惯性器件测量的参考基准。完全理想的惯性坐标系本身并不存在，在实际应用中通过使用近似的地心惯性坐标系来代替惯性坐标系进行运算。
+
+(2)地球坐标系(e系)
+
+与地球固连，以地球质心为坐标原点，轴与地球自转轴方向一致。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap2_coordinate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{地球坐标系与地理坐标系示意图}
+ \label{chap2_Fig.2}
+ \vspace{-0.4cm}
+\end{figure}
+
+(3)地理坐标系(g系)
+
+如图所示，地理坐标系OEN$\xi$的原点O取在载体的重心，E轴在当地水平面内的指东，N轴在当地水平面指北，$\xi$轴则沿当地地垂线指向天空的方向，EN$\xi$三轴构成右手直角坐标系。地理系是随着载体运动的，可以按“东北天”“北西天”或者“北东地”顺序构成，本文中的地理坐标系选择“东北天”坐标系描述。
+
+(4)载体坐标系(b系)
+
+如图所示，载体坐标系的原点$O_b$位于载体重心位置，与运载体固联，$x_b$轴沿载体的横轴方向，$y_b$沿载体的纵轴方向，$z_b$垂直机体水平面向上，$x_by_bz_b$轴构成右手直角坐系，载体坐标系相对于地理坐标系的方位称为载体的姿态和航向。
+
+(5)导航坐标系(n系)
+
+导航坐标系是惯性导航系统求解导航参数时所采用的坐标系用$Ox_ny_nz_n$。针对捷联惯导来说，传感器所采的数据是沿载体坐标系轴向的，必须将该采集的信息分解到便于描述和求解导航参数的坐标系内，然后进行导航解算，这个坐标系即导航坐标系。本文选择的导航坐标系为地理坐标系即东北天坐标系。
+
+当物体在地球上运动时，物体相对地球的位置不断改变；同时，地球上的点的地理坐标系相对于地球系的角位置是不相同的。运载体相对于地球运动引起地理坐标系相对地球坐标系的转动。此时，地理坐标系相对惯性坐标系的转动角速度有两部分组成：一个是地球坐标系相对于惯性坐标系的转动角速度；另一部分是地理坐标系相对于地球坐标系的转动角速度。两部分具体的计算过程在后续章节详细介绍。确定物体的地理位置，就是确定地理坐标系相对于地球坐标系的方位关系，即经度$\lambda$纬度$\varphi$和到地球地心的距离R；而物体的姿态则是确定载体坐标系相对于地理坐标系的方位关系。
+
+
+\subsection{坐标系变换原理}\label{Scheme_of_MPC}
+由上面定义的几种坐标系可知，在分析惯性导航系统运动时，将用到多种坐标系，而这些坐标系并不是相互孤立的。虽然空间中一个向量在不同的坐标系里的坐标是不同的，但是通过坐标变换，可以将一个坐标系下的向量坐标转换到另一个坐标系下。这种变换包括平移和旋转，在惯性导航中坐标系的变换我们更关注坐标之间的角度关系，即旋转坐标变换，具体的转换方法见文献。以下介绍两种坐标之间的转换。
+
+(1)地球坐标系与地理坐标系之间的转换
+
+根据图可知，地球坐标系和地理坐标系的原点不重合，当用经度$\lambda$ 和纬度$\varphi$来表示旋转角度时，其转动过程可以描述为地球坐标系绕$Z_e$轴转动($90^{\circ}$+$\lambda$)，再绕变换后的$x$轴转动($90^{\circ}$-$\varphi$),最后绕变换后的z轴旋转$90^{\circ}$而得到地理坐标系。\\
+\begin{align*}
+\left [\begin{array}{ccc}
+E\\
+N\\
+\xi\\
+\end{array}\right]&=
+\left [\begin{array}{ccc}
+{0}  & {1} & {0} \\
+{-1} & {0} & {0} \\
+{0}  & {0} & {1} \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+{\cos(90^{\circ}-\varphi)}  & {0} & {-\sin(90^{\circ}-\varphi)} \\
+{0} & {1} & {0} \\
+{\sin(90^{\circ}-\varphi)}  & {0} & {\cos(90^{\circ}-\varphi)} \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+{\cos \lambda}  & {\sin \lambda} & {0} \\
+{-\sin \lambda} & {\cos \lambda} & {0} \\
+{0} & {0} & {1} \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+x_e\\
+y_e\\
+z_e\\
+\end{array}\right]\notag \\
+&=
+\left [\begin{array}{ccc}
+{-\sin \lambda}  & {\cos \lambda} & {0} \\
+{-\sin \varphi \cos \lambda} & {-\sin \varphi \sin \lambda} & {\cos \varphi} \\
+{\cos \varphi \cos \lambda}  & {\cos \varphi \sin \lambda} & {\sin \varphi} \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+x_e\\
+y_e\\
+z_e\\
+\end{array}\right]\tag{1.1}\\
+\end{align*}
+用$\textbf{C}^n_e$表示变换矩阵，有
+\begin{eqnarray}
+\textbf{C}^n_e&=
+\left [\begin{array}{ccc}
+{-\sin \lambda}  & {\cos \lambda} & {0} \\
+{-\sin \varphi \cos \lambda} & {-\sin \varphi \sin \lambda} & {\cos \varphi} \\
+{\cos \varphi \cos \lambda}  & {\cos \varphi \sin \lambda} & {\sin \varphi} \\
+\end{array}\right]\triangleq
+\left [\begin{array}{ccc}
+{\textbf{C}_{11}} & {\textbf{C}_{12}} & {\textbf{C}_{13}} \\
+{\textbf{C}_{21}} & {\textbf{C}_{22}} & {\textbf{C}_{23}} \\
+{\textbf{C}_{31}} & {\textbf{C}_{32}} & {\textbf{C}_{33}} \\
+\end{array}\right]
+\end{eqnarray}
+式中，$\textbf{C}^n_e$为地球坐标系到地理坐标系的变换矩阵；$\textbf{C}_{ij}$为变换矩阵的元素($i=1,2,3;j=1,2,3$)。
+
+(2)地理坐标系和载体坐标系之间的转换
+
+载体的姿态和航向实际上就是载体坐标系和地理坐标系之间的方位关系。载体的姿态可用如下欧拉角表示：\\
+俯仰角($\theta$):载体绕横轴$x_b$转动时，载体的纵轴与水平面之间会形成一个夹角，该角即为俯仰角，一般用$\theta$表示,向上角度为正，向下为负，俯仰角取值范围为$[-90^\circ,90^\circ]$。
+
+翻滚角($\gamma$):载体绕纵轴$y_b$转动时，载体的横轴与水平面之间会形成一个夹角，该角即为翻滚角，一般用$\gamma$表示，以右端向下为正，翻滚角取值范围为$[-90^\circ,90^\circ]$
+
+航向角($\psi$):载体绕方位轴转动时，载体纵轴$y_b$在地理坐标系下的水平投影与地理子午线$N$的夹角称为航向角，一般用$psi$表示，以正北方向为起点并以北偏东方向逐渐增加，航向角取值范围为$[0^\circ,360\circ]$
+
+载体坐标系和导航坐标系之间可以绕$Z-X-Y$的顺序转动三次完成转换，载体姿态矩阵$\textbf{C}^n_b$实现转换,变换公式如下：
+\begin{eqnarray}
+\left [\begin{array}{ccc}
+x_n\\
+y_n\\
+z_N\\
+\end{array}\right]
+&=
+\textbf{C}^n_b
+\left [\begin{array}{ccc}
+x_b\\
+y_b\\
+z_b\\
+\end{array}\right]
+\end{eqnarray}
+第一次转动：坐标系
+绕$Z$轴负向转动角$\psi$：\\
+\begin{eqnarray}
+\textbf{C}^{n1}_b
+&=
+\left [\begin{array}{ccc}
+{\cos \psi}  & {-\sin \psi} & {0} \\
+{\sin \psi} & {\cos \psi} & {0} \\
+{0}  & {0} & {1} \\
+\end{array}\right]
+\end{eqnarray}\\
+第二次转动：坐标系
+绕$X$轴负向转动角$\psi$：\\
+\begin{eqnarray}
+\textbf{C}^{n2}_{n1}
+&=
+\left [\begin{array}{ccc}
+{1}  & {0} & {0} \\
+{0} & {\cos \theta} & {\sin \theta} \\
+{0}  & {-\sin \theta} & {\cos \theta} \\
+\end{array}\right]
+\end{eqnarray}
+第三次转动：坐标系
+绕$Y$轴负向转动角$\psi$：\\
+\begin{eqnarray}
+\textbf{C}^n_{n2}
+&=
+\left [\begin{array}{ccc}
+{\cos \gamma}  & {0} & {-\sin \gamma} \\
+{0} & {1} & {0} \\
+{\sin \gamma}  & {0} & {\cos \gamma} \\
+\end{array}\right]
+\end{eqnarray}
+\begin{align*}
+\textbf{C}^n_b
+&=\textbf{C}^n_{n2}\textbf{C}^{n2}_{n1}\textbf{C}^{n1}_b=
+\left [\begin{array}{ccc}
+{\cos \psi}  & {-\sin \psi} & {0} \\
+{\sin \psi} & {\cos \psi} & {0} \\
+{0}  & {0} & {1} \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+{1}  & {0} & {0} \\
+{0} & {\cos \theta} & {\sin \theta} \\
+{0}  & {-\sin \theta} & {\cos \theta} \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+{\cos \gamma}  & {0} & {-\sin \gamma} \\
+{0} & {1} & {0} \\
+{\sin \gamma}  & {0} & {\cos \gamma} \\
+\end{array}\right]\\
+&=
+\left [\begin{array}{ccc}
+{\cos\gamma\cos\psi+\sin \gamma \sin \psi \sin \theta}  & {\sin \psi \cos \theta} & {\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} \\
+{-\cos \gamma \cos \psi+\sin \gamma \sin \psi \sin \theta} & {\cos \psi \cos \theta} & {-\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} \\
+{-\sin \gamma \cos \theta}  & {\sin \theta} & {\cos \gamma \cos \theta} \\
+\end{array}\right]
+\end{align*}
+定义$\textbf{C}^n_b$为如下形式：
+\begin{eqnarray}
+\textbf{C}^n_b&=
+\left [\begin{array}{ccc}
+{\textbf{T}_{11}} & {\textbf{T}_{12}} & {\textbf{T}_{13}} \\
+{\textbf{T}_{21}} & {\textbf{T}_{22}} & {\textbf{T}_{23}} \\
+{\textbf{T}_{31}} & {\textbf{T}_{32}} & {\textbf{T}_{33}} \\
+\end{array}\right]
+\end{eqnarray}
+$\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
+\begin{equation}
+\left\{
+\begin{aligned}
+\boldsymbol{\psi_{\mbox{\zihao{7}主}}}&= \arctan(\frac{\textbf{T}_{13}}{\textbf{T}_{22}})\\
+\boldsymbol{\theta_{\mbox{\zihao{7}主}}} &= \arcsin(\textbf{T}_{32})\\
+\boldsymbol{\gamma_{\mbox{\zihao{7}主}}} &= \arctan(\frac{-\textbf{T}_{31}}{\textbf{T}_{33}})
+\end{aligned}
+\right.
+\end{equation}
+对于地面车辆导航系统，式中，俯仰角$\theta$ 、翻滚角$\gamma$定义在区间$[-90^\circ,90^\circ]$中，在计算反正弦和反正切函数中没有多值问题；航向角$psi$定义在$[0^\circ,360^\circ]$区间，需要分情况考虑根据主值区间和方向矩阵的数值来确定角度大小，其真值表如表所示。
+\begin{table}[!t]
+\renewcommand\arraystretch{1.2}
+\centering
+\caption{\label{chap2_Table 1}航向角$psi$的真值表}
+\begin{tabular}{c c c}
+%\hline
+\toprule
+\hspace{1cm}$\textbf{T}_{22}$ \hspace{2cm} &  $\textbf{T}_{12}$ \hspace{2cm} & $\boldsymbol{\psi}$\\
+\hline
+\hspace{1cm}$\to0$ \hspace{2cm} & $+$ \hspace{2cm} & $90^\circ$\\
+\hspace{1cm}$\to0$ \hspace{2cm} & $-$ \hspace{2cm} & $270^\circ$\\
+\hspace{1cm}$+$    \hspace{2cm} & $+$ \hspace{2cm} & $\psi_{\mbox{\zihao{7}主}}$\\
+\hspace{1cm}$+$    \hspace{2cm} & $-$ \hspace{2cm} & $180^\circ+\psi_{\mbox{\zihao{7}主}}$\\
+\hspace{1cm}$-$    \hspace{2cm} & $+$ \hspace{2cm} & $\psi_{\mbox{\zihao{7}主}}+180^\circ$\\
+\hspace{1cm}$-$    \hspace{2cm} & $-$ \hspace{2cm} & $\psi_{\mbox{\zihao{7}主}}-180^\circ$\\
+\hline
+\end{tabular}
+\end{table}
+%\caption{\label{chap2_Table 1}航向角$psi$的真值表}
+%\begin{tabular}{ l l l}
+%\toprule[1.5pt]
+%$\textbf{T}_{22}$ &  $\textbf{T}_{12}$ & $\boldsymbol{\psi}$\\
+%\hline
+%$\to0$ & $+$ & $90^\circ$\\
+%\hline
+%$\to0$ & $-$ & $270^\circ$
+%\end{tabular}
+%\end{table}
+\section{导航定位原理}
+在捷联惯性导航系统(SINS)中惯性测量器件(陀螺仪和加速度计)直接与运载体固联，通过导航计算机采集惯性器件的输出信息并进行数值积分求解运载体的姿态、速度和位置等导航信息，这三个过程分别是姿态更新、速度更新和位置更新。MEMS惯导一般采用角速率输出采样方式，简单的将输出信号乘以采样间隔$T_s$即可变换为近似的角增量，利用单位时间角增量数据可以实现载体姿态的更新，姿态指的是载体坐标系相对于导航坐标系的角位置，具体定义及坐标变换已在上一章具体介绍。MEMS惯导信息的解算核心是姿态更新，对整个系统的解算精度影响最为突出，具有重要的研究和应用价值。
+\subsection{四元数与姿态更新}
+根据所选的变量参数不同，常用的姿态更新算法有方向余弦法、欧拉角法和四元数法(Quaternations)。这几种姿态解算方法分别适合不同的姿态变化情况。
+
+欧拉角算法通过求解欧拉角微分方程直接求解姿态角。欧拉角解算简单明了，概念直观，容易理解，但求解过程中需要频繁解算三角函数，运算比较困难，而且当俯仰角接近$90^\circ$时会引起万向节死锁问题，所以该方法适合水平姿态变化不大，实时性要求不高的情况下。
+
+方向余弦和欧拉角并没有本质上的区别，因为是用欧拉角表示的方向余弦阵，避免了退化的问题，可以计算全姿态，但是姿态矩阵微分方程包含九个未知量，因此算法设计计算量大，实时性差，不利于工程上的应用。
+
+四元数表示方法虽然有些抽象，但它的优点有很多，利用起来非常方便，算法实现上简单易操作，是很实用的工程方法。本课题是基于四元数法完成姿态矩阵的解算。四元数是由威廉卢云哈密尔顿在1843年爱尔兰提出的数学概念，其基础思想为：一个坐标系到另一个坐标系的变换可以通过绕一个定义在参考系中的矢量$\mu$的单次转动来实现，四元数提供该转动的数学描述，一个单位四元数可以为表示一个旋转。四元数法实质上是旋转矢量法中的单子样算法，对有限旋转引起的的补偿程度不够，只适用于低动态运载体的姿态解算，而对于高动态运载体的姿态解算中漂移非常严重，对于低动态的车载组合导航系统来说，四元数方法十分适用。
+
+1、四元数定义
+
+四元数是由四个元构成的数：
+\begin{equation}\label{2.13}
+  Q(q_0,q_1,q_2,q_3)=q_0+q_1\boldsymbol{i}+q_2\boldsymbol{j}+q_3\boldsymbol{k}=\boldsymbol{q}_0 + \boldsymbol{q}_v
+\end{equation}
+其中，$q_0$、$q_1$、$q_2$、$q_3$是实数，$q_0$也称为实部，$q_v=\boldsymbol{q}_1\boldsymbol{i}+\boldsymbol{q}_2\boldsymbol{j}+\boldsymbol{q}_3\boldsymbol{k}$ 称为虚部，$\boldsymbol{i}$、$\boldsymbol{j}$、$\boldsymbol{k}$是互相正交的单位向量，可以将四元数看作是四维空间中的一个向量或者一个超复数。四元数的虚单位$\boldsymbol{i}$、$\boldsymbol{j}$、$\boldsymbol{k}$之间满足如下乘法运算规则
+\begin{equation}\label{2.14}
+\left\{
+\begin{aligned}
+\boldsymbol{i}\otimes\boldsymbol{i}&=\boldsymbol{j}\otimes\boldsymbol{j}=\boldsymbol{k}\otimes\boldsymbol{k}=-1\\
+\boldsymbol{i}\otimes\boldsymbol{j}&=\boldsymbol{k},
+\boldsymbol{j}\otimes\boldsymbol{k}=\boldsymbol{i},
+\boldsymbol{k}\otimes\boldsymbol{i}=\boldsymbol{j},
+\boldsymbol{j}\otimes\boldsymbol{i}=-\boldsymbol{k},
+\boldsymbol{k}\otimes\boldsymbol{j}=-\boldsymbol{i},
+\boldsymbol{i}\otimes\boldsymbol{k}=-\boldsymbol{j}
+\end{aligned}
+\right.
+\end{equation}
+其中，运算符"$\otimes$"表示四元数乘法运算，虚部单位矢量的叉乘运算特点，可以将四元数的虚数部分$\boldsymbol{q}_v = \boldsymbol{q}_1\boldsymbol{i}+\boldsymbol{q}_2\boldsymbol{j}+\boldsymbol{q}_3\boldsymbol{k}$ 看成是在三维空间中的映像，反之，一个三维矢量可以看做一个零标量四元数。
+
+2、四元数与姿态矩阵的转换
+
+类比于复数的三角表示法，四元数写成三角函数为
+\begin{equation}
+\boldsymbol{Q}=\Vert\boldsymbol{Q}\Vert(\cos\frac{\phi}{2}+\boldsymbol{\mu}\sin\frac{\phi}{2})
+\end{equation}
+特别地，当$\Vert\boldsymbol{Q}\Vert=1$时，即对于单位四元数，有，$q_0=\cos\frac{\phi}{2}$,$\boldsymbol{q_v}=\boldsymbol{\mu}\sin\frac{\phi}{2}$且$q_0^2+\boldsymbol{q_v}^T\boldsymbol{q_v}=1$;$\boldsymbol{\mu}$为单位长度的三维矢量，即$\boldsymbol{\mu}^T\boldsymbol{\mu}=1$;$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\mu$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\mu$来表示如下图。
+
+因此，推导出由四元数表示的载体系至导航系的转换矩阵：
+\begin{equation}
+\boldsymbol{C}_b^n=
+\left [\begin{array}{ccc}
+{1-2(q_2^2+q_3^2)} & {2(q_1q_2-q_0q_3)} & {2(q_1q_3+q_0q_2)} \\
+{2(q_1q_2+q_0q_3)} & {1-2(q_1^2+q_3^2)} & {2(q_2q_3-q_0q_1)} \\
+{2(q_1q_3-q_0q_2)} & {2(q_2q_3+q_0q_1)} & {1-2(q_1^2+q_2^2)} \\
+\end{array}\right]
+\end{equation}
+
+3、姿态更新四元数算法
+
+根据四元数理论，坐标系转换过程可以表示为：
+\begin{align*}
+\boldsymbol{v}^b &=\boldsymbol{Q}_b^n\otimes\boldsymbol{v}^n\otimes(\boldsymbol{Q}_b^n)^*\\
+&=
+\left [\begin{array}{cccc}
+{q_0^2+q_1^2+q_2^2+q_3^2} & {0} & {0} & {0}\\
+{0} & {q_0^2+q_1^2-q_2^2-q_3^2} & {2(q_1q_2-q_0q_3)} & {2(q_1q_3+q_0q_2)} \\
+{0} & {2(q_1q_2+q_0q_3)} & {q_0^2-q_1^2+q_2^2-q_3^2} & {2(q_2q_3-q_0q_1)} \\
+{0} & {2(q_1q_3-q_0q_2)} & {2(q_2q_3+q_0q_1)} & {q_0^2-q_1^2-q_2^2+q_3^2}
+\end{array}\right]
+\end{align*}
+式中，$\boldsymbol{Q}_b^n$表示导航系n到载体系b的变换四元数；$(\boldsymbol{Q}_b^n)^*$是$\boldsymbol{Q}_b^n$的共轭表示，$\boldsymbol{v}^n$和$\boldsymbol{v}^b$表示同意向量分别在导航系n和载体系b下的表示，其向量表示分别为
+\begin{align*}
+\boldsymbol{v}_n&=
+\left [\begin{array}{cccc}
+{0} & {\boldsymbol{v}_x^n} & {\boldsymbol{v}_y^n} & {\boldsymbol{v}_z^n}
+\end{array}\right]^T\\
+\boldsymbol{v}_b&=
+\left [\begin{array}{cccc}
+{0} & {\boldsymbol{v}_x^b} & {\boldsymbol{v}_y^b} & {\boldsymbol{v}_z^b}
+\end{array}\right]^T
+\end{align*}
+根据方向余弦理论：
+\begin{align*}
+\boldsymbol{v}^b
+&=
+\left [\begin{array}{cc}
+{*} & {0}\\
+{0} & {\boldsymbol{C}_t^b}
+\end{array}\right]\boldsymbol{v}^t\\
+&=
+\left [\begin{array}{cccc}
+{*} & {0} & {0} & {0}\\
+{0} & {\cos\gamma\cos\psi+\sin \gamma \sin \psi \sin \theta} & {-\cos \gamma \cos \psi+\sin \gamma \sin \psi \sin \theta} & {-\sin \gamma \cos \theta}\\
+{0} & {\sin \psi \cos \theta} & {\cos \psi \cos \theta} & {\sin \theta}\\
+{0} & {\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} & {-\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} & {\cos \gamma \cos \theta}\\
+\end{array}\right]
+\left [\begin{array}{c}
+{0}\\
+{\boldsymbol{v}_x^n}\\
+{\boldsymbol{v}_y^n}\\
+{\boldsymbol{v}_z^n}
+\end{array}\right]\\
+\end{align*}
+这样可以得到变换过程中姿态角的四元数计算方法：
+\begin{equation}
+\left\{
+\begin{aligned}
+\boldsymbol{\psi_{\mbox{\zihao{7}主}}}&= -\arctan(\frac{2(q_1q_2+q_0q_3)}{q_0^2-q_1^2+q_2^2-q_3^2})\\
+\boldsymbol{\theta_{\mbox{\zihao{7}主}}} &= \arcsin(2(q_2q_3-q_0q_1))\\
+\boldsymbol{\gamma_{\mbox{\zihao{7}主}}} &= \arctan(\frac{2(q_1q_3+q_0q_2)}{q_0^2-q_1^2-q_2^2+q_3^2})
+\end{aligned}
+\right.
+\end{equation}
+四元数微分方程
+
+已知Q为导航系至载体系的四元数表达式，对两端求导得四元数的微分方程：
+\begin{align*}
+d\frac{\boldsymbol{Q}}{t} &= -\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\boldsymbol{\mu}^R\frac{\dot{\theta}}{2}\cos\frac{\theta}{2}+\sin\frac{\theta}{2}\frac{d\boldsymbol{\mu}^R}{dt}\\
+&=-\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\boldsymbol{\mu}^R\frac{\dot{\theta}}{2}\cos\frac{\theta}{2}\\
+&=\frac{\dot{\theta}}{2}\boldsymbol{\mu}^R\otimes\boldsymbol{Q}
+\end{align*}
+由刚体动力学知识可知
+\begin{align*}
+\omega_{nb}^n &=\dot{\theta}\boldsymbol{\mu}^R\\
+\omega_{nb}^n &=\boldsymbol{Q}\otimes\omega_{nb}^b\otimes\boldsymbol{Q^*}
+\end{align*}
+式？中$\omega_nb^b$是MEMS陀螺测量载体系相对于导航系下的角速度，结合上述两式式？可以计算记为
+\begin{equation}
+d\frac{\boldsymbol{Q}}{t} = \frac{1}{2}\boldsymbol{Q}\otimes\omega_{nb}^b
+\end{equation}
+记
+\begin{equation}
+\omega_{nb}^b=
+\left [\begin{array}{ccc}
+\omega_x&\omega_y&\omega_z
+\end{array}\right]^T
+\end{equation}
+
+矩阵形式：
+\begin{equation}
+\left [\begin{array}{ccc}
+\dot{q}_0\\
+\dot{q}_1\\
+\dot{q}_2\\
+\dot{q}_3\\
+\end{array}\right]=
+\frac{1}{2}
+\left [\begin{array}{cccc}
+0 & -\omega_x & -\omega_y & -\omega_z\\
+\omega_x & 0& \omega_z & -\omega_y\\
+\omega_y & -\omega_z& 0 & \omega_x\\
+\omega_z & \omega_y& -\omega_x &0
+\end{array}\right]
+\left [\begin{array}{ccc}
+q_0\\
+q_1\\
+q_2\\
+q_3
+\end{array}\right]
+\end{equation}
+ 
+\section{本章小结}
+本章主要研究了多个异构线性系统的分布式模型预测调节控制问题，智能体系统之间同时存在成本耦合和约束耦合。利用同步更新策略，提出了改进的相容性约束上界；设计了每个智能体的终端成分，给出了其需要满足的条件，并且保证终端集中的状态满足耦合约束；设计了分布式优化算法，详细分析了局部约束和耦合约束的迭代可行性，以及整个系统的闭环稳定性；最后通过仿真实验比较了集中式模型预测控制方法和分布式模型预测控制方法的性能，对比表明在保证系统性能和集中式性能接近的条件下，分布式方法大大缩短了优化时间，减小了在线计算量。

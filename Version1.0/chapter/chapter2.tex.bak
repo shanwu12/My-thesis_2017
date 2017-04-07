@@ -389,6 +389,21 @@ q_3
 \begin{equation}
 \omega_{nb}^b=\omega_{ib}^b-C_n^b(\omega_{ie}^n+\omega_{en}^n)
 \end{equation}
- 
+上式中，$C_n^b$是姿态阵，$\omega_{nb}^b$不能直接测量获得，MEMS陀螺的输出是载体系相对于惯性系的角速度$\omega_{ib}^b$，其中包含了$\omega_{ie}^n$是地球自转速率，$\omega_{en}^n$是位置速率，大小为：
+\begin{equation}
+\omega_{ie}^n+\omega_{en}^n=
+\left [\begin{array}{c}
+-\frac{V_N}{R_M}\\
+\omega_{ie}\cos{L}+\frac{V_E}{R_N}\\
+\omega_{ie}\sin{L}+\frac{V_E}{R_N}\tan{L}
+\end{array}\right]
+\end{equation}
+其中，L是导航系所在地理纬度，$V_E$、$V_N$为当时时刻载体的东向和北向速度，$\omega_{ie}$是地球自转角速度。
+
+\subsection{速度更新与位置更新}
+本文选择“东-北-天”导航坐标系($n$系)，则有惯导比力方程
+\begin{equation}
+\dot{V}_{en}^n=C_b^nf_{sf}^b-(2\omega_{ie}^n+\omega_{en}^n)\times\boldsymbol{v}_{en}^n+g^n
+\end{equation}
 \section{本章小结}
 本章主要研究了多个异构线性系统的分布式模型预测调节控制问题，智能体系统之间同时存在成本耦合和约束耦合。利用同步更新策略，提出了改进的相容性约束上界；设计了每个智能体的终端成分，给出了其需要满足的条件，并且保证终端集中的状态满足耦合约束；设计了分布式优化算法，详细分析了局部约束和耦合约束的迭代可行性，以及整个系统的闭环稳定性；最后通过仿真实验比较了集中式模型预测控制方法和分布式模型预测控制方法的性能，对比表明在保证系统性能和集中式性能接近的条件下，分布式方法大大缩短了优化时间，减小了在线计算量。

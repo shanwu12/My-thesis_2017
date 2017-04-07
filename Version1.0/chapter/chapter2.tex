@@ -399,6 +399,21 @@ q_3
 \end{array}\right]
 \end{equation}
 其中，L是导航系所在地理纬度，$V_E$、$V_N$为当时时刻载体的东向和北向速度，$\omega_{ie}$是地球自转角速度。
- 
+
+\subsection{速度更新与位置更新}
+本文选择“东-北-天”导航坐标系($n$系)，则有惯导比力方程
+\begin{equation}
+\boldsymbol{\dot{V}}_{en}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{sf}^b-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}_{en}^n+\boldsymbol{g}^n
+\end{equation}
+其中$\boldsymbol{f}_{sf}$为加速度计测量的比力，$2\boldsymbol{\omega}_{ie}^n\times\boldsymbol{v}_{en}^n$为由载体运动和地球自转引起的哥氏加速度，$\boldsymbol{\omega}_{en}^n\times\boldsymbol{v}_{en}^n$为由载体运动引起的对地向心加速度，$\boldsymbol{g}^n$为重力加速度，$-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{v}_{en}^n+\boldsymbol{g}^n$。式表明，在加速度计输出中去掉有害加速度后，就可获得载体在导航系下的真实加速度$\boldsymbol{\dot{V}}_{en}^n$,设速度的更新周期为$T$，在每个更新周期内对角增量和速度增量作$N$次采样，对上式作积分运算，得到$t_m$时刻载体在导航系内的速度：
+\begin{equation}
+\boldsymbol{V}_m^n=\boldsymbol{V}_{m-1}^n+\boldsymbol{C}_{b(m-1)}^{n(m-1)}\int_{t_{m-1}}^{t_m}\boldsymbol{C}_{b(t)}^{b(m-1)}\boldsymbol{f}_{ib}^{b}dt+\int_{t_{m-1}}^{t_m}[\boldsymbol{g}^n-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}_{en}^n]dt
+\end{equation}
+
+根据比力方程，可以得到离散系统时速度在导航系的增量为：
+\begin{equation}
+\Delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
+\end{equation}
+
 \section{本章小结}
 本章主要研究了多个异构线性系统的分布式模型预测调节控制问题，智能体系统之间同时存在成本耦合和约束耦合。利用同步更新策略，提出了改进的相容性约束上界；设计了每个智能体的终端成分，给出了其需要满足的条件，并且保证终端集中的状态满足耦合约束；设计了分布式优化算法，详细分析了局部约束和耦合约束的迭代可行性，以及整个系统的闭环稳定性；最后通过仿真实验比较了集中式模型预测控制方法和分布式模型预测控制方法的性能，对比表明在保证系统性能和集中式性能接近的条件下，分布式方法大大缩短了优化时间，减小了在线计算量。

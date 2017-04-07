@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  15 MAR 2017 14:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  6 APR 2017 21:53
 entering extended mode
-**D:/Shan_5/shan_5/Graduation*project/BIT_thesis/BIT论文模板/BIT论文模�
-�/毕业论文Final*Veision*-*副本/chapter/chapter2.tex
+**D:/Shan_5/shan_5/Graduation*project/BIT_thesis/Draft/Version1.0/chapter/chapt
+er2.tex
 
-("D:/Shan_5/shan_5/Graduation project/BIT_thesis/BIT论文模板/BIT论文模�
-�/毕业论文Final Veision - 副本/chapter/chapter2.tex"
+("D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/chapter/chapt
+er2.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 ! Undefined control sequence.
@@ -19,10 +19,10 @@ End of file on the terminal!
  
 Here is how much of TeX's memory you used:
  7 strings out of 495354
- 458 string characters out of 3183859
+ 308 string characters out of 3183859
  44842 words of memory out of 3000000
  3276 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 5i,0n,1p,184b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 5i,0n,1p,134b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!

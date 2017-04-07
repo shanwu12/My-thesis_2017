@@ -1,5 +1,5 @@
 
-\chapter{多个线性系统的分布式模型预测调节控制}
+\chapter{小型化车载导航组合系统方案设计}
 \section{引言}
 车载组合定位系统是采用车载传感器进行组合定位的实时系统，随着MEMS 惯性器件工程化及其精度的提升，其小型化、低成本、低功耗抗稳定性好的应用特点在航姿测量系统得到广泛的应用。本文基于MEMS传感器，通过合理的布局设计及系统设计，将惯性测量、惯性导航、卫星导航、姿态解算、组合导航集成在一块单板上。
 
@@ -270,7 +270,7 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 \begin{equation}
 \boldsymbol{Q}=\Vert\boldsymbol{Q}\Vert(\cos\frac{\phi}{2}+\boldsymbol{\mu}\sin\frac{\phi}{2})
 \end{equation}
-特别地，当$\Vert\boldsymbol{Q}\Vert=1$时，即对于单位四元数，有，$q_0=\cos\frac{\phi}{2}$,$\boldsymbol{q_v}=\boldsymbol{\mu}\sin\frac{\phi}{2}$且$q_0^2+\boldsymbol{q_v}^T\boldsymbol{q_v}=1$;$\boldsymbol{\mu}$为单位长度的三维矢量，即$\boldsymbol{\mu}^T\boldsymbol{\mu}=1$;$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\mu$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\mu$来表示如下图。
+特别地，当$\Vert\boldsymbol{Q}\Vert=1$时，即对于单位四元数，有，$q_0=\cos\frac{\phi}{2}$,$\boldsymbol{q_v}=\boldsymbol{\mu}\sin\frac{\phi}{2}$ 且$q_0^2+\boldsymbol{q_v}^T\boldsymbol{q_v}=1$;$\boldsymbol{\mu}$ 为单位长度的三维矢量，即$\boldsymbol{\mu}^T\boldsymbol{\mu}=1$;$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\mu$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\mu$来表示如下图。
 
 因此，推导出由四元数表示的载体系至导航系的转换矩阵：
 \begin{equation}
@@ -400,10 +400,96 @@ q_3
 \end{equation}
 其中，L是导航系所在地理纬度，$V_E$、$V_N$为当时时刻载体的东向和北向速度，$\omega_{ie}$是地球自转角速度。
 
-\subsection{速度更新与位置更新}
+\subsection{速度更新}
 本文选择“东-北-天”导航坐标系($n$系)，则有惯导比力方程
 \begin{equation}
-\dot{V}_{en}^n=C_b^nf_{sf}^b-(2\omega_{ie}^n+\omega_{en}^n)\times\boldsymbol{v}_{en}^n+g^n
+\boldsymbol{\dot{V}}_{en}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{sf}^b-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}_{en}^n+\boldsymbol{g}^n
 \end{equation}
+
+其中$\boldsymbol{f}_{sf}$为加速度计测量的比力，$2\boldsymbol{\omega}_{ie}^n\times\boldsymbol{v}_{en}^n$为由载体运动和地球自转引起的哥氏加速度，$\boldsymbol{\omega}_{en}^n\times\boldsymbol{v}_{en}^n$为由载体运动引起的对地向心加速度，$\boldsymbol{g}^n$为重力加速度，$-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{v}_{en}^n+\boldsymbol{g}^n$。 式表明，在加速度计输出中去掉有害加速度后，就可获得载体在导航系下的真实加速度$\boldsymbol{\dot{V}}_{en}^n$,设速度的更新周期为$T$，在每个更新周期内对角增量和速度增量作$N$次采样，对上式作积分运算，得到$t_m$时刻载体在导航系内的速度：
+\begin{equation}
+\boldsymbol{V}_m^n=\boldsymbol{V}_{m-1}^n+\boldsymbol{C}_{b(m-1)}^{n(m-1)}\int_{t_{m-1}}^{t_m}\boldsymbol{C}_{b(t)}^{b(m-1)}\boldsymbol{f}_{ib}^{b}dt+\int_{t_{m-1}}^{t_m}[\boldsymbol{g}^n-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}_{en}^n]dt
+\end{equation}
+
+式中，$\boldsymbol{V}_m$$\boldsymbol{V}_{m-1}$分别是$t_m$和$t_{m-1}$时刻载体的速度；$\boldsymbol{C}_{b(m-1)}^{n(m-1)}$是$t_{m-1}$时刻的姿态矩阵。若$\delta\boldsymbol{V}_{g/corm}^{n}$表示在时间$[t_{m-1},t_m]$ 内有害加速度引起的速度补偿量，$\delta\boldsymbol{V}_{sfm}$是由比力引起的速度补偿量，则式？可以改写成
+\begin{equation}
+\boldsymbol{V}_m^n=\boldsymbol{V}_{m-1}^n+\boldsymbol{C}_{b(m-1)}^{n(m-1)}\delta\boldsymbol{V}_{sfm}+\delta\boldsymbol{V}_{g/corm}^{n}
+\end{equation}
+\begin{equation}
+\delta\boldsymbol{V}_{sfm}^n=\delta\boldsymbol{V}_{m}^n+\frac{1}{2}\delta\theta_m\times\delta\boldsymbol{V}_m^n+\frac{1}{2}\int_{t_{m-1}}^{t_m}[\Delta\theta(t)\times\boldsymbol{f}_{ib}^{b}+\Delta\boldsymbol{V}(t)\times\boldsymbol{\omega}(t)]dt
+\end{equation}
+
+式？在MEMS惯导速度更新中的第二项和第三项分别进行了旋转效应和划桨效应的补偿，旋转效应指的是运动物体在某个方向进行线运动的同时发生空间旋转变化引起，划桨效应指运动物体在纵轴方向做线振动时又在横轴方向发生同向频的角振动。$\delta\theta_m$、$\Delta\boldsymbol{V}_m$为更新周期内的陀螺角增量和加速度计速度增量。因为载体角速度和加速度变化复杂，无法通过确定的数学公式加以描述，工程中常采用曲线拟合的方法来近似求解。
+根据比力方程，可以得到离散系统时速度在导航系的增量为：
+\begin{equation}
+\Delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
+\end{equation}
+
+由于低成本MEMS传感器属于低精度，陀螺精度（零偏稳定性及重复性）为$0.1^\circ$量级，加速度精度为$5mg$,传感器标定在下节介绍具体方法，此处忽略划桨效应，可对其作大幅简化。
+
+\subsection{位置更新}
+如图，假设地球表面运动的物体在地理坐标系下的坐标记为$O_g(\lambda,L,h)$。如果$O_o$点是$O_g$与地心连线在地球表面的交点，以该点建立直角坐标系，纬圈切线指东为$O_ox_o$轴，经圈切线指北$O_oy_o$轴、椭球面法线方向指天$O_oz_o$轴，$O_g$点的地理坐标表示，记为$O_g(\lambda,L,h)$。
+
+在图？，如果$O_o$点对地球坐标系$Ox_ey_ez_e$的速度在$Ox_oy_oz_o$系的投影记为$v_e^o=[v_{xo}\quad v_{yo}\quad v_{zo}]^T$。注意，由于$O_oX_o$轴与纬圈相切，故经度会随着$v_{x0}$而变化，根据地理几何有：
+\begin{equation}
+\dot{\lambda}=\frac{v_{x_0}}{R_N\cos{L}}
+\end{equation}
+
+对于地理高度为$h$的$O_g$点，假设其速度为$\boldsymbol{v}_{eg}^{g}=[v_x\quad v_y\quad  v_z]^T$,根据图？中几何关系，有
+
+\begin{equation}
+\frac{v_{x_0}}{R_N}=\frac{v_x}{R_N+h}
+\end{equation}
+\begin{equation}
+\frac{v_{y_0}}{R_M}=\frac{v_y}{R_M+h}
+\end{equation}
+上述两式分别带入
+\begin{align}
+\dot{\lambda}&=\frac{v_x}{(R_N+h)\cos{L}}\\
+\dot{L}&=\frac{v_y}{(R_M+h)}\\
+\dot{h}&=v_z
+\end{align}
+记：
+\begin{equation}
+\boldsymbol{p}=
+\left [\begin{array}{ccc}
+\lambda\\
+L\\
+h
+\end{array}\right],
+\boldsymbol{M}_{pv}=
+\left [\begin{array}{ccc}
+0 & 1/[(R_N+h)\cos{L}]&0\\
+1/(R_M+h)&0&0\\
+0&0&1
+\end{array}\right]
+\end{equation}
+则矩阵形式，
+\begin{equation}
+\dot{\boldsymbol{p}}=\boldsymbol{M}_{pv}\boldsymbol{v}^n
+\end{equation}
+
+与捷联惯导姿态和速度更新算法相比，位置更新算法引起的误差一般比较小，采用梯形积分法将上式离散化，得
+\begin{equation}
+\boldsymbol{p}_t=\boldsymbol{p}_{t-1}+\boldsymbol{M}_{pv}\times(\boldsymbol{v}_{t-1}^n+\boldsymbol{v}_t^n)\times\frac{T}{2}
+\end{equation}
+\section{小型化车载组合定位原理}
+结合GPS定位的长期稳定性与SINS系统定位的短期精确性，整合两套设备的导航信息可以提高整个系统的定位性能，目前常见的组合方法有：GPS/SINS松组合、紧组合和超紧组合等模式。
+
+(1)GPS/SINS松组合
+
+松组合是采用滤波计算的较为基础的组合方式，从GNSS接收机和惯导系统各自输出的速度、位置之差作为系统量测，通过组合滤波器对惯导系统的速度、位置误差和姿态误差进行估计，然后作为反馈信息完成对MEMS惯导传感器的校正，从而实现对SINS系统的累积误差的消除，提高组合系统的导航精度。
+
+松组合的特点是：系统结构简单，易于实现，计算量小等，GNSS可以限制惯导误差的增长，当GNSS失去信号时惯导可短时间内自主导航，惯性传感器误差实时估计并修正。适合车载导航、民用航空等领域。其结构示意图如下？
+
+(2)紧组合
+
+根据
+
+\section{车载组合定位系统总体方案设计与分析}
+车载组合定位系统是一个复杂的系统，包括传感器的数据采集与处理，实时数据融合。小型化导航模块以ARM处理器为核心，外接MEMS惯性传感器，卫星接收机等设备，采集导航数据并处理，进行实时导航，用于对其他设备的控制、监控或管理功能。ARM控制器体积小，功耗低，数据计算功能强等优点，为小型化、低功耗，低成本导航系统硬件设计提供了解决方案。本课题结合导航算法理论，合理选型，完成一款自动驾驶辅助系统的小型化导航模块的工程实现，本节主要从总体方案设计来介绍。
+
+
+
 \section{本章小结}
 本章主要研究了多个异构线性系统的分布式模型预测调节控制问题，智能体系统之间同时存在成本耦合和约束耦合。利用同步更新策略，提出了改进的相容性约束上界；设计了每个智能体的终端成分，给出了其需要满足的条件，并且保证终端集中的状态满足耦合约束；设计了分布式优化算法，详细分析了局部约束和耦合约束的迭代可行性，以及整个系统的闭环稳定性；最后通过仿真实验比较了集中式模型预测控制方法和分布式模型预测控制方法的性能，对比表明在保证系统性能和集中式性能接近的条件下，分布式方法大大缩短了优化时间，减小了在线计算量。

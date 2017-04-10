@@ -9,6 +9,6 @@
 \contentsline {subsection}{\numberline {1.3.2}速度更新}{10}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}位置更新}{11}{subsection.1.3.3}
 \contentsline {section}{\numberline {1.4}小型化车载组合定位原理}{12}{section.1.4}
-\contentsline {section}{\numberline {1.5}车载组合定位系统总体方案设计与分析}{12}{section.1.5}
-\contentsline {section}{\numberline {1.6}本章小结}{12}{section.1.6}
+\contentsline {section}{\numberline {1.5}车载组合定位系统总体方案设计}{12}{section.1.5}
+\contentsline {section}{\numberline {1.6}本章小结}{13}{section.1.6}
 \contentsfinish 

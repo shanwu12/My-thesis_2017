@@ -11,4 +11,21 @@
 \contentsline {section}{\numberline {1.4}小型化车载组合定位原理}{12}{section.1.4}
 \contentsline {section}{\numberline {1.5}车载组合定位系统总体方案设计}{12}{section.1.5}
 \contentsline {section}{\numberline {1.6}本章小结}{13}{section.1.6}
+\contentsline {chapter}{\numberline {第2\ignorespaces 章\hspace {0.3em}}小型化组合定位系统硬件设计}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}引言}{15}{section.2.1}
+\contentsline {section}{\numberline {2.2}主要器件选型}{15}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}ARM芯片}{15}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}MEMS器件}{16}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}卫星接收模块}{16}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}电源管理模块}{17}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}硬件电路设计}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}系统原理图设计}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}系统PCB板设计}{17}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}分布式模型预测控制}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}相容性约束的设计}{20}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}终端成分的设计}{20}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}分布式实现算法}{24}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}主要结果}{25}{section.2.5}
+\contentsline {section}{\numberline {2.6}仿真结果和分析}{27}{section.2.6}
+\contentsline {section}{\numberline {2.7}本章小结}{31}{section.2.7}
 \contentsfinish 

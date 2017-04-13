@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  11 APR 2017 21:43
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  13 APR 2017 14:52
 entering extended mode
-**D:/Shan_5/shan_5/Graduation*project/BIT_thesis/Draft/Version1.0/Thesis_of_YUL
-ONG_WANG.tex
+**Thesis_of_YULONG_WANG.tex
 
-("D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/Thesis_of_YUL
+("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\Thesis_of_YUL
 ONG_WANG.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
@@ -1038,17 +1037,47 @@ er3.tex" [14
 
 ]
 ตฺ2\ignorespaces ีย
-[15] [16] [17]
+[15]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+ (C:\CTEX\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+ [16]
+<figures/chap3/chap3_Arm.png, id=389, 484.05844pt x 424.58624pt>
+File: figures/chap3/chap3_Arm.png Graphic file (type png)
 
-Package natbib Warning: Citation `DunbarWBAuto(2006)' on page 18 undefined on i
-nput line 121.
+<use figures/chap3/chap3_Arm.png>
+Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 55.
+(pdftex.def)             Requested size: 414.58246pt x 363.65991pt.
+
+<figures/chap3/chap3_RST.png, id=390, 117.43875pt x 155.07938pt>
+File: figures/chap3/chap3_RST.png Graphic file (type png)
+
+<use figures/chap3/chap3_RST.png>
+Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 62.
+(pdftex.def)             Requested size: 138.19649pt x 182.49039pt.
+
+Underfull \vbox (badness 5533) has occurred while \output is active []
+
+ [17]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap3/chap3_Arm.png>] [19 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/V
+ersion1.0/figures/chap3/chap3_RST.png>]
+
+Package natbib Warning: Citation `DunbarWBAuto(2006)' on page 20 undefined on i
+nput line 157.
 
 
-Package natbib Warning: Citation `DunbarWBPHD(2004)' on page 18 undefined on in
-put line 121.
+Package natbib Warning: Citation `DunbarWBPHD(2004)' on page 20 undefined on in
+put line 157.
 
-[18] [19]
-Overfull \hbox (12.85422pt too wide) in paragraph at lines 167--169
+[20] [21]
+Overfull \hbox (12.85422pt too wide) in paragraph at lines 203--205
 []\C19/zhsong/m/n/12/49 -$\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
  t[]\OT1/cmr/m/n/12 ) = [] [] \OMS/cmsy/m/n/12 k[]\OT1/cmr/m/n/12 (\OML/cmm/m/i
 t/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
@@ -1062,102 +1091,95 @@ sy/m/n/12 j\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 k$|\C19/rm/m/n
  []
 
 Package CJKpunct Info: punctuation spaces for family 'zhkai' do not exist. Use 
-family 'def' instead. on input line 180.
+family 'def' instead. on input line 216.
 
-Package natbib Warning: Citation `MullerMA(2011)' on page 20 undefined on input
- line 191.
+Package natbib Warning: Citation `MullerMA(2011)' on page 22 undefined on input
+ line 227.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 206.
+[22]
 
-(C:\CTEX\MiKTeX\tex\latex\base\omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 206.
- [20]
-
-Package natbib Warning: Citation `MayneDQBOOK(2009)' on page 21 undefined on in
-put line 248.
-
-[21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-
-Package natbib Warning: Citation `ChenJ(2009)' on page 23 undefined on input li
-ne 315.
-
-
-Package natbib Warning: Citation `GuD(2006)' on page 23 undefined on input line
- 315.
+Package natbib Warning: Citation `MayneDQBOOK(2009)' on page 23 undefined on in
+put line 284.
 
 [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `DunbarWBAuto(2006)' on page 24 undefined on i
-nput line 353.
+ [24]
+
+Package natbib Warning: Citation `ChenJ(2009)' on page 25 undefined on input li
+ne 351.
 
 
-Package natbib Warning: Citation `DunbarWBPHD(2004)' on page 24 undefined on in
-put line 353.
+Package natbib Warning: Citation `GuD(2006)' on page 25 undefined on input line
+ 351.
 
-[24] [25] [26] <figures/chap3_state.pdf, id=529, 597.23125pt x 845.1575pt>
+[25]
+
+Package natbib Warning: Citation `DunbarWBAuto(2006)' on page 26 undefined on i
+nput line 389.
+
+
+Package natbib Warning: Citation `DunbarWBPHD(2004)' on page 26 undefined on in
+put line 389.
+
+[26] [27] [28] <figures/chap3_state.pdf, id=546, 597.23125pt x 845.1575pt>
 File: figures/chap3_state.pdf Graphic file (type pdf)
 
 <use figures/chap3_state.pdf>
-Package pdftex.def Info: figures/chap3_state.pdf used on input line 430.
+Package pdftex.def Info: figures/chap3_state.pdf used on input line 466.
 (pdftex.def)             Requested size: 414.58246pt x 586.69283pt.
 
 
-Package natbib Warning: Citation `LiZJ(2006)' on page 27 undefined on input lin
-e 438.
+Package natbib Warning: Citation `LiZJ(2006)' on page 29 undefined on input lin
+e 474.
 
 
-Package natbib Warning: Citation `FalugiP(2010)' on page 27 undefined on input 
-line 438.
+Package natbib Warning: Citation `FalugiP(2010)' on page 29 undefined on input 
+line 474.
 
 
-Package natbib Warning: Citation `WachterA(2010)' on page 27 undefined on input
- line 438.
+Package natbib Warning: Citation `WachterA(2010)' on page 29 undefined on input
+ line 474.
 
 
-Overfull \hbox (2.99086pt too wide) in alignment at lines 455--458
+Overfull \hbox (2.99086pt too wide) in alignment at lines 491--494
  [][][] []
  []
 
-<figures/chap3_input.pdf, id=532, 597.23125pt x 845.1575pt>
+<figures/chap3_input.pdf, id=549, 597.23125pt x 845.1575pt>
 File: figures/chap3_input.pdf Graphic file (type pdf)
 
 <use figures/chap3_input.pdf>
-Package pdftex.def Info: figures/chap3_input.pdf used on input line 464.
+Package pdftex.def Info: figures/chap3_input.pdf used on input line 500.
 (pdftex.def)             Requested size: 414.58246pt x 586.69283pt.
 
-<figures/chap3_cost.pdf, id=533, 597.23125pt x 845.1575pt>
+<figures/chap3_cost.pdf, id=550, 597.23125pt x 845.1575pt>
 File: figures/chap3_cost.pdf Graphic file (type pdf)
 
 <use figures/chap3_cost.pdf>
-Package pdftex.def Info: figures/chap3_cost.pdf used on input line 473.
+Package pdftex.def Info: figures/chap3_cost.pdf used on input line 509.
 (pdftex.def)             Requested size: 299.41989pt x 423.71257pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{equation.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{equation.
 2.5.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.511 \end{eqnarray*}
+l.547 \end{eqnarray*}
                      ]
 
-LaTeX Warning: Text page 28 contains only floats.
+LaTeX Warning: Text page 30 contains only floats.
 
-[28 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+[30 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
 ap3_state.pdf>]
 
-LaTeX Warning: Text page 29 contains only floats.
+LaTeX Warning: Text page 31 contains only floats.
 
-[29 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+[31 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
 ap3_input.pdf>]
 Underfull \vbox (badness 1275) has occurred while \output is active []
 
- [30 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3_cost.pdf>]) [31]
+ [32 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap3_cost.pdf>]) [33]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1172,21 +1194,27 @@ er2.aux")
 er3.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
-Package rerunfilecheck Info: File `Thesis_of_YULONG_WANG.out' has not changed.
-(rerunfilecheck)             Checksum: 026D06DBE367F0048F3AF374F1870D5F;1879.
 
+
+Package rerunfilecheck Warning: File `Thesis_of_YULONG_WANG.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis_of_YULONG_WANG.out':
+(rerunfilecheck)             Before: D3CFA9B2B90F9B7B8A4855326A97EF76;3395
+(rerunfilecheck)             After:  026D06DBE367F0048F3AF374F1870D5F;1879.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19289 strings out of 495354
- 304149 string characters out of 3183859
- 379468 words of memory out of 3000000
- 21842 multiletter control sequences out of 15000+200000
- 68188 words of font info for 237 fonts, out of 3000000 for 9000
+ 19325 strings out of 495354
+ 304878 string characters out of 3183859
+ 379617 words of memory out of 3000000
+ 21869 multiletter control sequences out of 15000+200000
+ 69380 words of font info for 241 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,19n,47p,1063b,1161s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,19n,47p,999b,1173s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/s
 imkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS
 /Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:
@@ -1231,16 +1259,17 @@ mex8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmmi6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
 b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTE
-X/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTe
-X/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_of_YULONG_WANG.pdf (37 pages, 1002422 bytes).
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CT
+EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
+msfonts/symbols/msam10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on Thesis_of_YULONG_WANG.pdf (39 pages, 1062178 bytes).
 PDF statistics:
- 959 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 980 PDF objects out of 1000 (max. 8388607)
+ 144 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 

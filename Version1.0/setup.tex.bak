@@ -70,6 +70,7 @@
 % \newtheorem{proof}{}[chapter]
 \newenvironment{proof}{\hspace{\parindent}\textbf{Ö¤Ã÷:}}{\hfill$\Box$}
 
+
 \newcommand{\bn}{\begin{eqnarray}}
 \newcommand{\ed}{\end{eqnarray}}
 \newcommand{\bnn}{\begin{eqnarray*}}
@@ -144,7 +145,7 @@
 \def\thechapter{\arabic{chapter}}
 \def\thesection{\thechapter.\arabic{section}}
 \def\thesubsection{\thesection.\arabic{subsection}}
-\def\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\def\thesubsubsection{\thesection.\arabic{subsubsection}} %\thesubsection
 \fi
 
 

@@ -145,7 +145,7 @@
 \def\thechapter{\arabic{chapter}}
 \def\thesection{\thechapter.\arabic{section}}
 \def\thesubsection{\thesection.\arabic{subsection}}
-\def\thesubsubsection{\thesection.\arabic{subsubsection}} %\thesubsection
+\def\thesubsubsection{\thesubsection.\arabic{subsubsection}} %\thesubsection
 \fi
 
 

@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  13 APR 2017 14:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  14 APR 2017 14:34
 entering extended mode
-**Thesis_of_YULONG_WANG.tex
+**D:/Shan_5/shan_5/Graduation*project/BIT_thesis/Draft/Version1.0/Thesis_of_YUL
+ONG_WANG.tex
 
-("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\Thesis_of_YUL
+("D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/Thesis_of_YUL
 ONG_WANG.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
@@ -492,6 +493,53 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
+)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
 (C:\CTEX\MiKTeX\tex\latex\geometry\geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -502,22 +550,17 @@ Package ifvtex Info: VTeX not detected.
 \Gm@cnth=\count196
 \Gm@cntv=\count197
 \c@Gm@tempcnt=\count198
-\Gm@bindingoffset=\dimen160
-\Gm@wd@mp=\dimen161
-\Gm@odd@mp=\dimen162
-\Gm@even@mp=\dimen163
-\Gm@layoutwidth=\dimen164
-\Gm@layoutheight=\dimen165
-\Gm@layouthoffset=\dimen166
-\Gm@layoutvoffset=\dimen167
+\Gm@bindingoffset=\dimen162
+\Gm@wd@mp=\dimen163
+\Gm@odd@mp=\dimen164
+\Gm@even@mp=\dimen165
+\Gm@layoutwidth=\dimen166
+\Gm@layoutheight=\dimen167
+\Gm@layouthoffset=\dimen168
+\Gm@layoutvoffset=\dimen169
 \Gm@dimlist=\toks23
 
 (C:\CTEX\MiKTeX\tex\latex\geometry\geometry.cfg))
-(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen168
-\Gin@req@width=\dimen169
-)
 (C:\CTEX\MiKTeX\tex\latex\threeparttable\threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box45
@@ -644,23 +687,14 @@ Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
-Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
 Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
 Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
 Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
@@ -674,9 +708,6 @@ Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
 Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
 Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
-)
-(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
-Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
 \@linkdim=\dimen200
 \Hy@linkcounter=\count292
@@ -738,14 +769,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `CJKbookmarks' set `true' on input line 227.
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 229.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 227.
+(hyperref)                setting the option has no effect on input line 229.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 227.
-Package hyperref Info: Option `colorlinks' set `true' on input line 227.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 229.
+Package hyperref Info: Option `colorlinks' set `true' on input line 229.
 )
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\Thesis_of_YUL
 ONG_WANG.aux"
@@ -754,13 +785,13 @@ er2.aux")
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
 er3.aux"
 
-LaTeX Warning: Label `chap2_Table 1' multiply defined.
+LaTeX Warning: Label `chap3_Fig.2' multiply defined.
 
 
-LaTeX Warning: Label `chap2_Remark 1' multiply defined.
+LaTeX Warning: Label `chap3_Fig.2' multiply defined.
 
 
-LaTeX Warning: Label `chap2_Fig.2' multiply defined.
+LaTeX Warning: Label `chap3_Table 1' multiply defined.
 
 ))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -1049,140 +1080,59 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: figures/chap3/chap3_Arm.png Graphic file (type png)
 
 <use figures/chap3/chap3_Arm.png>
-Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 55.
+Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 56.
 (pdftex.def)             Requested size: 414.58246pt x 363.65991pt.
 
 <figures/chap3/chap3_RST.png, id=390, 117.43875pt x 155.07938pt>
 File: figures/chap3/chap3_RST.png Graphic file (type png)
 
 <use figures/chap3/chap3_RST.png>
-Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 62.
+Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 63.
 (pdftex.def)             Requested size: 138.19649pt x 182.49039pt.
 
 Underfull \vbox (badness 5533) has occurred while \output is active []
 
  [17]
+[18 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap3/chap3_Arm.png>]
+<figures/chap3/chap3_Principle.png, id=403, 903.375pt x 510.708pt>
+File: figures/chap3/chap3_Principle.png Graphic file (type png)
+
+<use figures/chap3/chap3_Principle.png>
+Package pdftex.def Info: figures/chap3/chap3_Principle.png used on input line 8
+9.
+(pdftex.def)             Requested size: 414.58246pt x 234.38303pt.
+
+<figures/chap3/chap3_Power.png, id=404, 297.36093pt x 386.94562pt>
+File: figures/chap3/chap3_Power.png Graphic file (type png)
+
+<use figures/chap3/chap3_Power.png>
+Package pdftex.def Info: figures/chap3/chap3_Power.png used on input line 97.
+(pdftex.def)             Requested size: 230.32515pt x 299.71443pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3/chap3_Arm.png>] [19 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/V
-ersion1.0/figures/chap3/chap3_RST.png>]
 
-Package natbib Warning: Citation `DunbarWBAuto(2006)' on page 20 undefined on i
-nput line 157.
-
-
-Package natbib Warning: Citation `DunbarWBPHD(2004)' on page 20 undefined on in
-put line 157.
-
-[20] [21]
-Overfull \hbox (12.85422pt too wide) in paragraph at lines 203--205
-[]\C19/zhsong/m/n/12/49 -$\OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12
- t[]\OT1/cmr/m/n/12 ) = [] [] \OMS/cmsy/m/n/12 k[]\OT1/cmr/m/n/12 (\OML/cmm/m/i
-t/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
-  []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t[]\O
-T1/cmr/m/n/12 )\OMS/cmsy/m/n/12 k$ \C19/zhsong/m/n/12/43 Ú$\OML/cmm/m/it/12 []
-\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 ) = [] [] \OMS/cmsy/m/n/12
- k[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 t[]\O
-T1/cmr/m/n/12 ) \OMS/cmsy/m/n/12   []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OMS/cm
-sy/m/n/12 j\OML/cmm/m/it/12 t[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 k$|\C19/rm/m/n
-/12/25 "|
+Overfull \hbox (3.0554pt too wide) in paragraph at lines 119--120
+[]\C19/zhsong/m/n/12/62 M \C19/zhsong/m/n/12/45 ‡ \C19/zhsong/m/n/12/36 † \C19/
+zhsong/m/n/12/63 1 \C19/zhsong/m/n/12/61 ˜ \C19/zhsong/m/n/12/42 ‡\OT1/cmr/m/n/
+12 MiniUSB\C19/zhsong/m/n/12/57 Þ|\C19/rm/m/n/12/26 §| \C19/zhsong/m/n/12/62 ^ 
+u\OT1/cmr/m/n/12 USB\C19/rm/m/n/12/39 l \C19/zhsong/m/n/12/44 Å\OT1/cmr/m/n/12 
+(SLAVE)\C19/zhsong/m/n/12/57 Ï \C19/zhsong/m/n/12/60 &|\C19/rm/m/n/12/26 §| \C1
+9/zhsong/m/n/12/47 Œ \C19/zhsong/m/n/12/61 ± \C19/zhsong/m/n/12/54 4 \C19/zhson
+g/m/n/12/55  \C19/zhsong/m/n/12/37  \C19/zhsong/m/n/12/57 Ó \C19/zhsong/m/n/1
+2/40 > \C19/zhsong/m/n/12/51 M \C19/zhsong/m/n/12/40 à\OT1/cmr/m/n/12 USB\C19/z
+hsong/m/n/12/57 Ï
  []
 
-Package CJKpunct Info: punctuation spaces for family 'zhkai' do not exist. Use 
-family 'def' instead. on input line 216.
-
-Package natbib Warning: Citation `MullerMA(2011)' on page 22 undefined on input
- line 227.
-
-[22]
-
-Package natbib Warning: Citation `MayneDQBOOK(2009)' on page 23 undefined on in
-put line 284.
-
-[23]
+[19 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap3/chap3_RST.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-
-Package natbib Warning: Citation `ChenJ(2009)' on page 25 undefined on input li
-ne 351.
-
-
-Package natbib Warning: Citation `GuD(2006)' on page 25 undefined on input line
- 351.
-
-[25]
-
-Package natbib Warning: Citation `DunbarWBAuto(2006)' on page 26 undefined on i
-nput line 389.
-
-
-Package natbib Warning: Citation `DunbarWBPHD(2004)' on page 26 undefined on in
-put line 389.
-
-[26] [27] [28] <figures/chap3_state.pdf, id=546, 597.23125pt x 845.1575pt>
-File: figures/chap3_state.pdf Graphic file (type pdf)
-
-<use figures/chap3_state.pdf>
-Package pdftex.def Info: figures/chap3_state.pdf used on input line 466.
-(pdftex.def)             Requested size: 414.58246pt x 586.69283pt.
-
-
-Package natbib Warning: Citation `LiZJ(2006)' on page 29 undefined on input lin
-e 474.
-
-
-Package natbib Warning: Citation `FalugiP(2010)' on page 29 undefined on input 
-line 474.
-
-
-Package natbib Warning: Citation `WachterA(2010)' on page 29 undefined on input
- line 474.
-
-
-Overfull \hbox (2.99086pt too wide) in alignment at lines 491--494
- [][][] []
- []
-
-<figures/chap3_input.pdf, id=549, 597.23125pt x 845.1575pt>
-File: figures/chap3_input.pdf Graphic file (type pdf)
-
-<use figures/chap3_input.pdf>
-Package pdftex.def Info: figures/chap3_input.pdf used on input line 500.
-(pdftex.def)             Requested size: 414.58246pt x 586.69283pt.
-
-<figures/chap3_cost.pdf, id=550, 597.23125pt x 845.1575pt>
-File: figures/chap3_cost.pdf Graphic file (type pdf)
-
-<use figures/chap3_cost.pdf>
-Package pdftex.def Info: figures/chap3_cost.pdf used on input line 509.
-(pdftex.def)             Requested size: 299.41989pt x 423.71257pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{equation.
-2.5.31}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.547 \end{eqnarray*}
-                     ]
-
-LaTeX Warning: Text page 30 contains only floats.
-
-[30 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3_state.pdf>]
-
-LaTeX Warning: Text page 31 contains only floats.
-
-[31 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3_input.pdf>]
-Underfull \vbox (badness 1275) has occurred while \output is active []
-
- [32 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3_cost.pdf>]) [33]
-
-Package natbib Warning: There were undefined citations.
-
+ [20 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap3/chap3_Principle.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft
+/Version1.0/figures/chap3/chap3_Power.png>] [21]) [22]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
 
@@ -1194,82 +1144,60 @@ er2.aux")
 er3.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package rerunfilecheck Info: File `Thesis_of_YULONG_WANG.out' has not changed.
+(rerunfilecheck)             Checksum: 026D06DBE367F0048F3AF374F1870D5F;1879.
 
-
-Package rerunfilecheck Warning: File `Thesis_of_YULONG_WANG.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis_of_YULONG_WANG.out':
-(rerunfilecheck)             Before: D3CFA9B2B90F9B7B8A4855326A97EF76;3395
-(rerunfilecheck)             After:  026D06DBE367F0048F3AF374F1870D5F;1879.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19325 strings out of 495354
- 304878 string characters out of 3183859
- 379617 words of memory out of 3000000
- 21869 multiletter control sequences out of 15000+200000
- 69380 words of font info for 241 fonts, out of 3000000 for 9000
+ 18929 strings out of 495354
+ 296738 string characters out of 3183859
+ 380392 words of memory out of 3000000
+ 21531 multiletter control sequences out of 15000+200000
+ 57086 words of font info for 199 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,19n,47p,999b,1173s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/s
-imkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS
-/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:
-/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
-.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
-s/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIND
-OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
-<C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/sim
-kai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/F
-onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/W
-INDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.t
-tf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/
-simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
-S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C
-:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhe
-i.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fon
-ts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WIN
-DOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf
-><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
-mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/
-Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/
-WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.
-ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
-/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
-WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
-C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
-un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
-nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
-NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.tt
-c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
-imsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
-/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:
-/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun
-.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Font
-s/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/CTEX/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/c
-mex8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-y6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
-msfonts/symbols/msam10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on Thesis_of_YULONG_WANG.pdf (39 pages, 1062178 bytes).
+ 43i,19n,47p,1063b,1093s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
+imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
+/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:
+/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
+.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Font
+s/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WIND
+OWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf>
+<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
+hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
+onts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/W
+INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
+tc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
+simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
+S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
+:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
+n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
+ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
+DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
+mhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
+Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
+WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
+ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
+/simsun.ttc><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/CTEX/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTE
+X/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/
+fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Thesis_of_YULONG_WANG.pdf (28 pages, 815962 bytes).
 PDF statistics:
- 980 PDF objects out of 1000 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 696 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 

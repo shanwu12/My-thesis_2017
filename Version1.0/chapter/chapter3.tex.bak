@@ -83,6 +83,8 @@ $1$ & $1$ & SRAM启动 & SRAM启动，可在SRAM中调试代码 \\
 \end{tabular}
 \end{table}
 
+程序下载配置电路：STM32的程序下载有多种方法：USB、串口、JTAG、SWD。上面介绍了程序的启动模式，我们配置了BOOT0和BOOT1都接地，程序即从flash启动。由于板子尺寸较小，这里没有采用JTAG方式，因为其占用的IO管脚比较多，选择的SWD模式占用的IO很少，只需要两根信号线和电源线，而且下载速度也非常快，SWD不仅可以下载代码，还可以实时跟踪调试，寻找程序中的bug, 让开发事半功倍。
+
 MEMS传感器模块设计相应的原理图如下：
 \begin{figure}[!htb]
  \centering
@@ -91,7 +93,7 @@ MEMS传感器模块设计相应的原理图如下：
  \label{chap3_Fig.2}
  \vspace{-0.4cm}
 \end{figure}
-图中采用退耦电容C18、C21消除电源纹波对供电电路的影响。
+图中采用退耦电容C18、C21消除电源纹波对供电电路的影响。选择通过SPI接口来访问。
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_Power}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -116,7 +118,7 @@ SD卡主要完成实验过程中的数据保存功能，可以方便地进行调试和数据分析。
 \end{tabular}
 \end{table}
 
-硬件板载一个MiniUSB头，用于USB从机(SLAVE)通信，可以让设备同电脑端USB通信进行数据的传输，同时，也可以为系统供电电流不超过500mA，
+硬件板载一个MiniUSB头，用于USB从机(SLAVE)通信，可以让设备同电脑端USB通信进行数据的传输，同时，还可以为系统供电，但电流不超过500mA。
 
 \subsection{系统PCB板设计}
 使用Altium Designer完成原理图设计后，还要绘制PCB图来制作印刷电路板，PCB板是电路元件的载体，提供了元器件之间的电气连接。在设计PCB 时，必须遵守电路设计的一般规则，不仅要解决好信号的传输问题，还要消除电磁耦合的影响。在设计电路板时，根据以下几个规则：

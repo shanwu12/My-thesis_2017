@@ -21,10 +21,9 @@
 \BOOKMARK [1][]{section.2.3}{硬件电路设计}{chapter.2}% 21
 \BOOKMARK [2][]{subsection.2.3.1}{系统原理图设计}{section.2.3}% 22
 \BOOKMARK [2][]{subsection.2.3.2}{系统PCB板设计}{section.2.3}% 23
-\BOOKMARK [1][]{section.2.4}{分布式模型预测控制}{chapter.2}% 24
-\BOOKMARK [2][]{subsection.2.4.1}{相容性约束的设计}{section.2.4}% 25
-\BOOKMARK [2][]{subsection.2.4.2}{终端成分的设计}{section.2.4}% 26
-\BOOKMARK [2][]{subsection.2.4.3}{分布式实现算法}{section.2.4}% 27
-\BOOKMARK [1][]{section.2.5}{主要结果}{chapter.2}% 28
-\BOOKMARK [1][]{section.2.6}{仿真结果和分析}{chapter.2}% 29
-\BOOKMARK [1][]{section.2.7}{本章小结}{chapter.2}% 30
+\BOOKMARK [2][]{subsection.2.3.3}{硬件调试}{section.2.3}% 24
+\BOOKMARK [2][]{subsection.2.3.4}{终端成分的设计}{section.2.3}% 25
+\BOOKMARK [2][]{subsection.2.3.5}{分布式实现算法}{section.2.3}% 26
+\BOOKMARK [1][]{section.2.4}{主要结果}{chapter.2}% 27
+\BOOKMARK [1][]{section.2.5}{仿真结果和分析}{chapter.2}% 28
+\BOOKMARK [1][]{section.2.6}{本章小结}{chapter.2}% 29

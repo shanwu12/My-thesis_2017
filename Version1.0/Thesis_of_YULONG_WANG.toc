@@ -21,11 +21,10 @@
 \contentsline {section}{\numberline {2.3}硬件电路设计}{18}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}系统原理图设计}{18}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}系统PCB板设计}{21}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}分布式模型预测控制}{22}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}相容性约束的设计}{22}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}终端成分的设计}{22}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}分布式实现算法}{22}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}主要结果}{22}{section.2.5}
-\contentsline {section}{\numberline {2.6}仿真结果和分析}{22}{section.2.6}
-\contentsline {section}{\numberline {2.7}本章小结}{22}{section.2.7}
+\contentsline {subsection}{\numberline {2.3.3}硬件调试}{22}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}终端成分的设计}{22}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}分布式实现算法}{22}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}主要结果}{22}{section.2.4}
+\contentsline {section}{\numberline {2.5}仿真结果和分析}{22}{section.2.5}
+\contentsline {section}{\numberline {2.6}本章小结}{22}{section.2.6}
 \contentsfinish 

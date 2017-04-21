@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  18 APR 2017 15:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  19 APR 2017 10:10
 entering extended mode
 **Thesis_of_YULONG_WANG.tex
 
@@ -1079,39 +1079,35 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 File: figures/chap3/chap3_Arm.png Graphic file (type png)
 
 <use figures/chap3/chap3_Arm.png>
-Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 57.
+Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 53.
 (pdftex.def)             Requested size: 414.58246pt x 363.65991pt.
-
-<figures/chap3/chap3_RST.png, id=384, 117.43875pt x 155.07938pt>
+ [17]
+<figures/chap3/chap3_RST.png, id=389, 117.43875pt x 155.07938pt>
 File: figures/chap3/chap3_RST.png Graphic file (type png)
 
 <use figures/chap3/chap3_RST.png>
-Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 64.
+Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 61.
 (pdftex.def)             Requested size: 138.19649pt x 182.49039pt.
-
-Underfull \vbox (badness 5533) has occurred while \output is active []
-
- [17]
-[18 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3/chap3_Arm.png>]
-<figures/chap3/chap3_Principle.png, id=397, 903.375pt x 510.708pt>
+ [18 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap3/chap3_Arm.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versi
+on1.0/figures/chap3/chap3_RST.png>]
+<figures/chap3/chap3_Principle.png, id=399, 903.375pt x 510.708pt>
 File: figures/chap3/chap3_Principle.png Graphic file (type png)
 
 <use figures/chap3/chap3_Principle.png>
 Package pdftex.def Info: figures/chap3/chap3_Principle.png used on input line 9
-2.
+4.
 (pdftex.def)             Requested size: 414.58246pt x 234.38303pt.
- [19 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3/chap3_RST.png>]
-<figures/chap3/chap3_Power.png, id=406, 297.36093pt x 386.94562pt>
+ [19]
+<figures/chap3/chap3_Power.png, id=406, 314.97675pt x 428.802pt>
 File: figures/chap3/chap3_Power.png Graphic file (type png)
 
 <use figures/chap3/chap3_Power.png>
-Package pdftex.def Info: figures/chap3/chap3_Power.png used on input line 104.
-(pdftex.def)             Requested size: 230.32515pt x 299.71443pt.
+Package pdftex.def Info: figures/chap3/chap3_Power.png used on input line 106.
+(pdftex.def)             Requested size: 230.32515pt x 313.56592pt.
  [20 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_Principle.png>]
-Overfull \hbox (3.0554pt too wide) in paragraph at lines 126--127
+Overfull \hbox (3.0554pt too wide) in paragraph at lines 128--129
 []\C19/zhsong/m/n/12/62 M \C19/zhsong/m/n/12/45 ‡ \C19/zhsong/m/n/12/36 † \C19/
 zhsong/m/n/12/63 1 \C19/zhsong/m/n/12/61 ˜ \C19/zhsong/m/n/12/42 ‡\OT1/cmr/m/n/
 12 MiniUSB\C19/zhsong/m/n/12/57 Þ|\C19/rm/m/n/12/26 §| \C19/zhsong/m/n/12/62 ^ 
@@ -1144,56 +1140,65 @@ Package rerunfilecheck Warning: File `Thesis_of_YULONG_WANG.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `Thesis_of_YULONG_WANG.out':
 (rerunfilecheck)             Before: 89C7EBAC899C67F8444D870C42589A43;3236
-(rerunfilecheck)             After:  80F5A8FCE6BAD475C723A5A4CF77C01E;1806.
+(rerunfilecheck)             After:  DDC3653F5DFE9DBEE99892314E0237CF;1609.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18939 strings out of 495354
- 296902 string characters out of 3183859
+ 18926 strings out of 495354
+ 296610 string characters out of 3183859
  380389 words of memory out of 3000000
- 21542 multiletter control sequences out of 15000+200000
- 56192 words of font info for 196 fonts, out of 3000000 for 9000
+ 21529 multiletter control sequences out of 15000+200000
+ 55599 words of font info for 194 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,19n,47p,999b,1086s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
-imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
-/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
-.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Font
-s/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WIND
-OWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf>
-<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
+ 43i,19n,47p,999b,1074s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{section.2.6} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
 hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
-onts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/W
-INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.t
-tc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
-simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
-S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
-:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsu
-n.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fon
-ts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIN
+onts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/W
+INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.t
+tf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/
+simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
+S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C
+:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhe
+i.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fon
+ts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WIN
 DOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc
-><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/si
-mhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
+msun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
 Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
 WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
-ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/CTEX/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmib10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/s
-ymbols/msam10.pfb>
-Output written on Thesis_of_YULONG_WANG.pdf (29 pages, 831912 bytes).
+ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
+/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
+WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
+C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simh
+ei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
+nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
+NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.tt
+c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/CTEX/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmib10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb>
+Output written on Thesis_of_YULONG_WANG.pdf (29 pages, 838724 bytes).
 PDF statistics:
  690 PDF objects out of 1000 (max. 8388607)
  99 named destinations out of 1000 (max. 500000)

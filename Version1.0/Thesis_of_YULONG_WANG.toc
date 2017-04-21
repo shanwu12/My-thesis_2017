@@ -18,13 +18,10 @@
 \contentsline {subsection}{\numberline {2.2.2}MEMS器件}{16}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}卫星接收模块}{16}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}电源管理模块}{17}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}硬件电路设计}{18}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}系统原理图设计}{18}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.3}硬件电路设计}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}系统原理图设计}{17}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}系统PCB板设计}{21}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}硬件调试}{22}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}终端成分的设计}{22}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}分布式实现算法}{22}{subsection.2.3.5}
 \contentsline {section}{\numberline {2.4}主要结果}{22}{section.2.4}
-\contentsline {section}{\numberline {2.5}仿真结果和分析}{22}{section.2.5}
-\contentsline {section}{\numberline {2.6}本章小结}{22}{section.2.6}
+\contentsline {section}{\numberline {2.5}本章小结}{22}{section.2.5}
 \contentsfinish 

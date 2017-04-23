@@ -1,5 +1,5 @@
 
-\chapter{多个线性二阶系统的分布式模型预测编队控制}
+\chapter{小型化组合定位系统算法软件设计}
 
 \section{引言}
 编队是指设计合适的控制器，使得多个系统形成一定队形，编队既可以是动态的，也可以是静态的。编队控制是多智能体领域重要的问题。本章主要研究了多个线性二阶系统的分布式模型预测编队控制问题，每个智能体到达各自的目的地形成队形，同时智能体之间满足避碰约束。
@@ -100,8 +100,8 @@ $\hat{z}_i(k+l|k)$  & 假设状态  \\
 \label{chap3_assumed control input}
   \hat{u}_i(k+l|k)=\left\{
                \begin{array}{l}
-                u_i^{*}(k+l|k-1)    \qquad\qquad   l=0,1,\ldots,N-2 \\
-               \kappa_i(z^*_i(k-1+N|k-1))  ~ \ \ \ \ \qquad  l=N-1,\\
+                u_i^{*}(k+l|k-1)    \qquad\qquad \qquad    l=0,1,\ldots,N-2 \\
+               \kappa_i(z^*_i(k-1+N|k-1))  ~ \ \ \ \ \  l=N-1,\\
                \end{array}
              \right.
 \end{eqnarray}
@@ -113,8 +113,8 @@ $\hat{z}_i(k+l|k)$  & 假设状态  \\
 \label{chap3_Eq.6}
   \hat{z}_i(k+l|k)=\left\{
                \begin{array}{l}
-                z_i^{*}(k+l|k-1) ,    \qquad\qquad    l=0,1,\ldots,N-1 \\
-                z_i^{\kappa}(k+N|k-1), \ \ \ \qquad l=N.\\
+                z_i^{*}(k+l|k-1)    \qquad\qquad    l=0,1,\ldots,N-1 \\
+                z_i^{\kappa}(k+N|k-1) \ \ \ \  \qquad l=N.\\
                \end{array}
              \right.
 \end{eqnarray}
@@ -125,7 +125,7 @@ $\hat{z}_i(k+l|k)$  & 假设状态  \\
 \subsection{相容性约束的设计}
 类似于前两章，由于引入了假设轨迹，我们需要设计相容性约束来保证每个智能体的实际轨迹和假设轨迹偏差不大。在本章中，相容性约束有两部分组成：位置的相容性约束和状态的相容性约束。
 
-对于智能体$i$，定义$\mu_{ij}(k+l|k)=\frac{\|\hat{x}_j(k+l|k)-\hat{x}_i(k+l|k)\|-2R}{2}$，$l=0,1,\ldots,N-1$，$j\in\mathbb{N}_a\setminus i$和$\mu_{i}(k+l|k)=\min\limits_{j\in\mathbb{N}_a\setminus i}\mu_{ij}$。位置的相容性约束定义为：
+对于智能体$i$，定义$\mu_{ij}(k+l|k)=\frac{\|\hat{x}_j(k+l|k)-\hat{x}_i(k+l|k)\|-2R}{2}$，$l=0,1,\ldots,N-1$，$j\in\mathbb{N}_a\setminus i$和$\mu_{i}(k+l|k)=\min\limits_{j\in\mathbb{N}_a\setminus i}\mu_{ij}$。 位置的相容性约束定义为：
 \begin{eqnarray}
 \|\hat{x}_i(k+l|k)-x_i(k+l|k)\|=\varepsilon^x_i(k+l|k)\leq\mu_i(k+l|k) \ \ l=0,1,\ldots,N-1. \label{chap3_compatibility constraints for position}
 \end{eqnarray}
@@ -173,7 +173,7 @@ $c_i=-\frac{\gamma_i}{N-1}\alpha_i\|\Delta z_i(k|k)\|$，$\varphi_{ji}(k)=\max\li
 将其带入模型（\ref{chap3_model}），可得误差模型如下：
 \begin{eqnarray}
 &&\Delta z_i(k+1)=A\Delta z_i(k)+(I-A)z^d_i-B(K_{i1}z_i(k)+K_{i2}z^d_i) \nonumber \\
-&&\hspace{2cm}=(A+BK_{i1})\Delta z_i(k)+(I-A-BK_{i1}-BK_{i2})z^d_i, \label{chap3_error model1}
+&&\hspace{2cm}=(A+BK_{i1})\Delta z_i(k)+(I-A-BK_{i1}-BK_{i2})z^d_i. \label{chap3_error model1}
 \end{eqnarray}
 如果以下两个条件满足
 \begin{itemize}

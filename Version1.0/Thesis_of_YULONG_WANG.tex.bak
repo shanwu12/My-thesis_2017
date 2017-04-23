@@ -17,7 +17,6 @@
 \pagestyle{plain}
 \input chapter/chap-abstract
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ŀ¼
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,9 +36,8 @@
  \setcounter{chapter}{0}
  \def\thepage{\arabic{page}}
 %\include {chapter/chapter1}
-%\include {chapter/chapter2}
 \include {chapter/chapter2}
-%\include {chapter/chapter3}
+\include {chapter/chapter3}
 %\include {chapter/chapter4}
 %\include {chapter/chapter5}
 %\include {chapter/chap-bibs}

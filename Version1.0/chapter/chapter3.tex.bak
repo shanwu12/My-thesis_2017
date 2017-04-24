@@ -39,7 +39,7 @@ STM32F405RGT6是F4系列的一款设备，我们选用LQNF100封装，内置有1M闪存。其通讯接口丰
  \centering
  \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_BMI}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{MEMS惯性芯片}
- \label{chap3_Fig.1}
+ \label{chap3_Fig.2}
  \vspace{-0.4cm}
 \end{figure}
 本设计采用的MEMS器件是德国博世公司研发的六轴惯性传感器芯片BMI160，该模块集成了三轴陀螺仪、三轴加速度计和温度传感器。外形尺寸仅为$2.5mm\times3.0\times0.83mm$，实物图如\ref{chap3_Fig.1}所示。
@@ -51,18 +51,24 @@ BMI160的性能指标如表？所示
 
 \subsection{卫星接收模块}
 卫星接收模块采用的是U-blox公司的NEO-M8N系列芯片。NEO-M8N是一款高性能,高灵敏度的卫星信号接收模块，虽然其外形尺寸只有$16\times12.2\times2.4mm$,却可以提供丰富的卫星数据信息，模块的高灵敏度、低功耗及轻巧的体积，非常适用于车载、手机、无人机及其他移动定位系统的应用。其实物如图？所示：
-
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/chap3/chap3_NEO}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+\caption{卫星接收模块}
+\label{chap3_Fig.3}
+\vspace{-0.4cm}
+\end{figure}
 U-blox8拥有22个跟踪通道，66个捕获通道，热启动下捕获卫星信号的速度不足一秒，模块速度极快，其捕获和跟踪灵敏度甚至达到-160dBm。同时，这款芯片采用创新设计和技术，能有效抑制干扰源和多路径效应，在恶劣环境下也能提供有效的导航信息。
 NEO-M8N的性能指标如表？所示：
 
-NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式。据格格式采用工程中常用的NMEA-0183协议，该协议是美国国家海洋电子协会(national marine electronics association)为海用电子设备指定的一套标准格式，目前绝大部分卫星接收机都采用NMEA-0183协议输出位置、速度、星历等导航信息
+NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式。据格格式采用工程中常用的NMEA-0183协议，该协议是美国国家海洋电子协会(national marine electronics association)为海用电子设备指定的一套标准格式，目前绝大部分卫星接收机都采用NMEA-0183协议输出位置、速度、星历等导航信息。
 
 \subsection{电源管理模块}
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.2\textwidth]{figures/chap3/chap3_TPS73}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{电源芯片}
- \label{chap3_Fig.1}
+ \label{chap3_Fig.4}
  \vspace{-0.4cm}
 \end{figure}
 电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性。本系统选择德州仪器的TPS73133 具有反向电流保护的超低功耗电压稳压器件，系列线性稳压器是设计用于功耗敏感类应用的超低静态电流器件。一个精密带隙和误差放大器在温度范围内的精度为2。 只有1μA 的静态电流使这些器件成为要求极小闲置状态功率耗散的电池供电常开系统的理想解决方案。为了增加安全性，这些器件还具有热关断、电流限制和反向电流保护功能。通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
@@ -75,7 +81,7 @@ ARM最小系统原理图如下所示：
  \centering
  \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_Arm}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{ARM最小系统原理图}
- \label{chap3_Fig.1}
+ \label{chap3_Fig.5}
  \vspace{-0.4cm}
 \end{figure}
 
@@ -83,7 +89,7 @@ ARM最小系统原理图如下所示：
  \centering
  \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_RST}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{复位电路}
- \label{chap3_Fig.2}
+ \label{chap3_Fig.6}
  \vspace{-0.4cm}
 \end{figure}
 
@@ -112,17 +118,17 @@ $1$ & $1$ & SRAM启动 & SRAM启动，可在SRAM中调试代码 \\
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_Power}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
- \caption{BMI160硬件电路设计}
- \label{chap3_Fig.2}
+ \caption{电源管理设计}
+ \label{chap3_Fig.7}
  \vspace{-0.4cm}
 \end{figure}
 
 MEMS传感器模块设计相应的原理图如下：
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_Principle}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_Bmi160}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{BMI160硬件电路设计}
- \label{chap3_Fig.2}
+ \label{chap3_Fig.8}
  \vspace{-0.4cm}
 \end{figure}
 图中采用退耦电容C18、C21消除电源纹波对供电电路的影响。从电路图可以看出BMI160通过SPI高速串行接口来和ARM处理器进行数据通讯。BMI160 是一个自动测量系统，当系统上电后，器件自检通过后，就可以输出六轴传感器数据，默认采样频率为6.4KHz。程序设置100Hz取数，使控制器执行终端可实现100Hz带宽。一般带宽大时，动态响应虽提高，噪声（即稳态误差）也随之增加。 动态在大于200Hz时，大约有3dB的信号损失，噪声也会增加，表现出来的是惯性传感器零偏稳定性变差。
@@ -130,9 +136,22 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 寄存器对应表？如下：
 
 内部寄存器都是十六位宽度，分高低八位两个字节，但只要一个字节的地址即可访问全部的两个字节。例如X轴加速度计输出寄存器XACCL\_OUT，地址为0x0A,寄存器内容为X轴加速度计的输出数据，并以14位二进制补码的形式存储。当需要读取X轴加速度计的输出数据时，只需要通过编程在给芯片写入0x0A的数据，SPI即可在输出端返回16位寄存器的数据，再通过二进制补码的格式将其转换成十进制，乘以相应的刻度即可得到X轴加速度计的数据。
-
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_SDIO}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{NEO-M8N电路图}
+ \label{chap3_Fig.9}
+ \vspace{-0.4cm}
+\end{figure}
 SD卡主要完成实验过程中的数据保存功能，可以方便地进行调试和数据分析。
 
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_m8n}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{NEO-M8N电路图}
+ \label{chap3_Fig.10}
+ \vspace{-0.4cm}
+\end{figure}
 在设计卫星接受模块电路时，设计中为减小信号间的串扰采用了隔离供电的方式，模块引出电源引脚连接$3V3_2$，可以由处理器编程控制稳压电源芯片的输出使能来达到控制卫星芯片工作的目的。设计IPX天线接口可用于扩展GPS有源天线，非常适合地面车辆的使用。设备TIMEPULSE端口连接到状态指示灯，此端口的输出特性可以通过程序进行设置，在默认情况下，有两个状态，这样通过指示灯可以方便判断当前卫星定位的情况。选择STM32的USART3连接设置NEO-M8N模块，连线引脚图如上图所示
 \begin{table}[!h]
 \renewcommand\arraystretch{1.2}
@@ -142,8 +161,8 @@ SD卡主要完成实验过程中的数据保存功能，可以方便地进行调试和数据分析。
 \toprule
 \hspace{1cm}状态 && 状态说明 \\
 \hline
-常亮 && 未实现定位\\
-闪烁 && 模块定位成功\\
+\hspace{1cm}常亮 && 未实现定位\\
+\hspace{1cm}闪烁 && 模块定位成功\\
 \toprule
 \end{tabular}
 \end{table}
@@ -151,13 +170,16 @@ SD卡主要完成实验过程中的数据保存功能，可以方便地进行调试和数据分析。
 硬件板载一个MiniUSB头，用于USB从机(SLAVE)通信，可以让设备同电脑端USB通信进行数据的传输，同时，还可以为系统供电，但电流不超过500mA。
 
 \subsection{系统PCB板设计}
-使用Altium Designer完成原理图设计后，还要绘制PCB图来制作印刷电路板，PCB板是电路元件的载体，提供了元器件之间的电气连接。在设计PCB 时，必须遵守电路设计的一般规则，不仅要解决好信号的传输问题，还要消除电磁耦合的影响。在设计电路板时，主要遵循了以下几个规则：\\
+使用Altium Designer完成原理图设计后，还要绘制PCB图来制作印刷电路板，PCB板是电路元件的载体，提供了元器件之间的电气连接。在设计PCB 时，必须遵守电路设计的一般规则，不仅要解决好信号的传输问题，还要消除电磁耦合的影响。在设计电路板时，主要遵循了以下几个规则：
+
 1、器件布局
 
-元器件布局尽量紧凑，各模块之间以主处理器为中心，其他器件以扇形状态置于元器件周围，总的连线尽可能短，关键信号线最短。使用同一电源的器件尽可能的放在一块，便于电源管理。\\
+元器件布局尽量紧凑，各模块之间以主处理器为中心，其他器件以扇形状态置于元器件周围，总的连线尽可能短，关键信号线最短。使用同一电源的器件尽可能的放在一块，便于电源管理。
+
 2、布线
 
-地线布线遵循了环路最小原则，即信号线与其回路构成的环面积要尽可能小，环面积越小，对外的辐射越少，接收外界的干扰也越小；信号线之间会因较长的平行布线引起相互干扰，主要是由于平行线间的分布电容和分布电感的作用，扩大线间距、尽可能少走平行线，不走环行线以此来克服串扰。增加线宽度，重要信号间，平行地线的方法隔离。\\
+地线布线遵循了环路最小原则，即信号线与其回路构成的环面积要尽可能小，环面积越小，对外的辐射越少，接收外界的干扰也越小；信号线之间会因较长的平行布线引起相互干扰，主要是由于平行线间的分布电容和分布电感的作用，扩大线间距、尽可能少走平行线，不走环行线以此来克服串扰。增加线宽度，重要信号间，平行地线的方法隔离。
+
 3、接地
 
 接地技术的目的是最小化接地阻抗，以减少从电路返回到电源之间的接地回路的电势。去耦电容放置在距离IC供电线和接地层之间尽可能近的地方。

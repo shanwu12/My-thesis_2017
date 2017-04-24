@@ -1,0 +1,33 @@
+\contentsline {chapter}{目录}{i}{chapter*.1}
+\contentsline {chapter}{\numberline {第1\ignorespaces 章\hspace {0.3em}}绪论}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}课题研究的目的与意义}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}研究背景和研究现状}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}MEMS惯性传感器}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}卫星导航}{4}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}组合导航定位系统发展及现状}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}论文的内容及编排}{8}{section.1.4}
+\contentsline {chapter}{\numberline {第2\ignorespaces 章\hspace {0.3em}}小型化车载导航组合系统方案设计}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}引言}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}车载组合导航系统坐标定义及转换换}{11}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}导航坐标系定义}{11}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}坐标系变换原理}{13}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}导航定位原理}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}四元数与姿态更新}{16}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}速度更新}{20}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}位置更新}{21}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}小型化车载组合定位原理}{22}{section.2.4}
+\contentsline {section}{\numberline {2.5}车载组合定位系统总体方案设计}{22}{section.2.5}
+\contentsline {section}{\numberline {2.6}本章小结}{24}{section.2.6}
+\contentsline {chapter}{\numberline {第3\ignorespaces 章\hspace {0.3em}}小型化组合定位系统硬件设计}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}引言}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}主要器件选型}{26}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}ARM芯片}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}MEMS器件}{27}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}卫星接收模块}{27}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}电源管理模块}{28}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}硬件电路设计}{29}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}系统原理图设计}{29}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}系统PCB板设计}{33}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}硬件调试}{34}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}本章小结}{34}{section.3.4}
+\contentsfinish 

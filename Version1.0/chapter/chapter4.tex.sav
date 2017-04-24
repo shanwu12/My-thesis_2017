@@ -5,8 +5,59 @@
 组合导航技术的发展，一方面得电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法，为组合导航系统提供了有力的理论基础。有了前几章的设计基础，本章主要讲述MEMS惯导和GPS传感器松组合系统的软件工程实现，主要从卡尔曼滤波算法，嵌入式软件，上位机显示等方面内容进行说明。
 
 \section{滤波器的设计}
- 本章
+ 本节讨论MEMS惯导/GNSS组合的基本滤波器设计，采用第二章中图？所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS惯导和GNSS接收机保持独立工作，选用导航误差作为系统状态量，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，该算法具有实现简单，可靠性较高，计算量低等优点。
+ 
+ 本设计中组合系统以15维导航误差作为系统的待估计状态$\delta X$($\delta X$表示误差作为状态)，误差包括三维位置、三维速度、三维姿态、还有三个陀螺零偏及三个加速度计零偏，表示为：
+\begin{equation}
+\delta X = [\delta P_\varphi \ \ \delta P_\lambda \ \ \delta P_h\ \ \delta V_e\ \ \delta V_n\ \ \delta V_u\ \ \delta A_p\ \ \delta A_r\ \ \delta A_y\ \  gb_x\ \ gb_y\ \ gb_z\ \  ab_x\ \ ab_y\ \ ab_z]^T
+\end{equation}
 
+其中：
+
+$[\delta P_\varphi \ \ \delta P_\lambda \ \ \delta P_h]^T$为导航坐标系上的东北天三维位置误差；
+$[\delta V_e\ \ \delta V_n\ \ \delta V_u]^T$为分别为东北天方向三维速度误差；
+$[\delta A_p\ \ \delta A_r\ \ \delta A_y]^T$为俯仰角、翻滚角、偏航角三维姿态误差；
+$[gb_x\ \ gb_y\ \ gb_z]^T$为MEMS陀螺仪沿载体系$x$，$y$，$z$轴的随机误差,为一阶高斯马尔可夫模型；
+$[ab_x\ \ ab_y\ \ ab_z]^T$为MEMS加速度计沿载体系$x$，$y$，$z$轴的随机误差,为一阶高斯马尔可夫模型；\\
+
+(1)MEMS惯导姿态误差方程
+由于姿态四元数满足式(2?),可将姿态速率$\boldsymbol{\omega}_{nb}^b$视为零标量四元数。根据文献[?]推导，将$\delta\boldsymbol{Q}$写成三角形式
+\begin{equation}
+\delta\boldsymbol{Q} = \cos frac{}{}
+\end{equation}
+
+
+可以得到东北天坐标系下的MEMS惯导姿态误差方程的矢量形式，
+\begin{equation}
+\dot{\boldsymbol\varphi}=\boldsymbol\varphi\times\boldsymbol\omega_{in}^n+\delta\boldsymbol\omega_{in}^n-\boldsymbol\varepsilon^n
+\end{equation}
+
+矩阵形式为：
+
+\begin{equation}
+\left [\begin{array}{ccc}
+\dot{\boldsymbol\varphi}\\
+\dot{q}_1\\
+\dot{q}_2\\
+\dot{q}_3\\
+\end{array}\right]=
+\frac{1}{2}
+\left [\begin{array}{cccc}
+0 & -\omega_x & -\omega_y & -\omega_z\\
+\omega_x & 0& \omega_z & -\omega_y\\
+\omega_y & -\omega_z& 0 & \omega_x\\
+\omega_z & \omega_y& -\omega_x &0
+\end{array}\right]
+\left [\begin{array}{ccc}
+q_0\\
+q_1\\
+q_2\\
+q_3
+\end{array}\right]
+\end{equation}
+
+(1)MEMS惯导速度误差方程
+(1)MEMS惯导位置误差方程
 \section{分布式协同模型预测控制}
 
 \subsection{相容性约束的设计}

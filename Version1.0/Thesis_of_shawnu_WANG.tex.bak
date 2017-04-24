@@ -15,7 +15,7 @@
 %\input chapter/chap-shengming
 
 \pagestyle{plain}
-\input chapter/chap-abstract
+%\input chapter/chap-abstract
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ŀ¼

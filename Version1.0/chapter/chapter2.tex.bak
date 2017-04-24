@@ -20,9 +20,9 @@
 与地球固连，以地球质心为坐标原点，轴与地球自转轴方向一致。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap2_coordinate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.6\textwidth]{figures/chap2/chap2_coordinate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{地球坐标系与地理坐标系示意图}
- \label{chap2_Fig.2}
+ \label{chap2_Fig.1}
  \vspace{-0.4cm}
 \end{figure}
 
@@ -33,26 +33,25 @@
 (4)载体坐标系(b系)
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap2/chap_body}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
- \caption{地球坐标系与地理坐标系示意图}
+ \includegraphics[width=0.4\textwidth]{figures/chap2/chap2_body}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{机体坐标系示意图}
  \label{chap2_Fig.2}
  \vspace{-0.4cm}
 \end{figure}
-如图所示，载体坐标系的原点$O_b$位于载体重心位置，与运载体固联，$x_b$轴沿载体的横轴方向，$y_b$沿载体的纵轴方向，$z_b$垂直机体水平面向上，$x_by_bz_b$轴构成右手直角坐系，载体坐标系相对于地理坐标系的方位称为载体的姿态和航向。
+
+如图\ref{chap2_Fig.2}所示，载体坐标系的原点$O_b$位于载体重心位置，与运载体固联，$x_b$轴沿载体的横轴方向，$y_b$沿载体的纵轴方向，$z_b$垂直机体水平面向上，$x_by_bz_b$轴构成右手直角坐系，载体坐标系相对于地理坐标系的方位称为载体的姿态和航向。
 
 (5)导航坐标系(n系)
 
 导航坐标系是惯性导航系统求解导航参数时所采用的坐标系用$Ox_ny_nz_n$。针对捷联惯导来说，传感器所采的数据是沿载体坐标系轴向的，必须将该采集的信息分解到便于描述和求解导航参数的坐标系内，然后进行导航解算，这个坐标系即导航坐标系。本文选择的导航坐标系为地理坐标系即东北天坐标系。
 
 当物体在地球上运动时，物体相对地球的位置是不断改变的，与此同时，地球上某点的地理坐标系相对于地球系的角位置也是不同。运载体相对地球运动引起地理坐标系相对地球坐标系的转动。地理坐标系相对惯性坐标系的转动角速度有两部分组成：一个是地球坐标系相对于惯性坐标系的转动角速度；另一部分是地理坐标系相对于地球坐标系的转动角速度。两部分具体的计算过程在后续章节详细介绍。确定物体的地理位置，就是确定地理坐标系相对于地球坐标系的方位关系，即经度$\lambda$纬度$\varphi$和到地球地心的距离R；而物体的姿态则是确定载体坐标系相对于地理坐标系的方位关系。
-
-
 \subsection{坐标系变换原理}
 由上面定义的几种坐标系可知，在分析惯性导航系统运动时，将用到多种坐标系，而这些坐标系并不是相互孤立的。虽然空间中一个向量在不同的坐标系里的坐标是不同的，但是通过坐标变换，可以将一个坐标系下的向量坐标转换到另一个坐标系下。这种变换包括平移和旋转，在惯性导航中坐标系的变换我们更关注坐标之间的角度关系，即旋转坐标变换，具体的转换方法见文献。以下介绍两种坐标之间的转换。
 
 (1)地球坐标系与地理坐标系之间的转换
 
-根据图（\ref{chap2_Fig.2}）可知，地球坐标系和地理坐标系的原点不重合，当用经度$\lambda$ 和纬度$\varphi$来表示旋转角度时，其转动过程可以描述为地球坐标系绕$Z_e$轴转动($90^{\circ}$+$\lambda$)，再绕变换后的$x$轴转动($90^{\circ}$-$\varphi$),最后绕变换后的z轴旋转$90^{\circ}$而得到地理坐标系。\\
+根据图（\ref{chap2_Fig.1}）可知，地球坐标系和地理坐标系的原点不重合，当用经度$\lambda$ 和纬度$\varphi$来表示旋转角度时，其转动过程可以描述为地球坐标系绕$Z_e$轴转动($90^{\circ}$+$\lambda$)，再绕变换后的$x$轴转动($90^{\circ}$-$\varphi$),最后绕变换后的z轴旋转$90^{\circ}$而得到地理坐标系。
 \begin{align*}
 \left [\begin{array}{ccc}
 E\\
@@ -89,7 +88,7 @@ z_e\\
 x_e\\
 y_e\\
 z_e\\
-\end{array}\right]\tag{1.1}\\
+\end{array}\right]\tag{1.1}
 \end{align*}
 用$\textbf{C}^n_e$表示变换矩阵，有
 \begin{eqnarray}
@@ -277,6 +276,13 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 \boldsymbol{Q}=\Vert\boldsymbol{Q}\Vert(\cos\frac{\phi}{2}+\boldsymbol{\mu}\sin\frac{\phi}{2})
 \end{equation}
 特别地，当$\Vert\boldsymbol{Q}\Vert=1$时，即对于单位四元数，有，$q_0=\cos\frac{\phi}{2}$,$\boldsymbol{q_v}=\boldsymbol{\mu}\sin\frac{\phi}{2}$ 且$q_0^2+\boldsymbol{q_v}^T\boldsymbol{q_v}=1$;$\boldsymbol{\mu}$ 为单位长度的三维矢量，即$\boldsymbol{\mu}^T\boldsymbol{\mu}=1$;$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\mu$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\mu$来表示如下图。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.4\textwidth]{figures/chap2/chap2_rotate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{坐标系旋转变化}
+ \label{chap2_Fig.3}
+ \vspace{-0.4cm}
+\end{figure}
 
 因此，推导出由四元数表示的载体系至导航系的转换矩阵：
 \begin{equation}
@@ -301,7 +307,7 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 {0} & {2(q_1q_3-q_0q_2)} & {2(q_2q_3+q_0q_1)} & {q_0^2-q_1^2-q_2^2+q_3^2}
 \end{array}\right]
 \end{align*}
-式中，$\boldsymbol{Q}_b^n$表示导航系n到载体系b的变换四元数；$(\boldsymbol{Q}_b^n)^*$是$\boldsymbol{Q}_b^n$的共轭表示，$\boldsymbol{v}^n$和$\boldsymbol{v}^b$表示同意向量分别在导航系n和载体系b下的表示，其向量表示分别为
+式中，$\boldsymbol{Q}_b^n$表示导航系n到载体系b的变换四元数；$(\boldsymbol{Q}_b^n)^*$是$\boldsymbol{Q}_b^n$的共轭表示，$\boldsymbol{v}^n$和$\boldsymbol{v}^b$为同一向量在导航系n和载体系b下的表示，该向量分别为
 \begin{align*}
 \boldsymbol{v}_n&=
 \left [\begin{array}{cccc}
@@ -429,7 +435,7 @@ q_3
 式？在MEMS惯导速度更新中的第二项和第三项分别进行了旋转效应和划桨效应的补偿，旋转效应指的是运动物体在某个方向进行线运动的同时发生空间旋转变化引起，划桨效应指运动物体在纵轴方向做线振动时又在横轴方向发生同向频的角振动。$\delta\theta_m$、$\Delta\boldsymbol{V}_m$为更新周期内的陀螺角增量和加速度计速度增量。因为载体角速度和加速度变化复杂，无法通过确定的数学公式加以描述，工程中常采用曲线拟合的方法来近似求解。
 根据比力方程，可以得到离散系统时速度在导航系的增量为：
 \begin{equation}
-\Delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
+\delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
 \end{equation}
 
 由于低成本MEMS传感器属于低精度，陀螺精度（零偏稳定性及重复性）为$0.1^\circ$量级，加速度精度为$5mg$,传感器标定在下节介绍具体方法，此处忽略划桨效应，可对其作大幅简化。
@@ -504,7 +510,7 @@ h
  \vspace{-0.4cm}
 \end{figure}
 
-从图中可以看出，首先将MEMS惯性器件通过SPI通信接口以100Hz的频率采样，降频至10Hz送入ARM芯片数据缓存区，降频采用简单的均值滤波并做误差补偿，供后续系统做惯导解算使用；另一路GNSS模块通过串口连接到ARM芯片，并以1Hz 速率将数据送入数据缓存区；ARM芯片在解析惯导数据和GNSS数据后，对结果进行时间对准后进行卡尔曼滤波融合对导航数据进行最优估计，最后通过串行总线把导航解算数据传送到PC端进行显示，同时也可将结果实时记录在SD中，方便对实时环境的工作测试。
+从图中可以看出，首先将MEMS惯性器件通过SPI通信接口以100Hz的频率采样，降频至10Hz送入ARM芯片数据缓存区，降频采用简单的均值滤波并做误差补偿，供后续系统做惯导解算使用；另一路GNSS模块通过串口连接到ARM芯片，并以1Hz 速率将数据送入数据缓存区；ARM芯片在解析惯导数据和GNSS数据后，对结果进行时间对准后进行卡尔曼滤波融合对导航数据进行最优估计，最后通过串行总线把导航解算数据传送到PC端进行显示，同时也可将结果实时记录在SD中，方便对实时工作环境的测试。
 
 根据上述系统总体方案的介绍，GNSS/INS组合导航系统中，不仅要完成导航信息解算等软件问题、首先要完成硬件平台的开发。结合本系统的功能及特点可以将设计的主要任务主要分成以下几点：
 

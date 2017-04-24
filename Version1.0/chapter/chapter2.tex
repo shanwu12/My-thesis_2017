@@ -276,6 +276,13 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 \boldsymbol{Q}=\Vert\boldsymbol{Q}\Vert(\cos\frac{\phi}{2}+\boldsymbol{\mu}\sin\frac{\phi}{2})
 \end{equation}
 特别地，当$\Vert\boldsymbol{Q}\Vert=1$时，即对于单位四元数，有，$q_0=\cos\frac{\phi}{2}$,$\boldsymbol{q_v}=\boldsymbol{\mu}\sin\frac{\phi}{2}$ 且$q_0^2+\boldsymbol{q_v}^T\boldsymbol{q_v}=1$;$\boldsymbol{\mu}$ 为单位长度的三维矢量，即$\boldsymbol{\mu}^T\boldsymbol{\mu}=1$;$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\mu$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\mu$来表示如下图。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.4\textwidth]{figures/chap2/chap2_rotate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{坐标系旋转变化}
+ \label{chap2_Fig.3}
+ \vspace{-0.4cm}
+\end{figure}
 
 因此，推导出由四元数表示的载体系至导航系的转换矩阵：
 \begin{equation}
@@ -300,7 +307,7 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 {0} & {2(q_1q_3-q_0q_2)} & {2(q_2q_3+q_0q_1)} & {q_0^2-q_1^2-q_2^2+q_3^2}
 \end{array}\right]
 \end{align*}
-式中，$\boldsymbol{Q}_b^n$表示导航系n到载体系b的变换四元数；$(\boldsymbol{Q}_b^n)^*$是$\boldsymbol{Q}_b^n$的共轭表示，$\boldsymbol{v}^n$和$\boldsymbol{v}^b$表示同意向量分别在导航系n和载体系b下的表示，其向量表示分别为
+式中，$\boldsymbol{Q}_b^n$表示导航系n到载体系b的变换四元数；$(\boldsymbol{Q}_b^n)^*$是$\boldsymbol{Q}_b^n$的共轭表示，$\boldsymbol{v}^n$和$\boldsymbol{v}^b$为同一向量在导航系n和载体系b下的表示，该向量分别为
 \begin{align*}
 \boldsymbol{v}_n&=
 \left [\begin{array}{cccc}
@@ -356,7 +363,7 @@ d\frac{\boldsymbol{Q}}{t} &= -\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\bo
 \omega_{nb}^n &=\dot{\theta}\boldsymbol{\mu}^R\\
 \omega_{nb}^n &=\boldsymbol{Q}\otimes\omega_{nb}^b\otimes\boldsymbol{Q^*}
 \end{align*}
-式？中$\omega_nb^b$是MEMS陀螺测量载体系相对于导航系下的角速度，结合上述两式式？可以计算记为
+式？中$\omega_{nb}^b$是MEMS陀螺测量载体系相对于导航系下的角速度，结合上述两式式？可以计算记为
 \begin{equation}
 d\frac{\boldsymbol{Q}}{t} = \frac{1}{2}\boldsymbol{Q}\otimes\omega_{nb}^b
 \end{equation}
@@ -428,7 +435,7 @@ q_3
 式？在MEMS惯导速度更新中的第二项和第三项分别进行了旋转效应和划桨效应的补偿，旋转效应指的是运动物体在某个方向进行线运动的同时发生空间旋转变化引起，划桨效应指运动物体在纵轴方向做线振动时又在横轴方向发生同向频的角振动。$\delta\theta_m$、$\Delta\boldsymbol{V}_m$为更新周期内的陀螺角增量和加速度计速度增量。因为载体角速度和加速度变化复杂，无法通过确定的数学公式加以描述，工程中常采用曲线拟合的方法来近似求解。
 根据比力方程，可以得到离散系统时速度在导航系的增量为：
 \begin{equation}
-\Delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
+\delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
 \end{equation}
 
 由于低成本MEMS传感器属于低精度，陀螺精度（零偏稳定性及重复性）为$0.1^\circ$量级，加速度精度为$5mg$,传感器标定在下节介绍具体方法，此处忽略划桨效应，可对其作大幅简化。

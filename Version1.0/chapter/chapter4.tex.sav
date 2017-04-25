@@ -6,7 +6,7 @@
 
 \section{滤波器的设计}
  本节讨论MEMS惯导/GNSS组合的基本滤波器设计，采用第二章中图？所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS惯导和GNSS接收机保持独立工作，选用导航误差作为系统状态量，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，该算法具有实现简单，可靠性较高，计算量低等优点。
- 
+
  本设计中组合系统以15维导航误差作为系统的待估计状态$\delta X$($\delta X$表示误差作为状态)，误差包括三维位置、三维速度、三维姿态、还有三个陀螺零偏及三个加速度计零偏，表示为：
 \begin{equation}
 \delta X = [\delta P_\varphi \ \ \delta P_\lambda \ \ \delta P_h\ \ \delta V_e\ \ \delta V_n\ \ \delta V_u\ \ \delta A_p\ \ \delta A_r\ \ \delta A_y\ \  gb_x\ \ gb_y\ \ gb_z\ \  ab_x\ \ ab_y\ \ ab_z]^T
@@ -21,43 +21,105 @@ $[gb_x\ \ gb_y\ \ gb_z]^T$为MEMS陀螺仪沿载体系$x$，$y$，$z$轴的随机误差,为一阶高
 $[ab_x\ \ ab_y\ \ ab_z]^T$为MEMS加速度计沿载体系$x$，$y$，$z$轴的随机误差,为一阶高斯马尔可夫模型；\\
 
 (1)MEMS惯导姿态误差方程
-由于姿态四元数满足式(2?),可将姿态速率$\boldsymbol{\omega}_{nb}^b$视为零标量四元数。根据文献[?]推导，将$\delta\boldsymbol{Q}$写成三角形式
-\begin{equation}
-\delta\boldsymbol{Q} = \cos frac{}{}
-\end{equation}
-
-
-可以得到东北天坐标系下的MEMS惯导姿态误差方程的矢量形式，
+由于姿态四元数满足式(2?),可将姿态速率$\boldsymbol{\omega}_{nb}^b$ 视为零标量四元数。根据文献[?]推导，
+%将$\delta\boldsymbol{Q}$写成三角形式
+%\begin{equation}
+%\delta\boldsymbol{Q} = \cos frac{\phi}{2}+frac{\boldsymbol\phi}{\phi}\sin frac{\phi}{2}
+%\end{equation}
+%式中，$\phi = left| \boldsymbol\phi right|$,$\boldsymbol\phi$是
+可以得到以地理坐标系为导航坐标系下的MEMS惯导姿态误差方程矢量形式，
 \begin{equation}
 \dot{\boldsymbol\varphi}=\boldsymbol\varphi\times\boldsymbol\omega_{in}^n+\delta\boldsymbol\omega_{in}^n-\boldsymbol\varepsilon^n
 \end{equation}
+上式矩阵形式为：
+\begin{align*}
+\displaystyle
+\left [\begin{array}{ccc}
+\dot{\boldsymbol\varphi}_e\\
+\dot{\boldsymbol\varphi}_n\\
+\dot{\boldsymbol\varphi}_u\\
+\end{array}\right]
+&=
+\left [\begin{array}{ccc}
+0                  & -\boldsymbol\varphi_u &  \boldsymbol\varphi_n\\
+\boldsymbol\varphi_u & 0                     & -\boldsymbol\varphi_e\\
+-\boldsymbol\varphi_n & \boldsymbol\varphi_e & 0 \\
+\end{array}\right]
+\left [\begin{array}{ccc}
+-\frac{V_N}{R_M+h}\\
+\omega_{ie}\cos{L}+\frac{V_E}{R_N+h}\\
+\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L}\\
+\end{array}\right]\\
+%\qquad
+&+
+\left [\begin{array}{ccc}
+-\frac{\delta V_N}{R_M+h}+\delta h\frac{V_N}{(R_M+h)^2} \\
+-\delta L\omega_{ie}\sin{L}+\frac{\delta V_E}{R_N+h}-\delta h\frac{\delta V_E}{(R_N+h)^2}\\
+\delta L\omega_{ie}\cos{L}+\frac{\delta V_E}{R_N+h}\tan{L}+ \delta L\frac{\delta V_E}{R_N+h}\sec^2 L - \delta h \frac{\delta V_E}{(R_N+h)^2}\tan L
+\end{array}\right]
+-
+\left [\begin{array}{ccc}
+\dot{\boldsymbol\varepsilon}_e\\
+\dot{\boldsymbol\varepsilon}_n\\
+\dot{\boldsymbol\varepsilon}_u
+\end{array}\right]
+\end{align*}
+展开后得；
+\begin{align*}
+\dot{\boldsymbol\varphi}_e &= \boldsymbol\varphi_n(\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L})-\boldsymbol\varphi_u(\omega_{ie}\cos{L}+\frac{V_E}{R_N+h})-\frac{\delta V_N}{R_M+h}+\delta h\frac{V_N}{(R_M+h)^2}-\boldsymbol\varepsilon_e\\
+\dot{\boldsymbol\varphi}_n &= -\boldsymbol\varphi_e(\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L})-\boldsymbol\varphi_u\frac{V_n}{R_M+h}-\delta L\omega_{ie}\sin{L}+\frac{\delta V_e}{R_N+h}-\delta h\frac{V_e}{(R_N+h)^2}-\boldsymbol\varepsilon_n\\
+\dot{\boldsymbol\varphi}_u &= \boldsymbol\varphi_e(\omega_{ie}\cos{L}+\frac{V_E}{R_N+h})+\boldsymbol\varphi_n\frac{V_n}{R_M+h}+\delta L(\omega_{ie}\cos{L}+\frac{\delta V_e}{R_N+h}\sec^2 L)+\frac{V_e}{R_N+h}\tan L\\&- \delta h\frac{V_e}{(R_N+h)^2}\tan L  \boldsymbol\varepsilon_n\\
+\end{align*}
+式中：
+\begin{align*}
+\boldsymbol\varepsilon_e &=\boldsymbol{T}_{11}\boldsymbol\varepsilon_x+\boldsymbol{T}_{12}\boldsymbol\varepsilon_y+\boldsymbol{T}_{13}\boldsymbol\varepsilon_z \\
+\boldsymbol\varepsilon_n &=\boldsymbol{T}_{21}\boldsymbol\varepsilon_x+\boldsymbol{T}_{22}\boldsymbol\varepsilon_y+\boldsymbol{T}_{23}\boldsymbol\varepsilon_z \\
+\boldsymbol\varepsilon_u &=\boldsymbol{T}_{31}\boldsymbol\varepsilon_x+\boldsymbol{T}_{32}\boldsymbol\varepsilon_y+\boldsymbol{T}_{33}\boldsymbol\varepsilon_z \\
+\end{align*}
+式中，$\boldsymbol{T}_{11}$等参数时MEMS惯导姿态矩阵$\boldsymbol{C}_{n}^b$的系数。
+(2)MEMS惯导速度误差方程
 
-矩阵形式为：
-
+根据式(?)的MEMS惯导比力方程，若考虑系统中存在的各种误差。则MEMS惯导的速度误差计算应该表示为：
 \begin{equation}
-\left [\begin{array}{ccc}
-\dot{\boldsymbol\varphi}\\
-\dot{q}_1\\
-\dot{q}_2\\
-\dot{q}_3\\
-\end{array}\right]=
-\frac{1}{2}
-\left [\begin{array}{cccc}
-0 & -\omega_x & -\omega_y & -\omega_z\\
-\omega_x & 0& \omega_z & -\omega_y\\
-\omega_y & -\omega_z& 0 & \omega_x\\
-\omega_z & \omega_y& -\omega_x &0
-\end{array}\right]
-\left [\begin{array}{ccc}
-q_0\\
-q_1\\
-q_2\\
-q_3
-\end{array}\right]
+\boldsymbol{\delta\dot{V}}^n=-\varphi^n \times \boldsymbol{f}^b+\delta V^n\times(2\boldsymbol \omega^n_{ie}+\boldsymbol\omega^n_{en})+ \boldsymbol{V}^n\times(2\delta\boldsymbol{\omega}^n_{ie}+\delta\boldsymbol{\omega}^n_{en})+\bigtriangledown^n
 \end{equation}
-
-(1)MEMS惯导速度误差方程
+这样东北天各向速度误差可表示为：
+\begin{align*}
+\delta\dot{\boldsymbol V}_e &= \boldsymbol{\varphi_u}f_n - \boldsymbol{\varphi}_n f_u+\delta{V_e}\frac{V_n\tan L-V_u}{R_N+h}+
+\delta V_n(2\omega_{ie}\sin{L}+\frac{V_e}{R_N+h}\tan L)\\
+&-\delta V_u(2\omega_{ie}\cos{L}+\frac{V_e}{R_N+h})+\delta L [2\omega_{ie}(V_u\sin L+V_n\cos L)+\frac{V_eV_n}{R_N+h}\sec^2L]\\
+&+\delta h \frac{V_eV_n-V_eV_n\tan L}{(R_N+h)^2}+\bigtriangledown_e\\
+\delta\dot{\boldsymbol V}_n &= -\boldsymbol\varphi_u f_e + \boldsymbol\varphi_e f_u - delta V_e\cdot2(\omega\sin L+\frac{V_e}{R_N+h}\tan L)-\delta V_n\frac{V_u}{R_M+h}-\delta V_u\frac{V_n}{R_M+h}\\
+&-\delta L(2V_e\omega_{ie}\cos L + \frac{V_e^2}{R_N+h}\sec^2L)+\delta h [\frac{V_uV_n}{(R_M+h)^2}+\frac{V_e^2\tan L}{(R_N+h)^2}]+\bigtriangledown_n\\
+\delta\dot{\boldsymbol V}_u &= \boldsymbol\varphi_e f_e + \boldsymbol\varphi_e f_n + 2delta V_e(\omega_{ie}\cos L+\frac{V_e}{R_N+h})+\delta V_n\frac{2V_n}{R_M+h}-2V_e\delta L\omega_{ie}\sin L\\
+&-\delta h[\frac{V_e^2}{(R_N+h)^2}+\frac{V_n^2}{(R_M+h)^2}]+\bigtriangledown_u\\
+\end{align*}
+式中：
+\begin{align*}
+\boldsymbol\bigtriangledown_e &=\boldsymbol{T}_{11}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{12}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{13}\boldsymbol\bigtriangledown_z \\
+\boldsymbol\bigtriangledown_n &=\boldsymbol{T}_{21}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{22}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{23}\boldsymbol\bigtriangledown_z \\
+\boldsymbol\bigtriangledown_u &=\boldsymbol{T}_{31}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{32}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{33}\boldsymbol\bigtriangledown_z \\
+\end{align*}
+式中，$\boldsymbol{T}_{11}$等参数时MEMS惯导姿态矩阵$\boldsymbol{C}_{n}^b$的系数。
 (1)MEMS惯导位置误差方程
+\begin{align*}
+\delta\dot{\boldsymbol L} &= \frac{\delta V_n}{R_M+h}-\delta h \frac{V_n}{(R_M+h)^2}\\
+\delta\dot{\boldsymbol \lambda} &= \frac{\delta V_e}{R_N+h}\sec L+\delta L \frac{V_e}{R_N+h}\tan L\sec L - \delta h \frac{V_e\sec L}{(R_N+h)^2}\\
+\delta\dot{\boldsymbol h} &= \delta V_u\\
+\end{align*}
+
+综合MEMS惯导的误差方程，可以得到GNSS/MEMS惯导组合系统的状态方程表达式：
+\begin{equation}
+\dot X(t) = F(t)X(t)+G(t)W(t)
+\end{equation}
+$W(t)$是系统噪声：
+\begin{equation}
+ W(t) = [\omega_gx\ \ \omega_gy\ \ \omega_gz\ \ \omega_ax\ \ \omega_ay\ \ \omega_az]^T
+\end{equation}
+其中，$\omega_gx$、$\omega_gy$、$\omega_gz$是MEMS陀螺仪随机白噪声，$\omega_ax$、$\omega_ay$、$\omega_az$是MEMS加速度计随机白噪声，F和G分别为$15\times15$维组合系统状态转移矩阵和$15\times6$维的噪声输入矩阵：
+
+
+
 \section{分布式协同模型预测控制}
 
 \subsection{相容性约束的设计}

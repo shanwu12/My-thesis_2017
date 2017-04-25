@@ -33,10 +33,5 @@
 \BOOKMARK [0][]{chapter.4}{小型化组合定位系统算法软件设计}{}% 33
 \BOOKMARK [1][]{section.4.1}{引言}{chapter.4}% 34
 \BOOKMARK [1][]{section.4.2}{滤波器的设计}{chapter.4}% 35
-\BOOKMARK [1][]{section.4.3}{分布式协同模型预测控制}{chapter.4}% 36
-\BOOKMARK [2][]{subsection.4.3.1}{相容性约束的设计}{section.4.3}% 37
-\BOOKMARK [2][]{subsection.4.3.2}{避碰约束的设计}{section.4.3}% 38
-\BOOKMARK [2][]{subsection.4.3.3}{终端成分的设计}{section.4.3}% 39
-\BOOKMARK [1][]{section.4.4}{主要结果}{chapter.4}% 40
-\BOOKMARK [1][]{section.4.5}{仿真结果和分析}{chapter.4}% 41
-\BOOKMARK [1][]{section.4.6}{本章小结}{chapter.4}% 42
+\BOOKMARK [2][]{subsection.4.2.1}{系统状态方程}{section.4.2}% 36
+\BOOKMARK [2][]{subsection.4.2.2}{系统量测方程}{section.4.2}% 37

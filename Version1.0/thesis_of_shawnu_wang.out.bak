@@ -32,6 +32,7 @@
 \BOOKMARK [1][]{section.3.4}{本章小结}{chapter.3}% 32
 \BOOKMARK [0][]{chapter.4}{小型化组合定位系统算法软件设计}{}% 33
 \BOOKMARK [1][]{section.4.1}{引言}{chapter.4}% 34
-\BOOKMARK [1][]{section.4.2}{滤波器的设计}{chapter.4}% 35
+\BOOKMARK [1][]{section.4.2}{系统模型的设计}{chapter.4}% 35
 \BOOKMARK [2][]{subsection.4.2.1}{系统状态方程}{section.4.2}% 36
 \BOOKMARK [2][]{subsection.4.2.2}{系统量测方程}{section.4.2}% 37
+\BOOKMARK [2][]{subsection.4.2.3}{离散化卡尔曼滤波设计}{section.4.2}% 38

@@ -32,7 +32,8 @@
 \contentsline {section}{\numberline {3.4}本章小结}{34}{section.3.4}
 \contentsline {chapter}{\numberline {第4\ignorespaces 章\hspace {0.3em}}小型化组合定位系统算法软件设计}{37}{chapter.4}
 \contentsline {section}{\numberline {4.1}引言}{37}{section.4.1}
-\contentsline {section}{\numberline {4.2}滤波器的设计}{37}{section.4.2}
+\contentsline {section}{\numberline {4.2}系统模型的设计}{37}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}系统状态方程}{37}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}系统量测方程}{41}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}离散化卡尔曼滤波设计}{41}{subsection.4.2.3}
 \contentsfinish 

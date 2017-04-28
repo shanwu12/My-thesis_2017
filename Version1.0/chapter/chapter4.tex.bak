@@ -1,11 +1,10 @@
-
 \chapter{Ð¡ÐÍ»¯×éºÏ¶¨Î»ÏµÍ³Ëã·¨Èí¼þÉè¼Æ}
 
 \section{ÒýÑÔ}
-×éºÏµ¼º½¼¼ÊõµÄ·¢Õ¹£¬Ò»·½ÃæµÃµç×Ó¹è¹¤ÒÕ¼¼ÊõµÄÌá¸ß£¬ÁíÒ»·½ÃæÏÖ´ú¿ØÖÆÀíÂÛ£¬ÌØ±ðÊÇ×îÓÅ¹À¼ÆÀíÂÛµÄÊý¾Ý´¦Àí·½·¨£¬Îª×éºÏµ¼º½ÏµÍ³Ìá¹©ÁËÓÐÁ¦µÄÀíÂÛ»ù´¡¡£ÓÐÁËÇ°¼¸ÕÂµÄÉè¼Æ»ù´¡£¬±¾ÕÂÖ÷Òª½²ÊöMEMS¹ßµ¼ºÍGPS´«¸ÐÆ÷ËÉ×éºÏÏµÍ³µÄÈí¼þ¹¤³ÌÊµÏÖ£¬Ö÷Òª´Ó¿¨¶ûÂüÂË²¨Ëã·¨£¬Ç¶ÈëÊ½Èí¼þ£¬ÉÏÎ»»úÏÔÊ¾µÈ·½ÃæÄÚÈÝ½øÐÐËµÃ÷¡£
+×éºÏµ¼º½¼¼ÊõµÄ·¢Õ¹£¬Ò»·½ÃæµÃµç×Ó¹è¹¤ÒÕ¼¼ÊõµÄÌá¸ß£¬ÁíÒ»·½ÃæÏÖ´ú¿ØÖÆÀíÂÛ£¬ÌØ±ðÊÇ×îÓÅ¹À¼ÆÀíÂÛµÄÊý¾Ý´¦Àí·½·¨£¬Îª×éºÏµ¼º½ÏµÍ³Ìá¹©ÁËÓÐÁ¦µÄÀíÂÛ»ù´¡¡£ÔÚÉÏÒ»ÕÂÒÑ¾­Íê³ÉÓ²¼þÆ½Ì¨µÄÉè¼Æ£¬ÓÐÁËÇ°¼¸ÕÂµÄÉè¼Æ»ù´¡£¬±¾ÕÂ½²ÊöMEMS ¹ßµ¼ºÍGPS´«¸ÐÆ÷ËÉ×éºÏÏµÍ³µÄÈí¼þ¹¤³ÌÊµÏÖ£¬Ö÷Òª´ÓÇ¶ÈëÊ½Èí¼þ£¬¿¨¶ûÂüÂË²¨Ëã·¨£¬ÉÏÎ»»úÏÔÊ¾µÈ·½ÃæÄÚÈÝ½øÐÐËµÃ÷¡£
 
-\section{ÂË²¨Æ÷µÄÉè¼Æ}
- ±¾½ÚÌÖÂÛMEMS¹ßµ¼/GNSS×éºÏµÄ»ù±¾ÂË²¨Æ÷Éè¼Æ£¬²ÉÓÃµÚ¶þÕÂÖÐÍ¼£¿ËùÊ¾µÄËÉ×éºÏ½á¹¹£¬ËÉ×éºÏÊÇÒ»ÖÖ¼òµ¥¡¢Ö±¹ÛµÄ×éºÏ·½Ê½£¬´ËÄ£Ê½ÖÐMEMS ¹ßµ¼ºÍGNSS½ÓÊÕ»ú±£³Ö¶ÀÁ¢¹¤×÷£¬Ñ¡ÓÃµ¼º½Îó²î×÷ÎªÏµÍ³×´Ì¬Á¿£¬ÒÔÎ»ÖÃ¡¢ËÙ¶ÈÐÅÏ¢×÷ÎªÍâ²¿¹Û²âÁ¿£¬Í¨¹ý¿¨¶ûÂüÂË²¨¶ÔÊý¾Ý½øÐÐÈÚºÏ²¢½«µÃµ½µÄÎó²îÁ¿·´À¡¸øMEMS¹ßµ¼½øÐÐÐÞÕýÇó³öµ¼º½×îÓÅ½â£¬¸ÃËã·¨¾ßÓÐÊµÏÖ¼òµ¥£¬¿É¿¿ÐÔ½Ï¸ß£¬¼ÆËãÁ¿µÍµÈÓÅµã¡£
+\section{ÏµÍ³Ä£ÐÍµÄÉè¼Æ}
+ ±¾½ÚÌÖÂÛMEMS¹ßµ¼/GNSS×éºÏµÄ»ù±¾ÂË²¨Æ÷Éè¼Æ£¬²ÉÓÃµÚ¶þÕÂÖÐÍ¼£¿ËùÊ¾µÄËÉ×éºÏ½á¹¹£¬ËÉ×éºÏÊÇÒ»ÖÖ¼òµ¥¡¢Ö±¹ÛµÄ×éºÏ·½Ê½£¬´ËÄ£Ê½ÖÐMEMS ¹ßµ¼ºÍGNSS½ÓÊÕ»ú±£³Ö¶ÀÁ¢¹¤×÷£¬Ñ¡ÓÃµ¼º½Îó²î×÷ÎªÏµÍ³×´Ì¬Á¿£¬ÒÔÎ»ÖÃ¡¢ËÙ¶ÈÐÅÏ¢×÷ÎªÍâ²¿¹Û²âÁ¿£¬Í¨¹ý¿¨¶ûÂüÂË²¨¶ÔÊý¾Ý½øÐÐÈÚºÏ²¢½«µÃµ½µÄÎó²îÁ¿·´À¡¸øMEMS¹ßµ¼½øÐÐÐÞÕýÇó³öµ¼º½×îÓÅ½â£¬¸ø³öµÍ³É±¾IMU/GNSS×éºÏµ¼º½ÏµÍ³ÂË²¨×éºÏËã·¨£¬¸ÃËã·¨¾ßÓÐÊµÏÖ¼òµ¥£¬¿É¿¿ÐÔ½Ï¸ß£¬¼ÆËãÁ¿µÍµÈÓÅµã¡£
 
 \subsection{ÏµÍ³×´Ì¬·½³Ì}
  ±¾Éè¼ÆÖÐ×éºÏÏµÍ³ÒÔ15Î¬µ¼º½Îó²î×÷ÎªÏµÍ³µÄ´ý¹À¼Æ×´Ì¬$\delta X$($\delta X$±íÊ¾Îó²î×÷Îª×´Ì¬)£¬Îó²î°üÀ¨ÈýÎ¬Î»ÖÃ¡¢ÈýÎ¬ËÙ¶È¡¢ÈýÎ¬×ËÌ¬¡¢»¹ÓÐÈý¸öÍÓÂÝÁãÆ«¼°Èý¸ö¼ÓËÙ¶È¼ÆÁãÆ«£¬±íÊ¾Îª£º
@@ -174,10 +173,129 @@ GNSS/MEMS¹ßµ¼ËÉ×éºÏÄ£ÐÍµÄ¹Û²â·½³ÌÎÒÃÇ²ÉÓÃËÙ¶ÈºÍÎ»ÖÃµÄ·½Ê½£¬¼´Ñ¡ÔñGNSSÐÅºÅµÃµ½µÄË
 
 Î»ÖÃ¹Û²âÏòÁ¿$Z_P$Îª£º
 \begin{equation}
-Z_p(t) =
-\left [
+\boldsymbol{Z}_p(t) =
+\left [\begin{array}{l}
 L_I-L_G\\
 \lambda_I-\lambda_G\\
 h_I-h_G\\
-\right]
+\end{array}\right]
+=
+\boldsymbol{H_P}\boldsymbol{X}(t)+\boldsymbol{V_p}(t)
 \end{equation}
+ÆäÖÐ£¬$\boldsymbol{H_P}=[0_{3\times6} \ \ I_{3\times3}\ \ 0_{3\times6}]$,ÏÂ±ê$I$±íÊ¾MEMS¹ßµ¼£¬ÏÂ±ê$G$±íÊ¾ÎÀÐÇÐÅºÅ£¬$V_p$ÎªÎÀÐÇÐÅºÅµÄÎ»ÖÃ¹Û²âÔëÉù¡£
+Í¬Àí£¬ËÙ¶È¹Û²âÁ¿$Z_v$Îª
+\begin{equation}
+\boldsymbol{Z}_v(t) =
+\left [\begin{array}{l}
+v_{IE}-v_{GE}\\
+v_{IN}-v_{GN}\\
+v_{IU}-v_{GU}\\
+\end{array}\right]
+=
+\boldsymbol{H_v}\boldsymbol{X}(t)+\boldsymbol{V_v}(t)
+\end{equation}
+ÆäÖÐ£¬ÇÒ$\boldsymbol{H_v}=[0_{3\times3} \ \ I_{3\times3}\ \ 0_{3\times9}]$£¬$V_v$ÎªÎÀÐÇÐÅºÅµÄËÙ¶ÈÔëÉù¡£
+ºÏ²¢ÒÔÉÏÁ½Ê½£¬¿ÉÒÔµÃµ½×éºÏÏµÍ³µÄ¹Û²â·½³ÌÈçÏÂ£¬
+\begin{equation}
+\boldsymbol{Z}(t) =
+\left [\begin{array}{l}
+\boldsymbol{Z}_v(t)\\
+\boldsymbol{Z}_p(t)\\
+\end{array}\right]
+=
+\left [\begin{array}{l}
+\boldsymbol{H}_v\\
+\boldsymbol{H}_p\\
+\end{array}\right]
+\boldsymbol{X}(t)
++
+\left [\begin{array}{l}
+\boldsymbol{V}_v(t)\\
+\boldsymbol{V}_p(t)\\
+\end{array}\right]
+=
+\boldsymbol{H}(t)\boldsymbol{X}(t)+\boldsymbol{V}(t)
+\end{equation}
+\subsection{ÀëÉ¢»¯¿¨¶ûÂüÂË²¨Éè¼Æ}
+¿¨¶ûÂüÂË²¨Æ÷ÊÇ×éºÏµ¼º½ÏµÍ³ÖÐ×î³£ÓÃµÄÒ»ÖÖÊý¾ÝÈÚºÏËã·¨¡£ËüÊÇÔÚÉÏÊÀ¼Í60Äê´úËæ×ÅÏÖ´ú¿ØÖÆÀíÂÛµÄ·¢Õ¹Ìá³öµÄÒ»ÖÖ×îÓÅ¹À¼Æ¼¼Êõ£¬¶ÔÓÚ¾ßÓÐÁã¾ùÖµ¸ßË¹·Ö²¼ÔëÉùµÄÏßÐÔÏµÍ³¶øÑÔ£¬ÊÇÍ¨¹ýÓëÐÅºÅÓÐ¹ØµÄ¹Û²âÁ¿¹À¼Æ³öËùÐèÐÅºÅµÄÒ»ÖÖÊµÊ±µÝÍÆµÄ×îÐ¡·½²î¹À¼Æ·½·¨£¬¿ÉÒÔ¹À¼ÆÏµÍ³µÄ¸÷ÖÖÎó²î×´Ì¬£¬ÀûÓÃÎó²î×´Ì¬µÄ¹À¼Æ¿ÉÒÔÐ£Õý²¹³¥ÏµÍ³£¬´ïµ½ÏµÍ³×éºÏµÄÄ¿µÄ¡£Òò´Ë£¬Éè¼Æ×éºÏµ¼º½ÏµÍ³µÄ¿¨¶ûÂüÂË²¨Æ÷µÄÉè¼ÆÊÇ·Ç³£ÖØÒªµÄÒ»²½¡£
+
+ÔÚÊµ¼ÊµÄÓ¦ÓÃÉè¼ÆÖÐ£¬ÎªÁË±ãÓÚ¼ÆËã»ú½øÐÐµü´úÔËËã£¬Í¨³£ÐèÒª½«Á¬ÐøÐÎÊ½µÄµÄÏµÍ³·½³Ì½øÐÐÀëÉ¢»¯¡£ÀëÉ¢ºóµÄÏµÍ³·½³ÌÈçÏÂ£º
+\begin{equation}
+\left\{
+\begin{aligned}
+\boldsymbol{X}_k &= \boldsymbol{\phi}_{k,k-1}\boldsymbol{X}_{k-1}+\boldsymbol{\Gamma}_{k-1}\boldsymbol{W}_{k-1}\\
+\boldsymbol{Z}_k &= \boldsymbol{H}_{k}\boldsymbol{X}_{k}+\boldsymbol{V}_{k}
+\end{aligned}
+\right.
+\end{equation}
+Ê½ÖÐ£¬$\boldsymbol{\phi}_{k,k-1}$ÊÇ$k-1$Ê±¿ÌÖÁ$k$Ê±¿ÌµÄ$n$½×µÄÒ»²½×´Ì¬×ªÒÆ¾ØÕó£¬$\boldsymbol{\Gamma}_{k-1}$ÊÇ$n\times p$Î¬ÏµÍ³ÔëÉùÊäÈë¾ØÕó£¬$W_{k-1}$Îª$k-1$Ê±¿ÌµÄÏµÍ³ÔëÉù¡£$\boldsymbol{H}_{k}$Îª$k$Ê±¿ÌµÄÁ¿²â¾ØÕó£¬$\boldsymbol{V}_k$ÊÇ$k$Ê±¿ÌµÄÁ¿²âÔëÉù¡£
+
+ÔÚ¿¨¶ûÂüÂË²¨¼ÆËãÖÐ£¬¶ÔÏµÍ³µÄÄ£ÐÍÒªÇóÊ®·ÖÑÏ¸ñ£¬ÒªÇó${\boldsymbol{W}_{k}}$ºÍ${\boldsymbol{V}_{k}}$ÊÇ»¥²»Ïà¹ØµÄ£¬Í¬Ê±Á½ÕßÎªÁã¾ùÖµµÄ°×ÔëÉùÐòÁÐ£¬ËûÃÇÂú×ãÈçÏÂÊ½×Ó£º
+\begin{equation}
+\left\{
+\begin{aligned}
+\boldsymbol E[\boldsymbol{W}_{k}] &= 0\\
+\boldsymbol E[\boldsymbol{W}_{k}\boldsymbol{W}_{j}^T] &= Q_k\delta_{kj}
+\end{aligned}
+\right.
+\end{equation}
+\begin{equation}
+\left\{
+\begin{aligned}
+\boldsymbol{E}[\boldsymbol{V}_{k}] &= 0\\
+\boldsymbol{E}[\boldsymbol{V}_{k}\boldsymbol{V}_{j}^T] &= R_k\delta_{kj}
+\end{aligned}
+\right.
+\end{equation}
+$Q_k$ÊÇÏµÍ³¹ý³ÌÔëÉù·½²î¾ØÕó£¬Âú×ã·Ç¸º¶¨µÄÌõ¼þ£»$R_k$ÊÇÏµÍ³¹Û²âÔëÉù·½²î¾ØÕó£¬Âú×ã¶Ô³ÆÕý¶¨Õó£»$\delta_{kj}$Îª$Kronecker-\delta $º¯Êý£¬ÇÒ¹ý³ÌÔëÉùºÍ¹Û²âÔëÉù¾ùÂú×ãÓë³õÊ¼×´Ì¬$X_0$²»Ïà¹Ø¡£ÕâÔÚÊµ¼Ê¹¤³Ì»·¾³ÏÂ£¬¹Û²âÎó²îµÄÌØÐÔÓëÊýÖµÊµ¼ÊÉÏ²»»áÊÜµ½ÏµÍ³³õÊ¼×´Ì¬µÄÓ°Ïì£»Æä´Î£¬ÏµÍ³µÄ¹ý³ÌÔëÉùÀíÂÛÒ²²»»áÊÜµ½³õÊ¼×´Ì¬µÄÓ°Ïì¡£
+
+Èô±»¹À¼Æ×´Ì¬$X_k$ÓëÆä¹Û²âÁ¿$Z_k$Âú×ã¿¨¶ûÂüÂË²¨µÄÔ¼ÊøÌõ¼þ£¬¼ÙÉè$K$Ê±¿ÌµÄ¹Û²âÎª$Z_k$£¬ÇÒÒÑ»ñµÃ$k-1$Ê±¿Ì×´Ì¬$X_{k-1}$µÄ×îÓÅ¹À¼ÆÖµ$\hat{X}_{k-1}$£¬Ôò×´Ì¬$X_k$µÄ¹À¼ÆÖµ$\hat{X}_{k}$¿ÉÓÉÈçÏÂ·½³ÌÇó½â£»
+
+ÀëÉ¢ÏµÍ³$k-1$Ê±¿ÌÖÁ$k$Ê±¿ÌµÄ×´Ì¬Ò»²¿Ô¤²â£º
+\begin{equation}
+{\hat{X}}_{k,k-1}={\Phi}_{k,k-1}{\hat{X}}_{k-1}
+\end{equation}
+ÀëÉ¢ÏµÍ³$k$Ê±¿Ì×´Ì¬¹À¼Æ£º
+\begin{equation}
+{\hat{X}}_{k}={\hat{X}}_{k,k-1}+{K}_{k}[{Z}_{k}-{H}_{k}{\hat{X}}_{k,k-1}]
+\end{equation}
+ÀëÉ¢ÏµÍ³$k$Ê±¿ÌÂË²¨ÔöÒæ¾ØÕó£º
+\begin{equation}
+{K}_{k}={P}_{k,k-1}{H}_{k}^T[{H}_{k}{P}_{k,k-1}{H}_{k}^T+{R}_{k}]^{-1}
+\end{equation}
+
+ÀëÉ¢ÏµÍ³$k-1$Ê±¿ÌÖÁ$k$Ê±¿ÌµÄÒ»²½Ô¤²âÎó²î·½²î¾ØÕó£º
+\begin{equation}
+{P}_{k,k-1}={\Phi}_{k,k-1}{P}_{k,k-1}{\Phi}_{k,k-1}^T+{{\Gamma}}_{k,k-1}{Q}_{k-1}{{\Gamma}}_{k,k-1}^T
+\end{equation}
+ÀëÉ¢ÏµÍ³$k$Ê±¿ÌµÄ¹À¼ÆÎó²î·½²î¾ØÕó£º
+\begin{equation}
+{P}_{k}=[ I-{K}_{k}{H}_k]{P}_{k,k-1}[ I-{K}_{k}{H}_k]^T+{{K}}_{k}{R}_{k}{{K}}_{k}^T
+\end{equation}
+ÒÔÉÏ¹«Ê½¼´ÎªËæ»úÀëÉ¢ÏµÍ³µÄ¿¨¶ûÂüÂË²¨µÝÍÆ·½³Ì¡£Ö»ÐèÒª¸ø¶¨³õÊ¼µÄ${\hat{X}}_{0}$¡¢³õÊ¼ÔëÉùÎó²îÐ­·½²î¾ØÕó${P}_{0}$¡¢ÏµÍ³³õÊ¼¹ý³ÌÔëÉù·½²î¾ØÕó${Q}_{k}$Óë³õÊ¼¹Û²âÔëÉù·½²î¾ØÕó${R}_{k}$£¬Ôò¿ÉÒÔÍ¨¹ý¿¨¶ûÂüÂË²¨µÝÍÆµÄ·½Ê½¸ù¾Ý$k$Ê±¿ÌµÄ¹Û²âÖµ$Z_k$¼ÆËã³ö¸ÃÊ±¿ÌµÄ×´Ì¬×îÓÅ¹À¼ÆÖµ${\hat{X}}_{k}$¡£ÔÚÇó½â¹ý³ÌÖÐ£¬½«Ã¿¸öÂË²¨ÖÜÆÚ»®·ÖÎª¶Ô×´Ì¬½øÐÐ¹À¼ÆµÄ¡°Ê±¼ä¸üÐÂ¡±¹ý³ÌºÍ¡°Á¿²â¸üÐÂ¡±£¬Ëã·¨Á÷³ÌÈçÍ¼ËùÊ¾£º
+
+\section{Ç¶ÈëÊ½Èí¼þÉè¼Æ}
+¸ù¾ÝÇ°ÃæÕÂ½ÚÏµÍ³×ÜÌåÉè¼ÆË¼Â·ºÍ¿¨¶ûÂüÂË²¨Ëã·¨·ÖÎö£¬ARMÔÚ×éºÏµ¼º½ÏµÍ³ÖÐÖ÷ÒªÍê³ÉÏµÍ³µÄÊý¾Ý²É¼¯ºÍ´¦Àí¹¤×÷ÏÂÎ»»úÈí¼þ·ÖÎªARM´¦ÀíÆ÷¼°´«¸ÐÆ÷ÍâÎ§µçÂ·Çý¶¯²¿·Ö£¬¹ßµ¼½âËã²¿·ÖºÍËã·¨ÐÅÏ¢×éºÏ²¿·Ö¡£
+
+\subsection{ÏµÍ³³ÌÐòÉè¼Æ·½°¸}
+
+ARMÍ¨¹ý¶¨Ê±Æ÷ÖÐ¶Ï·½Ê½À´²»¶Ï½ÓÊÕºÍ´¦ÀíMEMS¹ßµ¼¡¢GNSSÊý¾Ý£¬BMI160ÎÒÃÇÒÔ100HzÈ¡Êý£¬Ô¶¸ßÓÚGNSS1HzµÄ²É¼¯ÆµÂÊ£¬µ±MEMS¹ßµ¼ºÍGNSSÊý¾Ý²»Í¬²½Ê±£¬´¦ÀíÆ÷Ö»¶ÔMIMUÐÅºÅ´¦ÀíÊä³ö½ÝÁªµ¼º½ÏµÍ³µÄ½âËãÐÅÏ¢£»µ±GNSSÊý¾ÝÀ´Ê±£¬¶ÔÆä½øÐÐ¿¨¶ûÂüÂË²¨£¬Êä³öµÄ×éºÏµ¼º½ÐÅÏ¢¿ÉÒÔÒÔ´®¿Ú·½Ê½·¢ËÍ¸øÉÏÎ»»ú½øÐÐÊµÊ±ÏÔÊ¾»ò±£´æÖÁSD¿¨¡£
+¸ù¾ÝÉè¼Æ·½°¸£¬ÏµÍ³Èí¼þÁ÷³ÌÍ¼ÈçÏÂ£º
+\subsection{BootloaderÏÂÔØÉè¼Æ}
+ÔÚÇ¶ÈëÊ½ÏµÍ³ÖÐ£¬Bootloader¼´ÊÇÏµÍ³µÄÒýµ¼³ÌÐò£¬Æä×÷ÓÃÓëµçÄÔ²Ù×÷ÏµÍ³ÉÏµÄBIOS·Ç³£ÀàËÆ£¬Í¨¹ýBootloader¿ÉÒÔÍê³É¶ÔARM°åÉÏµÄÖ÷ÒªÆ÷¼þÈçCPU¡¢FLASH¡¢´®¿ÚµÈ½øÐÐ³õÊ¼»¯£¬»¹¿ÉÒÔ¶ÔFlash½øÐÐ¶ÁÐ´²Ù×÷ÊµÏÖÈí¼þÉý¼¶¹¦ÄÜ£¬¼ò¶øÑÔÖ®£¬Bootloader¾ÍÊÇÔÚ²Ù×÷ÏµÍ³ÄÚºËÔËÐÐÖ®Ç°ÔËÐÐµÄÒ»¶Î³ÌÐò£¬Í¨¹ýÕâ¶Î³ÌÐò£¬ÎÒÃÇ¿ÉÒÔ³õÊ¼»¯Ó²¼þÉè±¸¡¢½¨Á¢ÄÚ´æ¿Õ¼äµÄÓ³ÉäÍ¼£¬´Ó¶ø½«ÏµÍ³µÄÈíÓ²¼þ»·¾³·ÖÅä´¦ÔÚÒ»¸öºÏÊÊµÄ×´Ì¬¡£Îª·½±ã³ÌÐòµÄÏÂÔØ£¬±¾¿ÎÌâ±àÐ´ÁËÒ»¸öÏÂÔØ³ÌÐòµÄÉÏÎ»»ú³ÌÐò£¬½çÃæÈçÏÂËùÊ¾£¬
+
+ÓÃ»§³ÌÐòÔÚÔËÐÐ¹ý³ÌÖÐ¶ÔUser FlashµÄ²¿·ÖÇøÓò½øÐÐÉÕÐ´£¬¿ÉÒÔ¸üÐÂÉè±¸µÄÈí¼þ´úÂë£¬ÕâÑùºóÆÚ¿ÉÒÔ·½±ãµÄÍ¨¹ýÔ¤ÁôÍ¨ÐÅ½Ó¿Ú¶Ô²úÆ·½øÐÐ¸üÐÂÉý¼¶¡£´ËÎÄ¼þ¿ÉÒÔÍ¨¹ý´®¿ÚÐ´µ½µ½ARMÐ¾Æ¬µÄÄÚ²¿flashÖÐÈ¥£¬
+
+¾ßÌå·½·¨ÈçÏÂ£º³ö³§µÄÉè±¸falshÉÏË¢Ð´ÁËÁ½²¿·Ö³ÌÐò£¬Ò»¸öbootloaderÒýµ¼³ÌÐòºÍÒ»¸ö³ö³§Ê±×î³õµÄµ¼º½³ÌÐò¡£
+STM32F4µÄÄÚ²¿ÉÁ´æ(flash)ÈÝÁ¿ÓÐ1M×Ö½Ú£¬ÆðÊ¼ÓÚ0X08000000,Ò»°ãÇé¿öÏÂ£¬³ÌÐò¾Í´Ó´ËµØÖ·¿ªÊ¼Ð´Èë¡£´ËÍâSTM32ÊÇ»ùÓÚCortex-M4 ÄÚºËµÄÎ¢¿ØÖÆÆ÷£¬ÆäÄÚ²¿Í¨¹ýÒ»ÕÅ¡°ÖÐ¶ÏÏòÁ¿±í¡±À´ÏìÓ¦ÖÐ¶Ï£¬³ÌÐòÆô¶¯ºó£¬½«Ê×ÏÈ´Ó¡°ÖÐ¶ÏÏòÁ¿±í¡±È¡³ö¸´Î»ÖÐ¶ÏÏòÁ¿Ö´ÐÐ¸´Î»ÖÐ¶Ï³ÌÐòÍê³ÉÆô¶¯£¬¶øÕâÕÅ¡°ÖÐ¶ÏÏòÁ¿±í¡±µÄÆðÊ¼µØÖ·ÊÇ0x08000004£¬µ±ÖÐ¶ÏÀ´ÁÙ£¬STM32F4 µÄÄÚ²¿Ó²¼þ»úÖÆÒà»á×Ô¶¯½«PC Ö¸Õë¶¨Î»µ½¡°ÖÐ¶ÏÏòÁ¿±í¡±´¦£¬²¢¸ù¾ÝÖÐ¶ÏÔ´È¡³ö¶ÔÓ¦µÄÖÐ¶ÏÏòÁ¿Ö´ÐÐÖÐ¶Ï·þÎñ³ÌÐò¡£
+bootloader¸üÐÂ³ÌÐòÒªÂú×ãÒÔÏÂÒªÇó£º1¡¢ÐÂ³ÌÐò±ØÐëÔÚbootloader³ÌÐòÖ®ºóµÄÄ³¸öÆ«ÒÆÁ¿ÎªXµÄµØÖ·¿ªÊ¼£»2¡¢±ØÐë½«ÐÂ³ÌÐòµÄÖÐ¶ÏÏòÁ¿±íÏàÓ¦µÄÒÆ¶¯X¸öÆ«ÒÆÁ¿¡£
+Ä¬ÈÏÌõ¼þÏÂ£¬
+
+¸øÉè±¸ÉÏµçºó£¬Á¬½Ó´®¿ÚÖÁµçÄÔ¶Ë£¬ÉÏÎ»»úÖÐ´ò¿ª´®¿Ú£¬µ÷Õû²¨ÌØÂÊµ½115200bps£¬´ËÊ±µ¼º½³ÌÐòÕý³£ÔËÐÐ£¬ÐèÒª¸üÐÂ´úÂëÊ±£¬µã»÷¸üÐÂÊ¹ÄÜ£¬ÉÏÎ»»ú»á·¢ËÍÖ¸Áî¸øµ¼º½Éè±¸£¬Éè±¸»á¸´Î»Èí¼þ¸üÐÂ±êÖ¾Î»£¬½øÈëµ½µÈ´ý¸üÐÂµÄ´úÂëÖÐÈ¥£¬´ËÊ±Ñ¡ÔñÉú³ÉµÄBIN Ó³ÏñÎÄ¼þ£¬µã»÷Ö´ÐÐ°´¼ü£¬ÉÏÎ»»ú»á½«BINÎÄ¼þ·Ö°ü·¢ËÍ¸øÐ¾Æ¬£¬Ã¿Ò»°üµÄÊý¾Ý´óÐ¡Îª2k²¢¼ÓÉÏÊý¾Ý´«ÊäµÄÍ·ºÍÎ²£¬ÏÂÎ»»ú´®¿Ú½ÓÊÕºóÍê³ÉCRCÐ£Ñé£¬È·±£Ã»ÓÐÎÊÌâºó¾ÍÖØÐÂÐ´ÈëFLASHÌØ¶¨µÄÎ»ÖÃ£¬Ñ­»··¢ËÍÍêËùÓÐÊý¾Ýºó£¬ÖØÐÂÖÃÎ»Èí¼þ¸üÐÂ±êÖ¾²¢Èí¼þ¸´Î»ÖØÆô£¬¼´¿ÉÖØÐÂÔËÐÐÐÂµÄµ¼º½¹¦ÄÜ³ÌÐò£¬ÊµÏÖÈí¼þµÄÉý¼¶¡£
+
+MDK±àÒëÄ¬ÈÏÉú³É.hexÎÄ¼þ£¬ÔÚµÃµ½.binÎÄ¼þºó£¬ÎÒÃÇÖ»ÐèÒª½«Õâ¸öbinÎÄ¼þÍ¨¹ý´®¿Ú´«ËÍ¸øÐ¾Æ¬£¬¼´¿ÉÖ´ÐÐ´úÂëµÄÏÂÔØÍê³ÉÉý¼¶¡£
+
+\subsection{FAT32ÎÄ¼þÏµÍ³µÄÒÆÖ²}
+ÏµÍ³µÄÊý¾Ýµ÷ÊÔÑ¡ÔñSD¿¨±£´æÊý¾Ý£¬»ùÓÚµ÷ÊÔ·½±ãµÄÔ­Ôò£¬ÔÚ³ÌÐòÖÐÌí¼ÓFAT32ÎÄ¼þÏµÍ³£¬À´ÊµÏÖ´æ´¢Êý¾ÝµÄ¹ÜÀí£¬FATÎÄ¼þÏµÍ³ÒÆÖ²Á÷³ÌÍ¼ÈçÏÂÍ¼ËùÊ¾£¬
+
+FATÎÄ¼þÏµÍ³ÒÆÖ²¹ý³ÌÖÐ£¬Ê×ÏÈÒªÍê³ÉSDµÄÓ²¼þ³õÊ¼»¯£¬ÏµÍ³¼ìË÷ÊÇ·ñ´æÔÚSD¿¨£¬²¢ÅÐ¶ÏSD¿¨ÊÇ·ñ·ûºÏARMÖ§³ÖµÄÀàÐÍ£¬Ìá¹©ÎÄ¼þÏµÍ³ÓëSD¿¨µ×²ã½Ó¿Ú£¬Èç¹ûSDÇý¶¯²»³É¹¦£¬½«·µ»ØSTA\_NOINIT±êÖ¾Î»¡£SDÓ²¼þ³õÊ¼»¯³É¹¦Ö®ºó£¬ÎÄ¼þÏµÍ³½«Íê³É×¢²á¹¤×÷Çø¹¦ÄÜ£¬ÕâÒ»²¿·Ö¿ÉÒÔÊÓÎªÎÄ¼þÏµÍ³µÄ³õÊ¼»¯£¬¸Ã²¿·ÖÍê³ÉSD¿¨Ã¿¸ö¾í×¢²á¹¤×÷Çø¡£ËÑË÷¸ùÄ¿Â¼²¢ÏÔÊ¾Íê³É¶ÔSD¿¨¸ùÄ¿Â¼¶ÁÈ¡

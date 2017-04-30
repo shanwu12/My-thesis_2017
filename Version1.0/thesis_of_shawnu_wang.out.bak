@@ -36,3 +36,10 @@
 \BOOKMARK [2][]{subsection.4.2.1}{系统状态方程}{section.4.2}% 36
 \BOOKMARK [2][]{subsection.4.2.2}{系统量测方程}{section.4.2}% 37
 \BOOKMARK [2][]{subsection.4.2.3}{离散化卡尔曼滤波设计}{section.4.2}% 38
+\BOOKMARK [1][]{section.4.3}{嵌入式软件设计}{chapter.4}% 39
+\BOOKMARK [2][]{subsection.4.3.1}{系统程序设计方案}{section.4.3}% 40
+\BOOKMARK [2][]{subsection.4.3.2}{MEMS传感器配置}{section.4.3}% 41
+\BOOKMARK [2][]{subsection.4.3.3}{Bootloader下载设计}{section.4.3}% 42
+\BOOKMARK [2][]{subsection.4.3.4}{FAT32文件系统的移植}{section.4.3}% 43
+\BOOKMARK [1][]{section.4.4}{系统上位机软件设计}{chapter.4}% 44
+\BOOKMARK [2][]{subsection.4.4.1}{通信数据协议}{section.4.4}% 45

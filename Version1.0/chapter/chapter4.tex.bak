@@ -1,10 +1,10 @@
 \chapter{小型化组合定位系统算法软件设计}
 
 \section{引言}
-组合导航技术的发展，一方面得电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法，为组合导航系统提供了有力的理论基础。在上一章已经完成硬件平台的设计，有了前几章的设计基础，本章讲述MEMS 惯导和GPS传感器松组合系统的软件工程实现，主要从嵌入式软件，卡尔曼滤波算法，上位机显示等方面内容进行说明。
+组合导航技术的发展，一方面得电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法也为组合导航系统提供了有力的理论基础。在上一章已经完成硬件平台的设计，本章讲述MEMS 惯导和GPS传感器松组合系统的软件工程实现，主要从嵌入式软件，卡尔曼滤波算法，上位机显示等方面进行说明。
 
 \section{系统模型的设计}
- 本节讨论MEMS惯导/GNSS组合的基本滤波器设计，采用第二章中图？所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS 惯导和GNSS接收机保持独立工作，选用导航误差作为系统状态量，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，给出低成本IMU/GNSS组合导航系统滤波组合算法，该算法具有实现简单，可靠性较高，计算量低等优点。
+ 本节讨论MEMS惯导/GNSS组合的基本滤波器设计，采用第二章中图？所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS 惯导和GNSS接收机保持独立工作，选则导航误差作为系统状态量，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，给出低成本IMU/GNSS组合导航系统滤波组合算法，该算法具有实现简单，可靠性较高，计算量低等优点。
 
 \subsection{系统状态方程}
  本设计中组合系统以15维导航误差作为系统的待估计状态$\delta X$($\delta X$表示误差作为状态)，误差包括三维位置、三维速度、三维姿态、还有三个陀螺零偏及三个加速度计零偏，表示为：
@@ -228,7 +228,7 @@ v_{IU}-v_{GU}\\
 \end{aligned}
 \right.
 \end{equation}
-式中，$\boldsymbol{\phi}_{k,k-1}$是$k-1$时刻至$k$时刻的$n$阶的一步状态转移矩阵，$\boldsymbol{\Gamma}_{k-1}$是$n\times p$维系统噪声输入矩阵，$W_{k-1}$为$k-1$时刻的系统噪声。$\boldsymbol{H}_{k}$为$k$时刻的量测矩阵，$\boldsymbol{V}_k$是$k$时刻的量测噪声。
+式中，$\boldsymbol{\phi}_{k,k-1}$是$k-1$时刻至$k$时刻的$n$阶的一步状态转移矩阵，$\boldsymbol{\Gamma}_{k-1}$是$n\times p$维系统噪声输入矩阵，$W_{k-1}$为$k-1$时刻的系统噪声。$\boldsymbol{H}_{k}$ 为$k$时刻的量测矩阵，$\boldsymbol{V}_k$是$k$时刻的量测噪声。
 
 在卡尔曼滤波计算中，对系统的模型要求十分严格，要求${\boldsymbol{W}_{k}}$和${\boldsymbol{V}_{k}}$是互不相关的，同时两者为零均值的白噪声序列，他们满足如下式子：
 \begin{equation}
@@ -249,7 +249,7 @@ v_{IU}-v_{GU}\\
 \end{equation}
 $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足对称正定阵；$\delta_{kj}$为$Kronecker-\delta $函数，且过程噪声和观测噪声均满足与初始状态$X_0$不相关。这在实际工程环境下，观测误差的特性与数值实际上不会受到系统初始状态的影响；其次，系统的过程噪声理论也不会受到初始状态的影响。
 
-若被估计状态$X_k$与其观测量$Z_k$满足卡尔曼滤波的约束条件，假设$K$时刻的观测为$Z_k$，且已获得$k-1$时刻状态$X_{k-1}$的最优估计值$\hat{X}_{k-1}$，则状态$X_k$的估计值$\hat{X}_{k}$可由如下方程求解；
+若被估计状态$X_k$与其观测量$Z_k$满足卡尔曼滤波的约束条件，假设$K$ 时刻的观测为$Z_k$，且已获得$k-1$时刻状态$X_{k-1}$的最优估计值$\hat{X}_{k-1}$，则状态$X_k$的估计值$\hat{X}_{k}$可由如下方程求解；
 
 离散系统$k-1$时刻至$k$时刻的状态一部预测：
 \begin{equation}
@@ -281,21 +281,94 @@ $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足
 
 ARM通过定时器中断方式来不断接收和处理MEMS惯导、GNSS数据，BMI160我们以100Hz取数，远高于GNSS1Hz的采集频率，当MEMS惯导和GNSS数据不同步时，处理器只对MIMU信号处理输出捷联导航系统的解算信息；当GNSS数据来时，对其进行卡尔曼滤波，输出的组合导航信息可以以串口方式发送给上位机进行实时显示或保存至SD卡。
 根据设计方案，系统软件流程图如下：
+
+\subsection{MEMS传感器配置}
+为了MEMS传感器能够正常工作，需要配置它的工作方式，传输速率和通信方式等，具体流程图如下图所示，
+
+在设计加速度计软件驱动时，首先要考虑其测量范围，根据在载体实际所处的环境设置相应的测量范围：$\pm2g$，$\pm4g$，$\pm8g$，$\pm16g$，测量精度均为13位，车辆运行过程属于低动态，设计中采用$\pm2g$测量范围。
+MEMS陀螺仪初始化配置程序主要完成陀螺仪的初始化配置，首先是设置数据采样率，即数据输出率，同时需要设置信号带宽及截止频率。然后设置为工作模式
+
+
+
 \subsection{Bootloader下载设计}
-在嵌入式系统中，Bootloader即是系统的引导程序，其作用与电脑操作系统上的BIOS非常类似，通过Bootloader可以完成对ARM板上的主要器件如CPU、FLASH、串口等进行初始化，还可以对Flash进行读写操作实现软件升级功能，简而言之，Bootloader就是在操作系统内核运行之前运行的一段程序，通过这段程序，我们可以初始化硬件设备、建立内存空间的映射图，从而将系统的软硬件环境分配处在一个合适的状态。为方便程序的下载，本课题编写了一个下载程序的上位机程序，界面如下所示，
+在嵌入式系统中，Bootloader即是系统的引导程序，其作用与电脑操作系统上的BIOS非常类似，通过Bootloader可以完成对ARM板上的主要器件如CPU、FLASH、串口等进行初始化，还可以对Flash进行读写操作实现软件升级功能，简而言之，Bootloader就是在操作系统内核运行之前运行的一段程序，通过这段程序，我们可以初始化硬件设备、建立内存空间的映射图，从而将系统的软硬件环境分配处在一个合适的状态。本课题为方便产品程序的下载，单独编写了一个用于下载程序的上位机程序，界面如下所示，
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_Downloader}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{Bootloader下载器}
+ \label{chap4_Fig.10}
+ \vspace{-0.4cm}
+\end{figure}
 
-用户程序在运行过程中对User Flash的部分区域进行烧写，可以更新设备的软件代码，这样后期可以方便的通过预留通信接口对产品进行更新升级。此文件可以通过串口写到到ARM芯片的内部flash中去，
+MDK编译可以生成二进制BIN文件，在得到XX.bin文件后,用户程序在运行过程中对User Flash的部分区域重新烧写更新设备的软件代码，这样后期可以方便的通过预留通信接口对产品进行更新升级。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_flash}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{闪存Flash模块组织}
+ \label{chap4_Fig.10}
+ \vspace{-0.4cm}
+\end{figure}
 
-具体方法如下：出厂的设备falsh上刷写了两部分程序，一个bootloader引导程序和一个出厂时最初的导航程序。
-STM32F4的内部闪存(flash)容量有1M字节，起始于0X08000000,一般情况下，程序就从此地址开始写入。此外STM32是基于Cortex-M4 内核的微控制器，其内部通过一张“中断向量表”来响应中断，程序启动后，将首先从“中断向量表”取出复位中断向量执行复位中断程序完成启动，而这张“中断向量表”的起始地址是0x08000004，当中断来临，STM32F4 的内部硬件机制亦会自动将PC 指针定位到“中断向量表”处，并根据中断源取出对应的中断向量执行中断服务程序。
+设备falsh上刷写了两部分程序，一个bootloader引导程序和一个出厂时最初的导航程序。如图\ref{chap4_Fig.10}STM32F4的内部闪存(flash)容量有1M字节，起始于0X08000000,该部分用来存放代码和数据常数，当BOOT0、BOOT1都接地时，就是从该位置开始运行代码的。此外STM32 是基于Cortex-M4 内核的微控制器，其内部通过一张“中断向量表”来响应中断，程序启动后，将首先从“中断向量表”取出复位中断向量执行复位中断程序完成启动，而这张“中断向量表”的起始地址是0x08000004，当中断来临，STM32F4 的内部硬件机制亦会自动将PC 指针定位到“中断向量表”处，并根据中断源取出对应的中断向量执行中断服务程序。
 bootloader更新程序要满足以下要求：1、新程序必须在bootloader程序之后的某个偏移量为X的地址开始；2、必须将新程序的中断向量表相应的移动X个偏移量。
-默认条件下，
+
+而我们设置APP程序起始地址为0X08002800，即偏移量为0x4000(16K字节)，留给用户flash空间（size）是1024k-16k=1008K。偏移量是定义留给bootloader 程序的地址空间大小。这里我定义的是16K，偏移量为0x200的倍数即可（本设计的bootloader只有6K左右），这里留有余量，方便bootloader以后的升级修改。在flash中分配了一个四字节的空间(0X08004000-0X08004004)作为flash固件更新标志位。该标志位默认值为0XFFFF FFFF (flash掉电不擦除)，如果该值为0XFFFF FFFF说明flash中只有BOOTLOADER程序，此时等待串口更新操作。设备上电后运行Bootloader 代码读取flash该标志位上的数据。若读取到数据为0x2B2B1A1A时说明不进入更新，直接跳入功能程序运行，当需要更新代码时，上位机通过串口发送更新指令给ARM，RAM读到更新信号后，重新给更新标志地址(0x08002000)写人数据0x4D4D3C3C，成功写入后软件复位重启。重启后bootloader 此时读到该地址的数据为0x4D4D3C3C，说明进入更新程序代码，选择程序二进制文件写入flash,更新完成后再重置标志位，软件复位重启，运行新的代码。
 
 给设备上电后，连接串口至电脑端，上位机中打开串口，调整波特率到115200bps，此时导航程序正常运行，需要更新代码时，点击更新使能，上位机会发送指令给导航设备，设备会复位软件更新标志位，进入到等待更新的代码中去，此时选择生成的BIN 映像文件，点击执行按键，上位机会将BIN文件分包发送给芯片，每一包的数据大小为2k并加上数据传输的头和尾，下位机串口接收后完成CRC校验，确保没有问题后就重新写入FLASH特定的位置，循环发送完所有数据后，重新置位软件更新标志并软件复位重启，即可重新运行新的导航功能程序，实现软件的升级。
-
-MDK编译默认生成.hex文件，在得到.bin文件后，我们只需要将这个bin文件通过串口传送给芯片，即可执行代码的下载完成升级。
 
 \subsection{FAT32文件系统的移植}
 系统的数据调试选择SD卡保存数据，基于调试方便的原则，在程序中添加FAT32文件系统，来实现存储数据的管理，FAT文件系统移植流程图如下图所示，
 
-FAT文件系统移植过程中，首先要完成SD的硬件初始化，系统检索是否存在SD卡，并判断SD卡是否符合ARM支持的类型，提供文件系统与SD卡底层接口，如果SD驱动不成功，将返回STA\_NOINIT标志位。SD硬件初始化成功之后，文件系统将完成注册工作区功能，这一部分可以视为文件系统的初始化，该部分完成SD卡每个卷注册工作区。搜索根目录并显示完成对SD卡根目录读取
+FAT文件系统是一个免费开源的FAT文件系统模块，专门为小型的嵌入式系统而设计。他完全用标准C语言编写，具有良好的硬件平台独立性。
+移植过程中，首先要完成SD的硬件初始化，系统检索是否存在SD卡，判断SD卡是否符合ARM支持的类型并提供文件系统与SD 卡底层接口，如果SD 驱动不成功，将返回STA\_NOINIT 标志位。SD 硬件初始化成功之后，文件系统将完成注册工作区功能，这一部分可以视为文件系统的初始化，该部分完成SD卡每个卷注册工作区。搜索根目录并显示完成对SD 卡根目录读取。
+
+\section{系统上位机软件设计}
+本论文PC端监控软件是在Visual Studio 2013环境下编写的，实现的功能有数据保存与导入、参数设置，结果显示，KML文件的生成，
+与定位相关的功能包括两大类：定位工程管理和定位信息处理。定位工程管理完成串口的配置，数据的保存与导入，定位信息的回放等功能。定位信息处理完成串口数据的实时读取、处理、按要求显示等功能。
+定位信息处理包括以下方面：
+1、实时读取串口数据，将数据显示出来，并画出定位模块轨迹，同时显示当前模块搜到的卫星；
+2、解析存储的数据文件，并将数据文件中的数据回放在界面中，同时显示轨迹；
+3、解析数据，将已有的数据文件生成kml文件，KML文件是基于XML语法与格式的用于描述和保存地理信息的编码规范，可以被Google Earth识别并显示。
+\subsection{通信数据协议}
+导航设备与PC机之间信息传输遵循一定的数据格式，
+\begin{table}[!h]
+\renewcommand\arraystretch{1}
+\centering
+\caption{\label{chap2_Table 1}GNSS与惯导特性比较}
+\begin{tabular}{c l l}
+\toprule
+\hspace{0.5cm}Name &   \hspace{1cm}Bytes  &  \hspace{1.5cm}Description\\
+\hline
+Message ID       & \hspace{1cm}\$PBSOL  & \\
+Message subID    & \hspace{1cm}1        & \\
+UTC Year         & \hspace{1cm}UINT16   & \\
+UTC Month        & \hspace{1cm}UINT8    & \\
+UTC Day          & \hspace{1cm}UINT16   & \\
+UTC Hour         & \hspace{1cm}UINT8    & \\
+UTC Minutes      & \hspace{1cm}UINT8    & \\
+UTC millisecond  & \hspace{1cm}UINT16   & \\
+Sensor Time      & \hspace{1cm}UINT32   & In ms\\
+GPS week number  & \hspace{1cm}UINT16   & (only GPS week)\\
+TOW              & \hspace{1cm}UINT32   & In msec\\
+NavModeInfo      & \hspace{1cm}UINT32   & 0x00: no nav ; bit 0: reserved\\
+                 & \hspace{1cm}         & bit 1: gnss only \\
+                 & \hspace{1cm}         & bit 2: sensor only \\
+                 & \hspace{1cm}         & bit 3: combined solution
+                 & \hspace{1cm}         & bit 4: PDR mode
+                 & \hspace{1cm}         & bit 5~6: reserved
+                 & \hspace{1cm}......   &                                                    
+Latitude         & \hspace{1cm}UINT32   & in degree, scale *10^7\\
+Longitude        & \hspace{1cm}UINT32   & in degree, scale *10^7\\
+Altitude ellipsoid  & \hspace{1cm}UINT32   &Ellipsoid altitude in centimeter
+Altitude msl        & \hspace{1cm}UINT32   &Mean sea level altitude in cm
+Vn                  & \hspace{1cm}UINT32   &In cm/s
+Ve                  & \hspace{1cm}UINT32   &In cm/s
+Vd                  & \hspace{1cm}UINT32   &In cm/s
+Ground Speed        & \hspace{1cm}UINT32   &Speed over ground in cm/s
+Roll                & \hspace{1cm}UINT32   &Roll, in deg, scale *100
+Pitch               & \hspace{1cm}UINT32   &Pitch, in deg, scale *100
+Heading (yaw)       & \hspace{1cm}UINT32   &Course over ground (0~360) in deg, scale *10
+%\hline
+\toprule
+\end{tabular}
+\end{table}

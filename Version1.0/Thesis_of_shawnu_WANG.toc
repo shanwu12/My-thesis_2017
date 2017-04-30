@@ -36,4 +36,11 @@
 \contentsline {subsection}{\numberline {4.2.1}系统状态方程}{37}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}系统量测方程}{41}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}离散化卡尔曼滤波设计}{41}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}嵌入式软件设计}{43}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}系统程序设计方案}{43}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}MEMS传感器配置}{44}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Bootloader下载设计}{44}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}FAT32文件系统的移植}{46}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}系统上位机软件设计}{46}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}通信数据协议}{47}{subsection.4.4.1}
 \contentsfinish 

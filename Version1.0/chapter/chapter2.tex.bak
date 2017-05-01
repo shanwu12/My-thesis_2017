@@ -363,7 +363,7 @@ d\frac{\boldsymbol{Q}}{t} &= -\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\bo
 \omega_{nb}^n &=\dot{\theta}\boldsymbol{\mu}^R\\
 \omega_{nb}^n &=\boldsymbol{Q}\otimes\omega_{nb}^b\otimes\boldsymbol{Q^*}
 \end{align*}
-式？中$\omega_nb^b$是MEMS陀螺测量载体系相对于导航系下的角速度，结合上述两式式？可以计算记为
+式？中$\omega_{nb}^b$是MEMS陀螺测量载体系相对于导航系下的角速度，结合上述两式式？可以计算记为
 \begin{equation}
 d\frac{\boldsymbol{Q}}{t} = \frac{1}{2}\boldsymbol{Q}\otimes\omega_{nb}^b
 \end{equation}

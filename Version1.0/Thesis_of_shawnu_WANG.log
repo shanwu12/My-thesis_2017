@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  30 APR 2017 16:21
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  1 MAY 2017 19:45
 entering extended mode
 **Thesis_of_shawnu_WANG.tex
 
@@ -1114,30 +1114,47 @@ song/m/n/12/62 K \C19/zhsong/m/n/12/45 P \C19/zhsong/m/n/12/58 $\OML/cmm/m/it/
 /rm/m/n/12/25 "|
  []
 
-[21] [22] <figures/chap3/chap3_Principle.png, id=502, 903.375pt x 510.708pt>
+[21] <figures/chap2/chap2_loose.png, id=489, 453.8556pt x 130.8087pt>
+File: figures/chap2/chap2_loose.png Graphic file (type png)
+
+<use figures/chap2/chap2_loose.png>
+Package pdftex.def Info: figures/chap2/chap2_loose.png used on input line 499.
+(pdftex.def)             Requested size: 276.39299pt x 79.66144pt.
+ [22]
+<figures/chap2/chap2_tight.png, id=502, 493.6041pt x 174.53204pt>
+File: figures/chap2/chap2_tight.png Graphic file (type png)
+
+<use figures/chap2/chap2_tight.png>
+Package pdftex.def Info: figures/chap2/chap2_tight.png used on input line 509.
+(pdftex.def)             Requested size: 276.39299pt x 97.72928pt.
+
+<figures/chap3/chap3_Principle.png, id=504, 903.375pt x 510.708pt>
 File: figures/chap3/chap3_Principle.png Graphic file (type png)
 
 <use figures/chap3/chap3_Principle.png>
 Package pdftex.def Info: figures/chap3/chap3_Principle.png used on input line 5
-07.
+21.
 (pdftex.def)             Requested size: 414.58246pt x 234.38303pt.
  [23 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3/chap3_Principle.png>]) [24]
+hap2/chap2_loose.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Ver
+sion1.0/figures/chap2/chap2_tight.png>]
+[24 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap3/chap3_Principle.png>]) [25]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
-er3.tex"
+er3.tex" [26
+
+
+
+]
 ตฺ3\ignorespaces ีย
-<figures/chap3/chap3_process.png, id=515, 195.129pt x 233.673pt>
+<figures/chap3/chap3_process.png, id=528, 195.129pt x 233.673pt>
 File: figures/chap3/chap3_process.png Graphic file (type png)
 
 <use figures/chap3/chap3_process.png>
 Package pdftex.def Info: figures/chap3/chap3_process.png used on input line 7.
 (pdftex.def)             Requested size: 276.39299pt x 330.99432pt.
- [25
-
-
-
- <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/chap3
-/chap3_process.png>]
+ [27 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap3/chap3_process.png>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
 
 (C:\CTEX\MiKTeX\tex\latex\base\omscmr.fd
@@ -1145,80 +1162,80 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
- [26]
-<figures/chap3/chap3_BMI.png, id=526, 323.70938pt x 216.05719pt>
+ [28]
+<figures/chap3/chap3_BMI.png, id=539, 323.70938pt x 216.05719pt>
 File: figures/chap3/chap3_BMI.png Graphic file (type png)
 
 <use figures/chap3/chap3_BMI.png>
 Package pdftex.def Info: figures/chap3/chap3_BMI.png used on input line 40.
 (pdftex.def)             Requested size: 138.19649pt x 92.23682pt.
 
-<figures/chap3/chap3_NEO.png, id=528, 319.1925pt x 236.38312pt>
+<figures/chap3/chap3_NEO.png, id=541, 319.1925pt x 236.38312pt>
 File: figures/chap3/chap3_NEO.png Graphic file (type png)
 
 <use figures/chap3/chap3_NEO.png>
 Package pdftex.def Info: figures/chap3/chap3_NEO.png used on input line 56.
 (pdftex.def)             Requested size: 138.19649pt x 102.3425pt.
- [27 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+ [29 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_BMI.png>]
-<figures/chap3/chap3_TPS73.png, id=533, 138.5175pt x 111.41624pt>
+<figures/chap3/chap3_TPS73.png, id=548, 138.5175pt x 111.41624pt>
 File: figures/chap3/chap3_TPS73.png Graphic file (type png)
 
 <use figures/chap3/chap3_TPS73.png>
 Package pdftex.def Info: figures/chap3/chap3_TPS73.png used on input line 69.
 (pdftex.def)             Requested size: 92.12865pt x 74.10277pt.
- [28 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+ [30 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_NEO.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versi
 on1.0/figures/chap3/chap3_TPS73.png>]
-<figures/chap3/chap3_Arm.png, id=541, 484.05844pt x 424.58624pt>
+<figures/chap3/chap3_Arm.png, id=556, 484.05844pt x 424.58624pt>
 File: figures/chap3/chap3_Arm.png Graphic file (type png)
 
 <use figures/chap3/chap3_Arm.png>
 Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 82.
 (pdftex.def)             Requested size: 414.58246pt x 363.65991pt.
 
-<figures/chap3/chap3_RST.png, id=542, 289.83281pt x 301.8778pt>
+<figures/chap3/chap3_RST.png, id=557, 289.83281pt x 301.8778pt>
 File: figures/chap3/chap3_RST.png Graphic file (type png)
 
 <use figures/chap3/chap3_RST.png>
 Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 90.
 (pdftex.def)             Requested size: 138.19649pt x 143.94159pt.
- [29 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+ [31 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_Arm.png>]
-<figures/chap3/chap3_Power.png, id=550, 314.97675pt x 428.802pt>
+<figures/chap3/chap3_Power.png, id=564, 314.97675pt x 428.802pt>
 File: figures/chap3/chap3_Power.png Graphic file (type png)
 
 <use figures/chap3/chap3_Power.png>
 Package pdftex.def Info: figures/chap3/chap3_Power.png used on input line 120.
 (pdftex.def)             Requested size: 230.32515pt x 313.56592pt.
 
-<figures/chap3/chap3_Bmi160.png, id=551, 409.53pt x 316.93407pt>
+<figures/chap3/chap3_Bmi160.png, id=565, 409.53pt x 316.93407pt>
 File: figures/chap3/chap3_Bmi160.png Graphic file (type png)
 
 <use figures/chap3/chap3_Bmi160.png>
 Package pdftex.def Info: figures/chap3/chap3_Bmi160.png used on input line 129.
 
 (pdftex.def)             Requested size: 276.39299pt x 213.91159pt.
- [30 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3/chap3_RST.png>] [31 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
+ [32 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap3/chap3_RST.png>] [33 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
 Version1.0/figures/chap3/chap3_Power.png> <D:/Shan_5/shan_5/Graduation project/
 BIT_thesis/Draft/Version1.0/figures/chap3/chap3_Bmi160.png>]
-<figures/chap3/chap3_SDIO.png, id=566, 572.89032pt x 325.96782pt>
+<figures/chap3/chap3_SDIO.png, id=580, 572.89032pt x 325.96782pt>
 File: figures/chap3/chap3_SDIO.png Graphic file (type png)
 
 <use figures/chap3/chap3_SDIO.png>
 Package pdftex.def Info: figures/chap3/chap3_SDIO.png used on input line 142.
 (pdftex.def)             Requested size: 276.39299pt x 157.26355pt.
 
-<figures/chap3/chap3_m8n.png, id=567, 517.18219pt x 239.39438pt>
+<figures/chap3/chap3_m8n.png, id=581, 517.18219pt x 239.39438pt>
 File: figures/chap3/chap3_m8n.png Graphic file (type png)
 
 <use figures/chap3/chap3_m8n.png>
 Package pdftex.def Info: figures/chap3/chap3_m8n.png used on input line 150.
 (pdftex.def)             Requested size: 276.39299pt x 127.94139pt.
- [32 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+ [34 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_SDIO.png>]
-<figures/chap3/chap3_usb.png, id=573, 514.17094pt x 214.55156pt>
+<figures/chap3/chap3_usb.png, id=587, 514.17094pt x 214.55156pt>
 File: figures/chap3/chap3_usb.png Graphic file (type png)
 
 <use figures/chap3/chap3_usb.png>
@@ -1237,11 +1254,11 @@ g/m/n/12/55  \C19/zhsong/m/n/12/37  \C19/zhsong/m/n/12/57 ำ \C19/rm/m/n/12/40
 n/12/57 ฯ
  []
 
-[33 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+[35 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
 ap3/chap3_m8n.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versio
-n1.0/figures/chap3/chap3_usb.png>] [34]) [35]
+n1.0/figures/chap3/chap3_usb.png>] [36]) [37]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
-er4.tex" [36
+er4.tex" [38
 
 
 
@@ -1252,41 +1269,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--22
 
  []
 
-[37]
+[39]
 Overfull \hbox (30.86163pt too wide) in paragraph at lines 72--72
 [] 
  []
 
-[38]
+[40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-[40] [41] [42] [43]
-<figures/chap4/chap4_Downloader.png, id=644, 528.47438pt x 263.48438pt>
+ [41]
+[42] [43] [44] [45]
+<figures/chap4/chap4_Downloader.png, id=658, 528.47438pt x 263.48438pt>
 File: figures/chap4/chap4_Downloader.png Graphic file (type png)
 
 <use figures/chap4/chap4_Downloader.png>
 Package pdftex.def Info: figures/chap4/chap4_Downloader.png used on input line 
-297.
+295.
 (pdftex.def)             Requested size: 276.39299pt x 137.80066pt.
 
-<figures/chap4/chap4_flash.png, id=645, 698.00775pt x 346.896pt>
+<figures/chap4/chap4_flash.png, id=659, 698.00775pt x 346.896pt>
 File: figures/chap4/chap4_flash.png Graphic file (type png)
 
 <use figures/chap4/chap4_flash.png>
-Package pdftex.def Info: figures/chap4/chap4_flash.png used on input line 306.
+Package pdftex.def Info: figures/chap4/chap4_flash.png used on input line 304.
 (pdftex.def)             Requested size: 276.39299pt x 137.35852pt.
- [44 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+ [46 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap4/chap4_Downloader.png>]
 Underfull \vbox (badness 3557) has occurred while \output is active []
 
- [45 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap4/chap4_flash.png>] [46]
-Overfull \hbox (14.84724pt too wide) in paragraph at lines 338--364
+ [47 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap4/chap4_flash.png>] [48]
+Overfull \hbox (14.84724pt too wide) in paragraph at lines 336--362
  [][] 
  []
 
-) [47]
+) [49]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
 
@@ -1316,11 +1333,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19417 strings out of 495354
- 307005 string characters out of 3183859
+ 19434 strings out of 495354
+ 307410 string characters out of 3183859
  382203 words of memory out of 3000000
- 21918 multiletter control sequences out of 15000+200000
- 59172 words of font info for 206 fonts, out of 3000000 for 9000
+ 21929 multiletter control sequences out of 15000+200000
+ 59469 words of font info for 207 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,19n,60p,1287b,1161s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
@@ -1359,9 +1376,9 @@ TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public
 C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Thesis_of_shawnu_WANG.pdf (49 pages, 1846454 bytes).
+Output written on Thesis_of_shawnu_WANG.pdf (51 pages, 1871595 bytes).
 PDF statistics:
- 952 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 456 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 966 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 466 words of extra memory for PDF output out of 10000 (max. 10000000)
 

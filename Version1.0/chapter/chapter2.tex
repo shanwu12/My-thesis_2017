@@ -511,7 +511,68 @@ h
  \label{chap2_Fig.1}
  \vspace{-0.4cm}
 \end{figure}
-紧组合方案中，可以将GNSS和SINS按组合的要求进行一体化设计，伪距/伪距率组合，以及在此基础上用SINS的位置和速度对接收机跟踪环路进行辅助，为有效利用各导航子系统的导航信息，提高精度与松组合相比具有更高的定位精度及输出稳定性，同时利用两种定位方式相互补充的特点，如图，伪距/伪距率组合模式是用GPS给出的星历数据和SINS给出的位置和速度计算出相应于SINS位置的伪距和伪距率，并将其与GPS测量的伪距和伪距率相比较作为量测值，通过Kalman滤波器估计SINS和GPS的误差量，然后对两个系统进行校正，由于GPS的测距容易建模，因而可以把它扩充为状态，通过滤波器加以估计，然后对GPS接收机进行校正。
+该组合方式中，用GNSS给出的星历数据和SINS 给出的位置和速度计算出相应于SINS位置的伪距和伪距率，并将其与GPS 测量的伪距和伪距率相比较作为量测值，通过Kalman 滤波器估计SINS 和GPS 的误差量，然后对两个系统进行校正，由于GPS 的测距容易建模，因而可以把它扩充为状态，通过滤波器加以估计，然后对GPS 接收机进行校正。GNSS/MEMS惯导紧组合系统也逐渐成为欧美发达国家陆地车辆导航辅助的主要装备。
+
+紧组合的特点是：可以实现GNSS与惯导内部相互辅助，在小于四个卫星的情况下依然可以正常输出定位信息更新，相比松组合具有更高的定位精度及输出稳定性，抗干扰能力强等特点，但是需要参与大量的GNSS接收机的基带处理过程，导致计算量增大，软硬件架构复杂，应用有一定限制。
+
+\subsection{MEMS惯性传感器的误差模型}
+MEMS惯性传感器的输出信号中误差主要由确定性误差和随机性误差组成。确定性误差不随传感器工作时间的长短发生变化，可通过建模和测试予以补偿，在传感器数据导入惯导解算之前，这部分的误差应该首先被补偿。确定性误差包括零偏、刻度因子误差、传感器三个轴之间的非正交性以及刻度因子的非线性误差。而一般所指的惯性器件精度习惯上为静态条件下测试的随机误差，一般包括：零偏稳定性、白噪声、零偏重复性、加速度计速度随机游走、角度随机游走等，随机性误差比较复杂，通常可以用随机常数、随机游走和一阶高斯马尔可夫过程等统计方法来对随机误差进行建模。
+
+目前对于低精度低成本的惯性传感器，越来越多的建模方法被使用，如自相关函数法、功率谱密度法、自回归平滑模型法和Allan方差法等。由于Allan方差分析简单和有效，是针对传感器随机误差参数确定的常用方法之一，本课题采用此方法对MEMS惯导的随机误差进行分析。
+
+Allan方差作为陀螺随机误差一种时域分析技术,是公认的IEEE标准规范。他是美国学者David Allan为研究原子钟的震荡器稳定性而提出的概念，Allan方差随后被引入到中、低精度陀螺的随机误差辨识中，实用性很强，取得良好效果。
+
+1、Allan方差的定义
+
+如图，数轴上有N个连续的采样点，每个采样点的间隔都是$\Delta t$，然后连续n数据点可以创建一个簇$(n<N/2)$。每一簇的时间为$\tau = n\Delta t$。
+
+假设传感器的瞬时采样速率为$\boldsymbol\Omega(t)$，那么在时间$t_k$和$t_(k+1)$内的第K簇平均值为：
+\begin{equation}
+\overline{\boldsymbol{\Omega}}_k(\tau)=\frac{1}{\tau}\int_{t_k}^{t_{k+\tau}}\boldsymbol{\Omega}(t)dt
+\end{equation}
+
+其中，$\bar{\boldsymbol{\Omega}}_k(\tau)$代表从第$k$个数据点开始，持续n个数据点输出的速率平均值。则Allan方差定义为：
+\begin{equation}
+\sigma^2(\tau) = \frac{1}{2}\langle(\overline{\boldsymbol{\Omega}}_{k+n}-\overline{\boldsymbol{\Omega}}_k)^2\rangle \approx\frac{1}{2(N-2n)}\sum^{N-2n}_{k=1}(\overline{\boldsymbol{\Omega}}_{k+n}((\tau))-\overline{\boldsymbol{\Omega}}_k((\tau)))^2
+\end{equation}
+
+式中符号$\langle \rangle$代表无穷时间内的平均值，在实际中，对于有限N个MEMS惯导数据，时间长度为$\tau$的簇的数目也是有有限的，测试试验中$n$已知，则$\Omega(t)$是可以测量的，Allan方差$\sigma^2(\tau)$和MEMS惯导各项随机噪声的功率谱密度(PSD)有唯一对应关系(IEEE Std.952-1997)：
+\begin{equation}
+\sigma^2(\tau) = 4\int^{\infty}_{0}S_{\Omega}(f)\frac{\sin^4(\pi f\tau))}{(\pi f\tau)^2}df
+\end{equation}
+其中，$S_{\Omega}(f)$是$\Omega(T)$的随机功率谱密度。由于陀螺数据的Allan方差与功率谱密度之间存在定量关系，利用此关系，将陀螺输出数据在样本长度上进行计算，可以得到陀螺数据中的各种噪声特性。同时，该结果还为后面的Kalman滤波器初始参数的设置提供依据，可减小滤波器因噪声参数统计不准确而发散的风险。
+Allan方差分析通常能辨识出零偏不稳定性B、随机游走系数N、量化噪声Q等多种随机噪声。通过Allan 方差法对MEMS 陀螺与加速度计长时间静止数据进行处理后，可以得到类似如下？的双对数曲线图。不同噪声出现在不同的$\tau$区域上，
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.9\textwidth]{figures/chap2/chap2_Allan}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{Allan方差分析曲线图}
+ \label{chap2_Fig.2}
+ \vspace{-0.4cm}
+\end{figure}
+
+各误差项在Allan标准差双对数曲线上的对应的斜率和$\tau$值如表？所示。
+\begin{table}[!h]
+\renewcommand\arraystretch{1}
+\centering
+\caption{\label{chap2_Table 1}Allan方差}
+\begin{tabular}{c l l l}
+\toprule
+\hspace{0.5cm}随机噪声项 &   \hspace{1cm}Allan方差  &\hspace{1.5cm}斜率  &\hspace{1.5cm}$\tau$ 取值(h)\\
+\hline
+\hspace{0.5cm}量化噪声Q &   \hspace{1cm}$\sigma(\tau)=\sqrt(3)Q/\tau$  &\hspace{1.5cm}-1  &\hspace{1.5cm}$\sqrt(3)$\\
+\hspace{0.5cm}随机游走系数N &   \hspace{1cm}$\sigma(\tau)=N/\tau^(\frac{1}{2})$  &\hspace{1.5cm}-1/2  &\hspace{1.5cm}1\\
+\hspace{0.5cm}零偏不稳定性B &   \hspace{1cm}$\sigma(\tau)=B\sqrt(2ln2/\pi)=B/0.664$  &\hspace{1.5cm}0  &\hspace{1.5cm}\ \\
+\hspace{0.5cm}速率随机游走K &   \hspace{1cm}$\sigma(\tau)=K\tau^{1/2}/\sqrt(3)$  &\hspace{1.5cm}1/2  &\hspace{1.5cm}3 \\
+\hspace{0.5cm}速率斜坡R &   \hspace{1cm}$\sigma(\tau)=R\tau/\sqrt(2)$  &\hspace{1.5cm}1  &\hspace{1.5cm}$\sqrt(2)$ \\
+\toprule
+\end{tabular}
+\end{table}
+
+在曲线图上绘制某一斜率的直线，在该斜率直线上找到对应$\tau$处的$\sigma(\tau)$值，便可以分离出相应的随机噪声系数。
+\subsection{MEMS惯性传感器Allan方差实验}
+将制作的设备固定于静止工作台上，上电预热后，以50Hz采样频率采集了6h数据，在matlab上计算数据的Allan方差并绘制对数图，实验数据的Allan方差分析结果如图所示；
+
+根据上述结果可以得到MEMS惯导的随机误差参数，如表所示，
 
 \section{车载组合定位系统总体方案设计}
 车载组合定位系统是一个复杂的系统，包括传感器的数据采集与处理，实时数据解算和融合，上位机导航信息显示等。本课题根据本章前几节的导航解算理论知识，根据实际工作环境完成芯片选型与硬件设计，并编写导航软件实现导航定位功能，最终可以成功地为地面车辆提供姿态位置和速度信息，完成了一款自动驾驶辅助系统的小型化导航模块的工程实现。

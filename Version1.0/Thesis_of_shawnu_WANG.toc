@@ -16,31 +16,33 @@
 \contentsline {subsection}{\numberline {2.3.2}速度更新}{20}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}位置更新}{21}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}小型化车载组合定位原理}{22}{section.2.4}
-\contentsline {section}{\numberline {2.5}车载组合定位系统总体方案设计}{23}{section.2.5}
-\contentsline {section}{\numberline {2.6}本章小结}{25}{section.2.6}
-\contentsline {chapter}{\numberline {第3\ignorespaces 章\hspace {0.3em}}小型化组合定位系统硬件设计}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}引言}{27}{section.3.1}
-\contentsline {section}{\numberline {3.2}主要器件选型}{28}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}ARM芯片}{28}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}MEMS器件}{29}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}卫星接收模块}{29}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}电源管理模块}{30}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}硬件电路设计}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}系统原理图设计}{31}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}系统PCB板设计}{35}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}硬件调试}{36}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}本章小结}{36}{section.3.4}
-\contentsline {chapter}{\numberline {第4\ignorespaces 章\hspace {0.3em}}小型化组合定位系统算法软件设计}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}引言}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}系统模型的设计}{39}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}系统状态方程}{39}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}系统量测方程}{43}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}离散化卡尔曼滤波设计}{43}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}嵌入式软件设计}{45}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}系统程序设计方案}{45}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}MEMS传感器配置}{46}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Bootloader下载设计}{46}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}FAT32文件系统的移植}{48}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}系统上位机软件设计}{48}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}通信数据协议}{49}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {2.4.1}MEMS惯性传感器的误差模型}{23}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}MEMS惯性传感器Allan方差实验}{26}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}车载组合定位系统总体方案设计}{26}{section.2.5}
+\contentsline {section}{\numberline {2.6}本章小结}{27}{section.2.6}
+\contentsline {chapter}{\numberline {第3\ignorespaces 章\hspace {0.3em}}小型化组合定位系统硬件设计}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}引言}{29}{section.3.1}
+\contentsline {section}{\numberline {3.2}主要器件选型}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}ARM芯片}{30}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}MEMS器件}{31}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}卫星接收模块}{31}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}电源管理模块}{32}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}硬件电路设计}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}系统原理图设计}{33}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}系统PCB板设计}{37}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}硬件调试}{38}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}本章小结}{38}{section.3.4}
+\contentsline {chapter}{\numberline {第4\ignorespaces 章\hspace {0.3em}}小型化组合定位系统算法软件设计}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}引言}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}系统模型的设计}{41}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}系统状态方程}{41}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}系统量测方程}{45}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}离散化卡尔曼滤波设计}{45}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}嵌入式软件设计}{47}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}系统程序设计方案}{47}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}MEMS传感器配置}{48}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Bootloader下载设计}{48}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}FAT32文件系统的移植}{50}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}系统上位机软件设计}{50}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}通信数据协议}{51}{subsection.4.4.1}
 \contentsfinish 

@@ -1,10 +1,10 @@
 \chapter{小型化组合定位系统算法软件设计}
 
 \section{引言}
-组合导航技术的发展，一方面得电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法也为组合导航系统提供了有力的理论基础。在上一章已经完成硬件平台的设计，本章讲述MEMS 惯导和GPS传感器松组合系统的软件工程实现，主要从嵌入式软件，卡尔曼滤波算法，上位机显示等方面进行说明。
+组合导航技术的发展，一方面得益于电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法也为组合导航系统提供了有力的理论基础。在上一章完成硬件平台的设计的基础上，本章讲述MEMS惯导和GPS传感器组合系统的软件工程实现，主要从嵌入式软件，卡尔曼滤波算法，上位机显示等方面进行说明。
 
-\section{系统模型的设计}
- 本节讨论MEMS惯导/GNSS组合的基本滤波器设计，采用第二章中图？所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS 惯导和GNSS接收机保持独立工作，选则导航误差作为系统状态量，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，给出低成本IMU/GNSS组合导航系统滤波组合算法，该算法具有实现简单，可靠性较高，计算量低等优点。
+\section{组合系统模型的设计}
+ 本节讨论MEMS惯导/GNSS组合系统基本滤波器的设计，采用第二章中图？所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS 惯导和GNSS接收机保持独立工作，选则导航误差作为系统状态量，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，给出低成本IMU/GNSS组合导航系统滤波组合算法，该算法具有实现简单，可靠性较高，计算量低等优点。
 
 \subsection{系统状态方程}
  本设计中组合系统以15维导航误差作为系统的待估计状态$\delta X$($\delta X$表示误差作为状态)，误差包括三维位置、三维速度、三维姿态、还有三个陀螺零偏及三个加速度计零偏，表示为：
@@ -278,17 +278,26 @@ $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足
 根据前面章节系统总体设计思路和卡尔曼滤波算法分析，ARM在组合导航系统中主要完成系统的数据采集和处理工作下位机软件分为ARM处理器及传感器外围电路驱动部分，惯导解算部分和算法信息组合部分。
 
 \subsection{系统程序设计方案}
+本组合定位系统软件设计使用uVision5 IDE(MDK5)集成开发环境，这是目前针对ARM处理器，尤其是Cortex M内核处理器的最佳开发工具，它提供了一个框架，包括：高度优化的C/C++编译器、调试跟踪器、代码编辑器等。MDK5集成开发环境如图？所示： 采用标准C 语言实现，
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_IDE}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{软件开发环境}
+ \label{chap4_Fig.10}
+ \vspace{-0.4cm}
+\end{figure}
 
 ARM通过定时器中断方式来不断接收和处理MEMS惯导、GNSS数据，BMI160我们以100Hz取数，远高于GNSS1Hz的采集频率，当MEMS惯导和GNSS数据不同步时，处理器只对MIMU信号处理输出捷联导航系统的解算信息；当GNSS数据来时，对其进行卡尔曼滤波，输出的组合导航信息可以以串口方式发送给上位机进行实时显示或保存至SD卡。
-根据设计方案，系统软件流程图如下：
+根据系统设计方案，软件流程图如下：
+
+
+
 
 \subsection{MEMS传感器配置}
 为了MEMS传感器能够正常工作，需要配置它的工作方式，传输速率和通信方式等，具体流程图如下图所示，
 
 在设计加速度计软件驱动时，首先要考虑其测量范围，根据在载体实际所处的环境设置相应的测量范围：$\pm2g$，$\pm4g$，$\pm8g$，$\pm16g$，测量精度均为13位，车辆运行过程属于低动态，设计中采用$\pm2g$测量范围。
 MEMS陀螺仪初始化配置程序主要完成陀螺仪的初始化配置，首先是设置数据采样率，即数据输出率，同时需要设置信号带宽及截止频率。然后设置为工作模式
-
-
 
 \subsection{Bootloader下载设计}
 在嵌入式系统中，Bootloader即是系统的引导程序，其作用与电脑操作系统上的BIOS非常类似，通过Bootloader可以完成对ARM板上的主要器件如CPU、FLASH、串口等进行初始化，还可以对Flash进行读写操作实现软件升级功能，简而言之，Bootloader就是在操作系统内核运行之前运行的一段程序，通过这段程序，我们可以初始化硬件设备、建立内存空间的映射图，从而将系统的软硬件环境分配处在一个合适的状态。本课题为方便产品程序的下载，单独编写了一个用于下载程序的上位机程序，界面如下所示，
@@ -334,40 +343,30 @@ FAT文件系统是一个免费开源的FAT文件系统模块，专门为小型的嵌入式系统而设计。他完全
 \begin{table}[!h]
 \renewcommand\arraystretch{1}
 \centering
-\caption{\label{chap2_Table 1}GNSS与惯导特性比较}
+\caption{\label{chap2_Table 1}PBDR数据协议}
 \begin{tabular}{c l l}
 \toprule
-\hspace{0.5cm}Name &   \hspace{1cm}Bytes  &  \hspace{1.5cm}Description\\
+\hspace{0.5cm}Name &   \hspace{1cm}Bytes  &\hspace{1.5cm}Description\\
 \hline
 Message ID       & \hspace{1cm}\$PBSOL  & \\
 Message subID    & \hspace{1cm}1        & \\
-UTC Year         & \hspace{1cm}UINT16   & \\
-UTC Month        & \hspace{1cm}UINT8    & \\
-UTC Day          & \hspace{1cm}UINT16   & \\
-UTC Hour         & \hspace{1cm}UINT8    & \\
-UTC Minutes      & \hspace{1cm}UINT8    & \\
-UTC millisecond  & \hspace{1cm}UINT16   & \\
-Sensor Time      & \hspace{1cm}UINT32   & In ms\\
-GPS week number  & \hspace{1cm}UINT16   & (only GPS week)\\
-TOW              & \hspace{1cm}UINT32   & In msec\\
-NavModeInfo      & \hspace{1cm}UINT32   & 0x00: no nav ; bit 0: reserved\\
-                 & \hspace{1cm}         & bit 1: gnss only \\
-                 & \hspace{1cm}         & bit 2: sensor only \\
-                 & \hspace{1cm}         & bit 3: combined solution
-                 & \hspace{1cm}         & bit 4: PDR mode
-                 & \hspace{1cm}         & bit 5~6: reserved
-                 & \hspace{1cm}......   &                                                    
-Latitude         & \hspace{1cm}UINT32   & in degree, scale *10^7\\
-Longitude        & \hspace{1cm}UINT32   & in degree, scale *10^7\\
-Altitude ellipsoid  & \hspace{1cm}UINT32   &Ellipsoid altitude in centimeter
-Altitude msl        & \hspace{1cm}UINT32   &Mean sea level altitude in cm
-Vn                  & \hspace{1cm}UINT32   &In cm/s
-Ve                  & \hspace{1cm}UINT32   &In cm/s
-Vd                  & \hspace{1cm}UINT32   &In cm/s
-Ground Speed        & \hspace{1cm}UINT32   &Speed over ground in cm/s
-Roll                & \hspace{1cm}UINT32   &Roll, in deg, scale *100
-Pitch               & \hspace{1cm}UINT32   &Pitch, in deg, scale *100
-Heading (yaw)       & \hspace{1cm}UINT32   &Course over ground (0~360) in deg, scale *10
+UTC Time         & \hspace{1cm}UINT16   & \\
+Sensor Time      & \hspace{1cm}UINT32   & \hspace{1.5cm}In ms\\
+GPS week number  & \hspace{1cm}UINT16   & \hspace{1.5cm}(only GPS week)\\
+TOW              & \hspace{1cm}UINT32   & \hspace{1.5cm}In msec\\
+NavModeInfo      & \hspace{1cm}UINT32   & \hspace{1.5cm}0x00: no nav ; bit 0: reserved\\
+                 & \hspace{1cm}         & \hspace{1.5cm}bit 1: gnss only \\
+                 & \hspace{1cm}         & \hspace{1.5cm}bit 2: sensor only \\
+                 & \hspace{1cm}         & \hspace{1.5cm}bit 3: combined solution\\
+......           & \hspace{1cm}......   & \hspace{1.5cm}......                 \\
+Latitude         & \hspace{1cm}UINT32   & \hspace{1.5cm}in degree, scale $*10^7$\\
+Longitude        & \hspace{1cm}UINT32   & \hspace{1.5cm}in degree, scale $*10^7$\\
+Altitude msl     & \hspace{1cm}UINT32   &\hspace{1.5cm}Mean sea level altitude in cm\\
+Velocity         & \hspace{1cm}UINT32   &\hspace{1.5cm}In cm/s\\
+......           & \hspace{1cm}......   & \hspace{1.5cm}......                 \\
+Roll                & \hspace{1cm}UINT32   &\hspace{1.5cm}Roll, in deg, scale *100\\
+Pitch               & \hspace{1cm}UINT32   &\hspace{1.5cm}Pitch, in deg, scale *100\\
+Heading (yaw)       & \hspace{1cm}UINT32   &\hspace{1.5cm}Course over ground (0~360) in deg, scale *10\\
 %\hline
 \toprule
 \end{tabular}

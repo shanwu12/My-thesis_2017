@@ -15,11 +15,12 @@
 \contentsline {subsection}{\numberline {2.3.1}四元数与姿态更新}{16}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}速度更新}{20}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}位置更新}{21}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}小型化车载组合定位原理}{22}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}MEMS惯性传感器的误差模型}{23}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.3.4}低成本惯导的姿态初始化}{22}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}小型化车载组合定位原理}{23}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}MEMS惯性传感器的误差模型}{24}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}MEMS惯性传感器Allan方差实验}{26}{subsection.2.4.2}
 \contentsline {section}{\numberline {2.5}车载组合定位系统总体方案设计}{26}{section.2.5}
-\contentsline {section}{\numberline {2.6}本章小结}{27}{section.2.6}
+\contentsline {section}{\numberline {2.6}本章小结}{28}{section.2.6}
 \contentsline {chapter}{\numberline {第3\ignorespaces 章\hspace {0.3em}}小型化组合定位系统硬件设计}{29}{chapter.3}
 \contentsline {section}{\numberline {3.1}引言}{29}{section.3.1}
 \contentsline {section}{\numberline {3.2}主要器件选型}{30}{section.3.2}

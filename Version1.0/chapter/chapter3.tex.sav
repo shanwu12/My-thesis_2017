@@ -13,9 +13,10 @@
 本设计硬件是在Altium Designer 10 上进行设计的。这是一款由Altium 公司开发的基于Windows环境下的电路板设计软件，在电子行业运用十分普遍，是电子工程师设计印刷线路板的首选工具，它具有简单易学，操作便捷，资源丰富，人机交互良好等优点。
 
 \section{主要器件选型}
-本课题是利用MIMU构建捷联惯性导航系统，然后接收卫星信号对导航结果进行补偿和融合，得到可信度高的姿态、速度和位置等信息。最终可以应用在地面车辆上，需要良好的稳定性和抗干扰能力。所以，再设计时，不仅需要对其进行规划分析，还要根据工作环境和运行条件进行芯片的选型。以下将介绍几个主要器件的选型。
-\subsection{ARM芯片}
-明确硬件总体需求情况选择的CPU的处理能力、存储容量及速度、IO端口的分配、接口要求、电平要求等等。综合这些因素考虑本系统采用的处理芯片为ST公司的STM32F405VGT6型号的ARM芯片，其属于STM32F4系列，是基于Cortex-M4内核的，是一款升级版的处理器，具有多方面的优势：
+本课题是利用MIMU构建捷联惯性导航系统，然后接收卫星信号对导航结果进行补偿和融合，得到可信度高的姿态、速度和位置等信息。最终可以应用在地面车辆上，需要良好的稳定性和抗干扰能力。所以，在设计时，不仅需要对其进行规划分析，还要根据工作环境和运行条件进行芯片的选型。以下将介绍几个主要器件的选型。
+\subsection{核心处理器ARM芯片}
+在设计导航设备时，需要考虑CPU的处理能力、存储容量及速度、IO端口的分配、接口要求、电平要求等等，同时也要满足组合导航系统的精度要求和实时性，综合这些因素考虑本系统采用的处理芯片为ST公司的STM32F405VGT6型号的ARM芯片，该处理器内核架构是基于Cortex-M4 内核的，是一款升级版的处理器，具有高性能、低成本、低功耗多方面的优势：
+
 1）相比于Cortex M3芯片,STM32F4最大的优势就是内置单精度FPU和DSP指令，可提升控制算法的执行速度，提高代码执行效率，本设计中涉及导航数据的解算而且导航解算对实时性要求比较高，该优势可以很好地展现出来。
 
 2）芯片主频达到168Mhz，片上flash可达1MB,SRAM有192KB，有着丰富的内存资源，满足本设计程序和数据的处理和存储要求。
@@ -24,17 +25,19 @@
 
 4)功能强大、价格低廉，性价比高。
 
-STM32F405RGT6是F4系列的一款设备，我们选用LQNF100封装，内置有1M闪存。其通讯接口丰富，主要接口如下:
+STM32F405RGT6是F4系列的一款设备，我们选用LQNF100封装，内置有1M闪存。其主要通讯接口和外设如下:
 \begin{itemize}
 \item 4个10.5Mbit/s的USART，加上两个UART；
 \item 3个42Mbit/s的SPI；
 \item 3个$I^2C$；
 \item 2个CAN；
-\item 1个SDIO），满足本设计的通讯接口的需求；
+\item 1个SDIO接口，满足本设计数据保存接口的需求；
 \item 1个全速USB OTG和一个高速USB OTG；
+\item 多达17个定时器：16位和32位定时器，最高频率168MHz
 \end{itemize}
 
 \subsection{MEMS器件}
+本设计采用的MEMS器件是德国博世公司研发的六轴惯性传感器芯片BMI160，该模块整合了三轴陀螺仪、三轴加速度计和温度传感器，并含有IIC和SPI接口，可用于连接外部主从设备，向应用端输出完整的六轴惯性数据，相比较多组件方案，免除了组合陀螺仪与加速度时之轴间差的问题，减小了安装空间。且外形尺寸仅为$2.5mm\times3.0\times0.83mm$，实物图如\ref{chap3_Fig.1} 所示。
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_BMI}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -42,13 +45,12 @@ STM32F405RGT6是F4系列的一款设备，我们选用LQNF100封装，内置有1M闪存。其通讯接口丰
  \label{chap3_Fig.2}
  \vspace{-0.4cm}
 \end{figure}
-本设计采用的MEMS器件是德国博世公司研发的六轴惯性传感器芯片BMI160，该模块整合了三轴陀螺仪、三轴加速度计和温度传感器，并含有IIC和SPI接口，可用于连接外部主从设备，向应用端输出完整的六轴惯性数据，相比较多组件方案，免除了组合陀螺仪与加速度时之轴间差的问题，减小了安装空间。且外形尺寸仅为$2.5mm\times3.0\times0.83mm$，实物图如\ref{chap3_Fig.1} 所示。
 
 BMI的特点包括：
 
 1、集成可程序控制，范围$\pm2g$、$\pm4g$、$\pm8g$和$\pm16g$的三轴加速度传感器
 
-2、具有$263LSBs\circ/s$敏感度与全格感测范围为$\pm125\circ/s$、$\pm250\circ/s$、$\pm500\circ/s$、$\pm1000\circ/s$、$\pm2000\circ/s$的三轴角速度传感器
+2、具有$263LSBs\circ/s$敏感度与全格感测范围为$\pm125^\circ/s$、$\pm250^\circ/s$、$\pm500^\circ/s$、$\pm1000^\circ/s$、$\pm2000^\circ/s$ 的三轴角速度传感器
 
 3、VDD供电电压为$3.3V\pm5\%$；VLOGIC可低至$1.8V\pm5\%$
 
@@ -67,9 +69,11 @@ BMI160的性能指标如表？所示
 \toprule
 指标 & 陀螺 & 加速度计 &  \\
 \hline
-$0$ & $X$ & 用户闪存存储器 & 用户闪存存储器，即从Flash启动 \\
-$1$ & $0$ & 系统存储器 & 系统储存器启动，用于串口下载 \\
-$1$ & $1$ & SRAM启动 & SRAM启动，可在SRAM中调试代码 \\
+量程 & $\pm125$ & $\pm2$ \\
+零偏 & $\pm3^\circ/s$ &  $\pm70mg$\\
+分辨率 & $16bit$ & $16bit$  \\
+带宽 & $25-3200Hz$ & $12.5-1600Hz$ \\
+刻度系数 & $262.4LSB/^\circ/s$ & $16384LSB/g$\\
 \toprule
 \end{tabular}
 \end{table}
@@ -89,27 +93,29 @@ NEO-M8N的性能指标如表？所示：
 NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式。据格格式采用工程中常用的NMEA-0183协议，该协议是美国国家海洋电子协会(national marine electronics association)为海用电子设备指定的一套标准格式，目前绝大部分卫星接收机都采用NMEA-0183协议输出位置、速度、星历等导航信息。
 
 \subsection{电源管理模块}
+电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统选择德州仪器的TPS73133 具有反向电流保护的超低功耗电压稳压器件，系列线性稳压器是设计用于功耗敏感类应用的超低静态电流器件。一个精密带隙和误差放大器在温度范围内的精度为2。 只有1μA 的静态电流使这些器件成为要求极小闲置状态功率耗散的电池供电常开系统的理想解决方案。为了增加安全性，这些器件还具有热关断、电流限制和反向电流保护功能。通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.2\textwidth]{figures/chap3/chap3_TPS73}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.2\textwidth]{figures/chap3/chap3_TPS73}\\
  \caption{电源芯片}
  \label{chap3_Fig.4}
  \vspace{-0.4cm}
 \end{figure}
-电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性。本系统选择德州仪器的TPS73133 具有反向电流保护的超低功耗电压稳压器件，系列线性稳压器是设计用于功耗敏感类应用的超低静态电流器件。一个精密带隙和误差放大器在温度范围内的精度为2。 只有1μA 的静态电流使这些器件成为要求极小闲置状态功率耗散的电池供电常开系统的理想解决方案。为了增加安全性，这些器件还具有热关断、电流限制和反向电流保护功能。通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
 
 \section{硬件电路设计}
 \subsection{系统原理图设计}
 在设计原理图时，要清楚了解器件的使用和系统的开发，考虑系统的接地、环路、电源滤波等防止电磁干扰的措施。
+
 ARM最小系统原理图如下所示：
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_Arm}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.8\textwidth]{figures/chap3/chap3_Arm}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{ARM最小系统原理图}
  \label{chap3_Fig.5}
  \vspace{-0.4cm}
 \end{figure}
 
+系统采用STM32F405RGT6处理器作为控制器，其中包括晶振时钟电路、复位电路、boot启动模式设置接口等，从图中还可以看出，主控单元采用3.3V供电方式，数字地和模拟地采用电感隔离，避免信号的干扰。基准电压参考地、STM32 是低电平复位的，电阻R28和电容C25构成上电复位电路。当系统上电时，电源接通给电容充电，电容两端电压上升至3.3V，系统正常工作，当复位按键按下，开关导通电容两端形成回路开始放电，RST 电位被拉低，低电平复位。
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_RST}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -118,10 +124,9 @@ ARM最小系统原理图如下所示：
  \vspace{-0.4cm}
 \end{figure}
 
-系统采用STM32F405RGT6处理器作为控制器，其中包括晶振时钟电路、复位电路、boot启动模式设置接口等从图中还可以看出，主控单元采用3.3V供电方式，数字地和模拟地采用电感隔离，避免信号的干扰。基准电压参考地、STM32 是低电平复位的，电阻R28和电容C25构成上电复位电路。当系统上电时，电源接通给电容充电，电容两端电压上升至3.3V，系统正常工作，当复位按键按下，开关导通电容两端形成回路开始放电，RST 电位被拉低，低电平复位。
 ARM的BOOT0和BOOT1管脚用于设置STM32的启动方式，其对应启动模式如表？所示：
 \begin{table}[!h]
-\renewcommand\arraystretch{1.2}
+\renewcommand\arraystretch{1}
 \centering
 \caption{\label{chap3_Table 1}启动模式设置接口}
 \begin{tabular}{cccc}
@@ -129,13 +134,31 @@ ARM的BOOT0和BOOT1管脚用于设置STM32的启动方式，其对应启动模式如表？所示：
 $BOOT0$ & $BOOT1$ & 启动模式 & 说明 \\
 \hline
 $0$ & $X$ & 用户闪存存储器 & 用户闪存存储器，即从Flash启动 \\
-$1$ & $0$ & 系统存储器 & 系统储存器启动，用于串口下载 \\
+$1$ & $0$ & 系统存储器 & 系统储存器启动 \\
 $1$ & $1$ & SRAM启动 & SRAM启动，可在SRAM中调试代码 \\
 \toprule
 \end{tabular}
 \end{table}
 
 程序下载配置电路：STM32的程序下载有多种方法：USB、串口、JTAG、SWD。上面介绍了程序的启动模式，我们配置了BOOT0和BOOT1都接地，程序即从flash启动。由于板子尺寸较小，这里没有采用JTAG方式，因为其占用的IO管脚比较多，选择的SWD模式占用的IO很少，只需要两根信号线和电源线，而且下载速度也非常快，SWD不仅可以下载代码，还可以实时跟踪调试，寻找程序中的bug, 让开发事半功倍。
+本系统中ARM所使用的外设情况如下表：
+\begin{table}[!h]
+\renewcommand\arraystretch{1}
+\centering
+\caption{\label{chap3_Table 1}ARM外设主要接口}
+\begin{tabular}{cc}
+\toprule
+接口 & 功能 \\
+\hline
+$SPI1$串行总线 & BMI160数据传输\\
+串口$USART3$ & GPS与ARM连接通道 \\
+串口$USART1$ & 与外部设备通信接口\\
+$USB$ & 供电与上位机传输通道\\
+$SDIO$ & SD卡数据存储接口\\
+\toprule
+\end{tabular}
+\end{table}
+
 
 电源处理部分：这主要完成对系统的供电
 
@@ -156,11 +179,11 @@ MEMS传感器模块设计相应的原理图如下：
  \label{chap3_Fig.8}
  \vspace{-0.4cm}
 \end{figure}
-图中采用退耦电容C18、C21消除电源纹波对供电电路的影响。从电路图可以看出BMI160通过SPI高速串行接口来和ARM处理器进行数据通讯。BMI160 是一个自动测量系统，当系统上电后，器件自检通过后，就可以输出六轴传感器数据，默认采样频率为6.4KHz。程序设置100Hz取数，使控制器执行终端可实现100Hz带宽。一般带宽大时，动态响应虽提高，噪声（即稳态误差）也随之增加。 动态在大于200Hz时，大约有3dB的信号损失，噪声也会增加，表现出来的是惯性传感器零偏稳定性变差。
+图中采用退耦电容C18、C21消除电源纹波对供电电路的影响。从电路图可以看出BMI160通过SPI高速串行接口来和ARM处理器进行数据通讯。BMI160 是一个自动测量系统，当系统上电后，器件自检通过后，就可以输出六轴传感器数据，默认采样频率为3.2KHz。程序设置100Hz取数，使控制器执行终端可实现100Hz带宽。一般带宽大时，动态响应虽提高，噪声（即稳态误差）也随之增加。 动态在大于200Hz时，大约有3dB的信号损失，噪声也会增加，表现出来的是惯性传感器零偏稳定性变差。
 BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送目标地址给BMI160时，主设备能够读取其寄存器的内容，这一过程在同一个时钟信号SCLK中完成。数据采用选择普通模式，如图？所示。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_spi}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.8\textwidth]{figures/chap3/chap3_spi}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{SPI数据采集模式}
  \label{chap3_Fig.7}
  \vspace{-0.4cm}
@@ -168,9 +191,33 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 
 当用户通过查阅芯片手册，从寄存器地址可以读出目标测量数据。
 寄存器对应表？如下：
+\begin{table}[!htp]
+\renewcommand\arraystretch{0.8}
+\centering
+\caption{\label{chap3_Table 1}ARM外设主要接口}
+\begin{tabular}{cccc}
+\toprule
+\hspace{0.5cm}寄存器地址 & 寄存器名称 & 默认值 &\hspace{0.5cm}bit7-bit0 \\
+\hline
+\hspace{0.5cm}0x00 & CHIP\_ID   &\hspace{0.5cm}0xD1 &\hspace{0.5cm}chip\_id\\
+\hspace{0.5cm}0x6D & SELF\_TEST &\hspace{0.5cm}0x00 &\hspace{0.5cm}self\_test\_enable\\
+\hspace{0.5cm}0x17 & DATA\_19   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_z\_15\_8\\
+\hspace{0.5cm}0x16 & DATA\_18   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_z\_7\_0\\
+\hspace{0.5cm}0x15 & DATA\_17   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_y\_15\_8\\
+\hspace{0.5cm}0x14 & DATA\_16   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_y\_7\_0\\
+\hspace{0.5cm}0x13 & DATA\_15   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_x\_15\_8\\
+\hspace{0.5cm}0x12 & DATA\_14   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_x\_7\_0\\
+\hspace{0.5cm}0x11 & DATA\_13   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_z\_15\_8\\
+\hspace{0.5cm}0x10 & DATA\_12   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_z\_7\_0\\
+\hspace{0.5cm}0x0F & DATA\_11   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_y\_15\_8\\
+\hspace{0.5cm}0x0E & DATA\_10   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_y\_7\_0\\
+\hspace{0.5cm}0x0D & DATA\_9    &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_x\_15\_8\\
+\hspace{0.5cm}0x0C & DATA\_8    &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_x\_7\_0\\
+\toprule
+\end{tabular}
+\end{table}
 
-
-加速度计测量值寄存器、陀螺仪测量值寄存器和温度等外部传感器数据存储器都是由2个寄存器集合组成，例如X轴加速度计输出寄存器XACCL\_OUT，是由2部分分高低八位两个字节组成的16位数值，存储最近X轴加速度计的测量值，当需要读取X轴加速度计的输出数据时，只需要通过编程在给芯片写入0x0A的数据，SPI即可在输出端返回16位寄存器的数据，再通过二进制补码的格式将其转换成十进制，乘以相应的刻度即可得到X轴加速度计的数据。
+由表\ref{chap3_Table 1}中可以看出，BMI160内部寄存器都是八位宽度，通过一个字节的地址可以访问该寄存器。如加速度计测量值寄存器、陀螺仪测量值寄存器和温度等外部传感器数据存储器都是由2个寄存器集合组成，例如X轴加速度计输出寄存器XACCL\_OUT，是由2部分分高低八位两个字节组成的16位数值，存储最近X轴加速度计的测量值，当需要读取X轴加速度计的输出数据时，只需要通过编程在给芯片写入0x12和0x13的数据，SPI即可在输出端返回寄存器的数据，再通过二进制补码的格式将其转换成十进制，乘以相应的刻度即可得到X轴加速度计的数据。
 
 \begin{figure}[!htb]
  \centering
@@ -180,33 +227,35 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
  \vspace{-0.4cm}
 \end{figure}
 SD卡主要完成实验过程中的数据保存功能，可以方便地进行调试和数据分析。
+
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_m8n}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_m8n}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{NEO-M8N电路图}
  \label{chap3_Fig.10}
  \vspace{-0.4cm}
 \end{figure}
 
-在设计卫星接受模块电路时，设计中为减小信号间的串扰采用了隔离供电的方式，模块引出电源引脚连接$3V3_2$，可以由处理器编程控制稳压电源芯片的输出使能来达到控制卫星芯片工作的目的。设计IPX天线接口可用于扩展GPS有源天线，非常适合地面车辆的使用。设备TIMEPULSE端口连接到状态指示灯，此端口的输出特性可以通过程序进行设置，在默认情况下，有两个状态，这样通过指示灯可以方便判断当前卫星定位的情况。选择STM32的USART3连接设置NEO-M8N模块，连线引脚图如上图所示
+在设计卫星接受模块电路时，设计中为减小信号间的串扰采用了隔离供电的方式，模块引出电源引脚连接$3V3\_2$，可以由处理器编程控制稳压电源芯片的输出使能来达到控制卫星芯片工作的目的。设计IPX天线接口可用于扩展GPS有源天线，非常适合地面车辆的使用。设备TIMEPULSE端口连接到状态指示灯，此端口的输出特性可以通过程序进行设置，在默认情况下，有两个状态，这样通过指示灯可以方便判断当前卫星定位的情况。选择STM32的USART3连接设置NEO-M8N模块，连线引脚图如上图所示
 \begin{table}[!h]
 \renewcommand\arraystretch{1.2}
 \centering
+\renewcommand\arraystretch{0.8}
 \caption{\label{chap3_Table 1}启动模式设置接口}
 \begin{tabular}{cccc}
 \toprule
-\hspace{1cm}状态 && 状态说明 \\
+\hspace{0.5cm}状态 & \hspace{0.5cm}状态说明 \\
 \hline
-\hspace{1cm}常亮 && 未实现定位\\
-\hspace{1cm}闪烁 && 模块定位成功\\
+\hspace{0.5cm}常亮 & \hspace{0.5cm}未实现定位\\
+\hspace{0.5cm}闪烁 & \hspace{0.5cm}模块定位成功\\
 \toprule
 \end{tabular}
 \end{table}
 
-硬件板载一个MiniUSB头，用于USB从机(SLAVE)通信，可以让设备同电脑端USB通信进行数据的传输，同时，还可以为系统供电，但电流不超过500mA。
+硬件板载一个micro \ usb接口，用于USB从机(SLAVE)通信，可以让设备同电脑端USB通信进行数据的传输，同时，还可以为系统供电，但电流不超过500mA。USB电路连接如下图\ref{chap3_Fig.10}
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_usb}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.8\textwidth]{figures/chap3/chap3_usb}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{USB电路图}
  \label{chap3_Fig.10}
  \vspace{-0.4cm}
@@ -226,7 +275,15 @@ SD卡主要完成实验过程中的数据保存功能，可以方便地进行调试和数据分析。
 
 接地技术的目的是最小化接地阻抗，以减少从电路返回到电源之间的接地回路的电势。去耦电容放置在距离IC供电线和接地层之间尽可能近的地方。
 
-显然，由于电路板面积，总体安装位置等的限制，按上述原则设计会受到一定的限制。因此，在设计时，需要对布局和布线分别考虑，达到最佳的状态。
+显然，由于电路板面积，总体安装位置等的限制，按上述原则设计会受到一定的限制。因此，在设计时，需要对布局和布线分别考虑，达到最佳的状态。设计完成的PCB板3D模型如图？所示：
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_pcb}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{PCB3D模型}
+ \label{chap3_Fig.10}
+ \vspace{-0.4cm}
+\end{figure}
+
 
 \subsection{硬件调试}
 电路板设计加工完成后，首先进行硬件电路测试，，调试没有问题后进行系统软件测试。下面说明一下硬件调试过程：

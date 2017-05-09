@@ -17,10 +17,11 @@
 $[\delta P_\varphi \ \ \delta P_\lambda \ \ \delta P_h]^T$Îªµ¼º½×ø±êÏµÉÏµÄ¶«±±ÌìÈýÎ¬Î»ÖÃÎó²î£»
 $[\delta V_e\ \ \delta V_n\ \ \delta V_u]^T$Îª·Ö±ðÎª¶«±±Ìì·½ÏòÈýÎ¬ËÙ¶ÈÎó²î£»
 $[\delta A_p\ \ \delta A_r\ \ \delta A_y]^T$Îª¸©Ñö½Ç¡¢·­¹ö½Ç¡¢Æ«º½½ÇÈýÎ¬×ËÌ¬Îó²î£»
-$[gb_x\ \ gb_y\ \ gb_z]^T$ÎªMEMSÍÓÂÝÒÇÑØÔØÌåÏµ$x$£¬$y$£¬$z$ÖáµÄËæ»úÎó²î,ÎªÒ»½×¸ßË¹Âí¶û¿É·òÄ£ÐÍ£»
-$[ab_x\ \ ab_y\ \ ab_z]^T$ÎªMEMS¼ÓËÙ¶È¼ÆÑØÔØÌåÏµ$x$£¬$y$£¬$z$ÖáµÄËæ»úÎó²î,ÎªÒ»½×¸ßË¹Âí¶û¿É·òÄ£ÐÍ£»\\
+$[gb_x\ \ gb_y\ \ gb_z]^T$ÎªMEMSÍÓÂÝÒÇÑØÔØÌåÏµ$x$¡¢$y$¡¢$z$ÖáµÄËæ»úÎó²î,ÎªÒ»½×¸ßË¹Âí¶û¿É·òÄ£ÐÍ£»
+$[ab_x\ \ ab_y\ \ ab_z]^T$ÎªMEMS¼ÓËÙ¶È¼ÆÑØÔØÌåÏµ$x$¡¢$y$¡¢$z$ÖáµÄËæ»úÎó²î,ÎªÒ»½×¸ßË¹Âí¶û¿É·òÄ£ÐÍ£»
 
 (1)MEMS¹ßµ¼×ËÌ¬Îó²î·½³Ì
+
 ÓÉÓÚ×ËÌ¬ËÄÔªÊýÂú×ãÊ½(2?),¿É½«×ËÌ¬ËÙÂÊ$\boldsymbol{\omega}_{nb}^b$ ÊÓÎªÁã±êÁ¿ËÄÔªÊý¡£¸ù¾ÝÎÄÏ×[?]ÍÆµ¼£¬
 %½«$\delta\boldsymbol{Q}$Ð´³ÉÈý½ÇÐÎÊ½
 %\begin{equation}
@@ -77,6 +78,7 @@ $[ab_x\ \ ab_y\ \ ab_z]^T$ÎªMEMS¼ÓËÙ¶È¼ÆÑØÔØÌåÏµ$x$£¬$y$£¬$z$ÖáµÄËæ»úÎó²î,ÎªÒ»½×
 \boldsymbol\varepsilon_u &=\boldsymbol{T}_{31}\boldsymbol\varepsilon_x+\boldsymbol{T}_{32}\boldsymbol\varepsilon_y+\boldsymbol{T}_{33}\boldsymbol\varepsilon_z \\
 \end{align*}
 Ê½ÖÐ£¬$\boldsymbol{T}_{11}$µÈ²ÎÊýÊ±MEMS¹ßµ¼×ËÌ¬¾ØÕó$\boldsymbol{C}_{n}^b$µÄÏµÊý¡£
+
 (2)MEMS¹ßµ¼ËÙ¶ÈÎó²î·½³Ì
 
 ¸ù¾ÝÊ½(?)µÄMEMS¹ßµ¼±ÈÁ¦·½³Ì£¬Èô¿¼ÂÇÏµÍ³ÖÐ´æÔÚµÄ¸÷ÖÖÎó²î¡£ÔòMEMS ¹ßµ¼µÄËÙ¶ÈÎó²î¼ÆËãÓ¦¸Ã±íÊ¾Îª£º
@@ -101,6 +103,7 @@ $[ab_x\ \ ab_y\ \ ab_z]^T$ÎªMEMS¼ÓËÙ¶È¼ÆÑØÔØÌåÏµ$x$£¬$y$£¬$z$ÖáµÄËæ»úÎó²î,ÎªÒ»½×
 \boldsymbol\bigtriangledown_u &=\boldsymbol{T}_{31}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{32}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{33}\boldsymbol\bigtriangledown_z \\
 \end{align*}
 Ê½ÖÐ£¬$\boldsymbol{T}_{11}$µÈ²ÎÊýÊ±MEMS¹ßµ¼×ËÌ¬¾ØÕó$\boldsymbol{C}_{n}^b$µÄÏµÊý¡£
+
 (1)MEMS¹ßµ¼Î»ÖÃÎó²î·½³Ì
 \begin{align*}
 \delta\dot{\boldsymbol L} &= \frac{\delta V_n}{R_M+h}-\delta h \frac{V_n}{(R_M+h)^2}\\
@@ -167,6 +170,7 @@ F_s =
 0_{3\times3} & 0_{3\times3}\\
 \end{array}\right]_{9\times6}
 \end{equation}
+
 Ê½ÖÐ£¬$R_N$ÊÇµØÇò²Î¿¼ÍÖÔ²Ã®ÓÏÈ¦ÉÏµÄÇúÂÊ°ë¾¶£¬$R_M$ÔòÊÇµØÇò²Î¿¼ÍÖÔ²×ÓÎçÈ¦ÉÏ¸÷µãµÄÇúÂÊ°ë¾¶¡£
 \subsection{ÏµÍ³Á¿²â·½³Ì}
 GNSS/MEMS¹ßµ¼ËÉ×éºÏÄ£ÐÍµÄ¹Û²â·½³ÌÎÒÃÇ²ÉÓÃËÙ¶ÈºÍÎ»ÖÃµÄ·½Ê½£¬¼´Ñ¡ÔñGNSSÐÅºÅµÃµ½µÄËÙ¶ÈºÍÎ»ÖÃÓë¹ßÐÔ½âËãµÃµ½µÄËÙ¶ÈÓëÎ»ÖÃÖ®²î×÷Îª¹Û²âÁ¿¡£
@@ -182,6 +186,7 @@ h_I-h_G\\
 =
 \boldsymbol{H_P}\boldsymbol{X}(t)+\boldsymbol{V_p}(t)
 \end{equation}
+
 ÆäÖÐ£¬$\boldsymbol{H_P}=[0_{3\times6} \ \ I_{3\times3}\ \ 0_{3\times6}]$,ÏÂ±ê$I$±íÊ¾MEMS¹ßµ¼£¬ÏÂ±ê$G$±íÊ¾ÎÀÐÇÐÅºÅ£¬$V_p$ÎªÎÀÐÇÐÅºÅµÄÎ»ÖÃ¹Û²âÔëÉù¡£
 Í¬Àí£¬ËÙ¶È¹Û²âÁ¿$Z_v$Îª
 \begin{equation}
@@ -194,6 +199,7 @@ v_{IU}-v_{GU}\\
 =
 \boldsymbol{H_v}\boldsymbol{X}(t)+\boldsymbol{V_v}(t)
 \end{equation}
+
 ÆäÖÐ£¬ÇÒ$\boldsymbol{H_v}=[0_{3\times3} \ \ I_{3\times3}\ \ 0_{3\times9}]$£¬$V_v$ÎªÎÀÐÇÐÅºÅµÄËÙ¶ÈÔëÉù¡£
 ºÏ²¢ÒÔÉÏÁ½Ê½£¬¿ÉÒÔµÃµ½×éºÏÏµÍ³µÄ¹Û²â·½³ÌÈçÏÂ£¬
 \begin{equation}
@@ -228,6 +234,7 @@ v_{IU}-v_{GU}\\
 \end{aligned}
 \right.
 \end{equation}
+
 Ê½ÖÐ£¬$\boldsymbol{\phi}_{k,k-1}$ÊÇ$k-1$Ê±¿ÌÖÁ$k$Ê±¿ÌµÄ$n$½×µÄÒ»²½×´Ì¬×ªÒÆ¾ØÕó£¬$\boldsymbol{\Gamma}_{k-1}$ÊÇ$n\times p$Î¬ÏµÍ³ÔëÉùÊäÈë¾ØÕó£¬$W_{k-1}$Îª$k-1$Ê±¿ÌµÄÏµÍ³ÔëÉù¡£$\boldsymbol{H}_{k}$ Îª$k$Ê±¿ÌµÄÁ¿²â¾ØÕó£¬$\boldsymbol{V}_k$ÊÇ$k$Ê±¿ÌµÄÁ¿²âÔëÉù¡£
 
 ÔÚ¿¨¶ûÂüÂË²¨¼ÆËãÖÐ£¬¶ÔÏµÍ³µÄÄ£ÐÍÒªÇóÊ®·ÖÑÏ¸ñ£¬ÒªÇó${\boldsymbol{W}_{k}}$ºÍ${\boldsymbol{V}_{k}}$ÊÇ»¥²»Ïà¹ØµÄ£¬Í¬Ê±Á½ÕßÎªÁã¾ùÖµµÄ°×ÔëÉùÐòÁÐ£¬ËûÃÇÂú×ãÈçÏÂÊ½×Ó£º
@@ -247,6 +254,7 @@ v_{IU}-v_{GU}\\
 \end{aligned}
 \right.
 \end{equation}
+
 $Q_k$ÊÇÏµÍ³¹ý³ÌÔëÉù·½²î¾ØÕó£¬Âú×ã·Ç¸º¶¨µÄÌõ¼þ£»$R_k$ÊÇÏµÍ³¹Û²âÔëÉù·½²î¾ØÕó£¬Âú×ã¶Ô³ÆÕý¶¨Õó£»$\delta_{kj}$Îª$Kronecker-\delta $º¯Êý£¬ÇÒ¹ý³ÌÔëÉùºÍ¹Û²âÔëÉù¾ùÂú×ãÓë³õÊ¼×´Ì¬$X_0$²»Ïà¹Ø¡£ÕâÔÚÊµ¼Ê¹¤³Ì»·¾³ÏÂ£¬¹Û²âÎó²îµÄÌØÐÔÓëÊýÖµÊµ¼ÊÉÏ²»»áÊÜµ½ÏµÍ³³õÊ¼×´Ì¬µÄÓ°Ïì£»Æä´Î£¬ÏµÍ³µÄ¹ý³ÌÔëÉùÀíÂÛÒ²²»»áÊÜµ½³õÊ¼×´Ì¬µÄÓ°Ïì¡£
 
 Èô±»¹À¼Æ×´Ì¬$X_k$ÓëÆä¹Û²âÁ¿$Z_k$Âú×ã¿¨¶ûÂüÂË²¨µÄÔ¼ÊøÌõ¼þ£¬¼ÙÉè$K$ Ê±¿ÌµÄ¹Û²âÎª$Z_k$£¬ÇÒÒÑ»ñµÃ$k-1$Ê±¿Ì×´Ì¬$X_{k-1}$µÄ×îÓÅ¹À¼ÆÖµ$\hat{X}_{k-1}$£¬Ôò×´Ì¬$X_k$µÄ¹À¼ÆÖµ$\hat{X}_{k}$¿ÉÓÉÈçÏÂ·½³ÌÇó½â£»
@@ -255,10 +263,12 @@ $Q_k$ÊÇÏµÍ³¹ý³ÌÔëÉù·½²î¾ØÕó£¬Âú×ã·Ç¸º¶¨µÄÌõ¼þ£»$R_k$ÊÇÏµÍ³¹Û²âÔëÉù·½²î¾ØÕó£¬Âú×ã
 \begin{equation}
 {\hat{X}}_{k,k-1}={\Phi}_{k,k-1}{\hat{X}}_{k-1}
 \end{equation}
+
 ÀëÉ¢ÏµÍ³$k$Ê±¿Ì×´Ì¬¹À¼Æ£º
 \begin{equation}
 {\hat{X}}_{k}={\hat{X}}_{k,k-1}+{K}_{k}[{Z}_{k}-{H}_{k}{\hat{X}}_{k,k-1}]
 \end{equation}
+
 ÀëÉ¢ÏµÍ³$k$Ê±¿ÌÂË²¨ÔöÒæ¾ØÕó£º
 \begin{equation}
 {K}_{k}={P}_{k,k-1}{H}_{k}^T[{H}_{k}{P}_{k,k-1}{H}_{k}^T+{R}_{k}]^{-1}
@@ -268,40 +278,54 @@ $Q_k$ÊÇÏµÍ³¹ý³ÌÔëÉù·½²î¾ØÕó£¬Âú×ã·Ç¸º¶¨µÄÌõ¼þ£»$R_k$ÊÇÏµÍ³¹Û²âÔëÉù·½²î¾ØÕó£¬Âú×ã
 \begin{equation}
 {P}_{k,k-1}={\Phi}_{k,k-1}{P}_{k,k-1}{\Phi}_{k,k-1}^T+{{\Gamma}}_{k,k-1}{Q}_{k-1}{{\Gamma}}_{k,k-1}^T
 \end{equation}
+
 ÀëÉ¢ÏµÍ³$k$Ê±¿ÌµÄ¹À¼ÆÎó²î·½²î¾ØÕó£º
 \begin{equation}
 {P}_{k}=[ I-{K}_{k}{H}_k]{P}_{k,k-1}[ I-{K}_{k}{H}_k]^T+{{K}}_{k}{R}_{k}{{K}}_{k}^T
 \end{equation}
+
 ÒÔÉÏ¹«Ê½¼´ÎªËæ»úÀëÉ¢ÏµÍ³µÄ¿¨¶ûÂüÂË²¨µÝÍÆ·½³Ì¡£Ö»ÐèÒª¸ø¶¨³õÊ¼µÄ${\hat{X}}_{0}$¡¢³õÊ¼ÔëÉùÎó²îÐ­·½²î¾ØÕó${P}_{0}$¡¢ÏµÍ³³õÊ¼¹ý³ÌÔëÉù·½²î¾ØÕó${Q}_{k}$Óë³õÊ¼¹Û²âÔëÉù·½²î¾ØÕó${R}_{k}$£¬Ôò¿ÉÒÔÍ¨¹ý¿¨¶ûÂüÂË²¨µÝÍÆµÄ·½Ê½¸ù¾Ý$k$Ê±¿ÌµÄ¹Û²âÖµ$Z_k$¼ÆËã³ö¸ÃÊ±¿ÌµÄ×´Ì¬×îÓÅ¹À¼ÆÖµ${\hat{X}}_{k}$¡£ÔÚÇó½â¹ý³ÌÖÐ£¬½«Ã¿¸öÂË²¨ÖÜÆÚ»®·ÖÎª¶Ô×´Ì¬½øÐÐ¹À¼ÆµÄ¡°Ê±¼ä¸üÐÂ¡±¹ý³ÌºÍ¡°Á¿²â¸üÐÂ¡±£¬Ëã·¨Á÷³ÌÈçÍ¼ËùÊ¾£º
 
 \section{Ç¶ÈëÊ½Èí¼þÉè¼Æ}
 ¸ù¾ÝÇ°ÃæÕÂ½ÚÏµÍ³×ÜÌåÉè¼ÆË¼Â·ºÍ¿¨¶ûÂüÂË²¨Ëã·¨·ÖÎö£¬ARMÔÚ×éºÏµ¼º½ÏµÍ³ÖÐÖ÷ÒªÍê³ÉÏµÍ³µÄÊý¾Ý²É¼¯ºÍ´¦Àí¹¤×÷ÏÂÎ»»úÈí¼þ·ÖÎªARM´¦ÀíÆ÷¼°´«¸ÐÆ÷ÍâÎ§µçÂ·Çý¶¯²¿·Ö£¬¹ßµ¼½âËã²¿·ÖºÍËã·¨ÐÅÏ¢×éºÏ²¿·Ö¡£
 
-\subsection{ÏµÍ³³ÌÐòÉè¼Æ·½°¸}
-±¾×éºÏ¶¨Î»ÏµÍ³Èí¼þÉè¼ÆÊ¹ÓÃuVision5 IDE(MDK5)¼¯³É¿ª·¢»·¾³£¬ÕâÊÇÄ¿Ç°Õë¶ÔARM´¦ÀíÆ÷£¬ÓÈÆäÊÇCortex MÄÚºË´¦ÀíÆ÷µÄ×î¼Ñ¿ª·¢¹¤¾ß£¬ËüÌá¹©ÁËÒ»¸ö¿ò¼Ü£¬°üÀ¨£º¸ß¶ÈÓÅ»¯µÄC/C++ ±àÒëÆ÷¡¢µ÷ÊÔ¸ú×ÙÆ÷¡¢´úÂë±à¼­Æ÷µÈ¡£MDK5¼¯³É¿ª·¢»·¾³ÈçÍ¼£¿ËùÊ¾£º ²ÉÓÃ±ê×¼C ÓïÑÔÊµÏÖ£¬
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_IDE}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
- \caption{Èí¼þ¿ª·¢»·¾³}
+ \includegraphics[width=0.8\textwidth]{figures/chap4/chap4_software}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{×éºÏÏµÍ³Á÷³ÌÍ¼}
  \label{chap4_Fig.10}
  \vspace{-0.4cm}
 \end{figure}
+\subsection{ÏµÍ³³ÌÐòÉè¼Æ·½°¸}
+±¾×éºÏ¶¨Î»ÏµÍ³Èí¼þÉè¼ÆÊ¹ÓÃuVision5 IDE(MDK5)¼¯³É¿ª·¢»·¾³£¬ÕâÊÇÄ¿Ç°Õë¶ÔARM´¦ÀíÆ÷£¬ÓÈÆäÊÇCortex MÄÚºË´¦ÀíÆ÷µÄ×î¼Ñ¿ª·¢¹¤¾ß£¬ËüÌá¹©ÁËÒ»¸ö¿ò¼Ü£¬°üÀ¨£º¸ß¶ÈÓÅ»¯µÄC/C++ ±àÒëÆ÷¡¢µ÷ÊÔ¸ú×ÙÆ÷¡¢´úÂë±à¼­Æ÷µÈ¡£MDK5¼¯³É¿ª·¢»·¾³ÈçÍ¼£¿ËùÊ¾£º ²ÉÓÃ±ê×¼C ÓïÑÔÊµÏÖ¡£
 
 ARMÍ¨¹ý¶¨Ê±Æ÷ÖÐ¶Ï·½Ê½À´²»¶Ï½ÓÊÕºÍ´¦ÀíMEMS¹ßµ¼¡¢GNSSÊý¾Ý£¬BMI160ÎÒÃÇÒÔ100HzÈ¡Êý£¬Ô¶¸ßÓÚGNSS1HzµÄ²É¼¯ÆµÂÊ£¬µ±MEMS¹ßµ¼ºÍGNSSÊý¾Ý²»Í¬²½Ê±£¬´¦ÀíÆ÷Ö»¶ÔMIMUÐÅºÅ´¦ÀíÊä³ö½ÝÁªµ¼º½ÏµÍ³µÄ½âËãÐÅÏ¢£»µ±GNSSÊý¾ÝÀ´Ê±£¬¶ÔÆä½øÐÐ¿¨¶ûÂüÂË²¨£¬Êä³öµÄ×éºÏµ¼º½ÐÅÏ¢¿ÉÒÔÒÔ´®¿Ú·½Ê½·¢ËÍ¸øÉÏÎ»»ú½øÐÐÊµÊ±ÏÔÊ¾»ò±£´æÖÁSD¿¨¡£
 ¸ù¾ÝÏµÍ³Éè¼Æ·½°¸£¬Èí¼þÁ÷³ÌÍ¼ÈçÏÂ£º
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_software}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.9\textwidth]{figures/chap4/chap4_IDE}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{Èí¼þ¿ª·¢»·¾³}
  \label{chap4_Fig.10}
  \vspace{-0.4cm}
 \end{figure}
 
 \subsection{MEMS´«¸ÐÆ÷ÅäÖÃ}
-ÎªÁËMEMS´«¸ÐÆ÷ÄÜ¹»Õý³£¹¤×÷£¬ÐèÒªÅäÖÃËüµÄ¹¤×÷·½Ê½£¬´«ÊäËÙÂÊºÍÍ¨ÐÅ·½Ê½µÈ£¬¾ßÌåÁ÷³ÌÍ¼ÈçÏÂÍ¼ËùÊ¾£¬
+ÎªÁËMEMS´«¸ÐÆ÷ÄÜ¹»Õý³£¹¤×÷£¬ÐèÒªÅäÖÃËüµÄ¹¤×÷·½Ê½£¬´«ÊäËÙÂÊºÍÍ¨ÐÅ·½Ê½µÈ£¬
 
 ÔÚÉè¼Æ¼ÓËÙ¶È¼ÆÈí¼þÇý¶¯Ê±£¬Ê×ÏÈÒª¿¼ÂÇÆä²âÁ¿·¶Î§£¬¸ù¾ÝÔÚÔØÌåÊµ¼ÊËù´¦µÄ»·¾³ÉèÖÃÏàÓ¦µÄ²âÁ¿·¶Î§£º$\pm2g$£¬$\pm4g$£¬$\pm8g$£¬$\pm16g$£¬²âÁ¿¾«¶È¾ùÎª16Î»£¬³µÁ¾ÔËÐÐ¹ý³ÌÊôÓÚµÍ¶¯Ì¬£¬Éè¼ÆÖÐ¼ÓËÙ¶È¼Æ²ÉÓÃ$\pm2g$²âÁ¿·¶Î§£¬ÍÓÂÝÒÇÁ¿³ÌÑ¡Ôñ$\pm125_\circ/s$¡£
-MEMSÍÓÂÝÒÇ³õÊ¼»¯ÅäÖÃ³ÌÐòÖ÷ÒªÍê³ÉÍÓÂÝÒÇµÄ³õÊ¼»¯ÅäÖÃ£¬Ê×ÏÈÊÇÉèÖÃÊý¾Ý²ÉÑùÂÊ£¬¼´Êý¾ÝÊä³öÂÊ£¬Í¬Ê±ÐèÒªÉèÖÃÐÅºÅ´ø¿í¼°½ØÖ¹ÆµÂÊ¡£È»ºóÉèÖÃÎª¹¤×÷Ä£Ê½¡£
+MEMSÍÓÂÝÒÇ³õÊ¼»¯ÅäÖÃ³ÌÐòÖ÷ÒªÍê³ÉÍÓÂÝÒÇµÄ³õÊ¼»¯ÅäÖÃ£¬Ê×ÏÈÊÇÉèÖÃÊý¾Ý²ÉÑùÂÊ£¬¼´Êý¾ÝÊä³öÂÊ£¬Í¬Ê±ÐèÒªÉèÖÃÐÅºÅ´ø¿í¼°½ØÖ¹ÆµÂÊ¡£È»ºóÉèÖÃ¹¤×÷Ä£Ê½£¬BMI160Éè¼ÆÓÐµÍ¹¦ºÄÄ£Ê½£¬ÔÚ²»²É¼¯Êý¾ÝÊ±£¬¿ÉÒÔÉèÖÃ³ÉË¯ÃßÄ£Ê½£¬½µµÍÏµÍ³¹¦ºÄ£¬Êý¾ÝÊä³ö¸ñÊ½²ÉÓÃ¶þ½øÖÆ²¹ÂëÊý¾Ý¸ñÊ½£¬ÔÚÈí¼þÉÏ±àÐ´Êý¾Ý×ª»»´úÂë¼´¿ÉµÃµ½ËùÐèÒªµÄÊý¾Ý£¬ÓÉÓÚÎó²î£¬µ¼ÖÂÊä³öÊý¾ÝÊ±³£³öÏÖÁÙ½çÌø±ä£¬ÔÚÈí¼þÖÐ×öÏàÓ¦Âß¼­·ÖÎö£¬ÌÞ³ýÎÞÐ§Êý¾Ý¡£
+ÏÈÀûÓÃsensor\_BMI160\_init()¶ÔBMI160³õÊ¼»¯£¬Ê¹ÓÃSPI\_writedµ¥×Ö½ÚÐ´Èëº¯ÊýÐ´Èë¼Ä´æÆ÷Êý¾Ý£¬ÅäÖÃÍÓÂÝÒÇ¡¢¼ÓËÙ¶È¼ÆÁ¿³Ì£¬ÉèÖÃ²ÉÑùÆµÂÊµÈ£¬Ã¿´Î²ÉÑù½áÊøºó£¬¼ÓÔØÊý¾Ýµ½Êä³ö¼Ä´æÆ÷ÖÐ£¬È»ºóÔÚ¶¨Ê±Æ÷ÖÐ¶Ïº¯ÊýÖÐµÄ\\
+s8 \ bmi160\_read\_sensor\_data(\&bmi160\_data$[$ g8BmiWrPt $]$ )
+º¯Êý¶ÔBMI160ÀïÃæµÄÊý¾Ý½øÐÐ»ñÈ¡¡£
+
+¶¨ÒåBMI160Êý¾Ý½á¹¹Ìå\\
+typedef \ struct\\
+\{
+
+uint \ timeTag;   \hspace{4.5cm}$/*time \ in \ \lbrack ms \rbrack */$
+
+int \ \ \  sensor \lbrack MAX\_DR\_NUM\_SNSR \rbrack ; \hspace{0.3cm} $/*3 \ gyro \ deg/s , \ \ 3 \ accel \ m/s^2 , scaled \ by \ 1000;*/$ \\% /* 3 gyro in deg/s, 3 accel in m/s^2; scaled by 1000 */\\
+\} tExternalDRSensorData;
 
 \subsection{GNSSÄ£¿éÉè¼Æ}
 NEO\-M8NÄ£¿éÍ¬´¦ÀíÆ÷Ð¾Æ¬²ÉÓÃUART(´®¿Ú)·½Ê½£¬Ä¬ÈÏ²¨ÌØÂÊ115200bps,Êä³öµÄGNSS¶¨Î»Êý¾Ý²ÉÓÃNMEA-0183Ð­Òé¡£ÔÚ¿ªÆôGPSÄ£¿éÇ°£¬Ê×ÏÈÒªÊ¹ÄÜ¸ø¸ÃÄ£¿éµ¥¶À¹©µçµÄÎÈÑ¹Ð¾Æ¬£¬È»ºó¶ÔÄ£¿éÒÔ¼°´®¿Ú½øÐÐ³õÊ¼»¯¡£
@@ -320,17 +344,17 @@ NEO\-M8NÄ£¿éÍ¬´¦ÀíÆ÷Ð¾Æ¬²ÉÓÃUART(´®¿Ú)·½Ê½£¬Ä¬ÈÏ²¨ÌØÂÊ115200bps,Êä³öµÄGNSS¶¨Î»Êý
 º¯Êý$Process\_GpsDataInHandler() $Ñ­»·´¦Àíµ½´ïµÄGPSÐÅÏ¢£¬Ã¿´ÎÔÚ»ñµÃÐÂµÄÊý¾Ý°üºó½«Êý¾Ý½âÂë£¬»ñÈ¡ÓÐÐ§ÐÅÏ¢±£´æÔÚ½á¹¹Ìå±äÁ¿struct \ tUbxRawDataÖÐ£¬È»ºóËÍÈëÂË²¨Æ÷ÖÐ½øÐÐËã·¨ÈÚºÏ¡£
 
 \subsection{ÖÐ¶Ï³ÌÐòÉè¼Æ}
-ARMÏµÍ³µÄÖÐ¶Ï´¦ÀíÁ÷³ÌÖ÷ÒªÓÐ¶¨Ê±ÖÐ¶Ï¡¢´®¿ÚÖÐ¶Ï´¦Àí¡¢Íâ²¿´¥·¢ÖÐ¶Ï¡£
+ARMÏµÍ³µÄÖÐ¶Ï´¦ÀíÁ÷³ÌÖ÷ÒªÓÐ¶¨Ê±ÖÐ¶Ï¡¢´®¿ÚÖÐ¶Ï´¦Àí¡¢Íâ²¿´¥·¢ÖÐ¶ÏµÈ¡£
 
-1¡¢¶¨Ê±Æ÷ÖÐ¶Ï
+(1)¶¨Ê±Æ÷ÖÐ¶Ï
 
 ¶¨Ê±Æ÷ÖÐ¶ÏÖ÷ÒªÄ£Ê½Ö÷ÒªÎªÏµÍ³Ìá¹©ÁËÊ±ÖÓ»ù×¼£¬±¾ÏµÍ³Ê¹ÓÃÁËTIM3¡¢TIM4¡¢TIM5Èý¸ö¶¨Ê±Æ÷¡£
 
 TIM3ÉèÖÃÁË10ms£¨100Hz£©¶¨Ê±ÖÐ¶Ï£¬ÔÚÖÐ¶Ï´¦Àíº¯ÊýÖÐÖ´ÐÐBMI160µÄÊý¾Ý²É¼¯£¬ÅÐ¶ÏGPSÊý¾ÝÊÇ·ñÓÐÐ§£¬Íê³ÉÊ±¼äÍ¬²½´¦Àí¡£Ö´ÐÐLED×´Ì¬·­×ªÖ¸Ê¾¡£ÁíÍâ£¬ÔÚ10msÖÐ¶ÏÖÐ»¹ÉèÖÃÁËÊ±¼äÆ¬º¯Êý$Time\_slice()$£¬ÔÚº¯ÊýÖÐ¶¨ÒåÁËÆµÂÊ±ä»¯Îª100Hz¡¢10Hz¡¢1HzµÄ±êÖ¾Î»£¬·½±ãÊ±¼äÉÏµÄ¹ÜÀí¡£Èç£¬ÔÚÊý¾Ý´æ´¢ÖÐ£¬ÎÒÃÇÖ´ÐÐ1s×·¼ÓÒ»´ÎÊý¾ÝÁ÷µÄ²Ù×÷¾ÍÊÇÓÉTIM3¶¨Ê±Æ÷¿ØÖÆ¡£
 
-2¡¢´®¿Ú½ÓÊÕÖÐ¶Ï
+(2)´®¿Ú½ÓÊÕÖÐ¶Ï
 
-Ö÷Òª¸øÓÃ»§Ìá¹©½Ó¿Ú£¬·½±ã³ÌÐòµÄÏÂÔØÓëµ÷ÊÔ¡£ÔÚ´®¿ÚÖÐ¶ÏÖÐ£¬¶ÁÈ¡µ½½ÓÊÕµ½µÄÊý¾Ý£¬ÅÐ¶Ï±êÖ¾Î»ÊÇ·ñ½øÈë³ÌÐòµÄÉý¼¶£¬ÔÚbootloader´úÂëÖÐÖ´ÐÐ¸üÐÂ£¬Éè¼ÆÁËÈçÏÂ´®¿Ú½ÓÊÕÊý¾Ý¸üÐÂµÄÐ­Òé£¬
+´®¿Ú×÷ÎªMCUµÄÖØÒªÍâ²¿½Ó¿Ú£¬ÊÇÈí¼þ¿ª·¢µÄÖØÒªµ÷ÊÔÊÖ¶Î¡£±àÐ´ÖÐ¶Ï´¦Àíº¯ÊýUSART2\_IRQHandler()£¬Ö÷Òª¸øÓÃ»§Ìá¹©½Ó¿Ú£¬·½±ã³ÌÐòµÄÏÂÔØÓëµ÷ÊÔ¡£Ò»·½ÃæÔÚ´®¿ÚÖÐ¶ÏÖÐ£¬¶ÁÈ¡µ½½ÓÊÕµ½µÄÊý¾Ý£¬²¢½«Êý¾ÝËÍÈëÏàÓ¦¼Ä´æÆ÷ÖÐ£¬ÔÚÆäËû·þÎñº¯ÊýÖÐ·ÃÎÊ¸Ã¼Ä´æÆ÷µÄÖµ£¬¼´¿ÉÊµÏÖÊý¾ÝµÄ¸³Öµ£»ÁíÒ»·½ÃæÅÐ¶Ï½ÓÊÕµ½Êý¾ÝÖÐÊÇ·ñº¬ÓÐÏàÓ¦±êÖ¾Î»µÄ×Ö¶Î£¬È»ºó±àÐ´×Ô¼ºµÄµÄÂß¼­º¯Êý¡£Èç£¬¼ì²â´®¿Ú½ÓÊÕÊý¾ÝÖÐÊÇ·ñÊÕµ½Òª½øÈë³ÌÐòÉý¼¶µÄ±êÖ¾$\#up\$$£¬Èç¹ûÓÐ£¬Ìø×ªÖÁbootloader´úÂëÖÐÖ´ÐÐ¸üÐÂ£¬Éè¼ÆÁËÈçÏÂ´®¿Ú½ÓÊÕÊý¾Ý¸üÐÂµÄÐ­Òé£º
 \begin{table}[!h]
 \renewcommand\arraystretch{1.2}
 \centering
@@ -343,7 +367,7 @@ TIM3ÉèÖÃÁË10ms£¨100Hz£©¶¨Ê±ÖÐ¶Ï£¬ÔÚÖÐ¶Ï´¦Àíº¯ÊýÖÐÖ´ÐÐBMI160µÄÊý¾Ý²É¼¯£¬ÅÐ¶ÏGPSÊý
 \end{tabular}
 \end{table}
 
-\subsection{BootloaderÏÂÔØÉè¼Æ}
+\subsection{\textbf{BootloaderÏÂÔØÉè¼Æ}}
 ÔÚÇ¶ÈëÊ½ÏµÍ³ÖÐ£¬Bootloader¼´ÊÇÏµÍ³µÄÒýµ¼³ÌÐò£¬Æä×÷ÓÃÓëµçÄÔ²Ù×÷ÏµÍ³ÉÏµÄBIOS·Ç³£ÀàËÆ£¬Í¨¹ýBootloader¿ÉÒÔÍê³É¶ÔARM°åÉÏµÄÖ÷ÒªÆ÷¼þÈçCPU¡¢FLASH¡¢´®¿ÚµÈ½øÐÐ³õÊ¼»¯£¬»¹¿ÉÒÔ¶ÔFlash½øÐÐ¶ÁÐ´²Ù×÷ÊµÏÖÈí¼þÉý¼¶¹¦ÄÜ£¬¼ò¶øÑÔÖ®£¬Bootloader¾ÍÊÇÔÚ²Ù×÷ÏµÍ³ÄÚºËÔËÐÐÖ®Ç°ÔËÐÐµÄÒ»¶Î³ÌÐò£¬Í¨¹ýÕâ¶Î³ÌÐò£¬ÎÒÃÇ¿ÉÒÔ³õÊ¼»¯Ó²¼þÉè±¸¡¢½¨Á¢ÄÚ´æ¿Õ¼äµÄÓ³ÉäÍ¼£¬´Ó¶ø½«ÏµÍ³µÄÈíÓ²¼þ»·¾³·ÖÅä´¦ÔÚÒ»¸öºÏÊÊµÄ×´Ì¬¡£±¾¿ÎÌâÎª·½±ã²úÆ·³ÌÐòµÄÏÂÔØ£¬µ¥¶À±àÐ´ÁËÒ»¸öÓÃÓÚÏÂÔØ³ÌÐòµÄÉÏÎ»»ú³ÌÐò£¬½çÃæÈçÏÂËùÊ¾£¬
 \begin{figure}[!htb]
  \centering
@@ -353,7 +377,7 @@ TIM3ÉèÖÃÁË10ms£¨100Hz£©¶¨Ê±ÖÐ¶Ï£¬ÔÚÖÐ¶Ï´¦Àíº¯ÊýÖÐÖ´ÐÐBMI160µÄÊý¾Ý²É¼¯£¬ÅÐ¶ÏGPSÊý
  \vspace{-0.4cm}
 \end{figure}
 
-MDK±àÒë¿ÉÒÔÉú³É¶þ½øÖÆBINÎÄ¼þ£¬ÔÚµÃµ½XX.binÎÄ¼þºó,ÓÃ»§³ÌÐòÔÚÔËÐÐ¹ý³ÌÖÐ¶ÔUser FlashµÄ²¿·ÖÇøÓòÖØÐÂÉÕÐ´¸üÐÂÉè±¸µÄÈí¼þ´úÂë£¬ÕâÑùºóÆÚ¿ÉÒÔ·½±ãµÄÍ¨¹ýÔ¤ÁôÍ¨ÐÅ½Ó¿Ú¶Ô²úÆ·½øÐÐ¸üÐÂÉý¼¶¡£
+MDK±àÒë¿ÉÒÔÉú³É¶þ½øÖÆBINÎÄ¼þ£¬ÔÚµÃµ½XX.binÎÄ¼þºó,ÓÃ»§³ÌÐòÔÚÔËÐÐ¹ý³ÌÖÐ¶ÔUser FlashµÄ²¿·ÖÇøÓòÖØÐÂÉÕÐ´¼´¿É¸üÐÂÉè±¸µÄÈí¼þ´úÂë£¬ÕâÑùºóÆÚ¿ÉÒÔ·½±ãµÄÍ¨¹ýÔ¤ÁôÍ¨ÐÅ½Ó¿Ú¶Ô²úÆ·½øÐÐ¸üÐÂÉý¼¶¡£
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_flash}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -362,10 +386,14 @@ MDK±àÒë¿ÉÒÔÉú³É¶þ½øÖÆBINÎÄ¼þ£¬ÔÚµÃµ½XX.binÎÄ¼þºó,ÓÃ»§³ÌÐòÔÚÔËÐÐ¹ý³ÌÖÐ¶ÔUser Flas
  \vspace{-0.4cm}
 \end{figure}
 
-Éè±¸falshÉÏË¢Ð´ÁËÁ½²¿·Ö³ÌÐò£¬Ò»¸öbootloaderÒýµ¼³ÌÐòºÍÒ»¸ö³ö³§Ê±×î³õµÄµ¼º½³ÌÐò¡£ÈçÍ¼\ref{chap4_Fig.10}STM32F4µÄÄÚ²¿ÉÁ´æ(flash)ÈÝÁ¿ÓÐ1M×Ö½Ú£¬ÆðÊ¼ÓÚ0X08000000,¸Ã²¿·ÖÓÃÀ´´æ·Å´úÂëºÍÊý¾Ý³£Êý£¬µ±BOOT0¡¢BOOT1¶¼½ÓµØÊ±£¬¾ÍÊÇ´Ó¸ÃÎ»ÖÃ¿ªÊ¼ÔËÐÐ´úÂëµÄ¡£´ËÍâSTM32 ÊÇ»ùÓÚCortex-M4 ÄÚºËµÄÎ¢¿ØÖÆÆ÷£¬ÆäÄÚ²¿Í¨¹ýÒ»ÕÅ¡°ÖÐ¶ÏÏòÁ¿±í¡±À´ÏìÓ¦ÖÐ¶Ï£¬³ÌÐòÆô¶¯ºó£¬½«Ê×ÏÈ´Ó¡°ÖÐ¶ÏÏòÁ¿±í¡±È¡³ö¸´Î»ÖÐ¶ÏÏòÁ¿Ö´ÐÐ¸´Î»ÖÐ¶Ï³ÌÐòÍê³ÉÆô¶¯£¬¶øÕâÕÅ¡°ÖÐ¶ÏÏòÁ¿±í¡±µÄÆðÊ¼µØÖ·ÊÇ0x08000004£¬µ±ÖÐ¶ÏÀ´ÁÙ£¬STM32F4 µÄÄÚ²¿Ó²¼þ»úÖÆÒà»á×Ô¶¯½«PC Ö¸Õë¶¨Î»µ½¡°ÖÐ¶ÏÏòÁ¿±í¡±´¦£¬²¢¸ù¾ÝÖÐ¶ÏÔ´È¡³ö¶ÔÓ¦µÄÖÐ¶ÏÏòÁ¿Ö´ÐÐÖÐ¶Ï·þÎñ³ÌÐò¡£
-bootloader¸üÐÂ³ÌÐòÒªÂú×ãÒÔÏÂÒªÇó£º1¡¢ÐÂ³ÌÐò±ØÐëÔÚbootloader³ÌÐòÖ®ºóµÄÄ³¸öÆ«ÒÆÁ¿ÎªXµÄµØÖ·¿ªÊ¼£»2¡¢±ØÐë½«ÐÂ³ÌÐòµÄÖÐ¶ÏÏòÁ¿±íÏàÓ¦µÄÒÆ¶¯X¸öÆ«ÒÆÁ¿¡£
+ÉÏÍ¼Õ¹Ê¾ÁËSTM32F405µÄflashµØÖ·Ó³Éä±í£¬ÈçÍ¼\ref{chap4_Fig.10}STM32F4µÄÄÚ²¿ÉÁ´æ(flash)ÈÝÁ¿ÓÐ1M×Ö½Ú£¬ÆðÊ¼ÓÚ0X08000000,¸Ã²¿·ÖÓÃÀ´´æ·Å´úÂëºÍÊý¾Ý³£Êý£¬Éè±¸falshÉÏË¢Ð´ÁËÁ½²¿·Ö³ÌÐò£¬Ò»¸öbootloaderÒýµ¼³ÌÐòºÍÒ»¸ö³ö³§Ê±×î³õµÄµ¼º½³ÌÐò¡£µ±BOOT0¡¢BOOT1 ¶¼½ÓµØÊ±£¬¾ÍÊÇ´Ó¸ÃÎ»ÖÃ¿ªÊ¼ÔËÐÐ´úÂëµÄ¡£´ËÍâSTM32 ÊÇ»ùÓÚCortex-M4 ÄÚºËµÄÎ¢¿ØÖÆÆ÷£¬ÆäÄÚ²¿Í¨¹ýÒ»ÕÅ¡°ÖÐ¶ÏÏòÁ¿±í¡±À´ÏìÓ¦ÖÐ¶Ï£¬³ÌÐòÆô¶¯ºó£¬½«Ê×ÏÈ´Ó¡°ÖÐ¶ÏÏòÁ¿±í¡±È¡³ö¸´Î»ÖÐ¶ÏÏòÁ¿Ö´ÐÐ¸´Î»ÖÐ¶Ï³ÌÐòÍê³ÉÆô¶¯£¬¶øÕâÕÅ¡°ÖÐ¶ÏÏòÁ¿±í¡±µÄÆðÊ¼µØÖ·ÊÇ0x08000004£¬µ±ÖÐ¶ÏÀ´ÁÙ£¬STM32F4 µÄÄÚ²¿Ó²¼þ»úÖÆÒà»á×Ô¶¯½«PC Ö¸Õë¶¨Î»µ½¡°ÖÐ¶ÏÏòÁ¿±í¡±´¦£¬²¢¸ù¾ÝÖÐ¶ÏÔ´È¡³ö¶ÔÓ¦µÄÖÐ¶ÏÏòÁ¿Ö´ÐÐÖÐ¶Ï·þÎñ³ÌÐò¡£
+bootloader¸üÐÂ³ÌÐòÒªÂú×ãÒÔÏÂÒªÇó£º
 
-¶øÎÒÃÇÉèÖÃAPP³ÌÐòÆðÊ¼µØÖ·Îª0x08002800£¬¼´Æ«ÒÆÁ¿Îª0x4000(16K×Ö½Ú)£¬Áô¸øÓÃ»§flash¿Õ¼ä(size)ÊÇ1024k-16k=1008K¡£Æ«ÒÆÁ¿ÊÇ¶¨ÒåÁô¸øbootloader ³ÌÐòµÄµØÖ·¿Õ¼ä´óÐ¡¡£ÕâÀïÎÒ¶¨ÒåµÄÊÇ16K£¬Æ«ÒÆÁ¿Îª0x200µÄ±¶Êý¼´¿É£¨±¾Éè¼ÆµÄbootloaderÖ»ÓÐ6K×óÓÒ£©£¬ÕâÀïÁôÓÐÓàÁ¿£¬·½±ãbootloaderÒÔºóµÄÉý¼¶ÐÞ¸Ä¡£ÔÚflashÖÐ·ÖÅäÁËÒ»¸öËÄ×Ö½ÚµÄ¿Õ¼ä(0x08004000-0x08004004)×÷Îªflash¹Ì¼þ¸üÐÂ±êÖ¾Î»¡£¸Ã±êÖ¾Î»Ä¬ÈÏÖµÎª0xFFFF FFFF (flashµôµç²»²Á³ý)£¬Èç¹û¸ÃÖµÎª0xFFFF FFFFËµÃ÷flashÖÐÖ»ÓÐBOOTLOADER³ÌÐò£¬´ËÊ±µÈ´ý´®¿Ú¸üÐÂ²Ù×÷¡£Éè±¸ÉÏµçºóÔËÐÐBootloader ´úÂë¶ÁÈ¡flash¸Ã±êÖ¾Î»ÉÏµÄÊý¾Ý¡£Èô¶ÁÈ¡µ½Êý¾ÝÎª0x2B2B1A1AÊ±ËµÃ÷²»½øÈë¸üÐÂ£¬Ö±½ÓÌøÈë¹¦ÄÜ³ÌÐòÔËÐÐ£¬µ±ÐèÒª¸üÐÂ´úÂëÊ±£¬ÉÏÎ»»úÍ¨¹ý´®¿Ú·¢ËÍ¸üÐÂÖ¸Áî¸øARM£¬RAM¶Áµ½¸üÐÂÐÅºÅºó£¬ÖØÐÂ¸ø¸üÐÂ±êÖ¾µØÖ·(0x08002000)Ð´ÈËÊý¾Ý0x4D4D3C3C£¬³É¹¦Ð´ÈëºóÈí¼þ¸´Î»ÖØÆô¡£ÖØÆôºóbootloader ´ËÊ±¶Áµ½¸ÃµØÖ·µÄÊý¾ÝÎª0x4D4D3C3C£¬ËµÃ÷½øÈë¸üÐÂ³ÌÐò´úÂë£¬Ñ¡Ôñ³ÌÐò¶þ½øÖÆÎÄ¼þÐ´Èëflash,¸üÐÂÍê³ÉºóÔÙÖØÖÃ±êÖ¾Î»£¬Èí¼þ¸´Î»ÖØÆô£¬ÔËÐÐÐÂµÄ´úÂë¡£
+(1)ÐÂ³ÌÐò±ØÐëÔÚbootloader³ÌÐòÖ®ºóµÄÄ³¸öÆ«ÒÆÁ¿ÎªXµÄµØÖ·¿ªÊ¼¡£
+
+(2)±ØÐë½«ÐÂ³ÌÐòµÄÖÐ¶ÏÏòÁ¿±íÏàÓ¦µÄÒÆ¶¯X¸öÆ«ÒÆÁ¿¡£
+
+¶øÎÒÃÇÉèÖÃAPP³ÌÐòÆðÊ¼µØÖ·Îª0x08002800£¬¼´Æ«ÒÆÁ¿Îª0x4000(16K×Ö½Ú)£¬Áô¸øÓÃ»§flash¿Õ¼ä(size)ÊÇ1024k-16k=1008K¡£Æ«ÒÆÁ¿ÊÇ¶¨ÒåÁô¸øbootloader ³ÌÐòµÄµØÖ·¿Õ¼ä´óÐ¡¡£ÕâÀïÎÒ¶¨ÒåµÄÊÇ16K£¬Æ«ÒÆÁ¿Îª0x200µÄ±¶Êý¼´¿É£¨±¾Éè¼ÆµÄbootloaderÖ»ÓÐ6K×óÓÒ£©£¬ÕâÀïÁôÓÐÓàÁ¿£¬·½±ãbootloaderÒÔºóµÄÉý¼¶ÐÞ¸Ä¡£ÔÚflashÖÐ·ÖÅäÁËÒ»¸öËÄ×Ö½ÚµÄ¿Õ¼ä(0x08004000-0x08004004)×÷Îªflash¹Ì¼þ¸üÐÂ±êÖ¾Î»¡£¸Ã±êÖ¾Î»Ä¬ÈÏÖµÎª0xFFFF FFFF (flashµôµç²»²Á³ý)£¬Èç¹û¸ÃÖµÎª0xFFFF FFFFËµÃ÷flashÖÐÖ»ÓÐBootloader³ÌÐò£¬´ËÊ±µÈ´ý´®¿Ú¸üÐÂ²Ù×÷¡£Éè±¸ÉÏµçºóÔËÐÐBootloader ´úÂë¶ÁÈ¡flash¸Ã±êÖ¾Î»ÉÏµÄÊý¾Ý¡£Èô¶ÁÈ¡µ½Êý¾ÝÎª0x2B2B1A1AÊ±ËµÃ÷²»½øÈë¸üÐÂ£¬Ö±½ÓÌøÈë¹¦ÄÜ³ÌÐòÔËÐÐ£¬µ±ÐèÒª¸üÐÂ´úÂëÊ±£¬ÉÏÎ»»úÍ¨¹ý´®¿Ú·¢ËÍ¸üÐÂÖ¸Áî¸øARM£¬RAM¶Áµ½¸üÐÂÐÅºÅºó£¬ÖØÐÂ¸ø¸üÐÂ±êÖ¾µØÖ·(0x08002000)Ð´ÈËÊý¾Ý0x4D4D3C3C£¬³É¹¦Ð´ÈëºóÈí¼þ¸´Î»ÖØÆô¡£ÖØÆôºóbootloader ´ËÊ±¶Áµ½¸ÃµØÖ·µÄÊý¾ÝÎª0x4D4D3C3C£¬ËµÃ÷½øÈë¸üÐÂ³ÌÐò´úÂë£¬Ñ¡Ôñ³ÌÐò¶þ½øÖÆÎÄ¼þÐ´Èëflash,¸üÐÂÍê³ÉºóÔÙÖØÖÃ±êÖ¾Î»£¬Èí¼þ¸´Î»ÖØÆô£¬ÔËÐÐÐÂµÄ´úÂë¡£
 
 ¸øÉè±¸ÉÏµçºó£¬Á¬½Ó´®¿ÚÖÁµçÄÔ¶Ë£¬ÉÏÎ»»úÖÐ´ò¿ª´®¿Ú£¬µ÷Õû²¨ÌØÂÊµ½115200bps£¬´ËÊ±µ¼º½³ÌÐòÕý³£ÔËÐÐ£¬ÐèÒª¸üÐÂ´úÂëÊ±£¬µã»÷¸üÐÂÊ¹ÄÜ£¬ÉÏÎ»»ú»á·¢ËÍÖ¸Áî¸øµ¼º½Éè±¸£¬Éè±¸»á¸´Î»Èí¼þ¸üÐÂ±êÖ¾Î»£¬½øÈëµ½µÈ´ý¸üÐÂµÄ´úÂëÖÐÈ¥£¬´ËÊ±Ñ¡ÔñÉú³ÉµÄBIN Ó³ÏñÎÄ¼þ£¬µã»÷Ö´ÐÐ°´¼ü£¬ÉÏÎ»»ú»á½«BINÎÄ¼þ·Ö°ü·¢ËÍ¸øÐ¾Æ¬£¬Ã¿Ò»°üµÄÊý¾Ý´óÐ¡Îª2k²¢¼ÓÉÏÊý¾Ý´«ÊäµÄÍ·ºÍÎ²£¬ÏÂÎ»»ú´®¿Ú½ÓÊÕºóÍê³ÉCRCÐ£Ñé(¾ßÌåÐ­ÒéÈç±í£¿)£¬È·±£Ã»ÓÐÎÊÌâºó¾ÍÖØÐÂÐ´ÈëFLASHÌØ¶¨µÄÎ»ÖÃ£¬Ñ­»··¢ËÍÍêËùÓÐÊý¾Ýºó£¬ÖØÐÂÖÃÎ»Èí¼þ¸üÐÂ±êÖ¾²¢Èí¼þ¸´Î»ÖØÆô£¬¼´¿ÉÖØÐÂÔËÐÐÐÂµÄµ¼º½¹¦ÄÜ³ÌÐò£¬ÊµÏÖÈí¼þµÄÉý¼¶¡£
 
@@ -375,15 +403,15 @@ bootloader¸üÐÂ³ÌÐòÒªÂú×ãÒÔÏÂÒªÇó£º1¡¢ÐÂ³ÌÐò±ØÐëÔÚbootloader³ÌÐòÖ®ºóµÄÄ³¸öÆ«ÒÆÁ¿Î
 FATÎÄ¼þÏµÍ³ÊÇÒ»¸öÃâ·Ñ¿ªÔ´µÄFATÎÄ¼þÏµÍ³Ä£¿é£¬×¨ÃÅÎªÐ¡ÐÍµÄÇ¶ÈëÊ½ÏµÍ³¶øÉè¼Æ¡£ËûÍêÈ«ÓÃ±ê×¼CÓïÑÔ±àÐ´£¬¾ßÓÐÁ¼ºÃµÄÓ²¼þÆ½Ì¨¶ÀÁ¢ÐÔ¡£
 ÒÆÖ²¹ý³ÌÖÐ£¬Ê×ÏÈÒªÍê³ÉSDµÄÓ²¼þ³õÊ¼»¯£¬ÏµÍ³¼ìË÷ÊÇ·ñ´æÔÚSD¿¨£¬ÅÐ¶ÏSD¿¨ÊÇ·ñ·ûºÏARMÖ§³ÖµÄÀàÐÍ²¢Ìá¹©ÎÄ¼þÏµÍ³ÓëSD ¿¨µ×²ã½Ó¿Ú£¬Èç¹ûSD Çý¶¯²»³É¹¦£¬½«·µ»ØSTA\_NOINIT ±êÖ¾Î»¡£SD Ó²¼þ³õÊ¼»¯³É¹¦Ö®ºó£¬ÎÄ¼þÏµÍ³½«Íê³É×¢²á¹¤×÷Çø¹¦ÄÜ£¬ÕâÒ»²¿·Ö¿ÉÒÔÊÓÎªÎÄ¼þÏµÍ³µÄ³õÊ¼»¯£¬¸Ã²¿·ÖÍê³ÉSD¿¨Ã¿¸ö¾í×¢²á¹¤×÷Çø¡£ËÑË÷¸ùÄ¿Â¼²¢ÏÔÊ¾Íê³É¶ÔSD ¿¨¸ùÄ¿Â¼¶ÁÈ¡¡£Ö÷ÒªÖ´ÐÐÁ÷³Ì£º
 
-1¡¢Ê¹ÓÃ$SD\_Init()$º¯Êý¶ÔMicro SD½øÐÐ³õÊ¼»¯¡£
+(1)Ê¹ÓÃ$SD\_Init()$º¯Êý¶ÔMicro SD½øÐÐ³õÊ¼»¯¡£
 
-2¡¢ÀûÓÃ$GPIO\_initTypeDef$¶¨ÒåGPIO ³õÊ¼»¯½á¹¹Ìå±äÁ¿£¬ÀûÓÃ$NVIC\_InitTypeDef$¶¨ÒåÖÐ¶Ï½á¹¹Ìå±äÁ¿¡£
+(2)ÀûÓÃ$GPIO\_initTypeDef$¶¨ÒåGPIO ³õÊ¼»¯½á¹¹Ìå±äÁ¿£¬ÀûÓÃ$NVIC\_InitTypeDef$¶¨ÒåÖÐ¶Ï½á¹¹Ìå±äÁ¿¡£
 
-3¡¢¶Ô$SDIO \ IO$¿Ú³õÊ¼»¯¡£4¡¢¶ÔSD¿¨µÄÊ¹ÓÃ½øÐÐÅäÖÃ£¬Èç£¬SD¿¨ÉÏµç¡¢»ñÈ¡¿¨µÄÐÅÏ¢ÒÔ¼°SD¿¨µÄÊ±ÖÓÅäÖÃµÈ¡£
+(3)¶Ô$SDIO \ IO$¿Ú³õÊ¼»¯¡£4¡¢¶ÔSD¿¨µÄÊ¹ÓÃ½øÐÐÅäÖÃ£¬Èç£¬SD¿¨ÉÏµç¡¢»ñÈ¡¿¨µÄÐÅÏ¢ÒÔ¼°SD¿¨µÄÊ±ÖÓÅäÖÃµÈ¡£
 
-4¡¢¶ÔMicroSDÊ±ÖÓ½øÐÐ³õÊ¼»¯£¬Ê¹ÓÃSDIO+DMA·½Ê½·ÃÎÊSD¿¨¡£
+(4)¶ÔMicroSDÊ±ÖÓ½øÐÐ³õÊ¼»¯£¬Ê¹ÓÃSDIO+DMA·½Ê½·ÃÎÊSD¿¨¡£
 
-5¡¢Ê¹ÓÃFAT32ÎÄ¼þÏµÍ³¹ÜÀíSD¿¨£¬Íê³ÉÊý¾ÝÎÄ¼þµÄ¶ÁÐ´¡£
+(5)Ê¹ÓÃFAT32ÎÄ¼þÏµÍ³¹ÜÀíSD¿¨£¬Íê³ÉÊý¾ÝÎÄ¼þµÄ¶ÁÐ´¡£
 
 \section{ÏµÍ³ÉÏÎ»»úÈí¼þÉè¼Æ}
 ±¾ÂÛÎÄPC¶Ë¼à¿ØÈí¼þÊÇÔÚVisual Studio 2013»·¾³ÏÂ±àÐ´µÄ£¬ÊµÏÖµÄ¹¦ÄÜÓÐÊý¾Ý±£´æÓëµ¼Èë¡¢²ÎÊýÉèÖÃ£¬½á¹ûÏÔÊ¾£¬KMLÎÄ¼þµÄÉú³É£¬

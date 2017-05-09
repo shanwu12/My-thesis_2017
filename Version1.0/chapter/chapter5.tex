@@ -1,54 +1,147 @@
 
-\chapter{总结与展望}
+\chapter{小型化车载组合辅助系统测试与结果分析}
+基于所设计的MEMS惯导/GNSS组合导航系统设计，本章对设计的设备进行实地测试，通过采集的车载实验数据验证设备的工程实用性。
+%硬件方面，完成GNSS/惯导组合导航单元模块，数据采集电路等电路设计；在ARM基础上
 
-\section{研究工作总结}
-实际应用中，大规模复杂系统组成单元多，模型复杂，变量数量多，约束多，传统的控制方法难以处理。分布式模型预测控制方法是处理此类问题的一种有效工具，其研究具有重要的理论意义和现实意义。本文以存在耦合的多智能体系统为研究对象，针对分布式模型预测控制的终端成分设计、可行性和稳定性等难点问题，开展了系列研究，具体工作如下：
-\begin{itemize}
-%\item[(1)]总结了模型预测控制的概括，比较了集中式、分散式和分布式模型预测控制的优缺点，详细分析了分布式模型预测控制的研究现状
-\item[(1)]研究了多个异构线性系统的分布式模型预测调节控制问题，智能体系
-统之间同时存在成本耦合和约束耦合。在每一个采样时刻，所有智能体同步更新。提出了改进的相容性约束，保证每个智能体实际轨迹和假设轨迹的一致性。通过求解李亚普诺夫方程得到终端权重矩阵，从而设计了终端成本；利用耦合约束的信息，设计了正定不变的终端集，并且保证终端集中的
-状态满足耦合约束。设计了分布式优化算法，保证局部约束和耦合约束的迭代可行
-性，以及整个系统的闭环稳定性。最后通过仿真实验比较了集中式模型预测控制
-方法和分布式模型预测控制方法的性能，对比表明在保证系统性能和集中式的性能接近
-的条件下，分布式方法大大缩短了优化时间，减小了在线计算量。
+%在软件方面，完成组合导航信息融合Kalman滤波的软件编程；使用C语言实现系统采集、读写缓冲存储器FIFO以及
 
-\item[(2)]研究了多个二阶非线性系统的分布式模型预测一致控制问题，智能体系统
-之间存在成本耦合，所有智能体共享一个参考轨迹。利用同步更新策略，
-提出了改进的相容性约束上界，保证系统的收敛性；在分布式结构下，利用参考轨迹，
-设计了每个智能体的终端成本、终端控制器和正定不变的终端集。提出了分布式优化算法，保证优化问题的迭代可行性和整个系统的闭环收敛性。最后，以2-自由度机械臂为例，通过仿真实验验证了算法的有效性。
+\begin{figure}[!htb]
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\includegraphics[height=6cm,width=7.5cm]{figures/chap5/chap5_platform}
+\caption{UGV实验平台}
+ \label{chap5_Fig.1}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=6cm,width=5.5cm]{figures/chap5/chap5_experiment}
+\caption{实验装置}
+\label{chap5_Fig.2}
+\end{minipage}
+\end{figure}
+\section{跑车试验}
 
-\item[(3)]研究了多个线性二阶系统的分布式模型预测编队控制问题，每个智能体到
-达各自的目标位置形成队形，智能体系统之间存在耦合成本，且需要满足避碰约束。利
-用同步更新策略，设计了改进的相容性约束，包括位置相容性和状态相容性，同时提出了改进的避碰约束。充分利用系统模型的特点和编队目标，设计了分布式结构下的终端成分，并且在终端集中依然能保证避碰约束的满足。提出了分布式优化算法，保证优化问题的迭代可行性、整个系统的闭环收敛性以及避碰约
-束的满足。最后通过仿真实验验证了算法的有效性。
-\end{itemize}
+本次试验于2017年4月在北京理工大学附近进行，实验平台为上图\ref{chap5_Fig.1}所示的北京理工大学组合导航与智能导航实验室的自主改装的红旗轿车。测试同时搭载实验室自主开发的高精度GNSS/SINS组合系统（位置1σ精度：2cm;姿态精度：0.06°）作为本设计精度判定的标准，各系统以输出的GPS时间（UTC时）作为数据时间对齐基准。
 
+跑车实验，将本课题设计的导航设备与作为基准的高精度组合系统一起固联于试验车内部，两系统的X-Y-Z轴分别对应车体右-前-上方向，GPS天线沿车体放置于车外，小型化导航设备通过串口转USB与笔记本电脑连接，可以实时观测数据情况，同时数据保存在设备的SD卡内。车载实验装置如图\ref{chap5_Fig.2}所示。
 
+跑车实验轨迹如图\ref{chap5_Fig.3}所示，车辆从北京理工大学自动化学院出发，绕过苏州桥底沿西三环辅路，魏公村路、沿北三环西路回到自动化学院。行驶过程中，GNSS 信号频繁受到高架桥，高楼，树木的遮挡，导致GNSS接收机定位精度差或无定位现象。其中路段1和路段2人为中断GNSS信号的时长分别约为20s和180s。图\ref{chap5_Fig.4}和图\ref{chap5_Fig.5}是设计的导航上位机所得的轨迹图和实时卫星显示结果，蓝色部分为卫星信号失锁时的路线。
 
-\section{工作展望}
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap5/chap5_Trajectory2}
+ \caption{车载实验轨迹图}
+ \label{chap5_Fig.3}
+ \vspace{-0.4cm}
+\end{figure}
 
-本文主要开展了多智能体系统的分布式模型预测控制系列研究，但仍有很多问题需要进一步的研究与完善：
-
-\begin{itemize}
-\item[(1)]实时分布式模型预测控制研究。由于求解优化问题计算量大，模型预测控制的实时性难以满足。和集中式相比，虽然分布式模型预测大大降低了在线计算量，但是在常规的硬件条件下，依然难以实时性要求。研究实时分布式模型预测控制是目前的一个研究热点。
-
-\item[(2)]不确定性系统的分布式模型预测控制研究。本文主要研究了确定系统的分布式模型预测控制研究，而现实中的系统往往多受到各种干扰或者存在模型不确定性。目前不确定系统的分布式模型预测控制主要包括分布式鲁棒模型预测控制和分布式随机模型预测控制，其研究均尚在研究初期，理论成果非常少。
-
-\item[(3)]网络化控制系统的分布式模型预测控制研究。网络化控制系统是近些年来的研究热点，其往往受到量化、延时、丢包等随机因素的影响，分布式模型预测控制是研究网络化控制系统的一个新思路。
-    如何在网络化控制系统存在时变延时和随机丢包等情况下，设计出合适的分布式模型预测控制方法是一个非常值得研究的课题。
-
-\item[(4)]基于数据驱动的分布式模型预测控制研究。现实中往往难以得知系统不确定部分的精确概率特性，而随着检测技术和存储技术的进步，大数据技术蓬勃发展，可以利用统计学原理，基于数据估计不确定部分的一些统计特性。如何设计能保证迭代可行性和稳定性的基于数据驱动的分布式模型预测控制方法是一个具有实际意义和挑战的研究课题。
-\end{itemize}
-
-
-
-
-
-
-
-
-
+\begin{figure}[htbp]
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\includegraphics[height=6cm,width=7.5cm]{figures/chap5/chap5_pbright}
+\caption{PCB3D模型}
+ \label{chap5_Fig.4}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=6cm,width=7.5cm]{figures/chap5/chap5_GNSS}
+\caption{组合系统实物图}
+\label{chap5_Fig.5}
+\end{minipage}
+\end{figure}
 
 
 
 
+\section{数据分析与结果}
+\subsection{组合定位结果}
+将实验所得到的数据结果和基准数据经matlab处理后，给出了组合系统的位置、速度和姿态误差曲线图，经RMS(root-mean-square)统计后得到系统精度。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figures/chap5/chap5_2D}
+ \caption{车载实验轨迹图}
+ \label{chap5_Fig.6}
+ \vspace{-0.4cm}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_errPos}
+ \caption{GNSS/MEMS惯导组合结果位置误差图}
+ \label{chap5_Fig.7}
+ \vspace{-0.4cm}
+\end{figure}
+如图\ref{chap5_Fig.7}给出了组合导航系统输出的位置误差，将经纬度根据地球的地理模型转换成相应的距离可以得到有，北向误差最大为26m，东向误差最大为45m，天向误差最大为10m。从图中也可以看出在GNSS失效的区间内，卫星信号数据没有更新从而使组合后的数据误差有所增加。\\
+\\
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=9cm,width=18cm]{figures/chap5/chap5_attitude}
+ \caption{GNSS/MEMS惯导组合结果姿态对比图}
+ \label{chap5_Fig.8}
+ \vspace{-0.4cm}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=9cm,width=18cm]{figures/chap5/chap5_erratt}
+ \caption{GNSS/MEMS惯导组合结果姿态误差图}
+ \label{chap5_Fig.9}
+ \vspace{-0.4cm}
+\end{figure}
+
+如图\ref{chap5_Fig.8}给出了MEMS惯导/GNSS组合系统的姿态对比图，其中姿态角均为车在实验非静止时刻的数据，因对于MEMS器件而言，地球自转角速率完全湮没在陀螺的噪声里，因此不具备自助式的初始化对准功能。MEMS系统只能通过机动运动来增加系统滤波器的可观性从而完成动态的初始化对准，初始化阶段依据GNSS动态信息对其进行标定。
+
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_velocity}
+ \caption{GNSS/MEMS惯导组合结果速度对比图}
+ \label{chap5_Fig.10}
+ \vspace{-0.4cm}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_errVel}
+ \caption{GNSS/MEMS惯导组合结果速度误差图}
+ \label{chap5_Fig.11}
+ \vspace{-0.4cm}
+\end{figure}
+
+经统计得出组合系统速度误差曲线图，从图\ref{chap5_Fig.10}中可以看出，速度大小与基准速度的曲线基本吻合，可以很好地跟随。
+
+\begin{table}[!h]
+\renewcommand\arraystretch{1.2}
+\centering
+\caption{\label{chap2_Table 1}位置、速度、姿态误差值}
+\begin{tabular}{c c c ccccccc}
+\toprule
+类型 &      & 位置(m)  &       &\hspace{1cm}      & 速度($m/s$)  &       &\hspace{1cm}      & 姿态$(^\circ$)  &   \\
+     & 东向 & 北向     & 高度  &\hspace{1cm} 东向 & 北向         &  高度 &\hspace{1cm}偏航  &俯仰             &  横滚 \\
+\hline
+
+RMS          & 6.68 & 5.53     & 5.15  &\hspace{1cm}0.43  & 0.27         &  0.08 &\hspace{1cm}8.06  &2.25             &  1.01 \\
+最大误差     & 47.0 & 30.5     & 11.8  &\hspace{1cm} 4.12 & 1.72         &  0.78 &\hspace{1cm}22.09  &5.7             &  3.86 \\
+\toprule
+\end{tabular}
+\end{table}
+
+
+\subsection{卫星失锁时定位效果}
+为验证本设计的导航系统在卫星接收信号弱或无定位时，仍然可以通过惯性导航实现定位。试验中GPS天线使GNSS卫星信号失效三分钟，失效时车辆处于红绿灯路口处，图\ref{chap5_Fig.12}为组合系统在卫星失效情况下的导航情况，
+
+当GNSS无有用信号时，导航系统仍可以为车辆提高定位信息，在该阶段，定位误差有所增加，当有效GPS信号到来时迅速将位置拉回，所得到的运行轨迹与基准轨迹也基本吻合，能够满足车辆导航要求。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=6cm,width=9cm]{figures/chap5/chap5_GNSSInvalid}
+ \caption{GNSS失锁情况下定位效果}
+ \label{chap5_Fig.12}
+ \vspace{-0.4cm}
+\end{figure}
+
+
+\section{本章小结}
+本章详细说明了组合导航系统的工程实现情况，对设计的组合系统进行了动态试验，整个实验结果表明本设计的组合导航系统虽然具有一定的误差，但仍然具有一定的工程意义，为导航组合系统提供了一套简单有效的低成本导航方法。

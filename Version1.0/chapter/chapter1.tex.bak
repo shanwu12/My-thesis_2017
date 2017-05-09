@@ -58,14 +58,14 @@ GNSS£¨ Global Navigation Satellite System£©·ºÖ¸ËùÓÐµÄÎÀÐÇµ¼º½ÏµÍ³£¬Ö÷Òª°üÀ¨ÃÀ¹úµ
 Ëæºó¶àÖÖ³µÁ¾×éºÏµ¼º½¶¨Î»ÏµÍ³ÔÚ´Ë»ù´¡ÉÏµÃµ½·¢Õ¹£¬ÏÈºóÑÐ¾¿³öÄÓÐÔ½ÝÁª¹ßµ¼/GPS¡¢¹âÏË½ÝÁª¹ßµ¼/GPS¡¢¼¤¹â½ÝÁª¹ßµ¼/GPS£¬µ«ÕâÐ©Éè±¸Éè±¸½á¹¹ÅÓ´ó¸´ÔÓ£¬Ôì¼Û°º¹ó£¬²»ÀûÓÚÔÚÃñÓÃÊÐ³¡ÆÕ¼°¡£
 
 ¸ßÐÔÄÜµÄSINSÒòÎª¼Û¸ñ°º¹óÊ¹µÃÆäÓ¦ÓÃÊÜµ½¼«´óµÄÏÞÖÆ£¬µ«Ëæ×ÅMEMS¼¼ÊõµÄ·¢Õ¹£¬»ùÓÚMEMS SINS/GNSSµÄÐ¡ÐÍ»¯×éºÏµ¼º½¼¼Êõ·¢Õ¹Ïàµ±Ñ¸ËÙ£¬ÃÀ¹úµÈÅ·ÃÀ¹ú¼ÒÔÚMEMS¹ßÐÔÆ÷¼þÒÔ¼°Î¢ÐÍµ¼º½ÏµÍ³¼¼Êõ·½Ãæ´¦ÓÚÊÀ½çÁìÏÈµØÎ»¡£ÃÀ¹ú¹ú·À²¿DARPAÒÔ¼°ÆäËûÕþ¸®²¿ÃÅÔÚMEMSµÄ¾üÊÂºÍÉÌÒµÓ¦ÓÃ·½Ãæ½øÐÐÕ½ÂÔÐÔÍ¶Èë£¬Ã¿ÄêÍ¶Èë´óÁ¿×Ê½ð²¢ÇÒÖðÄêÔö¼Ó£¬ÒýÁìMEMS¼¼ÊõÏò¹¹½¨µÍ³É±¾¡¢Õ½Êõ¼¶µ¼º½ÏµÍ³·¢Õ¹£¬Æä¼¼ÊõÔ½À´Ô½ÍêÉÆ£¬×éºÏ²úÆ·µÄÐÔÄÜÒ²Ô½À´Ô½ºÃ¡£Èç£º
+ÃÀ¹úCrossbow¹«Ë¾µÄMEMS IMU/GPS×éºÏµ¼º½Ä£¿éNav440£¬ÆäÖÊÁ¿0.58kg£¬¹¦ÂÊÖ»ÓÐ4W£¬¶¨Î»¾«¶ÈÎª3m£¬×ËÌ¬²âÁ¿¾«¶È¾ù·½¸ù£¨Root mean square,RMS£©Îª0.4¶È£»µÂ¹úµÄiMAR¹«Ë¾µÄiVRU-CB-MºÍiVRU-SNCµÄÖÊÁ¿Ö»ÓÐ550g£¬¹¦ÂÊÖ»ÓÐ6W£¬¶¨Î»¾«¶ÈÎª5m£¬×ËÌ¬²âÁ¿¾«¶ÈRMSÎª0.5¶È¡£
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.3\textwidth]{figures/chap1/chap1_Nav440}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.6\textwidth]{figures/chap1/chap1_Nav440}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{Nav440×éºÏµ¼º½Ä£¿é}
  \label{chap3_Fig.1}
  \vspace{-0.4cm}
 \end{figure}
-ÃÀ¹úCrossbow¹«Ë¾µÄMEMS IMU/GPS×éºÏµ¼º½Ä£¿éNav440£¬ÆäÖÊÁ¿0.58kg£¬¹¦ÂÊÖ»ÓÐ4W£¬¶¨Î»¾«¶ÈÎª3m£¬×ËÌ¬²âÁ¿¾«¶È¾ù·½¸ù£¨Root mean square,RMS£©Îª0.4¶È£»µÂ¹úµÄiMAR¹«Ë¾µÄiVRU-CB-MºÍiVRU-SNCµÄÖÊÁ¿Ö»ÓÐ550g£¬¹¦ÂÊÖ»ÓÐ6W£¬¶¨Î»¾«¶ÈÎª5m£¬×ËÌ¬²âÁ¿¾«¶ÈRMSÎª0.5¶È¡£
 
 Wepilot1000¼¯³ÉGPS¡¢IMU¡¢´ÅÂÞÅÌ¡¢ÆøÑ¹¸ß¶È¼ÆºÍ¿ÕËÙ¼ÆµÈ¶àÖÖ´«¸ÐÆ÷¡£×î´ó²âÁ¿½ÇËÙÂÊÎªÊ¿100¶È/Ãë, ×î´ó²âÁ¿¼ÓËÙ¶ÈÎªÊ¿2g£¬Î»ÖÃ¾«¶È¿É´ï3m£¬¶øÇÒWepilot1000¾ßÓÐ·Ç³£·á¸»µÄÍâÎ§½Ó¿Ú, ¿ÉÖ±½ÓÓëÎÞÏßÁ´Â·¡¢Í¼ÏñÔØºÉµÈÉè±¸ÏàÁ¬½Ó¡£Æä¹¦ºÄÎª54W£¬ÖÊÁ¿1020g£¬³ß´ç½öÎª120mm*154mm*125mm¡£
 

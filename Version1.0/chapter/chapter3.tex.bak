@@ -1,20 +1,27 @@
 
 \chapter{小型化组合定位系统硬件设计}
 \section{引言}
-根据前一章系统总体方案的设计，本章的重点工作是完成系统的硬件平台。车载组合定位系统硬件设计分为：器件选型、嵌入式ARM系统设计、外围设备设计、数据传感器设计，硬件测试等。硬件设计需要考虑以下几个问题：抗干扰问题，GPS信号在复杂的场合，容易受到各种干扰，必须保证信号的稳定性并考虑省电节能问题。硬件设计过程如下图所示：
+根据前一章系统总体方案的设计，本章的重点工作是制作系统的硬件平台。本车载组合定位系统硬件设计分为：器件选型、嵌入式ARM系统设计、外围设备设计、数据传感器设计，硬件测试等。本文是利用实际科研条件，在以前研究基础上，提出自己的解决方案：设计一个低成本、精度可接受的MEMS \ SINS/GNSS组合的小型化导航系统。整个硬件设计过程需考虑设计成本、硬件尺寸、产品功耗、抗干扰性能和产品实用性等问题。设计流程如下图所示：
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_process}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_process}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{硬件设计流程图}
  \label{chap3_Fig.1}
  \vspace{-0.4cm}
 \end{figure}
 
-本设计硬件是在Altium Designer 10 上进行设计的。这是一款由Altium 公司开发的基于Windows环境下的电路板设计软件，在电子行业运用十分普遍，是电子工程师设计印刷线路板的首选工具，它具有简单易学，操作便捷，资源丰富，人机交互良好等优点。
+硬件电路的设计是在Altium Designer 10 上进行设计的。这是一款由Altium 公司开发的基于Windows环境下的电路板设计软件，在电子行业运用十分普遍，是电子工程师设计印刷线路板的首选工具，它具有简单易学，操作便捷，资源丰富，人机交互良好等优点。
 
 \section{主要器件选型}
-本课题是利用MIMU构建捷联惯性导航系统，然后接收卫星信号对导航结果进行补偿和融合，得到可信度高的姿态、速度和位置等信息。最终可以应用在地面车辆上，需要良好的稳定性和抗干扰能力。所以，在设计时，不仅需要对其进行规划分析，还要根据工作环境和运行条件进行芯片的选型。以下将介绍几个主要器件的选型。
+本课题是利用MIMU构建捷联惯性导航系统，然后接收卫星信号对导航结果进行补偿和融合，得到可信度高的姿态、速度和位置等信息。最终可以应用在地面车辆上，需要良好的稳定性和抗干扰能力。所以，在设计时，不仅需要对其进行规划分析，还要根据工作环境和运行条件进行芯片的选型。以下介绍几个主要器件的选型。
 \subsection{核心处理器ARM芯片}
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_stm32}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{主控制器芯片}
+ \label{chap3_Fig.1}
+ \vspace{-0.4cm}
+\end{figure}
 在设计导航设备时，需要考虑CPU的处理能力、存储容量及速度、IO端口的分配、接口要求、电平要求等等，同时也要满足组合导航系统的精度要求和实时性，综合这些因素考虑本系统采用的处理芯片为ST公司的STM32F405VGT6型号的ARM芯片，该处理器内核架构是基于Cortex-M4 内核的，是一款升级版的处理器，具有高性能、低成本、低功耗多方面的优势：
 
 (1)相比于Cortex M3芯片,STM32F4最大的优势就是内置单精度FPU和DSP指令，可提升控制算法的执行速度，提高代码执行效率，本设计中涉及导航数据的解算而且导航解算对实时性要求比较高，该优势可以很好地展现出来。
@@ -41,7 +48,7 @@ STM32F405RGT6是F4系列的一款设备，我们选用LQNF100封装，内置有1M闪存。其主要通讯接
 本设计采用的MEMS惯性器件是德国博世公司研发的六轴惯性传感器芯片BMI160，该模块整合了三轴陀螺仪、三轴加速度计和温度传感器，并含有IIC和SPI接口，可用于连接外部主从设备，向应用端输出完整的六轴惯性数据，相比较多组件方案，免除了组合陀螺仪与加速度时之轴间差的问题，减小了安装空间，当加速度计和陀螺仪在全速模式下运行时，耗电典型值低至950$\mu$A,且外形尺寸仅为$2.5mm\times3.0\times0.83mm$，实物图如\ref{chap3_Fig.1} 所示。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_BMI}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.2\textwidth]{figures/chap3/chap3_BMI}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{MEMS惯性芯片}
  \label{chap3_Fig.2}
  \vspace{-0.4cm}
@@ -66,36 +73,53 @@ BMI160的性能指标如表？所示
 \renewcommand\arraystretch{1.2}
 \centering
 \caption{\label{chap3_Table 1}BMI160性能指标图}
-\begin{tabular}{cccc}
+\begin{tabular}{ccc}
 \toprule
-指标 & 陀螺 & 加速度计 &  \\
+\hspace{0.5cm}指标     & \hspace{1cm}陀螺                &\hspace{1cm}加速度计   \\
 \hline
-量程 & $\pm125$ & $\pm2$ \\
-零偏 & $\pm3^\circ/s$ &  $\pm70mg$\\
-分辨率 & $16bit$ & $16bit$  \\
-带宽 & $25\sim3200Hz$ & $12.5\sim1600Hz$ \\
-刻度系数 & $262.4LSB/^\circ/s$ & $16384LSB/g$\\
+\hspace{0.5cm}量程     & \hspace{1cm}$\pm125^\circ/s$            &\hspace{1cm} $\pm2g$ \\
+\hspace{0.5cm}零偏     & \hspace{1cm}$\pm3^\circ/s$      &\hspace{1cm}  $\pm70mg$\\
+\hspace{0.5cm}分辨率   & \hspace{1cm}$16bit$             &\hspace{1cm} $16bit$  \\
+\hspace{0.5cm}带宽     & \hspace{1cm}$25\sim3200Hz$      &\hspace{1cm} $12.5\sim1600Hz$ \\
+\hspace{0.5cm}刻度系数 & \hspace{1cm}$262.4LSB/^\circ/s$ &\hspace{1cm} $16384LSB/g$\\
 \toprule
 \end{tabular}
 \end{table}
 
 \subsection{卫星接收模块}
-卫星接收模块采用的是U-blox公司的NEO-M8N系列芯片。NEO-M8N是一款高性能,高灵敏度的卫星信号接收模块，虽然其外形尺寸只有$16\times12.2\times2.4mm$,却可以提供丰富的卫星数据信息，模块的高灵敏度、低功耗及轻巧的体积，非常适用于车载、手机、无人机及其他移动定位系统的应用。其实物如图？所示：
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.3\textwidth]{figures/chap3/chap3_NEO}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+\includegraphics[width=0.2\textwidth]{figures/chap3/chap3_NEO}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
 \caption{卫星接收模块}
 \label{chap3_Fig.3}
 \vspace{-0.4cm}
 \end{figure}
+卫星接收模块采用的是U-blox公司的NEO-M8N系列芯片。NEO-M8N是一款高性能,高灵敏度的卫星信号接收模块，虽然其外形尺寸只有$16\times12.2\times2.4mm$,却可以提供丰富的卫星数据信息，模块的高灵敏度、低功耗及轻巧的体积，非常适用于车载、手机、无人机及其他移动定位系统的应用。其实物如图？所示：
 
 NEO-M8N拥有22个跟踪通道，66个捕获通道，热启动下捕获卫星信号的速度不足一秒，模块速度极快，其捕获和跟踪灵敏度甚至达到-160dBm。同时，这款芯片采用创新设计和技术，能有效抑制干扰源和多路径效应，在恶劣环境下也能提供有效的导航信息。
 NEO-M8N的性能指标如表？所示：
+\begin{table}[!h]
+\renewcommand\arraystretch{1}
+\centering
+\caption{\label{chap3_Table 1}NEO-M8N性能指标表}
+\begin{tabular}{|c|c|}
+\hline
+\hspace{0.5cm}灵敏度 \hspace{0.5cm}        & \hspace{0.5cm}-161dbm \hspace{0.5cm}     \\
+\hline
+\hspace{0.5cm}最大导航更新率\hspace{0.5cm} & \hspace{0.5cm}5Hz \hspace{0.5cm}  \\
+\hline
+\hspace{0.5cm}水平位置误差\hspace{0.5cm}   & \hspace{0.5cm}2.5m  \hspace{0.5cm} \\
+\hline
+\hspace{0.5cm}速度误差 \hspace{0.5cm}      & \hspace{0.5cm}$0.1m/s$   \hspace{0.5cm}  \\
+\hline
+\hspace{0.5cm}偏航角误差 \hspace{0.5cm}    & \hspace{0.5cm}$0.5^\circ$ \hspace{0.5cm}\\
+\hline
+\end{tabular}
+\end{table}
 
 NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式。据格格式采用工程中常用的NMEA-0183协议，该协议是美国国家海洋电子协会(national marine electronics association)为海用电子设备指定的一套标准格式，目前绝大部分卫星接收机都采用NMEA-0183协议输出位置、速度、星历等导航信息。
 
 \subsection{电源管理模块}
-电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统选择德州仪器的TPS73133 具有反向电流保护的超低功耗电压稳压器件，系列线性稳压器是设计用于功耗敏感类应用的超低静态电流器件。一个精密带隙和误差放大器在温度范围内的精度为2。 只有1μA 的静态电流使这些器件成为要求极小闲置状态功率耗散的电池供电常开系统的理想解决方案。为了增加安全性，这些器件还具有热关断、电流限制和反向电流保护功能。通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.2\textwidth]{figures/chap3/chap3_TPS73}\\
@@ -103,65 +127,71 @@ NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和
  \label{chap3_Fig.4}
  \vspace{-0.4cm}
 \end{figure}
+电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统选择德州仪器的TPS73133 具有反向电流保护的超低功耗电压稳压器件，系列线性稳压器是设计用于功耗敏感类应用的超低静态电流器件。一个精密带隙和误差放大器在温度范围内的精度为2。 只有1μA 的静态电流使这些器件成为要求极小闲置状态功率耗散的电池供电常开系统的理想解决方案。为了增加安全性，这些器件还具有热关断、电流限制和反向电流保护功能。通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
+
+\clearpage
 
 \section{硬件电路设计}
 \subsection{系统原理图设计}
-本节的工作是设计系统的原理图，在这部分我们需要参考所选器件的芯片手册，规范电路的设计，考虑电源信号滤波等防止电磁干扰的措施。根据系统设计的要求，原理图设计的重点在ARM的外围电路，信号IO接口电路。电源设计、各模块的电路设计等。
+本节的工作是设计系统的原理图，设计时需要参考所选器件的芯片手册，规范电路的设计，考虑电源信号滤波等防止电磁干扰的措施。根据系统设计的要求，原理图设计的重点在ARM的外围电路，信号IO接口电路。电源设计、各模块的电路设计等。
 
 ARM最小系统原理图如下所示：
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_Arm}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.7\textwidth]{figures/chap3/chap3_Arm}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{ARM最小系统原理图}
  \label{chap3_Fig.5}
  \vspace{-0.4cm}
 \end{figure}
 
-系统采用STM32F405RGT6处理器作为控制器，其中包括晶振时钟电路、复位电路、boot启动模式设置接口等，从图中还可以看出，主控单元采用3.3V 供电方式，数字地和模拟地采用电感隔离，避免信号的干扰，基准电压参考地。STM32是低电平复位的，电阻R28和电容C25构成上电复位电路。当系统上电时，电源接通给电容充电，电容两端电压上升至3.3V，系统正常工作，当复位按键按下，开关导通电容两端形成回路开始放电，RST 电位被拉低，低电平复位。
+系统采用STM32F405RGT6处理器作为控制器，其中包括晶振时钟电路、复位电路、boot启动模式设置接口等，从图中还可以看出，主控单元采用3.3V 供电方式，数字地和模拟地采用电感隔离，避免信号的干扰，基准电压参考地。
+
+STM32是低电平复位的，复位电路如图？，电阻R28和电容C25构成上电复位电路。当系统上电时，电源接通给电容充电，电容两端电压上升至3.3V，系统正常工作，当复位按键按下，开关导通电容两端形成回路开始放电，RST电位被拉低，低电平复位。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.4\textwidth]{figures/chap3/chap3_RST}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_RST}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{复位电路}
  \label{chap3_Fig.6}
  \vspace{-0.4cm}
 \end{figure}
 
-ARM的BOOT0和BOOT1管脚用于设置STM32的启动方式，其对应启动模式如表？所示：
+ARM的BOOT0和BOOT1管脚用于设置STM32的启动方式，其对应启动模式如下
 \begin{table}[!h]
-\renewcommand\arraystretch{1}
+\renewcommand\arraystretch{0.9}
 \centering
 \caption{\label{chap3_Table 1}启动模式设置接口}
 \begin{tabular}{cccc}
 \toprule
-$BOOT0$ & $BOOT1$ & 启动模式 & 说明 \\
+$BOOT0$ & $BOOT1$ &\hspace{0.5cm}  启动模式 \hspace{0.5cm} &  说明 \\
 \hline
-$0$ & $X$ & 用户闪存存储器 & 用户闪存存储器，即从Flash启动 \\
-$1$ & $0$ & 系统存储器 & 系统储存器启动 \\
-$1$ & $1$ & SRAM启动 & SRAM启动，可在SRAM中调试代码 \\
+$0$ & $X$ &\hspace{0.5cm}  用户闪存存储器\hspace{0.5cm}  & 用户闪存存储器，即从Flash启动 \\
+$1$ & $0$ &\hspace{0.5cm}  系统存储器\hspace{0.5cm}  & 系统储存器启动 \\
+$1$ & $1$ & \hspace{0.5cm} SRAM启动\hspace{0.5cm}  &  SRAM启动，可在SRAM中调试代码 \\
 \toprule
 \end{tabular}
 \end{table}
 
-程序下载配置电路：STM32的程序下载有多种方法：USB、串口、JTAG、SWD。上面介绍了程序的启动模式，我们配置了BOOT0和BOOT1都接地，程序即从flash启动。由于板子尺寸较小，这里没有采用JTAG方式，因为其占用的IO管脚比较多，选择的SWD模式占用的IO很少，只需要两根信号线和电源线，而且下载速度也非常快，SWD不仅可以下载代码，还可以实时跟踪调试，寻找程序中的bug, 让开发事半功倍,
-本系统中ARM所使用的外设接口情况如下表：
+STM32的程序下载有多种方法：USB、串口、JTAG、SWD。上面介绍了程序的启动模式，我们配置了BOOT0和BOOT1都接地，程序即从flash启动。由于板子尺寸较小，选择SWD方式下载程序，此模式占用的IO很少，只需要四根线，而且下载速度也非常快，SWD不仅可以下载代码，还可以实时跟踪调试，寻找程序中的bug, 让开发事半功倍。
+
+本系统中ARM所使用的外设接口情况如下表，
 \begin{table}[!h]
-\renewcommand\arraystretch{1}
+\renewcommand\arraystretch{0.9}
 \centering
 \caption{\label{chap3_Table 1}ARM外设主要接口}
 \begin{tabular}{cc}
 \toprule
-接口 & 功能 \\
+\hspace{0.5cm} 接口 & 功能 \\
 \hline
-$SPI1$串行总线 & BMI160数据传输\\
-串口$Usart3$ & GPS与ARM连接通道 \\
-串口$Usart1$ & 与外部设备通信接口\\
-$USB$ & 供电与上位机传输通道\\
-$SDIO$ & SD卡数据存储接口\\
+\hspace{0.5cm} $SPI1$串行总线 &\hspace{1cm}  BMI160数据传输\\
+\hspace{0.5cm} 串口$Usart3$ &\hspace{1cm}  GPS与ARM连接通道 \\
+\hspace{0.5cm} 串口$Usart1$ &\hspace{1cm}  与外部设备通信接口\\
+\hspace{0.5cm} $USB$ &\hspace{1cm}  供电与上位机传输通道\\
+\hspace{0.5cm} $SDIO$ &\hspace{1cm}  SD卡数据存储接口\\
 \toprule
 \end{tabular}
 \end{table}
 
-电源稳定地输出是系统正常工作的前提，因此要选择输出电压稳定性高、纹波噪声小的稳压芯片，为使传感器能够稳定工作，设计过程中采用隔离的供电方式，电源设计采用了两个稳压芯片，一个单独供GPS传感器供电，通过程序控制芯片使能端管脚的电平，另外一路稳压为主控芯片和其他外设供电。电源电路如图？所示：
+电源稳定的输出是系统正常工作的前提，因此要选择输出电压稳定性高、纹波噪声小的稳压芯片，为使传感器能够稳定工作，设计过程中采用隔离的供电方式，配置了两个稳压芯片，其中一个单独供GPS传感器供电，可以通过程序控制该芯片使能管脚的电平控制电压输出，另外一路稳压芯片为主控芯片和其他外设供电。电源电路如图？所示：
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_Power}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -170,7 +200,7 @@ $SDIO$ & SD卡数据存储接口\\
  \vspace{-0.4cm}
 \end{figure}
 
-MEMS传感器模块设计相应的原理图如下：
+MEMS传感器模块设计相应的原理图如图？
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_Bmi160}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -178,18 +208,18 @@ MEMS传感器模块设计相应的原理图如下：
  \label{chap3_Fig.8}
  \vspace{-0.4cm}
 \end{figure}
-图中采用退耦电容C18、C21消除电源纹波对供电电路的影响。从电路图可以看出BMI160通过SPI高速串行接口来和ARM处理器进行数据通讯。BMI160 是一个自动测量系统，当系统上电后，器件自检通过后，就可以输出六轴传感器数据，默认采样频率为3.2KHz。程序设置100Hz取数，使控制器执行终端可实现100Hz带宽。一般带宽大时，动态响应虽提高，噪声（即稳态误差）也随之增加。 动态在大于200Hz时，大约有3dB的信号损失，噪声也会增加，表现出来的是惯性传感器零偏稳定性变差。
+图中采用退耦电容C18、C21消除电源纹波对供电电路的影响，从电路图也可以看出BMI160使用SPI高速串行接口来和ARM处理器进行数据通讯。BMI160 是一个自动测量系统，当系统上电后，器件自检通过后，就可以输出六轴传感器数据，默认采样频率为3.2KHz。程序设置100Hz取数，使控制器执行终端可实现100Hz带宽。一般带宽大时，动态响应虽提高，当动态在大于200Hz时，大约有3dB的信号损失，噪声（即稳态误差） 也会增加，表现出来的是惯性传感器零偏稳定性变差。
+
 BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送目标地址给BMI160时，主设备能够读取其寄存器的内容，这一过程在同一个时钟信号SCLK中完成。数据采用选择普通模式，如图？所示。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.8\textwidth]{figures/chap3/chap3_spi}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_spi}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{SPI数据采集模式}
  \label{chap3_Fig.7}
  \vspace{-0.4cm}
 \end{figure}
 
-当用户通过查阅芯片手册，从寄存器地址可以读出目标测量数据。
-寄存器对应表？如下：
+用户通过查阅芯片手册，找到相应寄存器地址，从而读出目标测量的数据。寄存器对应表？如下：
 \begin{table}[!htp]
 \renewcommand\arraystretch{0.8}
 \centering
@@ -254,7 +284,7 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 硬件板载一个micro \ usb接口，用于USB从机(SLAVE)通信，接通USB后电脑可以访问设备中SD的数据，同时还可以为系统供电。USB电路连接如下图\ref{chap3_Fig.10}
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.8\textwidth]{figures/chap3/chap3_usb}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.7\textwidth]{figures/chap3/chap3_usb}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{USB电路图}
  \label{chap3_Fig.10}
  \vspace{-0.4cm}
@@ -283,11 +313,11 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 
 (1)器件布局
 
-元器件布局尽量紧凑，各模块之间以主处理器为中心，其他器件以扇形状态置于元器件周围，总的连线尽可能短，关键信号线最短。使用同一电源的器件尽可能的放在一块，便于电源管理。
+在设计中，元器件布局上承原理图设计，下接PCB布线设计，布局方式的优劣直接决定布线的成功与系统最终工作的性能，合理的布局特别是晶振、系统接口、电阻电容等关键器件的是整个电路信号完整性的关键，在确定PCB形状和尺寸后，器件摆放要尽量紧凑，各模块之间以主处理器为中心，其他器件以扇形状态置于元器件周围，使得总的连线尽可能短，关键信号线最短。使用同一电源的器件尽可能的放在一块，便于电源管理。
 
 (2)布线
 
-地线布线遵循了环路最小原则，即信号线与其回路构成的环面积要尽可能小，环面积越小，对外的辐射越少，接收外界的干扰也越小；信号线之间会因较长的平行布线引起相互干扰，主要是由于平行线间的分布电容和分布电感的作用，扩大线间距、尽可能少走平行线，不走环行线以此来克服串扰。增加线宽度，重要信号间，平行地线的方法隔离。
+布线是在布局完成后将是系统硬件设计中一个关键环节，本设计中布线遵循了环路最小原则，即信号线与其回路构成的环面积要尽可能小，环面积越小，对外的辐射越少，接收外界的干扰也越小；信号线之间会因较长的平行布线引起相互干扰，主要是由于平行线间的分布电容和分布电感的作用，扩大线间距、尽可能少走平行线，不走环行线以此来克服串扰。增加线宽度，重要信号间，平行地线的方法隔离。
 
 (3)接地
 
@@ -329,18 +359,15 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 接下来检查是否可以长时间稳定工作。电子电路经静态和动态调试正常之后，便可对课题要求的技术指标进行测量，测试并记录数据，确定电路技术指标符合设计要求。
 
 \subsection{屏蔽罩外壳设计}
-\begin{figure}[!htb]
- \centering
- \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_shell}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
- \caption{屏蔽罩设计}
- \label{chap3_Fig.10}
- \vspace{-0.4cm}
-\end{figure}
+本课题针对系统板设计了屏蔽外壳，一方面可以保护屏蔽罩内的元器件，另一方面作用是屏蔽电磁干扰(EMI)。屏蔽就是对两个空间区域之间进行金属的隔离，以控制产品外电场、磁场和电磁波对设备的感应和辐射。本设计在AutoCAD 软件上根据物体实际尺寸绘制了屏蔽罩三维模型，工厂根据图纸制作系统板屏蔽罩，其中使用的材料是洋白铜(GPS屏蔽罩一般都用洋白铜，在众多材料中洋白铜的屏蔽效果十分出色，是一种容易上锡的金属屏蔽材料，且在焊接、散热方面表现比较好)。屏蔽罩作用：
 
+(1)减少外界环境的电磁波对电路正常工作的干扰，从而提高质量、稳定性以及工作寿命。
+
+(2)有效地保护系统设备，方便导航模块的安装和拆卸。
 \begin{figure}[htbp]
 \begin{minipage}[t]{0.35\linewidth}
 \centering
-\includegraphics[height=7.5cm,width=7.5cm]{figures/chap3/chap3_shell}
+\includegraphics[height=4.5cm,width=7.5cm]{figures/chap3/chap3_shell}
 \caption{屏蔽罩设计}
  \label{chap3_Fig.10}
 \end{minipage}%
@@ -356,12 +383,3 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 
 \section{本章小结}
 本章主要说明了组合导航系统的硬件实现情况，首先根据总体方案设计的技术要求，对各芯片模块功能和原理进行说明并完成选型，主要采用意法半导体公司的STM32系列ARM微控制器作为主控制器，设计相应芯片的硬件接口及通信方式，最后给出系统原理图和PCB 图的设计，设计出完整的系统硬件平台，为后续软件算法设计提供物理基础。
-
-
-
-
-
-
-
-
-

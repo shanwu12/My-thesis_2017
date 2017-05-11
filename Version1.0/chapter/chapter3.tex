@@ -97,12 +97,11 @@ BMI160的性能指标如表\ref{chap3_Table 1}所示
 卫星接收模块采用的是U-blox公司的NEO-M8N系列芯片。NEO-M8N是一款高性能,高灵敏度的卫星信号接收模块，虽然其外形尺寸只有$16\times12.2\times2.4mm$,却可以提供丰富的卫星数据信息，模块的高灵敏度、低功耗及轻巧的体积，非常适用于车载、手机、无人机及其他移动定位系统的应用。其实物如图如图\ref{chap3_Fig.4}所示：
 
 NEO-M8N拥有22个跟踪通道，66个捕获通道，热启动下捕获卫星信号的速度不足一秒，模块速度极快，其捕获和跟踪灵敏度甚至达到-160dBm。同时，这款芯片采用创新设计和技术，能有效抑制干扰源和多路径效应，在恶劣环境下也能提供有效的导航信息。
-NEO-M8N的性能指标如表%\ref{chap3_Table_2}所示：
+NEO-M8N的性能指标如表\ref{chap3_Table 2}所示：
 \begin{table}[!h]
 \renewcommand\arraystretch{1}
 \centering
-\caption{NEO-M8N性能指标表}
-%\label{chap3_Table 2}
+\caption{\label{chap3_Table 2}NEO-M8N性能指标表}
 \begin{tabular}{|c|c|}
 \hline
 \hspace{0.5cm}灵敏度 \hspace{0.5cm}        & \hspace{0.5cm}-161dbm \hspace{0.5cm}     \\
@@ -156,7 +155,7 @@ STM32是低电平复位的，复位电路如图如图\ref{chap3_Fig.7}，电阻R28和电容C25构成上电
  \vspace{-0.4cm}
 \end{figure}
 
-ARM的BOOT0和BOOT1管脚用于设置STM32的启动方式，其对应启动模式如表%\ref{chap3_Table 3}%
+ARM的BOOT0和BOOT1管脚用于设置STM32的启动方式，其对应启动模式如表\ref{chap3_Table 3}
 \begin{table}[!h]
 \renewcommand\arraystretch{0.9}
 \centering
@@ -174,7 +173,7 @@ $1$ & $1$ & \hspace{0.5cm} SRAM启动\hspace{0.5cm}  &  SRAM启动，可在SRAM中调试代
 
 STM32的程序下载有多种方法：USB、串口、JTAG、SWD。上面介绍了程序的启动模式，我们配置了BOOT0和BOOT1都接地，程序即从flash启动。由于板子尺寸较小，选择SWD方式下载程序，此模式占用的IO很少，只需要四根线，而且下载速度也非常快，SWD不仅可以下载代码，还可以实时跟踪调试，寻找程序中的bug, 让开发事半功倍。
 
-本系统中ARM所使用的外设接口情况如下表%\ref{chap3_Table.4)，
+本系统中ARM所使用的外设接口情况如下表\ref{chap3_Table 4}；
 \begin{table}[!h]
 \renewcommand\arraystretch{0.9}
 \centering
@@ -220,7 +219,7 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
  \vspace{-0.4cm}
 \end{figure}
 
-用户通过查阅芯片手册，找到相应寄存器地址，从而读出目标测量的数据。寄存器对应表如下表：从表中可以看出，BMI160内部寄存器都是八位宽度，通过一个字节的地址可以访问该寄存器。如加速度计测量值寄存器、陀螺仪测量值寄存器和温度等外部传感器数据存储器都是由2个寄存器集合组成，例如X轴加速度计输出寄存器XACCL\_OUT，是由2部分分高低八位两个字节组成的16位数值，存储最近X轴加速度计的测量值，当需要读取X轴加速度计的输出数据时，只需要通过编程在给芯片写入0x12和0x13的数据，SPI即可在输出端返回寄存器的数据，再通过二进制补码的格式将其转换成十进制，乘以相应的刻度即可得到X轴加速度计的数据。
+用户通过查阅芯片手册，找到相应寄存器地址，从而读出目标测量的数据。寄存器对应表如下表\ref{chap3_Table 5}：从表中可以看出，BMI160内部寄存器都是八位宽度，通过一个字节的地址可以访问该寄存器。如加速度计测量值寄存器、陀螺仪测量值寄存器和温度等外部传感器数据存储器都是由2个寄存器集合组成，例如X轴加速度计输出寄存器XACCL\_OUT，是由2部分分高低八位两个字节组成的16位数值，存储最近X轴加速度计的测量值，当需要读取X轴加速度计的输出数据时，只需要通过编程在给芯片写入0x12和0x13的数据，SPI即可在输出端返回寄存器的数据，再通过二进制补码的格式将其转换成十进制，乘以相应的刻度即可得到X轴加速度计的数据。
 \begin{table}[!htp]
 \renewcommand\arraystretch{0.8}
 \centering

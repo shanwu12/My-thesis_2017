@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {2.3.2}速度更新}{21}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}位置更新}{22}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}低成本惯导的姿态初始化}{23}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}小型化车载组合定位原理}{24}{section.2.4}
+\contentsline {section}{\numberline {2.4}小型化车载组合定位原理}{23}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}MEMS惯性传感器的误差模型}{25}{subsection.2.4.1}
 \contentsline {section}{\numberline {2.5}车载组合定位系统总体方案设计}{27}{section.2.5}
 \contentsline {section}{\numberline {2.6}本章小结}{29}{section.2.6}
@@ -56,4 +56,5 @@
 \contentsline {chapter}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ignorespaces 章\hspace {0.3em}}总结与展望}{71}{chapter.6}
 \contentsline {section}{\numberline {6.1}研究工作总结}{71}{section.6.1}
 \contentsline {section}{\numberline {6.2}工作展望}{72}{section.6.2}
+\contentsline {chapter}{参考文献}{73}{chapter*.57}
 \contentsfinish 

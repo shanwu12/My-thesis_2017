@@ -1,9 +1,6 @@
 
-\chapter{小型化车载组合辅助系统测试与结果分析}
-基于所设计的MEMS惯导/GNSS组合导航系统设计，本章对设计的设备进行实地测试，通过采集的车载实验数据验证设备的工程实用性。
-%硬件方面，完成GNSS/惯导组合导航单元模块，数据采集电路等电路设计；在ARM基础上
-
-%在软件方面，完成组合导航信息融合Kalman滤波的软件编程；使用C语言实现系统采集、读写缓冲存储器FIFO以及
+\chapter{小型化车载组合导航系统测试与分析}
+基于所设计的MEMS惯导/GNSS组合导航系统设计，本章对设计的设备进行实地测试，开启系统数据记录功能，将实时采集的数据及结算后的数据保存至SD中，并对数据进行分析验证设备的工程实用性。
 
 \begin{figure}[!htb]
 \begin{minipage}[t]{0.35\linewidth}
@@ -22,11 +19,11 @@
 \end{figure}
 \section{跑车试验}
 
-本次试验于2017年4月在北京理工大学附近进行，实验平台为上图\ref{chap5_Fig.1}所示的北京理工大学组合导航与智能导航实验室的自主改装的红旗轿车。测试同时搭载实验室自主开发的高精度GNSS/SINS组合系统（位置1σ精度：2cm;姿态精度：0.06°）作为本设计精度判定的标准，各系统以输出的GPS时间（UTC时）作为数据时间对齐基准。
+本次试验于2017年4月在北京理工大学附近进行，实验平台为上图\ref{chap5_Fig.1}所示的北京理工大学组合导航与智能导航实验室的自主改装的红旗轿车。测试同时搭载实验室自主开发的高精度GNSS/SINS组合系统（位置1σ精度：2cm；姿态精度：0.06°）作为本设计精度判定的标准，各系统以输出的GPS时间（UTC时）作为数据时间对齐基准。
 
 跑车实验，将本课题设计的导航设备与作为基准的高精度组合系统一起固联于试验车内部，两系统的X-Y-Z轴分别对应车体右-前-上方向，GPS天线沿车体放置于车外，小型化导航设备通过串口转USB与笔记本电脑连接，可以实时观测数据情况，同时数据保存在设备的SD卡内。车载实验装置如图\ref{chap5_Fig.2}所示。
 
-跑车实验轨迹如图\ref{chap5_Fig.3}所示，车辆从北京理工大学自动化学院出发，绕过苏州桥底沿西三环辅路，魏公村路、沿北三环西路回到自动化学院。行驶过程中，GNSS 信号频繁受到高架桥，高楼，树木的遮挡，导致GNSS接收机定位精度差或无定位现象。其中路段1和路段2人为中断GNSS信号的时长分别约为20s和180s。图\ref{chap5_Fig.4}和图\ref{chap5_Fig.5}是设计的导航上位机所得的轨迹图和实时卫星显示结果，蓝色部分为卫星信号失锁时的路线。
+跑车实验轨迹如图\ref{chap5_Fig.3}所示，车辆从北京理工大学自动化学院出发，绕过苏州桥底沿西三环辅路，魏公村路、沿北三环西路回到自动化学院。行驶过程中，GNSS信号频繁受到高架桥，高楼，树木的遮挡，导致GNSS接收机定位精度差或无定位现象。其中路段1和路段2人为中断GNSS信号的时长分别约为20s和180s。图\ref{chap5_Fig.4}和图\ref{chap5_Fig.5}是设计的导航上位机所得的轨迹图和实时卫星显示结果，蓝色部分为卫星信号失锁时的路线。
 
 \begin{figure}[!htb]
  \centering
@@ -52,12 +49,9 @@
 \end{minipage}
 \end{figure}
 
-
-
-
 \section{数据分析与结果}
 \subsection{组合定位结果}
-将实验所得到的数据结果和基准数据经matlab处理后，给出了组合系统的位置、速度和姿态误差曲线图，经RMS(root-mean-square)统计后得到系统精度。
+将实验所得到的数据结果和基准数据经matlab处理后，给出了组合系统的位置、速度和姿态误差曲线图：
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap5/chap5_2D}
@@ -68,7 +62,7 @@
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_errPos}
+ \includegraphics[height=8cm,width=16cm]{figures/chap5/chap5_errPos}
  \caption{GNSS/MEMS惯导组合结果位置误差图}
  \label{chap5_Fig.7}
  \vspace{-0.4cm}
@@ -78,7 +72,7 @@
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=9cm,width=18cm]{figures/chap5/chap5_attitude}
+ \includegraphics[height=8cm,width=16cm]{figures/chap5/chap5_attitude}
  \caption{GNSS/MEMS惯导组合结果姿态对比图}
  \label{chap5_Fig.8}
  \vspace{-0.4cm}
@@ -86,7 +80,7 @@
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=9cm,width=18cm]{figures/chap5/chap5_erratt}
+ \includegraphics[height=8cm,width=16cm]{figures/chap5/chap5_erratt}
  \caption{GNSS/MEMS惯导组合结果姿态误差图}
  \label{chap5_Fig.9}
  \vspace{-0.4cm}
@@ -113,6 +107,7 @@
 
 经统计得出组合系统速度误差曲线图，从图\ref{chap5_Fig.10}中可以看出，速度大小与基准速度的曲线基本吻合，可以很好地跟随。
 
+经RMS(root-mean-square)统计后得到系统精度如表\ref{chap5_Table 1}中所示：
 \begin{table}[!h]
 \renewcommand\arraystretch{1.2}
 \centering
@@ -142,6 +137,6 @@ RMS          & 6.68 & 5.53     & 5.15  &\hspace{1cm}0.43  & 0.27         &  0.08
  \vspace{-0.4cm}
 \end{figure}
 
-
+\clearpage
 \section{本章小结}
 本章详细说明了组合导航系统的工程实现情况，对设计的组合系统进行了动态试验，整个实验结果表明本设计的组合导航系统虽然具有一定的误差，但仍然具有一定的工程意义，为导航组合系统提供了一套简单有效的低成本导航方法。

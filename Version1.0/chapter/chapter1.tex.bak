@@ -2,14 +2,14 @@
 \chapter{Ð÷ÂÛ}
 
 \section{¿ÎÌâÑÐ¾¿µÄÄ¿µÄÓëÒâÒå}
-³µÁ¾ÊÇÈËÃÇÈÕ³£Éú»îÖÐµÄÖØÒªµÄ³öÐÐ¹¤¾ß£¬Ëæ×ÅÉú»îË®Æ½µÄÌá¸ßºÍÆû³µµÄÆÕ¼°£¬´ó¶àÊý°ÙÐÕ¶¼ÓµÓÐÁËË½¼Ò³µ£¬µ¼ÖÂ³ÇÊÐ½»Í¨µÄÓµ¶Â×´¿öÈÕÒæ¼ÓÖØ£¬´ÓÁíÒ»·½Ãæ¸øÈËÃÇµÄ³öÐÐ´øÀ´¼«´óµÄ²»±ã¡£³µÁ¾¶¨Î»µ¼º½¼¼ÊõËæ×ÅÖÇÄÜ½»Í¨ÏµÍ³µÄ·¢Õ¹\cite{WangXiao(2006)}£¬»ùÓÚ¹ßÐÔÆ÷¼þºÍGNSS¶àÄ£ÎÀÐÇµ¼º½µÄ³µÔØ×éºÏÏµÍ³\cite{ZhangShiY(2010)}ÎªÆû³µÌá¹©È«µÀÂ·Á¬Ðøµ¼º½£¬´ó´ó»º½â³ÇÊÐµÄ½»Í¨Óµ¶ÂÏÖÏó£¬¸øÈËÃÇµÄÉú»î´øÀ´±ãÀû¡£
+³µÁ¾ÊÇÈËÃÇÈÕ³£Éú»îÖÐµÄÖØÒªµÄ³öÐÐ¹¤¾ß£¬Ëæ×ÅÉú»îË®Æ½µÄÌá¸ßºÍÆû³µµÄÆÕ¼°£¬´ó¶àÊý°ÙÐÕ¶¼ÓµÓÐÁËË½¼Ò³µ£¬µ¼ÖÂ³ÇÊÐ½»Í¨µÄÓµ¶Â×´¿öÈÕÒæ¼ÓÖØ£¬´ÓÁíÒ»·½Ãæ¸øÈËÃÇµÄ³öÐÐ´øÀ´¼«´óµÄ²»±ã¡£³µÁ¾¶¨Î»µ¼º½¼¼ÊõËæ×ÅÖÇÄÜ½»Í¨ÏµÍ³µÄ·¢Õ¹\cite{WangXiao(2006)}£¬»ùÓÚ¹ßÐÔÆ÷¼þºÍGNSS¶àÄ£ÎÀÐÇµ¼º½µÄ³µÔØ×éºÏÏµÍ³ÎªÆû³µÌá¹©È«µÀÂ·Á¬Ðøµ¼º½\cite{ZhangShiY(2010)}£¬´ó´ó»º½â³ÇÊÐµÄ½»Í¨Óµ¶ÂÏÖÏó£¬¸øÈËÃÇµÄÉú»î´øÀ´±ãÀû¡£
 
-ÏÖ´úÖÇÄÜ½»Í¨ÏµÍ³ÖÐ£¬³µÁ¾¶¨Î»µ¼º½¼¼Êõ´¦ÓÚ¼«ÎªÖØÒªµÄµØÎ»£¬ËûÊÇÊµÏÖ½»Í¨ÏµÍ³ÍøÂç»¯Óë³µÁ¾ÖÇÄÜ»¯µÄ¹Ø¼ü¼¼ÊõÖ®Ò»¡£ÖÇÄÜ½»Í¨ÏµÍ³ÔÚ¹úÍâºÜÔç¾ÍÊÜµ½Ö§³Ö²¢½øÐÐÑÐ¾¿£¬ÔçÔÚ20ÊÀ¼Í60Äê´ú£¬Å·ÃÀµÈ·¢´ï¹ú¼Ò¾Í¿ªÊ¼ÑÐ¾¿³µÁ¾¶¨Î»¼¼Êõ¼°µ¼º½ÏµÍ³Éè¼Æ¡£20ÊÀ¼Í90Äê´ú£¬Ëæ×Å¼ÆËã»ú¼¼ÊõºÍÍ¨ÐÅ¼¼ÊõµÄ¿ìËÙ·¢Õ¹£¬³µÔØµ¼º½¶¨Î»ÏµÍ³¿ªÊ¼½øÈëÕæÕýµÄÊµÓÃ½×¶Î¡£ÓÈÆäµ±ÃÀ¹úÈ«Çò¶¨Î»ÏµÍ³GPS£¨Global Position System£©Í¶ÈëÃñÓÃ½×¶ÎÖ®ºó£¬²ÉÓÃGPSÓëµç×ÓµØÍ¼µÄ³µÔØµ¼º½£¬¾«¶ÈµÃµ½´ó·ù¶ÈµÄÌá¸ß\cite{KaPL(2007)}¡£µ«ÊÇGPSÒ²´æÔÚÖî¶à²»×ã£¬ÓÈÆäÊÜµ½Ò»Ð©³ÇÊÐÌØ¶¨»·¾³µÄÓ°Ïì£¬Èç¶àÂ·¾¶Ð§Ó¦¡¢µç´Å¸ÉÈÅ¡¢¸ßÂ¥Ê÷Ä¾²úÉúµÄÐÅºÅÕÚµ²ºÍË¥¼õµÈ£¬ÕâÐ©ÒòËØ¶¼»áÔì³ÉGPSÐÅºÅ¿É¼ûÐÔ±ä²î£¬¶¨Î»ÐÅÏ¢ÖÐ¶Ï
-\cite{FanXY(2010),ZhangHN(2013),DaiWJ(2006)}¡£ µ«ÊÇËæ×Å¶à´«¸ÐÆ÷¼¼Êõ¼°ÐÅÏ¢ÈÚºÏ¼¼ÊõµÄ¿ìËÙ·¢Õ¹£¬Îª×éºÏµ¼º½ÏµÍ³Ìá¹©ÁËÎïÖÊÇ°ÌáºÍÀíÂÛ»ù´¡£¬×éºÏµ¼º½ÏµÍ³Ä¿Ç°ÒÑ¾­³ÉÎªµ¼º½ÏµÍ³·¢Õ¹µÄÖ÷Òª·½ÏòÖ®Ò»£¬ÊÜµ½Ô½À´Ô½¶àµÄÖØÊÓ£¬ÓÈÆäÊÇ¶Ô¶¨Î»¾«¶ÈºÍ¿É¿¿ÐÔÓÐÒ»¶¨ÐèÇóµÄ³µÁ¾µ¼º½ÏµÍ³ÖÐ¡£ÖÐ¹ú×÷ÎªÒ»¸öÈË¿Ú´ó¹ú£¬Æû³µÊÐ³¡ÓµÓÐ·Ç³£´óµÄÇ±Á¦£¬¶øÄ¿Ç°¸ßÐ£ÊµÑéÊÒºÍÒ»Ð©¿Æ¼¼¹«Ë¾Ö÷Òª»¹ÊÇÕë¶ÔÄ³Ð©Â·¶Î»òÌØÊâ³µÁ¾½øÐÐÎÞÈË¼ÝÊ»ÓëÖÇÄÜ¼ÝÊ»µÄ²âÊÔ£¬ÖÇÄÜµ¼º½²¢Ã»ÓÐÍêÈ«Ó¦ÓÃµ½ÈËÃÇÉú»îÖÐÈ¥¡£
+ÏÖ´úÖÇÄÜ½»Í¨ÏµÍ³ÖÐ£¬³µÁ¾¶¨Î»µ¼º½¼¼Êõ´¦ÓÚ¼«ÎªÖØÒªµÄµØÎ»£¬ËûÊÇÊµÏÖ½»Í¨ÏµÍ³ÍøÂç»¯Óë³µÁ¾ÖÇÄÜ»¯µÄ¹Ø¼ü¼¼ÊõÖ®Ò»¡£ÖÇÄÜ½»Í¨ÏµÍ³ÔÚ¹úÍâºÜÔç¾ÍÊÜµ½Ö§³Ö²¢½øÐÐÑÐ¾¿£¬ÔçÔÚ20ÊÀ¼Í60Äê´ú£¬Å·ÃÀµÈ·¢´ï¹ú¼Ò¾Í¿ªÊ¼ÑÐ¾¿³µÁ¾¶¨Î»¼¼Êõ¼°µ¼º½ÏµÍ³Éè¼Æ¡£20ÊÀ¼Í90Äê´ú£¬Ëæ×Å¼ÆËã»ú¼¼ÊõºÍÍ¨ÐÅ¼¼ÊõµÄ¿ìËÙ·¢Õ¹£¬³µÔØµ¼º½¶¨Î»ÏµÍ³¿ªÊ¼½øÈëÕæÕýµÄÊµÓÃ½×¶Î¡£ÓÈÆäµ±ÃÀ¹úÈ«Çò¶¨Î»ÏµÍ³GPS£¨Global Position System£©Í¶ÈëÃñÓÃ½×¶ÎÖ®ºó£¬²ÉÓÃGPSÓëµç×ÓµØÍ¼µÄ³µÔØµ¼º½£¬¾«¶ÈµÃµ½´ó·ù¶ÈµÄÌá¸ß\cite{KaPL(2007)}¡£ µ«ÊÇGPSÒ²´æÔÚÖî¶à²»×ã£¬ÓÈÆäÊÜµ½Ò»Ð©³ÇÊÐÌØ¶¨»·¾³µÄÓ°Ïì£¬Èç¶àÂ·¾¶Ð§Ó¦¡¢µç´Å¸ÉÈÅ¡¢¸ßÂ¥Ê÷Ä¾²úÉúµÄÐÅºÅÕÚµ²ºÍË¥¼õµÈ£¬ÕâÐ©ÒòËØ¶¼»áÔì³ÉGPS ÐÅºÅ¿É¼ûÐÔ±ä²î£¬¶¨Î»ÐÅÏ¢ÖÐ¶Ï
+\cite{FanXY(2010),ZhangHN(2013),DaiWJ(2006)}¡£ µ«ÊÇËæ×Å¶à´«¸ÐÆ÷¼¼Êõ¼°ÐÅÏ¢ÈÚºÏ¼¼ÊõµÄ¿ìËÙ·¢Õ¹£¬Îª×éºÏµ¼º½ÏµÍ³Ìá¹©ÁËÎïÖÊÇ°ÌáºÍÀíÂÛ»ù´¡£¬×éºÏµ¼º½ÏµÍ³Ä¿Ç°ÒÑ¾­³ÉÎªµ¼º½ÏµÍ³·¢Õ¹µÄÖ÷Òª·½ÏòÖ®Ò»£¬ÊÜµ½Ô½À´Ô½¶àµÄÖØÊÓ£¬ÓÈÆäÊÇ¶Ô¶¨Î»¾«¶ÈºÍ¿É¿¿ÐÔÓÐÒ»¶¨ÐèÇóµÄ³µÁ¾µ¼º½ÏµÍ³ÖÐ\cite{CuiLZ(2014)}¡£ÖÐ¹ú×÷ÎªÒ»¸öÈË¿Ú´ó¹ú£¬Æû³µÊÐ³¡ÓµÓÐ·Ç³£´óµÄÇ±Á¦£¬¶øÄ¿Ç°¸ßÐ£ÊµÑéÊÒºÍÒ»Ð©¿Æ¼¼¹«Ë¾Ö÷Òª»¹ÊÇÕë¶ÔÄ³Ð©Â·¶Î»òÌØÊâ³µÁ¾½øÐÐÎÞÈË¼ÝÊ»ÓëÖÇÄÜ¼ÝÊ»µÄ²âÊÔ£¬ÖÇÄÜµ¼º½²¢Ã»ÓÐÍêÈ«Ó¦ÓÃµ½ÈËÃÇÉú»îÖÐÈ¥¡£
 
-½üÄêÀ´£¬Ëæ×Å¹è¹¤ÒÕË®Æ½µÄÌá¸ß£¬Ê¹µÃ½ÝÁª¹ßµ¼ÏµÍ³³¯×ÅÌå»ý¸üÐ¡£¬µÍ¹¦ºÄ£¬µÍ³É±¾·½Ïò·¢Õ¹¡£»ùÓÚÎ¢¹è»úÐµÏµÍ³£¨Micro-Electro-Mechanical System£¬MEMS£©µÄ¹ßÐÔ²âÁ¿µ¥Ôª£¨IMU£¬Inertia Measurement unit£©ÒÑ¾­³ÉÎªµÍ³É±¾µ¼º½ÖÆµ¼²úÆ·µÄ´ú±í\cite{LiuWei(2006)}£¬Ò»·½ÃæMEMS¹ßµ¼¾ßÓÐÐ¡ÐÍ»¯¡¢µÍ³É±¾¡¢²âÁ¿·¶Î§´ó¡¢ÊÙÃü³¤µÈ´«Í³¹ßµ¼ÄÑÒÔ±ÈÄâµÄÓÅÊÆ£¬ÁíÒ»·½ÃæÒ²ÒòÎª¹¤×÷ÎÈ¶¨ÐÔ²î£¬ÊÜÎÂ¶ÈÓ°Ïì´óµÈÈ±µãÎÞ·¨Ïñ¹âÏËÍÓÂÝ¼¤¹âÍÓÂÝµÈ´«Í³¹ßµ¼¿ÉÒÔ¶ÀÁ¢¹¤×÷¡£Òò´Ë£¬MEMS¹ßµ¼ÓëÎÀÐÇµ¼º½×éºÏµÄÏµÍ³ÊÜµ½ÑÐ¾¿ÈËÔ±µÄ¹Ø×¢¡£¹úÍâµÄMEMS¹ßµ¼×éºÏ²úÆ·Ö÷Òª¼¯ÖÐÔÚÓëGNSSµÄ×éºÏÏµÍ³£¬³ý¾üÊÂÓ¦ÓÃÍâ£¬MEMS INS/GNSS×éºÏÏµÍ³Ò²±»ÓÃÓÚÆû³µ¡¢ÖÇÄÜ´©´÷Éè±¸¡¢ÎÞÈË»ú¡¢»úÆ÷ÈËµÈµÈÉè±¸ÉÏ£¬ÆäÓ¦ÓÃÒÑ¾­±é²¼ÔÚÎÒÃÇµÄÉú»îµ±ÖÐ¡£
+½üÄêÀ´£¬Ëæ×Å¹è¹¤ÒÕË®Æ½µÄÌá¸ß£¬Ê¹µÃ½ÝÁª¹ßµ¼ÏµÍ³³¯×ÅÌå»ý¸üÐ¡£¬µÍ¹¦ºÄ£¬µÍ³É±¾·½Ïò·¢Õ¹¡£»ùÓÚÎ¢¹è»úÐµÏµÍ³£¨Micro-Electro-Mechanical System£¬MEMS£©µÄ¹ßÐÔ²âÁ¿µ¥Ôª£¨IMU£¬Inertia Measurement unit£©ÒÑ¾­³ÉÎªµÍ³É±¾µ¼º½ÖÆµ¼²úÆ·µÄ´ú±í\cite{Liuwei(2004)}£¬Ò»·½ÃæMEMS¹ßµ¼¾ßÓÐÐ¡ÐÍ»¯¡¢µÍ³É±¾¡¢²âÁ¿·¶Î§´ó¡¢ÊÙÃü³¤µÈ´«Í³¹ßµ¼ÄÑÒÔ±ÈÄâµÄÓÅÊÆ£¬ÁíÒ»·½ÃæÒ²ÒòÎª¹¤×÷ÎÈ¶¨ÐÔ²î£¬ÊÜÎÂ¶ÈÓ°Ïì´óµÈÈ±µãÎÞ·¨Ïñ¹âÏËÍÓÂÝ¼¤¹âÍÓÂÝµÈ´«Í³¹ßµ¼¿ÉÒÔ¶ÀÁ¢¹¤×÷¡£Òò´Ë£¬MEMS¹ßµ¼ÓëÎÀÐÇµ¼º½×éºÏµÄÏµÍ³ÊÜµ½ÑÐ¾¿ÈËÔ±µÄ¹Ø×¢¡£¹úÍâµÄMEMS¹ßµ¼×éºÏ²úÆ·Ö÷Òª¼¯ÖÐÔÚÓëGNSSµÄ×éºÏÏµÍ³£¬³ý¾üÊÂÓ¦ÓÃÍâ£¬MEMS INS/GNSS×éºÏÏµÍ³Ò²±»ÓÃÓÚÆû³µ¡¢ÖÇÄÜ´©´÷Éè±¸¡¢ÎÞÈË»ú¡¢»úÆ÷ÈËµÈµÈÉè±¸ÉÏ£¬ÆäÓ¦ÓÃÒÑ¾­±é²¼ÔÚÎÒÃÇµÄÉú»îµ±ÖÐ\cite{MaoB(2013),QiGF(2015)}¡£
 
-³µÔØ×éºÏµ¼º½ÏµÍ³×÷Îª×éºÏµ¼º½×îÖØÒªµÄÓ¦ÓÃÖ®Ò»\cite{LiBowen(2014)}£¬ÊÇµ¼º½ÁìÓò¹Ø×¢µÄÖØµãºÍÈÈµã¡£³µÔØ×éºÏµ¼º½ÏµÍ³Ö÷ÒªÓÉ¹ßÐÔµ¼º½ÏµÍ³¡¢ÎÀÐÇ¶¨Î»ÏµÍ³¼°¸¨Öú´«¸ÐÆ÷×é³É£¬Í¨¹ýµ¼º½¼ÆËã»ú²É¼¯Êý¾Ý²¢½øÐÐ´¦Àí£¬Ìá¹©³µÁ¾µÄËÙ¶È¡¢Î»ÖÃ×ËÌ¬µÈÐÅÏ¢¡£ÒÔÍùÊÜÖÆÓÚ¹ßÐÔÆ÷¼þµÄ³É±¾£¬Ö»ÔÚ¾üÓÃ×÷Õ½³µÁ¾£¬ÌØÖÖ³µÁ¾µÈ×°±¸ÉÏÅä±¸¼¤¹â»ò¹âÏË¹ßµ¼£¬Ö±µ½Ð¡ÐÍ»¯¡¢µÍ³É±¾MEMS¹ßµ¼/GNSS×éºÏÏµÍ³µÄ³öÏÖ³É¹¦½«³µÔØ×éºÏµ¼º½ÏµÍ³µÄÓ¦ÓÃÀ©Õ¹ÖÁÃñÓÃ³µÁ¾ÁìÓò£¬ÉõÖÁ³ÉÎªÒ»Ð©¹úÍâ³µÁ¾³§ÉÌ³µÁ¾³ö³§µÄ±ê×¼ÅäÖÃ¡£×î½üÊ®ÄêÀ´Ëæ×ÅMEMS¹ßÐÔÆ÷¼þÊ¹ÓÃµÄÔö¼Ó£¬³µÔØ×éºÏµ¼º½¼¼ÊõµÄ¹ã·ºÊ¹ÓÃ´øÀ´ÎÞ±È¹ãÀ«µÄÊÐ³¡Ð§Ó¦£¬¹úÄÚÒ²½«MEMS×éºÏµ¼º½ÑÐ¾¿×÷ÎªÒ»¸öÑÐ¾¿ÈÈµã£¬µ«ÓÉÓÚÑÐ¾¿Æð²½Íí¼°ÖÆÔì¹¤ÒÕË®Æ½µÍÓÚ·¢´ï¹ú¼Ò£¬Ä¿Ç°»¹´æÔÚ±È½Ï´óµÄ²î¾à¡£
+³µÔØ×éºÏµ¼º½ÏµÍ³×÷Îª×éºÏµ¼º½×îÖØÒªµÄÓ¦ÓÃÖ®Ò»\cite{LiBowen(2014)}£¬ÊÇµ¼º½ÁìÓò¹Ø×¢µÄÖØµãºÍÈÈµã¡£³µÔØ×éºÏµ¼º½ÏµÍ³Ö÷ÒªÓÉ¹ßÐÔµ¼º½ÏµÍ³¡¢ÎÀÐÇ¶¨Î»ÏµÍ³¼°¸¨Öú´«¸ÐÆ÷×é³É£¬Í¨¹ýµ¼º½¼ÆËã»ú²É¼¯Êý¾Ý²¢½øÐÐ´¦Àí£¬Ìá¹©³µÁ¾µÄËÙ¶È¡¢Î»ÖÃ×ËÌ¬µÈÐÅÏ¢¡£ÒÔÍùÊÜÖÆÓÚ¹ßÐÔÆ÷¼þµÄ³É±¾£¬Ö»ÔÚ¾üÓÃ×÷Õ½³µÁ¾£¬ÌØÖÖ³µÁ¾µÈ×°±¸ÉÏÅä±¸¼¤¹â»ò¹âÏË¹ßµ¼£¬Ö±µ½Ð¡ÐÍ»¯¡¢µÍ³É±¾MEMS¹ßµ¼/GNSS×éºÏÏµÍ³µÄ³öÏÖ³É¹¦½«³µÔØ×éºÏµ¼º½ÏµÍ³µÄÓ¦ÓÃÀ©Õ¹ÖÁÃñÓÃ³µÁ¾ÁìÓò£¬ÉõÖÁ³ÉÎªÒ»Ð©¹úÍâ³µÁ¾³§ÉÌ³µÁ¾³ö³§µÄ±ê×¼ÅäÖÃ¡£×î½üÊ®ÄêÀ´Ëæ×ÅMEMS¹ßÐÔÆ÷¼þÊ¹ÓÃµÄÔö¼Ó£¬³µÔØ×éºÏµ¼º½¼¼ÊõµÄ¹ã·ºÊ¹ÓÃ´øÀ´ÎÞ±È¹ãÀ«µÄÊÐ³¡Ð§Ó¦£¬¹úÄÚÒ²½«MEMS×éºÏµ¼º½ÑÐ¾¿×÷ÎªÒ»¸öÑÐ¾¿ÈÈµã\cite{Liuwei(2004)}£¬µ«ÓÉÓÚÑÐ¾¿Æð²½Íí¼°ÖÆÔì¹¤ÒÕË®Æ½µÍÓÚ·¢´ï¹ú¼Ò£¬Ä¿Ç°»¹´æÔÚ±È½Ï´óµÄ²î¾à\cite{WangXiao(2006)}¡£
 ³µÁ¾ÊÇµÍ³É±¾INS/GPS×éºÏµ¼º½ÏµÍ³ºÜ´óµÄÓ¦ÓÃ´óÊÐ³¡£¬ÑÐ¾¿µÍ³É±¾µÄÐ¡ÐÍ»¯µÄ×éºÏÏµÍ³¾ßÓÐÉîÔ¶ÒâÒå¡£ÎªÌá¸ßÔÚµ¼º½²úÆ·µÄ¾ºÕùÁ¦ºÍÎüÒýÁ¦£¬Ìá¸ßÏµÍ³¾«¶ÈµÄÍ¬Ê±½µµÍ³É±¾ÊÇ×îÎªÓÐÐ§µÄÒ»ÖÖÊÖ¶Î¡£
 
 ±¾ÎÄÒÔµÍ³É±¾Ð¡ÐÍ»¯MEMS¹ßµ¼/GNSS×éºÏµ¼º½ÏµÍ³Éè¼ÆÎªÄ¿±ê£¬¸ù¾Ý³µÔØÊµ¼Ê»·¾³Ìá³öÓÐÕë¶ÔÐÔµÄ½â¾ö·½°¸£¬Éè¼Æ»ùÓÚARM¿ØÖÆÆ÷µÄÎ¢Ð¡ÐÍ³µÔØ×éºÏ¶¨Î»ÏµÍ³¡£Ê×ÏÈ¸ù¾Ý¼¼ÊõÒªÇó£¬½øÐÐÏµÍ³µÄ×ÜÌåÉè¼Æ£¬¶Ô¸÷¸öÄ£¿é¹¤×÷Ô­Àí¼°¹¦ÄÜ½øÐÐ·ÖÎöËµÃ÷£¬²¢¸ø³öÔ­ÀíÍ¼ºÍPCBÍ¼Íê³ÉÓ²¼þÆ½Ì¨µÄÖÆ×÷£¬½Ó×Å¶Ô×éºÏµ¼º½ÏµÍ³½øÐÐÈí¼þ±à³Ì£¬×îºó¶ÔÉè¼ÆµÄ×éºÏÏµÍ³½øÐÐÊÔÑé·ÖÎö¡£
@@ -19,14 +19,14 @@
 
 %µÍ¾«¶ÈµÄMEMS ¹ßµ¼×÷ÎªÐ¡ÐÍµç×Ó²úÆ·Ö÷ÒªÓÃÔÚMP3/MP4 ¡¢¸öÈËµ¼º½ÒÇ¡¢±ãÐ¯Ê½Ò½ÁÆÉè±¸¡¢PAD¡¢ÖÇÄÜÊÖ»ú¡¢µç×ÓÍæ¾ß¡¢¼Æ²½Æ÷¡¢Ô¶³Ì¿ØÖÆÆ÷µÈ±ãÐ¯Ê½Éè±¸¡£ÖÐµÈ¾«¶ÈµÄMEMS ¹ßµ¼×÷Îª¹¤Òµ¼¶²úÆ·£¬Ö÷ÒªÓÃÓÚÆû³µ¶¯Ì¬Æ«º½ÎÈ¶¨¿ØÖÆÏµÍ³¡¢ÎÀÐÇ¸¨Öúµ¼º½ÏµÍ³¡¢ÖÇÄÜ¼Ò¾Ó¡¢Æû³µSRS ÏµÍ³¡¢ÖÇÄÜ»úÆ÷ÈËµÈ¡£¸ß¾«¶ÈµÄMEMS ¹ßµ¼×÷Îª¾üÓÃ¼¶²úÆ·£¬Ö÷ÒªÓÃÓÚÍ¨Ñ¶ÎÀÐÇ¡¢´óÐÍÎÞÈË»ú¡¢µ¼µ¯µ¼ÒýÍ·¡¢¹âÑ§Ãé×¼ÏµÍ³¡¢·ÉÐÐÆ÷/µ¼µ¯¿ØÖÆ¡¢½¢´¬ÒÇÆ÷¡¢¾üÓÃ»úÆ÷ÈËµÈ¡£
 
-×ÔÉÏÊÀ¼ÍÆßÊ®Äê´úMEMS¼¼Êõ¿ªÊ¼·¢Õ¹ÒÔÀ´£¬Æ¾½èÉîºñµÄ¹¤Òµ»ù´¡ºÍ¿ÆÑÐÄÜÁ¦£¬Å·ÃÀ¸÷¹úÔÚMEMS¹ßÐÔµ¼º½ÏµÍ³¼¼ÊõÊ¼ÖÕ´¦ÓÚÁìÏÈµØÎ»¡£²©ÊÀ£¨BOSCH£©ÊÇµÂ¹ú¹¤ÒµÆóÒµÖ®Ò»£¬´ÓÊÂÆû³µÓëÖÇÄÜ½»Í¨¼¼Êõ¡¢¹¤Òµ¼¼Êõ¡¢´«¸ÐÆ÷Éú²úµÈ²úÒµ£¬²©ÊÀÒÔÆä´´ÐÂ¼â¶ËµÄ²úÆ·¼°ÏµÍ³½â¾ö·½°¸ÎÅÃûÓÚÊÀ£¬Ò²ÊÇÈ«Çò¶¥¼¶MEMS¹©Ó¦ÉÌ£¬Ã¿ÌìµÄMEMS²úÁ¿³¬¹ý400Íò¿Å¡£DraperÊµÑéÊÒÔÚMEMS¹ßÐÔ¼¼ÊõÁìÓò½øÐÐÁË´óÁ¿µÄÑÐ¾¿¹¤×÷£¬²¢ÇÒÈ¡µÃÁË·áË¶µÄ³É¹û£¬ÔÚ¹ýÈ¥µÄ¼¸ÄêÖÐÍÆ¶¯×ÅMEMS¹ßÐÔ¼¼ÊõÒÔ¼°×éºÏµ¼º½µÄ·¢Õ¹ºÍÓ¦ÓÃ¡£ÆäËûµÄÈç²¨Òô¡¢»ôÄáÎ¤¶û¡¢Rockwell¹«Ë¾µÈ¹¤Òµ¾ÞÍ·Îª´ú±íµÄÒ»´óÅú¹«Ë¾´óÁ¦¿ªÕ¹¶ÔMEMS¹ßµ¼/GNSSµÄ¿ª·¢ÓëÑÐ¾¿£¬²¢ÔÚº½¿ÕÆ÷£¬µØÃæÎÞÈË³µÁ¾µÈÉè±¸ÖÐ³É¹¦Ó¦ÓÃ¡£¶øÒÔÃÀ¹úË¹Ì¹¸£´óÑ§¡¢±öÏ¦·¨ÄáÑÇ´óÑ§£¬ÂéÊ¡Àí¹¤¡¢Ïã¸Û¿Æ¼¼´óÑ§µÈÖªÃû´óÑ§¶¼½«MEMS¹ßµ¼/GNSS×éºÏµ¼º½ÑÐ¾¿ÁÐÎª½üÄêµÄÖØµãÑÐ¾¿·½Ïò£¬²¢×öÁË´óÁ¿µÄÊµ¼ù£¬³É¹¦½«×éºÏµ¼º½²úÆ·Ó¦ÓÃµ½ÖîÈçÎÞÈË»ú¡¢ÎÞÈË³µÒÔ¼°»§Íâ»úÆ÷ÈËÉÏ£¬ÍÆ¶¯Õû¸öÁìÓòµÄ½ø²½¡£Å·ÖÞµÄÓ¢¹ú¡¢·¨¹ú¡¢µÂ¹ú¡¢ÒÔ¼°ÈÕ±¾Ò²ÔÚÏà¼Ì½øÐÐÏà¹Ø¼¼ÊõµÄÔ­ÀíµÄÑÐ¾¿¹¤×÷£¬²¢²»¶ÏÑÐ·¢³öÐÂµÄ²úÆ·Óë¼¼Êõ¡£
+×ÔÉÏÊÀ¼ÍÆßÊ®Äê´úMEMS¼¼Êõ¿ªÊ¼·¢Õ¹ÒÔÀ´£¬Æ¾½èÉîºñµÄ¹¤Òµ»ù´¡ºÍ¿ÆÑÐÄÜÁ¦£¬Å·ÃÀ¸÷¹úÔÚMEMS¹ßÐÔµ¼º½ÏµÍ³¼¼ÊõÊ¼ÖÕ´¦ÓÚÁìÏÈµØÎ»¡£²©ÊÀ£¨BOSCH£©ÊÇµÂ¹ú¹¤ÒµÆóÒµÖ®Ò»£¬´ÓÊÂÆû³µÓëÖÇÄÜ½»Í¨¼¼Êõ¡¢¹¤Òµ¼¼Êõ¡¢´«¸ÐÆ÷Éú²úµÈ²úÒµ£¬²©ÊÀÒÔÆä´´ÐÂ¼â¶ËµÄ²úÆ·¼°ÏµÍ³½â¾ö·½°¸ÎÅÃûÓÚÊÀ£¬Ò²ÊÇÈ«Çò¶¥¼¶MEMS¹©Ó¦ÉÌ£¬Ã¿ÌìµÄMEMS²úÁ¿³¬¹ý400Íò¿Å¡£DraperÊµÑéÊÒÔÚMEMS¹ßÐÔ¼¼ÊõÁìÓò½øÐÐÁË´óÁ¿µÄÑÐ¾¿¹¤×÷£¬²¢ÇÒÈ¡µÃÁË·áË¶µÄ³É¹û£¬ÔÚ¹ýÈ¥µÄ¼¸ÄêÖÐÍÆ¶¯×ÅMEMS¹ßÐÔ¼¼ÊõÒÔ¼°×éºÏµ¼º½µÄ·¢Õ¹ºÍÓ¦ÓÃ¡£ÆäËûµÄÈç²¨Òô¡¢»ôÄáÎ¤¶û¡¢Rockwell¹«Ë¾µÈ¹¤Òµ¾ÞÍ·Îª´ú±íµÄÒ»´óÅú¹«Ë¾´óÁ¦¿ªÕ¹¶ÔMEMS¹ßµ¼/GNSSµÄ¿ª·¢ÓëÑÐ¾¿£¬²¢ÔÚº½¿ÕÆ÷£¬µØÃæÎÞÈË³µÁ¾µÈÉè±¸ÖÐ³É¹¦Ó¦ÓÃ¡£¶øÒÔÃÀ¹úË¹Ì¹¸£´óÑ§¡¢±öÏ¦·¨ÄáÑÇ´óÑ§£¬ÂéÊ¡Àí¹¤¡¢Ïã¸Û¿Æ¼¼´óÑ§µÈÖªÃû´óÑ§¶¼½«MEMS¹ßµ¼/GNSS×éºÏµ¼º½ÑÐ¾¿ÁÐÎª½üÄêµÄÖØµãÑÐ¾¿·½Ïò£¬²¢×öÁË´óÁ¿µÄÊµ¼ù£¬³É¹¦½«×éºÏµ¼º½²úÆ·Ó¦ÓÃµ½ÖîÈçÎÞÈË»ú¡¢ÎÞÈË³µÒÔ¼°»§Íâ»úÆ÷ÈËÉÏ£¬ÍÆ¶¯Õû¸öÁìÓòµÄ½ø²½¡£Å·ÖÞµÄÓ¢¹ú¡¢·¨¹ú¡¢µÂ¹ú¡¢ÒÔ¼°ÈÕ±¾Ò²ÔÚÏà¼Ì½øÐÐÏà¹Ø¼¼ÊõµÄÔ­ÀíµÄÑÐ¾¿¹¤×÷£¬²¢²»¶ÏÑÐ·¢³öÐÂµÄ²úÆ·Óë¼¼Êõ\cite{Veth M(2006)}¡£
 
-ÎÒ¹úÓÚÉÏÊÀ¼Í¾ÅÊ®Äê´ú³õ¿ªÊ¼¶ÔMEMS ¹ßµ¼µÄÑÐ¾¿£¬Ö÷ÒªÑÐ¾¿Ö÷Òª¼¯ÖÐÓÚÇå»ª´óÑ§¡¢º½Ìì¿Æ¼¼¼¯ÍÅÊ®ÈýËùËù¡¢ÖÐ¹úº½Ìì¿Æ¹¤¼¯ÍÅ3ÔºµÚ33ÑÐ¾¿Ëù¡¢¹þ¶û±õ¹¤Òµ´óÑ§¡¢ÖÐ¹ú¿ÆÑ§ÔºÉÏº£Ò±½ðËùµÈ¸ßÐ£Óë¿ÆÑÐÔºËù¡£ÓÉÓÚMEMS ¹ßµ¼µÄÑÐ·¢ËùÐèÊ±¼ä½Ï³¤ÇÒ¶ÔÖÆÔì¹¤ÒÕÓÐ½Ï¸ßÒªÇó£¬ÎÒ¹ú¶Ô MEMS ¹ßµ¼µÄÑÐ¾¿Ê±¼ä½Ï¶ÌÇÒÈ±·¦ºËÐÄ¼¼Êõ£¬ËùÑÐ·¢µÄ²úÆ·ÔÚ¹¤ÒÕË®Æ½¡¢¿É¿¿ÐÔ¡¢Æ÷¼þ¾«¶ÈµÈ·½ÃæÓëÅ·ÃÀ»¹ÓÐÒ»¶¨µÄ²î¾à¡£
+ÎÒ¹úÓÚÉÏÊÀ¼Í¾ÅÊ®Äê´ú³õ¿ªÊ¼¶ÔMEMS¹ßµ¼µÄÑÐ¾¿£¬Ö÷ÒªÑÐ¾¿Ö÷Òª¼¯ÖÐÓÚÇå»ª´óÑ§¡¢º½Ìì¿Æ¼¼¼¯ÍÅÊ®ÈýËùËù¡¢ÖÐ¹úº½Ìì¿Æ¹¤¼¯ÍÅ3ÔºµÚ33ÑÐ¾¿Ëù¡¢¹þ¶û±õ¹¤Òµ´óÑ§¡¢ÖÐ¹ú¿ÆÑ§ÔºÉÏº£Ò±½ðËùµÈ¸ßÐ£Óë¿ÆÑÐÔºËù\cite{LiRongBing(2004)}¡£ÓÉÓÚMEMS¹ßµ¼µÄÑÐ·¢ËùÐèÊ±¼ä½Ï³¤ÇÒ¶ÔÖÆÔì¹¤ÒÕÓÐ½Ï¸ßÒªÇó£¬ÎÒ¹ú¶ÔMEMS¹ßµ¼µÄÑÐ¾¿Ê±¼ä½Ï¶ÌÇÒÈ±·¦ºËÐÄ¼¼Êõ£¬ËùÑÐ·¢µÄ²úÆ·ÔÚ¹¤ÒÕË®Æ½¡¢¿É¿¿ÐÔ¡¢Æ÷¼þ¾«¶ÈµÈ·½ÃæÓëÅ·ÃÀ»¹ÓÐÒ»¶¨µÄ²î¾à¡£
 
 \subsection{ÎÀÐÇµ¼º½}
 GNSS£¨ Global Navigation Satellite System£©·ºÖ¸ËùÓÐµÄÎÀÐÇµ¼º½ÏµÍ³£¬Ö÷Òª°üÀ¨ÃÀ¹úµÄGPS¡¢¶íÂÞË¹µÄGlonass¡¢Å·ÖÞµÄGalileo¡¢ÎÒ¹úµÄ×ÔÖ÷¿ª·¢²¢¼ÓËÙ²¼ÍøµÄ±±¶·ÎÀÐÇµ¼º½ÏµÍ³ÒÔ¼°Ïà¹ØµÄÔöÇ¿ÏµÍ³¡£ÎÀÐÇÏµÍ³Ö÷ÒªÓÉ¿Õ¼äÎÀÐÇÐÇ×ù²¿·Ö¡¢µØÃæ¿ØÖÆÕ¾¡¢ÓÃ»§½ÓÊÜÉè±¸Èý²¿·Ö×é³É£¬ÄÜÎªÈ«ÇòÂ½º£¿ÕµÄ¾üÃñÔØÌå£¬È«Ììºò¡¢Á¬ÐøÌá¹©¸ß¾«¶ÈÈýÎ¬Î»ÖÃ¡¢ËÙ¶ÈºÍÊ±¼äÐÅÏ¢£¬¶Ôµ¼º½¶¨Î»¡¢ÎäÆ÷ÖÆµ¼¡¢½»Í¨¹ÜÖÆ¡¢´óµØ²âÁ¿µÈ¾ù¾ßÓÐÖØÒªÒâÒå£¬ÎÀÐÇµ¼º½ÔÚ¾üÊÂºÍÃñÓÃ·½Ãæ¶¼µÃµ½ÁË¹ã·ºµÄÓ¦ÓÃ¡£
 
-ÔÚÎÀÐÇµ¼º½ÏµÍ³ÖÐ£¬GPS×îÎª³ÉÊì£¬ÇÒÉøÍ¸µ½ÈËÀàÉú»îµÄ·½·½ÃæÃæ¡£ÍêÕûµÄGPSÐÇ×ùÓÉ24¿ÅÔÚ¹ìÎÀÐÇ£¨ÆäÖÐ21¿Å¹¤×÷ÎÀÐÇ¡¢3¿Å±¸ÓÃÎÀÐÇ£©×é³É£¬Î»ÓÚ¾àµØ±í20200Ç§Ã×ÉÏ¿Õ£¬ÔËÐÐÖÜÆÚÎª12Ð¡Ê±¡£ÎÀÐÇ¾ùÔÈ·Ö²¼ÔÚ6¸ö¹ìµÀÃæÉÏ£¬Çã½ÇÎª$55\circ$¡£ ÀíÏë×´Ì¬ÏÂ£¬È«ÇòÈÎÒâÒ»µã¡¢ÈÎºÎÊ±¼ä¶¼¿É¹Û²âµ½4¿ÅÒÔÉÏµÄÎÀÐÇ¡£Ä¿Ç°GPSÔÚ¹ì¹¤×÷ÎÀÐÇÊýÁ¿31¿Å£¬¿Õ¼äÐÅºÅÓÃ»§¶¨Î»Îó²î1.6m£¬ÊÚÊ±¾«¶È20ns¡£2016Äê2ÔÂ5ÈÕ£¬ÃÀ¹úÁªºÏ·¢ÉäÁªÃË¹«Ë¾µÄ¡°ÓîÖæÉñ¡±5¡ª401ÐÍÔËÔØ»ð¼ýÔÚ¿¨ÄÉÎ¬À­¶û½Ç¿Õ¾üÕ¾·¢ÉäÁËÃÀ¹ú¿Õ¾üµÄGPS-2F12µ¼º½ÎÀÐÇ\cite{JiangS(2016)}¡£ÖÁ´ËµÚ¶þ´úGPSÎÀÐÇµÄÊ®¶þ¿ÅÎÀÐÇÒÑÈ«²¿·¢Éä£¬µÚÈý´úGPS¡ª3ÎÀÐÇµÄ·¢Éä½øÈëµ¹¼ÆÊ±\cite{ZhaoShuang(2013)}¡£
+ÔÚÎÀÐÇµ¼º½ÏµÍ³ÖÐ£¬GPS×îÎª³ÉÊì£¬ÇÒÉøÍ¸µ½ÈËÀàÉú»îµÄ·½·½ÃæÃæ¡£ÍêÕûµÄGPSÐÇ×ùÓÉ24¿ÅÔÚ¹ìÎÀÐÇ£¨ÆäÖÐ21¿Å¹¤×÷ÎÀÐÇ¡¢3¿Å±¸ÓÃÎÀÐÇ£©×é³É£¬Î»ÓÚ¾àµØ±í20200Ç§Ã×ÉÏ¿Õ£¬ÔËÐÐÖÜÆÚÎª12Ð¡Ê±¡£ÎÀÐÇ¾ùÔÈ·Ö²¼ÔÚ6¸ö¹ìµÀÃæÉÏ£¬Çã½ÇÎª$55^\circ$¡£ ÀíÏë×´Ì¬ÏÂ£¬È«ÇòÈÎÒâÒ»µã¡¢ÈÎºÎÊ±¼ä¶¼¿É¹Û²âµ½4¿ÅÒÔÉÏµÄÎÀÐÇ¡£Ä¿Ç°GPSÔÚ¹ì¹¤×÷ÎÀÐÇÊýÁ¿31¿Å£¬¿Õ¼äÐÅºÅÓÃ»§¶¨Î»Îó²î1.6m£¬ÊÚÊ±¾«¶È20ns¡£2016Äê2ÔÂ5ÈÕ£¬ÃÀ¹úÁªºÏ·¢ÉäÁªÃË¹«Ë¾µÄ¡°ÓîÖæÉñ¡±5¡ª401ÐÍÔËÔØ»ð¼ýÔÚ¿¨ÄÉÎ¬À­¶û½Ç¿Õ¾üÕ¾·¢ÉäÁËÃÀ¹ú¿Õ¾üµÄGPS-2F12µ¼º½ÎÀÐÇ\cite{JiangS(2016)}¡£ÖÁ´ËµÚ¶þ´úGPSÎÀÐÇµÄÊ®¶þ¿ÅÎÀÐÇÒÑÈ«²¿·¢Éä£¬µÚÈý´úGPS¡ª3ÎÀÐÇµÄ·¢Éä½øÈëµ¹¼ÆÊ±\cite{ZhaoShuang(2013)}¡£
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap1/chap1_Beidou}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -35,9 +35,9 @@ GNSS£¨ Global Navigation Satellite System£©·ºÖ¸ËùÓÐµÄÎÀÐÇµ¼º½ÏµÍ³£¬Ö÷Òª°üÀ¨ÃÀ¹úµ
  \vspace{-0.4cm}
 \end{figure}
 
-±±¶·ÎÀÐÇÏµÍ³ÊÇÎÒ¹ú×ÔÖ÷ÑÐÖÆµÄÎÀÐÇµ¼º½ÏµÍ³£¬ÎÒ¹ú±±¶·ÎÀÐÇµ¼º½ÏµÍ³²ÉÈ¡µÄÊÇ¡°Èý²½×ß¡±·¢Õ¹Õ½ÂÔ£¬±±¶·Ò»ºÅÊÇÓÐÔ´¶¨Î»(RDSS)£¬±±¶·¶þºÅÊÇÓÐÔ´¶¨Î»£«ÎÞÔ´¶¨Î»£¬¿É¸²¸ÇÈ«Çò1/3ÇøÓò£¬¶ø±±¶·ÈýºÅ½«ÊµÏÖÕæÕýµÄÈ«Çò¸²¸Ç£¬ÎÀÐÇÐÔÄÜÒ²´ó·ùÌáÉý£¬µ¥ÐÇÉè¼ÆÊÙÃü´ïµ½12Äê¡£°´¼Æ»®µ½2020Äê£¬½¨³ÉÓÉ5¿Å¾²Ö¹¹ìµÀºÍ30¿Å·Ç¾²Ö¹¹ìµÀÎÀÐÇ×éÍø¶ø³ÉµÄÈ«ÇòÎÀÐÇµ¼º½ÏµÍ³£¬ÐÎ³ÉÈ«Çò¸²¸ÇÄÜÁ¦£¬½¨³ÉÊÀ½çÒ»Á÷µÄÈ«ÇòÎÀÐÇµ¼º½ÏµÍ³¡£ÖÐ¹ú±±¶·ÎÀÐÇµ¼º½ÏµÍ³ÀûÓÃµØÇòÍ¬²½ÎÀÐÇ¶ÔÄ¿±êÊµÊ©¿ìËÙ¶¨Î»£¬Í¬Ê±¼æÓÐ±¨ÎÄÍ¨ÐÅºÍÊÚÊ±¶¨Ê±¹¦ÄÜ£¬±±¶·ÎÀÐÇµ¼º½ÏµÍ³µÄ½¨ÉèÊÇ±íÕ÷ÎÒ¹úº½ÌìÊÂÒµÍê³ÉÓÉÃæÏò×¨ÒµÁìÓòµ½´óÖÚÓÃ»§¡¢ÓÉµ¥ÐÇÑÐÖÆµ½×éÅúÉú²úµÄÀúÊ·ÐÔ×ª±ä¡£±±¶·ÎÀÐÇµ¼º½ÏµÍ³µÄ½¨Éè½«¶ÔÎ¬»¤ÎÒ¹ú¹ú¼Ò°²È«¡¢ÍÆ¶¯Éç»áµÄ½ø²½Óë·¢Õ¹Ìá¹©ÖØÒª±£ÕÏ\cite{TangSS(2014)}¡£×ÜÌåËµÀ´£¬ÃÀ¹úµÄGPSÑÐ¾¿×ßÔÚÖÐ¹ú±±¶·µÄÇ°Ãæ£¬ÎÒ¹úµÄ±±¶·ÏµÍ³ÊÇºóÆðÖ®Ðã¡£¾ÍÄ¿Ç°¶øÑÔ£¬GPSÄÜÎªÈ«ÇòÓÃ»§Ìá¹©¶¨Î»¡¢µ¼º½¡¢ÊÚÊ±·þÎñ£¬¶¨Î»¾«¶È´ïµ½1Ã×ÒÔÏÂ¡£ÎÒ¹úµÄ±±¶·µ¼º½ÏµÍ³Ä¿Ç°Ö»ÓÐ23¿ÅÎÀÐÇÔÚÔËÐÐ£¬»¹²»ÄÜÈ«Çò¸²¸Ç£¬Ö»ÄÜÔÝÊ±ÎªÑÇÖÞµØÇøÌá¹©¶¨Î»¡¢µ¼º½¡¢ÊÚÊ±¡¢Í¨ÐÅ·þÎñ¡£µ«Ëæ×Å±±¶·ÏµÍ³µÄ²»¶ÏÍêÉÆÒÔ¼°¼¼ÊõË®Æ½µÄÈÕÒæÌá¸ß£¬Î´À´±±¶·ÓëÆäËûÎÀÐÇµ¼º½ÏµÍ³²úÆ·µÄ¼æÈÝÐÔ½«Öð½¥Ôö¼Ó£¬¶àÄ£ÁªºÏ¶¨Î»£¬ÒÑ³ÉÎª¹ú¼ÊÇ÷ÊÆ£¬GNSSµÄ»¥²Ù×÷ÄÜ¹»´øÀ´µ¼º½¡¢¶¨Î»ºÍÊÚÊ±ÐÔÄÜµÄÏÔÖøÌá¸ß¡£¿í´øÌìÏß¼¼Êõ¡¢¸ßÐÔÄÜÉäÆµÇ°¶Î¼¼ÊõºÍÎ¢µç×Ó¼¼ÊõµÄ·¢Õ¹ÒÔ¼°¸ßËÙ¶àºË²¢ÐÐ´¦ÀíÆ÷µÄ³öÏÖÊ¹¶àÄ£GNSSÐÅºÅ½ÓÊÕ»úµÄÐ¡ÐÍ»¯ºÍ¹ã·ºÊ¹ÓÃ³ÉÎª¿ÉÄÜ¡£
+±±¶·ÎÀÐÇÏµÍ³ÊÇÎÒ¹ú×ÔÖ÷ÑÐÖÆµÄÎÀÐÇµ¼º½ÏµÍ³£¬ÎÒ¹ú±±¶·ÎÀÐÇµ¼º½ÏµÍ³²ÉÈ¡µÄÊÇ¡°Èý²½×ß¡±·¢Õ¹Õ½ÂÔ\cite{YangYX(2010)}£¬±±¶·Ò»ºÅÊÇÓÐÔ´¶¨Î»(RDSS)£¬±±¶·¶þºÅÊÇÓÐÔ´¶¨Î»£«ÎÞÔ´¶¨Î»£¬¿É¸²¸ÇÈ«Çò1/3ÇøÓò£¬¶ø±±¶·ÈýºÅ½«ÊµÏÖÕæÕýµÄÈ«Çò¸²¸Ç£¬ÎÀÐÇÐÔÄÜÒ²´ó·ùÌáÉý£¬µ¥ÐÇÉè¼ÆÊÙÃü´ïµ½12 Äê¡£°´¼Æ»®µ½2020Äê£¬½¨³ÉÓÉ5¿Å¾²Ö¹¹ìµÀºÍ30¿Å·Ç¾²Ö¹¹ìµÀÎÀÐÇ×éÍø¶ø³ÉµÄÈ«ÇòÎÀÐÇµ¼º½ÏµÍ³£¬ÐÎ³ÉÈ«Çò¸²¸ÇÄÜÁ¦£¬½¨³ÉÊÀ½çÒ»Á÷µÄÈ«ÇòÎÀÐÇµ¼º½ÏµÍ³¡£ÖÐ¹ú±±¶·ÎÀÐÇµ¼º½ÏµÍ³ÀûÓÃµØÇòÍ¬²½ÎÀÐÇ¶ÔÄ¿±êÊµÊ©¿ìËÙ¶¨Î»£¬Í¬Ê±¼æÓÐ±¨ÎÄÍ¨ÐÅºÍÊÚÊ±¶¨Ê±¹¦ÄÜ£¬±±¶·ÎÀÐÇµ¼º½ÏµÍ³µÄ½¨ÉèÊÇ±íÕ÷ÎÒ¹úº½ÌìÊÂÒµÍê³ÉÓÉÃæÏò×¨ÒµÁìÓòµ½´óÖÚÓÃ»§¡¢ÓÉµ¥ÐÇÑÐÖÆµ½×éÅúÉú²úµÄÀúÊ·ÐÔ×ª±ä¡£±±¶·ÎÀÐÇµ¼º½ÏµÍ³µÄ½¨Éè½«¶ÔÎ¬»¤ÎÒ¹ú¹ú¼Ò°²È«¡¢ÍÆ¶¯Éç»áµÄ½ø²½Óë·¢Õ¹Ìá¹©ÖØÒª±£ÕÏ\cite{TangSS(2008)}¡£×ÜÌåËµÀ´£¬ÃÀ¹úµÄGPSÑÐ¾¿×ßÔÚÖÐ¹ú±±¶·µÄÇ°Ãæ£¬ÎÒ¹úµÄ±±¶·ÏµÍ³ÊÇºóÆðÖ®Ðã¡£¾ÍÄ¿Ç°¶øÑÔ£¬GPSÄÜÎªÈ«ÇòÓÃ»§Ìá¹©¶¨Î»¡¢µ¼º½¡¢ÊÚÊ±·þÎñ£¬¶¨Î»¾«¶È´ïµ½1Ã×ÒÔÏÂ¡£ÎÒ¹úµÄ±±¶·µ¼º½ÏµÍ³Ä¿Ç°Ö»ÓÐ23¿ÅÎÀÐÇÔÚÔËÐÐ£¬»¹²»ÄÜÈ«Çò¸²¸Ç£¬Ö»ÄÜÔÝÊ±ÎªÑÇÖÞµØÇøÌá¹©¶¨Î»¡¢µ¼º½¡¢ÊÚÊ±¡¢Í¨ÐÅ·þÎñ¡£µ«Ëæ×Å±±¶·ÏµÍ³µÄ²»¶ÏÍêÉÆÒÔ¼°¼¼ÊõË®Æ½µÄÈÕÒæÌá¸ß£¬Î´À´±±¶·ÓëÆäËûÎÀÐÇµ¼º½ÏµÍ³²úÆ·µÄ¼æÈÝÐÔ½«Öð½¥Ôö¼Ó£¬¶àÄ£ÁªºÏ¶¨Î»£¬ÒÑ³ÉÎª¹ú¼ÊÇ÷ÊÆ£¬GNSSµÄ»¥²Ù×÷ÄÜ¹»´øÀ´µ¼º½¡¢¶¨Î»ºÍÊÚÊ±ÐÔÄÜµÄÏÔÖøÌá¸ß¡£¿í´øÌìÏß¼¼Êõ¡¢¸ßÐÔÄÜÉäÆµÇ°¶Î¼¼ÊõºÍÎ¢µç×Ó¼¼ÊõµÄ·¢Õ¹ÒÔ¼°¸ßËÙ¶àºË²¢ÐÐ´¦ÀíÆ÷µÄ³öÏÖÊ¹¶àÄ£GNSSÐÅºÅ½ÓÊÕ»úµÄÐ¡ÐÍ»¯ºÍ¹ã·ºÊ¹ÓÃ³ÉÎª¿ÉÄÜ¡£
 
-ÎÀÐÇµ¼º½ÏµÍ³¾ßÓÐÈ«Ììºò¡¢¸ß¾«¶ÈµÄÏÔÖøÓÅÊÆ£¬µ«ÈÎºÎµ¥Ò»ÎÀÐÇµ¼º½ÏµÍ³ÎÞ·¨Ìá¹©ÈýÎ¬×ËÌ¬ÐÅÏ¢£¬ÇÒ²¥·¢ÎÞÏßµçÐÅºÅÒ×ÊÜÕÚµ²¡¢¶àÂ·¾¶ºÍ¸ÉÈÅµÈÓ°Ïì¶øÎÞ·¨Âú×ãÁ¬Ðø¡¢¿É¿¿¶¨Î»µÄÊµ¼ÊÐèÒª£¬µ«Óë¹ßÐÔµ¼º½ÏµÍ³µÄ×éºÏ¿ÉÒÔ½ÏºÃ¿Ë·þÉÏÊöÎÊÌâ,×éºÏÏµÍ³Ê±¸÷·ÖÎöÏµÍ³µÄ»¥²¹¡¢»¥ÏàÌá¸ßµÄ¼¯³É£¬²¢·Ç¼òµ¥µÄÇÐ»»£¬Ê¹ÏµÍ³µÄÐÔÄÜ¸üÇ¿£¬Ó¦ÓÃÁìÓò¸ü¹ã\cite{QinYong(2015),FuMengYin(2006)}¡£ÒÀ¾Ý¹¤×÷Ô­Àí£¬±í\ref{chap1_Table 1}±È½ÏÁË¹ßµ¼ÓëGNSSµÄÖ÷ÒªÓÅÈ±µã¡£
+ÎÀÐÇµ¼º½ÏµÍ³¾ßÓÐÈ«Ììºò¡¢¸ß¾«¶ÈµÄÏÔÖøÓÅÊÆ£¬µ«ÈÎºÎµ¥Ò»ÎÀÐÇµ¼º½ÏµÍ³ÎÞ·¨Ìá¹©ÈýÎ¬×ËÌ¬ÐÅÏ¢£¬ÇÒ²¥·¢ÎÞÏßµçÐÅºÅÒ×ÊÜÕÚµ²¡¢¶àÂ·¾¶ºÍ¸ÉÈÅµÈÓ°Ïì¶øÎÞ·¨Âú×ãÁ¬Ðø¡¢¿É¿¿¶¨Î»µÄÊµ¼ÊÐèÒª£¬µ«Óë¹ßÐÔµ¼º½ÏµÍ³µÄ×éºÏ¿ÉÒÔ½ÏºÃ¿Ë·þÉÏÊöÎÊÌâ,×éºÏÏµÍ³Ê±¸÷·ÖÎöÏµÍ³µÄ»¥²¹¡¢»¥ÏàÌá¸ßµÄ¼¯³É£¬²¢·Ç¼òµ¥µÄÇÐ»»£¬Ê¹ÏµÍ³µÄÐÔÄÜ¸üÇ¿£¬Ó¦ÓÃÁìÓò¸ü¹ã\cite{QinYong(2015),FuMengYin(2010)}¡£ÒÀ¾Ý¹¤×÷Ô­Àí£¬±í\ref{chap1_Table 1}±È½ÏÁË¹ßµ¼ÓëGNSSµÄÖ÷ÒªÓÅÈ±µã¡£
 \begin{table}[!h]
 \renewcommand\arraystretch{1}
 \centering
@@ -61,12 +61,12 @@ GNSS£¨ Global Navigation Satellite System£©·ºÖ¸ËùÓÐµÄÎÀÐÇµ¼º½ÏµÍ³£¬Ö÷Òª°üÀ¨ÃÀ¹úµ
 
 ±¾Ìï¹«Ë¾ÔÚ1977ÄêÊ¹ÓÃÆøÌåÖá³ÐÍÓÂÝÒÇÀ´¸¨ÖúÆû³µµ¼º½£¬¸Ãµ¼º½Éè±¸ÄÜ¹»×·×Ù·½ÏòÐÔ×ª±ä²¢½øÐÐµ¼º½£¬Í¬Ê±ÄÜ¹»ÔÚÒ»¸öµ¥É«CRTÏÔÊ¾Æ÷ÉÏÕ¹Ê¾Æû³µÐÐÊ»×´Ì¬£¬Ê¹ÓÃÒ»¸öÁãÆðµãºÍÍ¸Ã÷µØÍ¼µþ¸ÇÔÚ¸ø¶¨µÄÂ·ÏßÉÏ×·×ÙÆû³µµÄÎ»ÖÃ¡£1981Äê£¬ÕâÌ×ÏµÍ³×÷Îª¸¨ÖúÉè±¸ÍÆËÍ¸ø¾­ÏúÉÌ£¬µ«È´´ÓÎ´½øÈë³ÉÅúÉú²ú¡£ÔÚ¸ÃÏµÍ³ÉÏ£¬¼¯³ÉÊµÊ±µ¼º½·½Ê½£¬Îª³µÁ¾×éºÏµ¼º½¶¨Î»ÏµÍ³µÄ·¢Õ¹µì¶¨ÁËÁ¼ºÃµÄ»ù´¡¡£
 
-ËæºóÔÚ°ËÊ®Äê´ú£¬×ÔÖ÷Ê½Â·¾¶µ¼º½¶¨Î»ÏµÍ³µÃµ½·¢Õ¹£¬ÀûÓÃ¼¯³ÉµÄ¸ß¾«¶Èµç×ÓµØÍ¼½øÐÐµØÍ¼Æ¥Åä£¬²¢Í¨¹ýº½Î»ÍÆËã¼¼Êõ½øÐÐ×éºÏ¶¨Î»£¬ÊµÏÖ³µÔØ×éºÏ¶¨Î»¡£µäÐÍµÄÓÐÃÀ¹ú¡°Navigation¡±µ¼º½¶¨Î»ÏµÍ³£¬µÂ¹úBOSCH¹«Ë¾µÄ¡°EVA¡±£¬ÒÔ¼°ºÉÀ¼µÄAutoguideµÈ,ÕâÐ©ÏµÍ³£¬ÓÉÓÚº½Î»ÍÆËãÈÝÒ×²úÉúÎó²îÀÛ¼Æ£¬¶¨Î»¾«¶ÈµÍ£¬ÊµÓÃÐÔÊÜµ½ºÜ´óÏÞÖÆ¡£
+ËæºóÔÚ°ËÊ®Äê´ú£¬×ÔÖ÷Ê½Â·¾¶µ¼º½¶¨Î»ÏµÍ³µÃµ½·¢Õ¹£¬ÀûÓÃ¼¯³ÉµÄ¸ß¾«¶Èµç×ÓµØÍ¼½øÐÐµØÍ¼Æ¥Åä£¬²¢Í¨¹ýº½Î»ÍÆËã¼¼Êõ½øÐÐ×éºÏ¶¨Î»£¬ÊµÏÖ³µÔØ×éºÏ¶¨Î»¡£µäÐÍµÄÓÐÃÀ¹ú¡°Navigation¡± µ¼º½¶¨Î»ÏµÍ³£¬µÂ¹úBOSCH¹«Ë¾µÄ¡°EVA¡±£¬ÒÔ¼°ºÉÀ¼µÄAutoguideµÈ,ÕâÐ©ÏµÍ³£¬ÓÉÓÚº½Î»ÍÆËãÈÝÒ×²úÉúÎó²îÀÛ¼Æ£¬¶¨Î»¾«¶ÈµÍ£¬ÊµÓÃÐÔÊÜµ½ºÜ´óÏÞÖÆ\cite{Quentin(2001),RStirling(2001)}¡£
 
 Ëæºó¶àÖÖ³µÁ¾×éºÏµ¼º½¶¨Î»ÏµÍ³ÔÚ´Ë»ù´¡ÉÏµÃµ½·¢Õ¹£¬ÏÈºóÑÐ¾¿³öÄÓÐÔ½ÝÁª¹ßµ¼/GPS¡¢¹âÏË½ÝÁª¹ßµ¼/GPS¡¢¼¤¹â½ÝÁª¹ßµ¼/GPS£¬µ«ÕâÐ©Éè±¸Éè±¸½á¹¹ÅÓ´ó¸´ÔÓ£¬Ôì¼Û°º¹ó£¬²»ÀûÓÚÔÚÃñÓÃÊÐ³¡ÆÕ¼°¡£
 
-¸ßÐÔÄÜµÄSINSÒòÎª¼Û¸ñ°º¹óÊ¹µÃÆäÓ¦ÓÃÊÜµ½¼«´óµÄÏÞÖÆ£¬µ«Ëæ×ÅMEMS¼¼ÊõµÄ·¢Õ¹£¬»ùÓÚMEMS SINS/GNSSµÄÐ¡ÐÍ»¯×éºÏµ¼º½¼¼Êõ·¢Õ¹Ïàµ±Ñ¸ËÙ£¬ÃÀ¹úµÈÅ·ÃÀ¹ú¼ÒÔÚMEMS¹ßÐÔÆ÷¼þÒÔ¼°Î¢ÐÍµ¼º½ÏµÍ³¼¼Êõ·½Ãæ´¦ÓÚÊÀ½çÁìÏÈµØÎ»¡£ÃÀ¹ú¹ú·À²¿DARPAÒÔ¼°ÆäËûÕþ¸®²¿ÃÅÔÚMEMSµÄ¾üÊÂºÍÉÌÒµÓ¦ÓÃ·½Ãæ½øÐÐÕ½ÂÔÐÔÍ¶Èë£¬Ã¿ÄêÍ¶Èë´óÁ¿×Ê½ð²¢ÇÒÖðÄêÔö¼Ó£¬ÒýÁìMEMS¼¼ÊõÏò¹¹½¨µÍ³É±¾¡¢Õ½Êõ¼¶µ¼º½ÏµÍ³·¢Õ¹£¬Æä¼¼ÊõÔ½À´Ô½ÍêÉÆ£¬×éºÏ²úÆ·µÄÐÔÄÜÒ²Ô½À´Ô½ºÃ¡£Èç£º
-ÃÀ¹úCrossbow¹«Ë¾µÄMEMS IMU/GPS×éºÏµ¼º½Ä£¿éNav440£¬ÆäÖÊÁ¿0.58kg£¬¹¦ÂÊÖ»ÓÐ4W£¬¶¨Î»¾«¶ÈÎª3m£¬×ËÌ¬²âÁ¿¾«¶È¾ù·½¸ù£¨Root mean square,RMS£©Îª0.4¶È£»µÂ¹úµÄiMAR¹«Ë¾µÄiVRU-CB-MºÍiVRU-SNCµÄÖÊÁ¿Ö»ÓÐ550g£¬¹¦ÂÊÖ»ÓÐ6W£¬¶¨Î»¾«¶ÈÎª5m£¬×ËÌ¬²âÁ¿¾«¶ÈRMSÎª0.5¶È¡£
+¸ßÐÔÄÜµÄSINSÒòÎª¼Û¸ñ°º¹óÊ¹µÃÆäÓ¦ÓÃÊÜµ½¼«´óµÄÏÞÖÆ£¬µ«Ëæ×ÅMEMS¼¼ÊõµÄ·¢Õ¹£¬»ùÓÚMEMS SINS/GNSSµÄÐ¡ÐÍ»¯×éºÏµ¼º½¼¼Êõ·¢Õ¹Ïàµ±Ñ¸ËÙ£¬ÃÀ¹úµÈÅ·ÃÀ¹ú¼ÒÔÚMEMS¹ßÐÔÆ÷¼þÒÔ¼°Î¢ÐÍµ¼º½ÏµÍ³¼¼Êõ·½Ãæ´¦ÓÚÊÀ½çÁìÏÈµØÎ»¡£ÃÀ¹ú¹ú·À²¿DARPAÒÔ¼°ÆäËûÕþ¸®²¿ÃÅÔÚMEMSµÄ¾üÊÂºÍÉÌÒµÓ¦ÓÃ·½Ãæ½øÐÐÕ½ÂÔÐÔÍ¶Èë£¬Ã¿ÄêÍ¶Èë´óÁ¿×Ê½ð²¢ÇÒÖðÄêÔö¼Ó£¬ÒýÁìMEMS¼¼ÊõÏò¹¹½¨µÍ³É±¾¡¢Õ½Êõ¼¶µ¼º½ÏµÍ³·¢Õ¹£¬Æä¼¼ÊõÔ½À´Ô½ÍêÉÆ£¬×éºÏ²úÆ·µÄÐÔÄÜÒ²Ô½À´Ô½ºÃ\cite{TangKH(2007)}¡£Èç£º
+Í¼\ref{chap1_Fig.2}ÃÀ¹úCrossbow¹«Ë¾µÄMEMS IMU/GPS×éºÏµ¼º½Ä£¿éNav440£¬ÆäÖÊÁ¿0.58kg£¬¹¦ÂÊÖ»ÓÐ4W£¬¶¨Î»¾«¶ÈÎª3m£¬×ËÌ¬²âÁ¿¾«¶È¾ù·½¸ù£¨Root mean square£¬RMS£©Îª0.4¶È¡£µÂ¹úµÄiMAR¹«Ë¾µÄiVRU-CB-MºÍiVRU-SNCµÄÖÊÁ¿Ö»ÓÐ550g£¬¹¦ÂÊÖ»ÓÐ6W£¬¶¨Î»¾«¶ÈÎª5m£¬×ËÌ¬²âÁ¿¾«¶ÈRMS Îª0.5¶È¡£
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.4\textwidth]{figures/chap1/chap1_Nav440}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -77,11 +77,11 @@ GNSS£¨ Global Navigation Satellite System£©·ºÖ¸ËùÓÐµÄÎÀÐÇµ¼º½ÏµÍ³£¬Ö÷Òª°üÀ¨ÃÀ¹úµ
 
 Wepilot1000¼¯³ÉGPS¡¢IMU¡¢´ÅÂÞÅÌ¡¢ÆøÑ¹¸ß¶È¼ÆºÍ¿ÕËÙ¼ÆµÈ¶àÖÖ´«¸ÐÆ÷¡£×î´ó²âÁ¿½ÇËÙÂÊÎªÊ¿100¶È/Ãë, ×î´ó²âÁ¿¼ÓËÙ¶ÈÎªÊ¿2g£¬Î»ÖÃ¾«¶È¿É´ï3m£¬¶øÇÒWepilot1000¾ßÓÐ·Ç³£·á¸»µÄÍâÎ§½Ó¿Ú, ¿ÉÖ±½ÓÓëÎÞÏßÁ´Â·¡¢Í¼ÏñÔØºÉµÈÉè±¸ÏàÁ¬½Ó¡£Æä¹¦ºÄÎª54W£¬ÖÊÁ¿1020g£¬³ß´ç½öÎª120mm*154mm*125mm¡£
 
-ÁíÍâ»¹ÓÐGeneva Aerospace¹«Ë¾µÄFlightTEKµ¼º½Ä£¿é£¬ÃÀ¹úAthena  Technologies Inc ¹«Ë¾Éú²úµÄGS511Õ½Êõ¼¶µ¼º½¼ÝÊ»ÒÇºÍCrossbow Technology,Inc.¹«Ë¾Éú²úµÄÓÃÓÚÐ¡ÐÍ»¯Éè±¸µÄMNAV100CAµ¼º½Ä£¿éµÈµÈ£¬¶¼´ïµ½ÁË¹ú¼ÊÉÏÏÈ½øµÄË®Æ½£¬²¢ÇÒÒÑÍ¶ÈëÉú²úÊ¹ÓÃ¡£
+ÁíÍâ»¹ÓÐGeneva Aerospace¹«Ë¾µÄFlightTEKµ¼º½Ä£¿é£¬ÃÀ¹úAthena  Technologies Inc ¹«Ë¾Éú²úµÄGS511Õ½Êõ¼¶µ¼º½¼ÝÊ»ÒÇºÍCrossbow Technology£¬Inc¡£¹«Ë¾Éú²úµÄÓÃÓÚÐ¡ÐÍ»¯Éè±¸µÄMNAV100CAµ¼º½Ä£¿éµÈµÈ£¬¶¼´ïµ½ÁË¹ú¼ÊÉÏÏÈ½øµÄË®Æ½£¬²¢ÇÒÒÑÍ¶ÈëÉú²úÊ¹ÓÃ¡£
 
 ÎÒ¹úÔÚ¡°Ê®Ò»Îå¡±¡¢¡°Ê®¶þÎå¡±¡¢¡°Ê®ÈýÎå¡±ÆÚ¼äµÃµ½×Ü×°±¸²¿¡¢¹ú¼Ò¿Æ¼¼²¿¡¢¹ú¼Ò×ÔÈ»¿ÆÑ§»ù½ðÎ¯ºÍ½ÌÓý²¿µÄÖØµãÖ§³Ö¡£È«¹úÒÑÓÐ50¶à¼Ò¸ßµÈÔºÐ£¡¢ÑÐ¾¿ÔºËùºÍÆóÒµ¿ªÕ¹ÁË¹ßµ¼ÓëGNSS×éºÏµ¼º½·½ÃæµÄÑÐ¾¿¹¤×÷£¬²¢ÔÚMEMS¹ßÐÔ´«¸ÐÆ÷¼°»ùÓÚMEMS¹ßµ¼×éºÏµ¼º½Ëã·¨ÑÐ¾¿µÈÖî¶à·½ÃæÈ¡µÃÒ»¶¨³É¹û¡£
 
-Çå»ª´óÑ§Éè¼Æ³öÀûÓÃBEI¹«Ë¾Î¢ÐÍÐ³ÕñÍÓÂÝÒÇºÍIC sensors¹èÎ¢¼ÓËÙ¶È¼ÆµÄMEMS IMU£¬ÏµÍ³³µÔØÊÔÑé±íÃ÷×éºÏÏµÍ³µ±GPS¶ÎÊ±¼äÊ§Ëø×éºÏÏµÍ³ÄÜ±£³Ö½Ï¸ßµÄ¶¨Î»¾«¶È£»¹þ¶û±õ¹¤Òµ´óÑ§ÑÐ·¢ÁËMEMS IMU/GPS/TAM×éºÏµ¼º½ÏµÍ³Ô­ÀíÑù»ú£»ÄÏ¾©º½¿Õº½Ìì´óÑ§µ¼º½ÑÐ¾¿ÖÐÐÄÉè¼Æ²¢ÊµÏÖÁË²ÉÓÃADXRS150µÄMEMSÍÓÂÝÒÔ¼°ADXL320µÄMEMS¼ÓËÙ¶È¼ÆIMU£¬Í¬Ê±²ÉÓÃUblox GPS½ÓÊÕ»úÓëÆä×é³ÉMEMS×éºÏµ¼º½ÏµÍ³£¬²¢³É¹¦Ó¦ÓÃÓÚÔË¶¯ÔØÌå¡£
+Çå»ª´óÑ§Éè¼Æ³öÀûÓÃÃÀ¹úBEI¹«Ë¾µÄÎ¢ÐÍÐ³ÕñÍÓÂÝÒÇºÍ¹èÎ¢¼ÓËÙ¶È¼ÆµÄMEMS IMU£¬ÏµÍ³³µÔØÊÔÑé±íÃ÷×éºÏÏµÍ³µ±GPS¶ÎÊ±¼äÊ§Ëø×éºÏÏµÍ³ÄÜ±£³Ö½Ï¸ßµÄ¶¨Î»¾«¶È£»¹þ¶û±õ¹¤Òµ´óÑ§ÑÐ·¢ÁËMEMS IMU/GPS/TAM×éºÏµ¼º½ÏµÍ³Ô­ÀíÑù»ú£»ÄÏ¾©º½¿Õº½Ìì´óÑ§µ¼º½ÑÐ¾¿ÖÐÐÄÉè¼Æ²¢ÊµÏÖÁË²ÉÓÃADXRS150µÄMEMSÍÓÂÝÒÔ¼°ADXL320µÄMEMS¼ÓËÙ¶È¼ÆIMU£¬Í¬Ê±²ÉÓÃUblox GPS½ÓÊÕ»úÓëÆä×é³ÉMEMS×éºÏµ¼º½ÏµÍ³£¬²¢³É¹¦Ó¦ÓÃÓÚÔË¶¯ÔØÌå¡£
 
 \begin{figure}[!htb]
  \centering
@@ -91,13 +91,13 @@ Wepilot1000¼¯³ÉGPS¡¢IMU¡¢´ÅÂÞÅÌ¡¢ÆøÑ¹¸ß¶È¼ÆºÍ¿ÕËÙ¼ÆµÈ¶àÖÖ´«¸ÐÆ÷¡£×î´ó²âÁ¿½ÇËÙÂÊÎ
  \vspace{-0.4cm}
 \end{figure}
 
-³ýÁË¸ßÐ£Óë¿ÆÑÐÔºËùÍâ£¬¹úÄÚ¶à¼Ò¿Æ¼¼¹«Ë¾Ò²Â½ÐøÍÆ³ö¾ßÓÐ×ÔÖ÷²úÈ¨µÄMEMS×éºÏµ¼º½²úÆ·£¬²¢ÔÚÖÇÄÜ¼ÝÊ»³µÁ¾ÖÐÍ¶ÈëÊ¹ÓÃ¡£Èç£º±±¾©ÐÇÍøÓî´ï¿Æ¼¼¹É·ÝÓÐÏÞ¹«Ë¾ÍÆ³öµÄXW-GI5610×éºÏµ¼º½²úÆ·£¬ÎÀÐÇ¶¨Î»·½Ãæ²ÉÓÃGPS/GLONASS/±±¶··½°¸£¬¾ßÓÐÈ«Ììºò¡¢È«Çò¸²¸Ç¡¢¸ß¾«¶È¡¢Ó¦ÓÃ¹ã·ºµÈÓÅµã£¬Óë´ËÍ¬Ê±XW-GI5610ÄÚÖÃ¹ßÐÔ²âÁ¿µ¥Ôª£¬½èÖúÐÂÒ»´ú¶à´«¸ÐÆ÷Êý¾ÝÈÚºÏ¼¼Êõ£¬ÃÖ²¹ÎÀÐÇÐÅºÅÒ×ÊÜ½¨ÖþÎï¡¢É½ÁÖµÈ¸ß´óÎïÌåÕÚµ²»ò¶àÂ·¾¶Ó°Ïì´øÀ´µÄÎÀÐÇ¶ÌÊ±¼äÐÅºÅ¶ªÊ§µÄÎÊÌâ£¬´ó´óÌá¸ßÏµÍ³¿É¿¿ÐÔ£¬Í¬Ê±»¹¿ÉÌá¹©ÎÀÐÇµ¼º½Ëù²»ÄÜÌá¹©µÄº½Ïò×ËÌ¬µÈÐÅÏ¢¡£±±¾©»ªÁ¦´´Í¨¿Æ¼¼ÓÐÏÞ¹«Ë¾³ö²úµÄHWANAV-BGI-7210ÊÇ×¨ÎªÆû³µµ¼º½·þÎñ¶ø¿ª·¢µÄ£¬»ùÓÚÆû³µ¼¶MEMS¹ßÐÔ´«¸ÐÆ÷ºÍBDS/GPSÎÀÐÇ½ÓÊÕ»úÐ¾Æ¬ÎªÖ÷µÄ×éºÏ·½°¸£¬Í¬Ê±£¬ÈÚºÏ´Å´«¸ÐÆ÷¡¢³µËÙÐÅÏ¢£¬¿ÉÊµÏÖ¸ßÐ§¾­¼ÃµÄ³µÔØ×éºÏµ¼º½½â¾ö·½°¸¡£
+³ýÁË¸ßÐ£Óë¿ÆÑÐÔºËùÍâ£¬¹úÄÚ¶à¼Ò¿Æ¼¼¹«Ë¾Ò²Â½ÐøÍÆ³ö¾ßÓÐ×ÔÖ÷²úÈ¨µÄMEMS×éºÏµ¼º½²úÆ·£¬²¢ÔÚÖÇÄÜ¼ÝÊ»³µÁ¾ÖÐÍ¶ÈëÊ¹ÓÃ¡£Èç£º±±¾©ÐÇÍøÓî´ï¿Æ¼¼¹É·ÝÓÐÏÞ¹«Ë¾ÍÆ³öµÄXW-GI5610×éºÏµ¼º½²úÆ·Í¼\ref{chap1_Fig.3}£¬ÎÀÐÇ¶¨Î»·½Ãæ²ÉÓÃGPS/GLONASS/ ±±¶·¶àÄ£·½°¸£¬¾ßÓÐÈ«Ììºò¡¢È«Çò¸²¸Ç¡¢¸ß¾«¶È¡¢Ó¦ÓÃ¹ã·ºµÈÓÅµã£¬Óë´ËÍ¬Ê±XW-GI5610ÄÚÖÃ¹ßÐÔ²âÁ¿µ¥Ôª£¬½èÖúÐÂÒ»´ú¶à´«¸ÐÆ÷Êý¾ÝÈÚºÏ¼¼Êõ£¬ÃÖ²¹ÎÀÐÇÐÅºÅÒ×ÊÜ½¨ÖþÎï¡¢É½ÁÖµÈ¸ß´óÎïÌåÕÚµ²»ò¶àÂ·¾¶Ó°Ïì´øÀ´µÄÎÀÐÇ¶ÌÊ±¼äÐÅºÅ¶ªÊ§µÄÎÊÌâ£¬´ó´óÌá¸ßÏµÍ³¿É¿¿ÐÔ£¬Í¬Ê±»¹¿ÉÌá¹©ÎÀÐÇµ¼º½Ëù²»ÄÜÌá¹©µÄº½Ïò×ËÌ¬µÈÐÅÏ¢¡£±±¾©»ªÁ¦´´Í¨¿Æ¼¼ÓÐÏÞ¹«Ë¾³ö²úµÄHWANAV-BGI-7210ÊÇ×¨ÎªÆû³µµ¼º½·þÎñ¶ø¿ª·¢µÄ£¬»ùÓÚÆû³µ¼¶MEMS¹ßÐÔ´«¸ÐÆ÷ºÍBDS/GPSÎÀÐÇ½ÓÊÕ»úÐ¾Æ¬ÎªÖ÷µÄ×éºÏ·½°¸£¬Í¬Ê±£¬ÈÚºÏ´Å´«¸ÐÆ÷¡¢³µËÙÐÅÏ¢£¬¿ÉÊµÏÖ¸ßÐ§¾­¼ÃµÄ³µÔØ×éºÏµ¼º½½â¾ö·½°¸¡£
 
 ÔÚ¾üÓÃÁìÓò£¬×Ô¶¯¼ÝÊ»¼¼Êõ¾ßÓÐ¹ã·ºµÄÓ¦ÓÃ¼ÛÖµ£¬°üÀ¨ÔËËÍ¾üÊÂÎï×Ê¡¢Ö´ÐÐ¸ßÎ£ÈÎÎñµÈ£¬´Ó¶øÌáÉý×÷Õ½Ð§ÂÊ¡¢¼õÉÙ´óÁ¿±øÔ±£¬µ«µÚÒ»´ú¡¢µÚ¶þ´ú¾üÓÃÎÞÈË³µ¼¼ÊõÊÜÖÆÓÚ¸ß³É±¾ÄÑÒÔÆÕ¼°£¬Èç½ñÐ¡ÐÍ»¯µÍ³É±¾µÄ½â¾ö·½°¸ÓÐÖúÓÚÍ»ÆÆÕâÒ»Æ¿¾±¡£¶øÔÚÃñÓÃÁìÓò£¬¹úÄÚÏû·ÑË®Æ½ÌáÉý´ø¶¯ÁËÎïÁ÷ÔËÊäÌØ±ðÊÇµçÉÌÎïÁ÷µÄ¿ìËÙ·¢Õ¹£¬À­¶¯ÁË¶Ô¹«Â·ÓÃ³µµÄÐèÇó£¬Óë´ËÍ¬Ê±£¬Ëæ×ÅÖÐ¹úÈË¿ÚºìÀûµÄÏûÊ§£¬ÖÐÐ¡ÆóÒµ¼°Ë½ÓªÔËÊäÊÐ³¡ÆÕ±éÃæÁÙÀÍ¶¯Á¦¶ÌÈ±ºÍÈËÁ¦³É±¾ÉÏÉýÑ¹Á¦¡£¾­¼ÃÐÍ¡¢¿ÉÉÌÓÃµÄ×Ô¶¯¼ÝÊ»¼¼Êõ½«ÏÔÖø½µµÍÔËÊäÊÐ³¡µÄÈËÁ¦³É±¾£¬²¢¼õÃâÒòÆ£ÀÍ¼ÝÊ»Ôì³ÉµÄ½»Í¨ÊÂ¹Ê·¢ÉúÂÊ¡£
 
-ÁíÍâÒ»·½Ãæ£¬µÃÒæÓÚ¼¯³ÉµçÂ·µÄ·¢Õ¹£¬ARM´¦ÀíÆ÷Ð¾Æ¬¼Û¸ñÔ½À´Ô½µÍ£¬ÐÔÄÜÈÕÒæÌá¸ß£¬¹ã·ºÓÃÓÚÐÅºÅ´¦Àí¡¢Í¨ÐÅ¡¢×Ô¶¯¿ØÖÆÖÐ£¬Ê¹ÓÃARM´úÌæ´«Í³PC»ú×÷Îªµ¼º½ÏµÍ³µÄºËÐÄ´¦ÀíÆ÷Éè¼ÆÐ¡ÐÍ»¯×éºÏµ¼º½ÏµÍ³½«»áÓÐ¸ü´óµÄÊÐ³¡¾ºÕùÁ¦¡£
+ÁíÍâÒ»·½Ãæ£¬µÃÒæÓÚ¼¯³ÉµçÂ·µÄ·¢Õ¹£¬ARM´¦ÀíÆ÷Ð¾Æ¬¼Û¸ñÔ½À´Ô½µÍ£¬ÐÔÄÜÈÕÒæÌá¸ß£¬¹ã·ºÓÃÓÚÐÅºÅ´¦Àí¡¢Í¨ÐÅ¡¢×Ô¶¯¿ØÖÆÖÐ£¬Ê¹ÓÃARM´úÌæ´«Í³PC»ú×÷Îªµ¼º½ÏµÍ³µÄºËÐÄ´¦ÀíÆ÷Éè¼ÆÐ¡ÐÍ»¯×éºÏµ¼º½ÏµÍ³½«»áÓÐ¸ü´óµÄÊÐ³¡¾ºÕùÁ¦\cite{SunLiN(2002)}¡£
 
-Ëæ×ÅÎÒ¹ú×ÔÖ÷ÑÐ·¢µÄ¡°±±¶·¡±Ë«ÐÇ¶¨Î»µ¼º½ÏµÍ³µÄ×éÍø³É¹¦£¬Î´À´¹úÄÚ³µÔØ×éºÏ¶¨Î»ÏµÍ³½«ÓÐ×Å¸ü¼Ó¹ãÀ«µÄÓ¦ÓÃÇ°¾°¡£
+Ëæ×ÅÎÒ¹ú×ÔÖ÷ÑÐ·¢µÄ¡°±±¶·¡±Ë«ÐÇ¶¨Î»µ¼º½ÏµÍ³µÄ×éÍø³É¹¦£¬Î´À´¹úÄÚ³µÔØ×éºÏ¶¨Î»ÏµÍ³½«ÓÐ×Å¸ü¼Ó¹ãÀ«µÄÓ¦ÓÃÇ°¾°\cite{TangSS(2008)}¡£
 
 \section{ÂÛÎÄµÄÄÚÈÝ¼°±àÅÅ}
 ±¾¿ÎÌâÒÔµÍ³É±¾¹ßÐÔ×éºÏµ¼º½ÏµÍ³ÎªÑÐ¾¿¶ÔÏó£¬Éè¼ÆÒ»¿îÓÃÓÚ×Ô¶¯¼ÝÊ»¸¨ÖúÏµÍ³µÄÐ¡ÐÍ»¯µ¼º½Ä£¿é£¬ÊµÏÖÐ¡ÐÍ»¯¡¢µÍ³É±¾µÄÉè¼ÆÄ¿µÄ¡£¸ù¾Ý¿ÎÌâÈÎÎñ£¬²ÉÓÃ¸¡µãÐÍARM¿ØÖÆÆ÷×÷ÎªÊý¾ÝÎ¢´¦ÀíÆ÷£¬µÍ³É±¾MEMS IMUµÈ¹ßÐÔÆ÷¼þºÍUblox ¶àÄ£ÎÀÐÇ½ÓÊÕ»ú×é³ÉMEMS×éºÏµ¼º½Ä£¿é£¬²É¼¯´«¸ÐÆ÷Êý¾Ý¶Ô³µÁ¾×ËÌ¬£¬ËÙ¶ÈºÍÎ»ÖÃÐÅÏ¢½øÐÐ½âËã£¬ÔÙ¸ù¾ÝÎÀÐÇ¶¨Î»ÐÅÏ¢¶ÔÁ½Õß½øÐÐ¿¨¶ûÂüÂË²¨ÐÅÏ¢ÈÚºÏ£¬Í¨¹ý³µÔØÊµÑéÑéÖ¤Ä£¿éµÄÊµÓÃÐÔ¡£×îºó£¬Éè¼Æ×éºÏµ¼º½ÏµÍ³µÄÊµÊ±µ¼º½¼à¿Ø½çÃæ¡£±¾ÎÄÖ÷ÒªÄÚÈÝ°²ÅÅÈçÏÂ£º

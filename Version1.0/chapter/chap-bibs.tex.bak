@@ -52,6 +52,9 @@ Axelrad P, Comp C J, Macdoran P F. SNR-based multipath error correction for GPS 
 \bibitem{RStirling(2005)}
 R. Stirling, K. Fyfe, G. Lachapelle. Evaluation of a new method of heading estimation for pedestrian dead reckoning using shoe mounted sensors[J]. The Journal of Navigation, 2005, 58(01): 31–45.
 
+\bibitem{JBKuipers(1999)}
+J. B. Kuipers. Quaternions and Rotation Sequences: A Primer with Applications to Orbits, Aerospace and Virtual Reality[M]. Princeton University Press, 1999: 103-105.
+
 \bibitem{KaPL(2007)}
 卡普兰. GPS原理与应用[M]. 第2版. 北京: 电子工业出版社, 2007: 4. 9
 
@@ -88,6 +91,9 @@ Hopkins R, Miola J, Sawyer W. The silicon oscillating accelerometer: A high-perf
 \bibitem{QinYong(2015)}
 秦永元, 张洪钺 , 汪叔华. 卡尔曼滤波与组合导航原理[M]. 西安: 西北工业大学出版社, 2015.
 
+\bibitem{DengZZ(2012)}
+邓志红, 付梦印, 张继伟, 肖烜. 惯性器件与惯性导航系统[M]. 科学出版社, 2012.
+
 \bibitem{MiaoYW(2013)}
 苗岳旺. SINS/GPS组合导航数据处理方法研究[D]. 中国人民解放军信息工程大学解放军信息工程大学, 2013.
 
@@ -112,8 +118,14 @@ Lee H K, Lee J G, Jee G I. GPS multipath detection based on sequence of successi
 \bibitem{Quentin(2001)}
 Quentin Ladetto, Vincent Gabaglio, Bertrand Merminod. Combining Gyroscopes, Magnetic Compass and GPS for Pedestrian Navigation[J]. International Symposium on Kinematic Systems in Geodesy, Geomatics and Navigation (KIS), Banff, Canada, 2001: 205-212.
 
-\bibitem{RStirling(2001)}
+\bibitem{SavagePG(2012)}
+Savage P G. Strapdown inertial navigation integration algorithm design. I: Attitude algorithms.[J]. Journal of Guidance Control  Dynamics, 2012, 21(1):19-28.
+
+\bibitem{RStirling(2005)}
 R. Stirling, K. Fyfe, and G. Lachapelle. Evaluation of a new method of heading estimation for pedestrian dead reckoning using shoe mounted sensors[J]. The Journal of Navigation, 2005, 58(01): 31–45.
+
+\bibitem{HouH(2003)}
+Hou H, EI-Sheimy N. Inertial sensor error modeling using allan variance.Proceedings of ION GPS/GNSS 2003[C]. Portland: ION, 2003, 2860-2867.
 
 \bibitem{TangKangH(2007)}
 唐康华, 吴美平, 胡小平, MEMS-IMU/GPS组合导航中的多模态Kalman滤波器设计[J]. 中国惯性技术学报, 2007, 15(3): 307-311.
@@ -121,7 +133,7 @@ R. Stirling, K. Fyfe, and G. Lachapelle. Evaluation of a new method of heading e
 \bibitem{ShiJing(2010)}
 石静, 缪玲娟, 高伟熙. 提高MEMS惯导系统速度解算精度的方法研究[J]. 北京理工大学学报, 2010, 30(1): 50-54.
 
-\bibitem{LiHAuto(2011)}
+\bibitem{LiuZP(2011)}
 刘智平, 于帆, 陈国绍. 低成本组合导航系统的数据融合算法[J]. 现代电子技术, 2011, 34(4): 204-207.
 
 \bibitem{LiuHua(2013)}
@@ -139,6 +151,8 @@ Godha S, Cannon M E. GPS/MEMS INS integrated system for navigation in urban area
 \bibitem{YangL(2014)}
 Yang L, Li Y, Wu Y, et al. An enhanced MEMS-INS/GNSS integrated system with fault detection and exclusion capability for land vehicle navigation in urban areas[J]. Gps Solutions, 2014, 18(4): 593-603.
 
+\bibitem{ZhaoYM(2011)}
+Zhao, Yueming. GPS/IMU Integrated System for Land Vehicle Navigation based on MEMS[J]. 2011.
 
 \bibitem{BonnifaitP(2001)}
 Bonnifait P, Bouron P, Crubille P, et al. Data fusion of four ABS sensors and GPS for an enhanced localization of car-like vehicles[C]. IEEE International Conference on Robotics  Automation. 2001: 1597-1602 vol. 2.
@@ -154,5 +168,8 @@ Bonnifait P, Bouron P, Crubille P, et al. Data fusion of four ABS sensors and GP
 
 \bibitem{SunLiN(2002)}
 孙立宁, 周兆英, 龚振邦. MEMS国内外发展状况及我国MEMS发展战略的思考[J]. 机器人技术与应用, 2002(2).
+
+\bibitem{YongY(2007)}
+Yong Yang. Tightly Coupled MEMS INS/GPS Integration with INS Aided Receiver Tracking Loops[D]. CALGARY: University of Calagray, Canada, 2007.
 
 \end{thebibliography}

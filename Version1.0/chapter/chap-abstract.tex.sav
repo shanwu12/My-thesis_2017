@@ -6,19 +6,19 @@
 %                                中文摘要
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \centerline{\large \zihao{3}\heiti \hbox{摘要}} \vskip 0.3cm
-车载组合导航是现代智能车辆必不可少的一项重要功能。为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题针对微电子机械系统(MEMS)惯性传感器和卫星导航模块，完成了小型化MEMS惯导/GNSS组合导航模块的设计。
+车载组合导航是现代智能车辆必不可少的一项重要功能，为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题针对集成化MEMS惯性传感器和卫星导航模块，完成了小型化组合导航模块的设计。最后对整个导航模块进行实际测试，验证本设计组合导航系统能实现导航功能，满足导航模块小型化低成本的设计要求。
 
-本文着重理解分析了组合定位的基本原理，确定采用位置/速度级的松组合导航算法，建立MEMS惯导姿态、速度和位置误差模型，并推导了卡尔曼滤波的状态方程和观测方程，完成导航系统数据的信息融合。整个系统设计主要可以分成硬件设计和软件设计。主要研究内容如下：
+在硬件基础上编写软件算法实现多传感器通信，数据的传输、存储等功能。
 
-1、模块以ARM微处理器、MEMS惯性器件、卫星定位模块中等为主要组成部分，详细给出系统硬件体系结构和具体的硬件选型及接口设计，完成硬件原理图和电路板制作，并进行硬件调试。
+本文着重理解分析组合定位的基本原理，确定采用位置、速度的松组合导航算法，推导了卡尔曼滤波的状态方程和观测方程，完成导航系统数据的信息融合。设计主要可以分成硬件设计和软件设计两个方面。主要研究成果如下：
 
-2、在硬件实验平台的基础上，给出了软件设计流程图，并编写软件底层驱动程序和导航应用程序，实现多传感器通信，组合系统数据的融合解算、导航信息的存储等功能。
+1、模块以ARM微处理器、MEMS惯性器件、卫星定位模块中等为主要组成部分，详细给出系统硬件体系结构和具体的硬件选型及接口设计，给出硬件原理图和PCB设计，并进行硬件调试。
 
-3、设计了MEMS惯导/GNSS组合系统的实时监控界面，实现对数据的保存，模式选择、数据加载、轨迹显示等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
+2、设计驱动程序和应用程序。
 
-最后，对所设计的系统进行了车载实验，结果表明本设计的MEMS惯导/GNSS组合系统实现了实时导航系统的基本功能，且位置误差约5~7m，速度误差约0.2~0.5m/s，姿态误差约为$8^\circ$，满足车载组合系统小型化、低成本和实时性的设计要求。
+最后，设计了MEMS惯导/GNSS组合系统的实时监控界面，实现对数据的保存，模式选择、数据加载、轨迹显示等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
 
-\vskip 0.3cm \textbf{关键词}: 小型化；低成本；MEMS惯导；组合导航；卡尔曼滤波
+\vskip 0.3cm \textbf{关键词}: 模型预测控制；分布式控制；终端成本；终端控制器； 终端集。
 
 \newpage
 
@@ -28,7 +28,6 @@
 
 $\\$ \centerline{\large \zihao{3}\heiti\hbox{Abstract}}
 
-Vehicle Integrated navigation is an indispensable feature in modern intelligent car,
 In the practical applications, the complex systems have the features of complex model, large scale, a great amount of variables and constraints. However, the traditional control methods cannot satisfy the requirements of the complex systems. Over the past years, distributed model predictive control (DMPC) is becoming an important tool to handle the large-scale complex systems due to its good control performance, capability of handling constraints and the structural
 flexibility. In the embryonic stage, the research of DMPC is confronted with many difficulties. For example, how to deal with the couplings between subsystems in order to make the optimization problem of each subsystem solvable; how to design the terminal ingredients (terminal cost, terminal controller and positive invariant terminal set) for each subsystem; how to guarantee the recursive feasibility and the closed-loop stability of the whole system.
 

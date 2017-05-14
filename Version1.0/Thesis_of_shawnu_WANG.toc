@@ -53,5 +53,8 @@
 \contentsline {subsection}{\numberline {5.2.1}组合定位结果}{64}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}卫星失锁时定位效果}{68}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}本章小结}{69}{section.5.3}
-\contentsline {chapter}{参考文献}{71}{chapter*.57}
+\contentsline {chapter}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ignorespaces 章\hspace {0.3em}}总结与展望}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}研究工作总结}{71}{section.6.1}
+\contentsline {section}{\numberline {6.2}工作展望}{72}{section.6.2}
+\contentsline {chapter}{参考文献}{73}{chapter*.57}
 \contentsfinish 

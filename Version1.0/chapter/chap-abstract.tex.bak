@@ -5,35 +5,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                中文摘要
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 \centerline{\large \zihao{3}\heiti \hbox{摘要}} \vskip 0.3cm
-在实际应用中，复杂系统具有模型复杂、规模大、变量多、约束多等特点，传统的控制方法无法满足复杂系统控制的要求。近些年来，分布式模型预测控制（Distributed MPC，简称DMPC）以其优良的控制性能、有效处理约束的能力和结构的灵活性等优点得到了广泛关注，成为了处理大规模复杂系统的重要工具。目前，该方法该尚处在研究初期，依然存在许多研究难点。例如，如何处理子系统之间的耦合，使得各个子系统的优化问题能在分布式结构下求解；如何设计每个子系统各自的终端成分，减小在线计算量；如何满足优化问题的迭代可行性和整个系统的闭环稳定性。
+车载组合导航是现代智能车辆必不可少的一项重要功能。为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题针对微电子机械系统(MEMS)惯性传感器和卫星导航模块，完成了小型化MEMS惯导/GNSS组合导航模块的设计。
 
-本文以多智能体系统为研究对象，开展了分布式模型预测控制的系
-列研究，分别研究了多智能体系统的调节问题、一致问题和编队问题，主要研究成果如下：
+本文着重理解分析了组合定位的基本原理，确定采用位置/速度级的松组合导航算法，建立MEMS惯导姿态、速度和位置误差模型，并推导了卡尔曼滤波的状态方程和观测方程，完成导航系统数据的信息融合。整个系统设计主要可以分成硬件设计和软件设计。主要研究内容如下：
 
-1、研究了多个异构线性系统的分布式模型预测调节控制问题，智能体系
-统之间同时存在成本耦合和约束耦合。在每一个采样时刻，所有智能体同步更新。提出了改进的相容性约束，保证每个智能体实际轨迹和假设轨迹的一致性。通过求解李亚普诺夫方程得到终端权重矩阵，从而设计了终端成本；利用耦合约束的信息，设计了正定不变的终端集，并且保证终端集中的
-状态满足耦合约束。设计了分布式优化算法，保证局部约束和耦合约束的迭代可行
-性，以及整个系统的闭环稳定性。最后通过仿真实验比较了集中式模型预测控制
-方法和分布式模型预测控制方法的性能，对比表明在保证系统性能和集中式的性能接近
-的条件下，分布式方法大大缩短了优化时间，减小了在线计算量。
+1、模块以ARM微处理器、MEMS惯性器件、卫星定位模块中等为主要组成部分，详细给出系统硬件体系结构和具体的硬件选型及接口设计，完成硬件原理图和电路板制作，并进行硬件调试。
 
-2、研究了多个二阶非线性系统的分布式模型预测一致控制问题，智能体系统
-之间存在成本耦合，所有智能体共享一个参考轨迹。利用同步更新策略，
-提出了改进的相容性约束上界，保证系统的收敛性；在分布式结构下，利用参考轨迹，
-设计了每个智能体的终端成本、终端控制器和正定不变的终端集。提出了分布式优化算法，保证优化问题的迭代可行性和整个系统的闭环收敛性。最后，以2-自由度机械臂为例，通过仿真实验验证了算法的有效性。
+2、在硬件实验平台的基础上，给出了软件设计流程图，并编写软件底层驱动程序和导航应用程序，实现多传感器通信，组合系统数据的融合解算、导航信息的存储等功能。
 
-3、研究了多个线性二阶系统的分布式模型预测编队控制问题，每个智能体到
-达各自的目标位置形成队形，智能体系统之间存在耦合成本，且需要满足避碰约束。利
-用同步更新策略，设计了改进的相容性约束，包括位置相容性和状态相容性，同时提出了改进的避碰约束。充分利用系统模型的特点和编队目标，设计了分布式结构下的终端成分，并且在终端集中依然能保证避碰约束的满足。提出了分布式优化算法，保证优化问题的迭代可行性、整个系统的闭环收敛性以及避碰约
-束的满足。最后通过仿真实验验证了算法的有效性。
+3、设计了MEMS惯导/GNSS组合系统的实时监控界面，实现对数据的保存，模式选择、数据加载、轨迹显示等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
 
-最后，归纳总结了本文的主要工作，并对今后的工作进行了展望。
+最后，对所设计的系统进行了车载实验，结果表明本设计的MEMS惯导/GNSS组合系统实现了实时导航系统的基本功能，位置误差约5~7m，速度误差约0.2~0.5m/s，姿态误差约为$8^\circ$速度误满足车载组合系统小型化、低成本和实时性的设计要求。
 
-\vskip 0.3cm \textbf{关键词}: 模型预测控制；分布式控制；终端成本；终端控制器； 终端集。
+\vskip 0.3cm \textbf{关键词}: 小型化；低成本；MEMS惯导；组合导航；卡尔曼滤波
 
 \newpage
 
@@ -43,6 +28,7 @@
 
 $\\$ \centerline{\large \zihao{3}\heiti\hbox{Abstract}}
 
+Vehicle Integrated navigation is an indispensable feature in modern intelligent car,
 In the practical applications, the complex systems have the features of complex model, large scale, a great amount of variables and constraints. However, the traditional control methods cannot satisfy the requirements of the complex systems. Over the past years, distributed model predictive control (DMPC) is becoming an important tool to handle the large-scale complex systems due to its good control performance, capability of handling constraints and the structural
 flexibility. In the embryonic stage, the research of DMPC is confronted with many difficulties. For example, how to deal with the couplings between subsystems in order to make the optimization problem of each subsystem solvable; how to design the terminal ingredients (terminal cost, terminal controller and positive invariant terminal set) for each subsystem; how to guarantee the recursive feasibility and the closed-loop stability of the whole system.
 

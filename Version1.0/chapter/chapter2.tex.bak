@@ -303,7 +303,7 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 
 3、姿态更新四元数算法
 
-根据四元数理论，坐标系转换过程可以表示为\cite{JBKuipers(1991)}：
+根据四元数理论，坐标系转换过程可以表示为\cite{JBKuipers(1999)}：
 \begin{align}
 \boldsymbol{v}^b &=\boldsymbol{Q}_b^n\otimes\boldsymbol{v}^n\otimes(\boldsymbol{Q}_b^n)^* \notag \\
 &=

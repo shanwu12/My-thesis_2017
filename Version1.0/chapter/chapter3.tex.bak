@@ -1,5 +1,5 @@
 
-\chapter{小型化组合定位系统硬件设计}
+\chapter{小型化车载组合导航系统硬件设计}
 \section{引言}
 根据前一章系统总体方案的设计，本章的重点工作是制作系统的硬件平台。本车载组合定位系统硬件设计分为：器件选型、嵌入式ARM系统设计、外围设备设计、数据传感器设计，硬件测试等。本文是利用已具备科研条件，在实验室的研究基础上，提出自己的解决方案：设计一个低成本、精度可接受的MEMS \ SINS/GNSS组合的小型化导航系统。整个硬件设计过程需考虑设计成本、硬件尺寸、产品功耗、抗干扰性能和产品实用性等问题。设计流程如下图\ref{chap3_Fig.1}所示：
 \begin{figure}[!htb]
@@ -102,22 +102,20 @@ NEO-M8N的性能指标如表\ref{chap3_Table 2}所示：
 \renewcommand\arraystretch{1}
 \centering
 \caption{\label{chap3_Table 2}NEO-M8N性能指标表}
-\begin{tabular}{|c|c|}
+\begin{tabular}{cc}
+\toprule
+\hspace{0.5cm}指标 \hspace{0.5cm}        & \hspace{0.5cm} 数值\hspace{0.5cm}     \\
 \hline
 \hspace{0.5cm}灵敏度 \hspace{0.5cm}        & \hspace{0.5cm}-161dbm \hspace{0.5cm}     \\
-\hline
 \hspace{0.5cm}最大导航更新率\hspace{0.5cm} & \hspace{0.5cm}5Hz \hspace{0.5cm}  \\
-\hline
 \hspace{0.5cm}水平位置误差\hspace{0.5cm}   & \hspace{0.5cm}2.5m  \hspace{0.5cm} \\
-\hline
 \hspace{0.5cm}速度误差 \hspace{0.5cm}      & \hspace{0.5cm}$0.1m/s$   \hspace{0.5cm}  \\
-\hline
 \hspace{0.5cm}偏航角误差 \hspace{0.5cm}    & \hspace{0.5cm}$0.5^\circ$ \hspace{0.5cm}\\
-\hline
+\toprule
 \end{tabular}
 \end{table}
 
-NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式。据格格式采用工程中常用的NMEA-0183协议，该协议是美国国家海洋电子协会(national marine electronics association)为海用电子设备指定的一套标准格式，目前绝大部分卫星接收机都采用NMEA-0183协议输出位置、速度、星历等导航信息。
+NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式，输出数据格式采用工程中常用的NMEA-0183协议。
 
 \subsection{电源管理模块}
 \begin{figure}[!htb]
@@ -127,7 +125,7 @@ NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和
  \label{chap3_Fig.5}
  \vspace{-0.4cm}
 \end{figure}
-电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统选择如图\ref{chap3_Fig.5}所示的德州仪器的TPS73133 ，是具有反向电流保护的超低功耗电压稳压器件。为了增加安全性，该器件还具有热关断、电流限制和反向电流保护功能。可以通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
+电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统的输入输出压降教小、功率要求低，设计时选择德州仪器的线性电源芯片TPS73133如图\ref{chap3_Fig.5}所示 ，该芯片是具有反向电流保护的超低功耗电压稳压器件。为了增加安全性，还具有热关断、电流限制和反向电流保护功能，还可以通过拉低使能(EN)引脚将稳压器置于关断模式，这个模式的关断电流低至150nA （典型值）。
 
 \clearpage
 
@@ -233,10 +231,10 @@ BMI160作为从设备，与主设备进行通讯采用SPI接口，SPI采用全双工模式，这样当设备发送
 \hspace{0.5cm}0x17 & DATA\_19   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_z\_15\_8\\
 \hspace{0.5cm}0x16 & DATA\_18   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_z\_7\_0\\
 %\hspace{0.5cm}0x15 & DATA\_17   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_y\_15\_8\\
-%\hspace{0.5cm}0x14 & DATA\_16   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_y\_7\_0\\
+\hspace{0.5cm}0x14 & DATA\_16   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_y\_7\_0\\
 \hspace{0.5cm}0x13 & DATA\_15   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_x\_15\_8\\
 \hspace{0.5cm}0x12 & DATA\_14   &\hspace{0.5cm}0x00 &\hspace{0.5cm}acc\_x\_7\_0\\
-%\hspace{0.5cm}0x11 & DATA\_13   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_z\_15\_8\\
+\hspace{0.5cm}0x11 & DATA\_13   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_z\_15\_8\\
 %\hspace{0.5cm}0x10 & DATA\_12   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_z\_7\_0\\
 \hspace{0.5cm}0x0F & DATA\_11   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_y\_15\_8\\
 \hspace{0.5cm}0x0E & DATA\_10   &\hspace{0.5cm}0x00 &\hspace{0.5cm}gyr\_y\_7\_0\\
@@ -356,7 +354,7 @@ SD卡主要完成导航运行过程中数据的实时保存，可以方便后期对数据分析和设备的调试，因
 
 接下来检查是否可以长时间稳定工作。电子电路经静态和动态调试正常之后，便可对课题要求的技术指标进行测量，测试并记录数据，确定电路技术指标符合设计要求。
 
-\subsection{屏蔽罩外壳设计}
+%\subsection{屏蔽罩外壳设计}
 本课题针对系统板设计了屏蔽外壳，一方面可以保护屏蔽罩内的元器件，另一方面作用是屏蔽电磁干扰（EMI）。屏蔽就是对两个空间区域之间进行金属的隔离，以控制产品外电场、磁场和电磁波对设备的感应和辐射。本设计在AutoCAD 软件上根据物体实际尺寸绘制了屏蔽罩三维模型如图\ref{chap3_Fig.19}，工厂根据图纸制作系统板屏蔽罩，其中使用的材料是洋白铜（GPS屏蔽罩一般都用洋白铜，在众多材料中洋白铜的屏蔽效果十分出色，是一种容易上锡的金属屏蔽材料，且在焊接、散热方面表现比较好）。屏蔽罩作用：
 
 (1)减少外界环境的电磁波对电路正常工作的干扰，从而提高质量、稳定性以及工作寿命。

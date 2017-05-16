@@ -102,22 +102,20 @@ NEO-M8N的性能指标如表\ref{chap3_Table 2}所示：
 \renewcommand\arraystretch{1}
 \centering
 \caption{\label{chap3_Table 2}NEO-M8N性能指标表}
-\begin{tabular}{|c|c|}
+\begin{tabular}{cc}
+\toprule
+\hspace{0.5cm}指标 \hspace{0.5cm}        & \hspace{0.5cm} 数值\hspace{0.5cm}     \\
 \hline
 \hspace{0.5cm}灵敏度 \hspace{0.5cm}        & \hspace{0.5cm}-161dbm \hspace{0.5cm}     \\
-\hline
 \hspace{0.5cm}最大导航更新率\hspace{0.5cm} & \hspace{0.5cm}5Hz \hspace{0.5cm}  \\
-\hline
 \hspace{0.5cm}水平位置误差\hspace{0.5cm}   & \hspace{0.5cm}2.5m  \hspace{0.5cm} \\
-\hline
 \hspace{0.5cm}速度误差 \hspace{0.5cm}      & \hspace{0.5cm}$0.1m/s$   \hspace{0.5cm}  \\
-\hline
 \hspace{0.5cm}偏航角误差 \hspace{0.5cm}    & \hspace{0.5cm}$0.5^\circ$ \hspace{0.5cm}\\
-\hline
+\toprule
 \end{tabular}
 \end{table}
 
-NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式。据格格式采用工程中常用的NMEA-0183协议，该协议是美国国家海洋电子协会(national marine electronics association)为海用电子设备指定的一套标准格式，目前绝大部分卫星接收机都采用NMEA-0183协议输出位置、速度、星历等导航信息。
+NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和RTCM。本文将NEO-M8N与STM32芯片相连，采用最为方便利于开发的USART接口连接方式，输出数据格式采用工程中常用的NMEA-0183协议。
 
 \subsection{电源管理模块}
 \begin{figure}[!htb]
@@ -127,7 +125,7 @@ NEO-M8N有多种接口方式：UART、SPI以及USB接口三种模式；数据输出格式有：NMEA、UBX和
  \label{chap3_Fig.5}
  \vspace{-0.4cm}
 \end{figure}
-电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统选择如图\ref{chap3_Fig.5}所示的德州仪器的TPS73133 ，是具有反向电流保护的超低功耗电压稳压器件。为了增加安全性，该器件还具有热关断、电流限制和反向电流保护功能。可以通过将使能(EN)引脚下拉至低电平可将这些稳压器置于关断模式。这个模式的关断电流低至150nA（典型值）。
+电源是一个系统中及其重要的一部分，电源的设计直接影响到系统能否正常工作。根据设计要求，模块通过USB供电或者引出电源管脚外部5V供电，为了使整个系统稳定的工作，选择稳压芯片输出稳定的电压。系统中需要的电压有5V 和3.3V。因此本系统对电源做了两级处理，前级电源输出5V的电压，接着连接3.3V的稳压芯片，保证了系统供电的稳定性，还加入使用500mA的保险丝作为过流保护。本系统的输入输出压降教小、功率要求低，设计时选择德州仪器的线性电源芯片TPS73133如图\ref{chap3_Fig.5}所示 ，该芯片是具有反向电流保护的超低功耗电压稳压器件。为了增加安全性，还具有热关断、电流限制和反向电流保护功能，还可以通过拉低使能(EN)引脚将稳压器置于关断模式，这个模式的关断电流低至150nA （典型值）。
 
 \clearpage
 
@@ -321,47 +319,35 @@ SD卡主要完成导航运行过程中数据的实时保存，可以方便后期对数据分析和设备的调试，因
 
 接地技术的目的是最小化接地阻抗，以减少从电路返回到电源之间的接地回路的电势。去耦电容放置在距离IC供电线和接地层之间尽可能近的地方。
 
-显然，由于电路板面积，总体安装位置等的限制，按上述原则设计会受到一定的限制。因此，在设计时，需要对布局和布线分别考虑，达到最佳的状态。设计完成的PCB板3D模型和实物如图\ref{chap3_Fig.16}、\ref{chap3_Fig.17}：
+显然，由于电路板面积，总体安装位置等的限制，按上述原则设计会受到一定的限制。因此，在设计时，需要对布局和布线分别考虑，达到最佳的状态。设计完成的PCB板3D模型和实物如图(\ref{chap3_Fig.16}、\ref{chap3_Fig.17})：
 \begin{figure}[htbp]
 \begin{minipage}[t]{0.35\linewidth}
 \centering
-\includegraphics[height=6cm,width=6cm]{figures/chap3/chap3_pcb}
+\includegraphics[height=5cm,width=5cm]{figures/chap3/chap3_pcb}
 \caption{PCB3D模型}
  \label{chap3_Fig.16}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.5\linewidth}
 \centering
-\includegraphics[height=6cm,width=6cm]{figures/chap3/chap3_hardware}
+\includegraphics[height=5cm,width=5cm]{figures/chap3/chap3_hardware}
 \caption{组合系统实物图}
 \label{chap3_Fig.17}
 \end{minipage}
 \end{figure}
 
-\subsection{硬件调试}
-电路板设计加工完成后，首先进行硬件电路测试，调试没有问题后才可以进行系统软件测试。硬件调试过程：制作硬件电路板的时候，焊接一部分调试一部分，遵循的顺序是：电源-> 主芯片外围器件-> 主芯片-> 其他外设。
-
-焊好电源部分在上电之前，先肉眼观察有无明显焊接错误，用万用表检查电源间是否有短路现象、地及一些关键信号线之间的连接情况。上电后，触摸一下芯片是否有发热严重的现象，如果个别芯片发烫，一般是有问题，需要立即断电检查排除故障后重新上电。然后测试主芯片位置与电源相连管脚，看电压输出可否保证主芯片正常工作。
-
-电源部分调试完成，接下来是焊接主芯片相关的外围器件，如复位电路，滤波电路，SWD调试接口等，最后接上主芯片一起调试，主芯片通过JLINK 调试器连接到电脑，在电脑端使用JTAG调试代理软件，就可以检查到板上的芯片如图\ref{chap3_Fig.18}，说明硬件设计正常。
+电路板设计加工完成后，首先进行硬件电路测试，调试没有问题后才可以进行系统软件测试。将主芯片通过JLINK调试器连接到电脑，使用JTAG调试代理软件，就可以检查到板上的芯片如图\ref{chap3_Fig.18}，说明硬件设计正常。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.75\textwidth]{figures/chap3/chap3_SWD}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_SWD}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{电脑识别ARM芯片}
  \label{chap3_Fig.18}
  \vspace{-0.4cm}
 \end{figure}
+编写一段测试程序，验证各模块正常工作，至此，硬件设计完成。检查是否可以长时间稳定工作。电子电路经静态和动态调试正常之后，便可对课题要求的技术指标进行测量，测试并记录数据，确定电路技术指标符合设计要求。
 
-调试到这里，说明导航设计板已经可以工作了，接下来一部分一部分连接外部传感器（BMI160、卫星接收模块等），通信接口如SDIO、USB、串口等电路部分，编写一段测试程序，使各模块正常工作，至此，硬件设计完成。
-
-接下来检查是否可以长时间稳定工作。电子电路经静态和动态调试正常之后，便可对课题要求的技术指标进行测量，测试并记录数据，确定电路技术指标符合设计要求。
-
-\subsection{屏蔽罩外壳设计}
-本课题针对系统板设计了屏蔽外壳，一方面可以保护屏蔽罩内的元器件，另一方面作用是屏蔽电磁干扰（EMI）。屏蔽就是对两个空间区域之间进行金属的隔离，以控制产品外电场、磁场和电磁波对设备的感应和辐射。本设计在AutoCAD 软件上根据物体实际尺寸绘制了屏蔽罩三维模型如图\ref{chap3_Fig.19}，工厂根据图纸制作系统板屏蔽罩，其中使用的材料是洋白铜（GPS屏蔽罩一般都用洋白铜，在众多材料中洋白铜的屏蔽效果十分出色，是一种容易上锡的金属屏蔽材料，且在焊接、散热方面表现比较好）。屏蔽罩作用：
-
-(1)减少外界环境的电磁波对电路正常工作的干扰，从而提高质量、稳定性以及工作寿命。
-
-(2)有效地保护系统设备，方便导航模块的安装和拆卸。
+%\subsection{屏蔽罩外壳设计}
+本课题针对系统板设计了屏蔽外壳，一方面可以保护屏蔽罩内的元器件，另一方面作用是屏蔽电磁干扰（EMI）。屏蔽就是对两个空间区域之间进行金属的隔离，以控制产品外电场、磁场和电磁波对设备的感应和辐射。本设计在AutoCAD 软件上根据物体实际尺寸绘制了屏蔽罩三维模型如图\ref{chap3_Fig.19}，其中外壳使用的材料是洋白铜（GPS屏蔽罩一般都用洋白铜，在众多材料中洋白铜的屏蔽效果十分出色，是一种容易上锡的金属屏蔽材料，且在焊接、散热方面表现比较好）。
 \begin{figure}[htbp]
 \begin{minipage}[t]{0.35\linewidth}
 \centering

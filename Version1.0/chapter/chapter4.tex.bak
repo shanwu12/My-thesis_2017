@@ -12,21 +12,21 @@
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{X}_k &= \boldsymbol{\phi}_{k,k-1}\boldsymbol{X}_{k-1}+\boldsymbol{\Gamma}_{k-1}\boldsymbol{W}_{k-1}\\
-\boldsymbol{Z}_k &= \boldsymbol{H}_{k}\boldsymbol{X}_{k}+\boldsymbol{V}_{k}
+{X}_k &= {\phi}_{k,k-1}{X}_{k-1}+{\Gamma}_{k-1}{W}_{k-1}\\
+{Z}_k &= {H}_{k}{X}_{k}+{V}_{k}
 \end{aligned}
 \right.
 \label{4.1}
 \end{equation}
 
-式中，$\boldsymbol{\phi}_{k,k-1}$是$k-1$时刻至$k$时刻的$n$阶的一步状态转移矩阵，$\boldsymbol{\Gamma}_{k-1}$是$n\times p$维系统噪声输入矩阵，$W_{k-1}$为$k-1$时刻的系统噪声。$\boldsymbol{H}_{k}$ 为$k$时刻的量测矩阵，$\boldsymbol{V}_k$是$k$时刻的量测噪声。
+式中，${\phi}_{k,k-1}$是$k-1$时刻至$k$时刻的$n$阶的一步状态转移矩阵，${\Gamma}_{k-1}$是$n\times p$维系统噪声输入矩阵，$W_{k-1}$为$k-1$时刻的系统噪声。${H}_{k}$ 为$k$时刻的量测矩阵，${V}_k$是$k$时刻的量测噪声。
 
-在卡尔曼滤波计算中，对系统的模型要求十分严格，要求${\boldsymbol{W}_{k}}$和${\boldsymbol{V}_{k}}$ 是互不相关的，同时两者为零均值的白噪声序列，他们满足如下式子\cite{QinYong(2015)}：
+在卡尔曼滤波计算中，对系统的模型要求十分严格，要求${{W}_{k}}$和${{V}_{k}}$ 是互不相关的，同时两者为零均值的白噪声序列，他们满足如下式子\cite{QinYong(2015)}：
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol E[\boldsymbol{W}_{k}] &= 0\\
-\boldsymbol E[\boldsymbol{W}_{k}\boldsymbol{W}_{j}^T] &= Q_k\delta_{kj}
+\boldsymbol E[{W}_{k}] &= 0\\
+\boldsymbol E[{W}_{k}{W}_{j}^T] &= Q_k\delta_{kj}
 \end{aligned}
 \right.
 \label{4.2}
@@ -34,8 +34,8 @@
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{E}[\boldsymbol{V}_{k}] &= 0\\
-\boldsymbol{E}[\boldsymbol{V}_{k}\boldsymbol{V}_{j}^T] &= R_k\delta_{kj}
+\boldsymbol{E}[{V}_{k}] &= 0\\
+\boldsymbol{E}[{V}_{k}{V}_{j}^T] &= R_k\delta_{kj}
 \end{aligned}
 \right.
 \label{4.3}
@@ -72,59 +72,39 @@ $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足
 
 公式(\ref{4.4}-\ref{4.8})即为随机离散系统的卡尔曼滤波递推方程。只需要给定初始的${\hat{X}}_{0}$、 初始噪声误差协方差矩阵${P}_{0}$、系统初始过程噪声方差矩阵${Q}_{k}$与初始观测噪声方差矩阵${R}_{k}$，则可以通过卡尔曼滤波递推的方式根据$k$时刻的观测值$Z_k$计算出该时刻的状态最优估计值${\hat{X}}_{k}$。本文中的MEMS 惯导/GNSS组合系统中的误差量看成小量，误差量的高阶项可看做高阶小量而略去，可将误差方程描述为线性方程，采用的是线性卡尔曼滤波器，在下一节将推导导航系统的状态方程和量测方程来构造卡尔曼滤波器，对MEMS惯导进行反馈校正。
 
-\subsection{系统误差方程}
-本设计中组合系统以15维导航误差作为系统的待估计状态，误差包括三维姿态、三维速度、三维位置、还有陀螺漂移及三个加速度计零偏，状态向量表示为：
-\begin{equation}
- X = [\varphi_e \ \ \varphi_n \ \ \varphi_n\ \ \delta V_e\ \ \delta V_n\ \ \delta V_u\ \ \delta L\ \ \delta \lambda\ \ \delta h\ \  \varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z\ \  \bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T
-\label{4.9}
-\end{equation}
-
-其中：
-
-$[\varphi_e \ \ \varphi_n \ \ \varphi_n]^T$为导航坐标系上的东北天三维姿态误差角；
-
-$[\delta V_e\ \ \delta V_n\ \ \delta V_u]^T$为分别为东北天方向三维速度误差；
-
-$[\delta L\ \ \delta \lambda\ \ \delta h]^T$为纬度、经度和高度误差；
-
-$[\varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z]^T$为沿载体坐标系$x$、$y$、$z$轴上的陀螺漂移，模型建立为一阶高斯马尔可夫；
-
-$[\bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T$为沿载体坐标系$x$、$y$、$z$ 轴上的加速度计零偏，模型建立为一阶高斯马尔可夫；
-
-在误差建模时，不仅要考虑陀螺和加速度计的零偏，还应考虑刻度系数误差和安装误差，但考虑到增加了系统建模的复杂性且对导航结果提高有限，故只考虑陀螺和加速度计的零偏，其中$\varepsilon=[\varepsilon_x \ \ \varepsilon_y \ \ \varepsilon_z]^T$，$\bigtriangledown=[\bigtriangledown_x \ \bigtriangledown_y \ \bigtriangledown_z]^T$分别为陀螺和加速度计零偏，而$\varepsilon$,$\bigtriangledown$ 可写成以下形式一阶高斯马尔可夫模型：
-\begin{equation}
-\left\{
-\begin{aligned}
-\dot{\varepsilon}&=-\alpha\varepsilon + \eta_a\\
-\dot{\bigtriangledown}&=-\beta\bigtriangledown + \eta_b
-\end{aligned}
-\right.
-\label{4.10}
-\end{equation}
-其中，$\alpha$，$\beta$是马尔可夫过程的相关时间，$\eta_a$，$\eta_b$分别是陀螺和加速度计白噪声。
+\subsection{捷联惯导系统误差建模}
 
 (1)姿态误差方程
 
-由于姿态四元数满足式(\ref{2.19})，参考式(\ref{2.25})可将姿态速率$\boldsymbol{\omega}_{nb}^b$ 视为零标量四元数。根据文献\citep{YanGM(2004),MiaoYW(2013)}推导，
-可以得到MEMS惯导姿态误差方程矢量形式:
+不考虑任何误差时，理想姿态四元数满足：
 \begin{equation}
-\dot{\boldsymbol\varphi}=\boldsymbol\varphi\times\boldsymbol\omega_{in}^n+\delta\boldsymbol\omega_{in}^n-\boldsymbol\varepsilon^n
+\dot{\mathbf{Q}} = \frac{1}{2}\mathbf{Q}\otimes\omega_{nb}^b \label{quaternion_att}
+\end{equation}
+
+考虑实际误差时，真实的四元数表示为：
+\begin{equation}
+\dot{\mathbf{\hat{Q}}} = \frac{1}{2}\hat{\mathbf{Q}}\otimes\hat{\omega}_{nb}^b %\label{2.22}
+\end{equation}
+
+记$\varphi$为姿态误差角矢量，即$\hat{Q}$和$Q$确定的两个导航坐标系之间的偏差角矢量，$\omega_{nb}^b$参考式\ref{2.25}。根据文献\citep{YanGM(2004),MiaoYW(2013)}推导，可以得到MEMS惯导姿态误差方程矢量形式:
+\begin{equation}
+\dot{\varphi}=\varphi\times\omega_{in}^n+\delta\omega_{in}^n-\varepsilon^n
 \label{4.11}
 \end{equation}
 
-其中$\varphi$为姿态误差角矢量，$\varepsilon$为陀螺仪角速度随机误差，$\omega_{in}^n$由式(\ref{2.25})确定，则该矢量方程的矩阵形式为：
+当以地理系为导航坐标系时。则\ref{4.11}矩阵形式为：
 \begin{align}
 \displaystyle
 \left [\begin{array}{ccc}
-\dot{\boldsymbol\varphi}_e\\
-\dot{\boldsymbol\varphi}_n\\
-\dot{\boldsymbol\varphi}_u\\
+\dot{\varphi}_e\\
+\dot{\varphi}_n\\
+\dot{\varphi}_u\\
 \end{array}\right]
 &=
 \left [\begin{array}{ccc}
-0                     & -\boldsymbol\varphi_u &  \boldsymbol\varphi_n\\
-\boldsymbol\varphi_u  & 0                     & -\boldsymbol\varphi_e\\
--\boldsymbol\varphi_n & \boldsymbol\varphi_e  & 0 \\
+0                     & -\varphi_u &  \varphi_n\\
+\varphi_u  & 0                     & -\varphi_e\\
+-\varphi_n & \varphi_e  & 0 \\
 \end{array}\right]
 \left [\begin{array}{ccc}
 -\frac{V_N}{R_M+h}\\
@@ -140,28 +120,28 @@ $[\bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T$为沿载体坐标
 \end{array}\right]
 -
 \left [\begin{array}{ccc}
-{\boldsymbol\varepsilon}_e\\
-{\boldsymbol\varepsilon}_n\\
-{\boldsymbol\varepsilon}_u
+{\varepsilon}_e\\
+{\varepsilon}_n\\
+{\varepsilon}_u
 \end{array}\right]
 \label{4.12}
 \end{align}
 
 展开后得；
 \begin{align}
-\dot{\boldsymbol\varphi}_e &= \boldsymbol\varphi_n(\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L})-\boldsymbol\varphi_u(\omega_{ie}\cos{L}+\frac{V_E}{R_N+h})-\frac{\delta V_N}{R_M+h}+\delta h\frac{V_N}{(R_M+h)^2}-\boldsymbol\varepsilon_e \notag\\
-\dot{\boldsymbol\varphi}_n &= -\boldsymbol\varphi_e(\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L})-\boldsymbol\varphi_u\frac{V_n}{R_M+h}-\delta L\omega_{ie}\sin{L}+\frac{\delta V_e}{R_N+h}-\delta h\frac{V_e}{(R_N+h)^2}-\boldsymbol\varepsilon_n \notag\\
-\dot{\boldsymbol\varphi}_u &= \boldsymbol\varphi_e(\omega_{ie}\cos{L}+\frac{V_E}{R_N+h})+\boldsymbol\varphi_n\frac{V_n}{R_M+h}+\delta L(\omega_{ie}\cos{L}+\frac{V_e}{R_N+h}\sec^2 L)+\frac{\delta V_e}{R_N+h}\tan L \notag\\
-& \qquad - \delta h\frac{V_e}{(R_N+h)^2}\tan L - \boldsymbol\varepsilon_u \notag\\
+\dot{\varphi}_e &= \varphi_n(\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L})-\varphi_u(\omega_{ie}\cos{L}+\frac{V_E}{R_N+h})-\frac{\delta V_N}{R_M+h}+\delta h\frac{V_N}{(R_M+h)^2}-\varepsilon_e \notag\\
+\dot{\varphi}_n &= -\varphi_e(\omega_{ie}\sin{L}+\frac{V_E}{R_N+h}\tan{L})-\varphi_u\frac{V_n}{R_M+h}-\delta L\omega_{ie}\sin{L}+\frac{\delta V_e}{R_N+h}-\delta h\frac{V_e}{(R_N+h)^2}-\varepsilon_n \notag\\
+\dot{\varphi}_u &= \varphi_e(\omega_{ie}\cos{L}+\frac{V_E}{R_N+h})+\varphi_n\frac{V_n}{R_M+h}+\delta L(\omega_{ie}\cos{L}+\frac{V_e}{R_N+h}\sec^2 L)+\frac{\delta V_e}{R_N+h}\tan L \notag\\
+& \qquad - \delta h\frac{V_e}{(R_N+h)^2}\tan L - \varepsilon_u \notag\\
 \label{4.13}
 \end{align}
-式\ref{4.13}中有：
+其中：
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol\varepsilon_e &=\boldsymbol{T}_{11}\boldsymbol\varepsilon_x+\boldsymbol{T}_{12}\boldsymbol\varepsilon_y+\boldsymbol{T}_{13}\boldsymbol\varepsilon_z \\
-\boldsymbol\varepsilon_n &=\boldsymbol{T}_{21}\boldsymbol\varepsilon_x+\boldsymbol{T}_{22}\boldsymbol\varepsilon_y+\boldsymbol{T}_{23}\boldsymbol\varepsilon_z \\
-\boldsymbol\varepsilon_u &=\boldsymbol{T}_{31}\boldsymbol\varepsilon_x+\boldsymbol{T}_{32}\boldsymbol\varepsilon_y+\boldsymbol{T}_{33}\boldsymbol\varepsilon_z
+\varepsilon_e &=\boldsymbol{T}_{11}\varepsilon_x+\boldsymbol{T}_{12}\varepsilon_y+\boldsymbol{T}_{13}\varepsilon_z \\
+\varepsilon_n &=\boldsymbol{T}_{21}\varepsilon_x+\boldsymbol{T}_{22}\varepsilon_y+\boldsymbol{T}_{23}\varepsilon_z \\
+\varepsilon_u &=\boldsymbol{T}_{31}\varepsilon_x+\boldsymbol{T}_{32}\varepsilon_y+\boldsymbol{T}_{33}\varepsilon_z
 \end{aligned}
 \right.
 \label{4.14}
@@ -172,46 +152,46 @@ $[\bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T$为沿载体坐标
 
 根据式(\ref{2.31})的MEMS惯导比力方程，理想状态下当忽略系统误差时速度解算方程表示为：
 \begin{equation}
-\boldsymbol{\dot{V}}^n= \boldsymbol{C}^n_b\boldsymbol{f}^b-(2\omega_{ie}^n+\omega_{en}^n)\times V^n + g^n
+{\dot{V}}^n= \mathbf{C}^n_b{f}^b-(2\omega_{ie}^n+\omega_{en}^n)\times V^n + g^n
 \label{4.15}
 \end{equation}
 
 若考虑系统中存在的各种扰动误差，则实际的速度计算应该表示为\cite{DengZZ(2012)}：
 \begin{equation}
-\boldsymbol{\dot{V}}^c= \boldsymbol{\hat{C}}^n_b\boldsymbol{\tilde{f}}^b-(2\omega_{ie}^c+\omega_{en}^c)\times V^c + g^c
+{\dot{V}}^c= \mathbf{\hat{C}}^n_b{\tilde{f}}^b-(2\omega_{ie}^c+\omega_{en}^c)\times V^c + g^c
 \label{4.16}
 \end{equation}
 
 式中：
 \begin{align}
 V^c&=V^n+\delta V^n ,\quad\omega_{ie}^c=\omega_{ie}^n+\delta \omega_{ie}^n ,\quad \omega_{en}^c=\omega_{en}^n+\delta \omega_{en}^n ,\quad  g^c=g^n+\delta g \notag\\
-\boldsymbol{\hat{C}}^n_b &= \boldsymbol{C}^{n'}_n\boldsymbol{C}^n_b=(\boldsymbol{I}-\boldsymbol\varphi^n \times)\boldsymbol{C}^n_b, \quad \boldsymbol{\tilde{f}}^b=\boldsymbol{f}^b+\bigtriangledown^b
+\mathbf{\hat{C}}^n_b &= \mathbf{C}^{n'}_n\mathbf{C}^n_b=(\mathbf{I}-\varphi^n \times)\mathbf{C}^n_b, \quad {\tilde{f}}^b={f}^b+\bigtriangledown^b
 \label{4.17}
 \end{align}
 其中，
-$\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式？减去？，忽略$\delta g$的影响，并略去二阶小量，得速度误差方程：
+$\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去\ref{4.15}，忽略$\delta g$的影响，并略去二阶小量，得速度误差方程：
 \begin{equation}
-\boldsymbol{\delta\dot{V}}^n=-\varphi^n \times \boldsymbol{f}^n+\delta V^n\times(2\boldsymbol \omega^n_{ie}+\boldsymbol\omega^n_{en})+ \boldsymbol{V}^n\times(2\delta\boldsymbol{\omega}^n_{ie}+\delta\boldsymbol{\omega}^n_{en})+\bigtriangledown^n
+\mathbf{\delta\dot{V}}^n=-\varphi^n \times {f}^n+\delta V^n\times(2 \omega^n_{ie}+\omega^n_{en})+ \mathbf{V}^n\times(2\delta{\omega}^n_{ie}+\delta{\omega}^n_{en})+\bigtriangledown^n
 \label{4.18}
 \end{equation}
 
 \begin{align}
 \displaystyle
 \left [\begin{array}{ccc}
-\delta\dot{\boldsymbol V}_e\\
-\delta\dot{\boldsymbol V}_n\\
-\delta\dot{\boldsymbol V}_u\\
+\delta\dot{ V}_e\\
+\delta\dot{ V}_n\\
+\delta\dot{ V}_u\\
 \end{array}\right]
 &=
 \left [\begin{array}{ccc}
-0                  & \boldsymbol\varphi_u &  -\boldsymbol\varphi_n\\
--\boldsymbol\varphi_u & 0                     & \boldsymbol\varphi_e\\
-\boldsymbol\varphi_n & -\boldsymbol\varphi_e & 0 \\
+0                  & \varphi_u &  -\varphi_n\\
+-\varphi_u & 0                     & \varphi_e\\
+\varphi_n & -\varphi_e & 0 \\
 \end{array}\right]
 \left [\begin{array}{ccc}
-\boldsymbol{f}_e\\
-\boldsymbol{f}_n\\
-\boldsymbol{f}_u\\
+{f}_e\\
+{f}_n\\
+{f}_u\\
 \end{array}\right]
 +
 \left [\begin{array}{ccc}
@@ -247,35 +227,35 @@ $\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式？减去？，忽略
 
 这样东北天各向速度误差可表示为\cite{DengZZ(2012)}：
 \begin{align}
-\delta\dot{\boldsymbol V}_e &= \boldsymbol{\varphi_u}f_n - \boldsymbol{\varphi}_n f_u+\delta{V_e}\frac{V_n\tan L-V_u}{R_N+h}+
+\delta\dot{\mathbf V}_e &= {\varphi_u}f_n - {\varphi}_n f_u+\delta{V_e}\frac{V_n\tan L-V_u}{R_N+h}+
 \delta V_n(2\omega_{ie}\sin{L}+\frac{V_e}{R_N+h}\tan L)\notag\\
 & \quad -\delta V_u(2\omega_{ie}\cos{L}+\frac{V_e}{R_N+h})+\delta L [2\omega_{ie}(V_u\sin L+V_n\cos L)+\frac{V_eV_n}{R_N+h}\sec^2L]\notag\\
 & \quad +\delta h \frac{V_eV_n-V_eV_n\tan L}{(R_N+h)^2}+\bigtriangledown_e \label{4.20}\\
-\delta\dot{\boldsymbol V}_n &= -\boldsymbol\varphi_u f_e + \boldsymbol\varphi_e f_u - \delta V_e\cdot2(\omega\sin L+\frac{V_e}{R_N+h}\tan L)-\delta V_n\frac{V_u}{R_M+h}-\delta V_u\frac{V_n}{R_M+h}\notag\\
+\delta\dot{\mathbf V}_n &= -\varphi_u f_e + \varphi_e f_u - \delta V_e\cdot2(\omega\sin L+\frac{V_e}{R_N+h}\tan L)-\delta V_n\frac{V_u}{R_M+h}-\delta V_u\frac{V_n}{R_M+h}\notag\\
 & \quad -\delta L(2V_e\omega_{ie}\cos L + \frac{V_e^2}{R_N+h}\sec^2L)+\delta h [\frac{V_uV_n}{(R_M+h)^2}+\frac{V_e^2\tan L}{(R_N+h)^2}]+\bigtriangledown_n \label{4.21}\\
-\delta\dot{\boldsymbol V}_u &= \boldsymbol\varphi_e f_e - \boldsymbol\varphi_e f_n + 2\delta V_e(\omega_{ie}\cos L+\frac{V_e}{R_N+h})+\delta V_n\frac{2V_n}{R_M+h}-2V_e\delta L\omega_{ie}\sin L\notag\\
+\delta\dot{\mathbf V}_u &= \varphi_e f_e - \varphi_e f_n + 2\delta V_e(\omega_{ie}\cos L+\frac{V_e}{R_N+h})+\delta V_n\frac{2V_n}{R_M+h}-2V_e\delta L\omega_{ie}\sin L\notag\\
 & \quad -\delta h[\frac{V_e^2}{(R_N+h)^2}+\frac{V_n^2}{(R_M+h)^2}]+\bigtriangledown_u \label{4.22}\\ \notag
 \end{align}
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol\bigtriangledown_e &=\boldsymbol{T}_{11}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{12}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{13}\boldsymbol\bigtriangledown_z \\
-\boldsymbol\bigtriangledown_n &=\boldsymbol{T}_{21}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{22}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{23}\boldsymbol\bigtriangledown_z \\
-\boldsymbol\bigtriangledown_u &=\boldsymbol{T}_{31}\boldsymbol\bigtriangledown_x+\boldsymbol{T}_{32}\boldsymbol\bigtriangledown_y+\boldsymbol{T}_{33}\boldsymbol\bigtriangledown_z
+\bigtriangledown_e &=\mathbf{T}_{11}\mathbf\bigtriangledown_x+\mathbf{T}_{12}\mathbf\bigtriangledown_y+\mathbf{T}_{13}\mathbf\bigtriangledown_z \\
+\bigtriangledown_n &=\mathbf{T}_{21}\mathbf\bigtriangledown_x+\mathbf{T}_{22}\mathbf\bigtriangledown_y+\mathbf{T}_{23}\mathbf\bigtriangledown_z \\
+\bigtriangledown_u &=\mathbf{T}_{31}\mathbf\bigtriangledown_x+\mathbf{T}_{32}\mathbf\bigtriangledown_y+\mathbf{T}_{33}\mathbf\bigtriangledown_z
 \end{aligned}
 \right.
 \label{4.23}
 \end{equation}
 
-式\ref{4.23}中，$\boldsymbol{T}_{11}$等参数是MEMS惯导姿态矩阵$\boldsymbol{C}_{n}^b$的系数。
+式\ref{4.23}中，$\mathbf{T}_{11}$等参数是MEMS惯导姿态矩阵$\mathbf{C}_{n}^b$的系数。
 
 (3)MEMS惯导位置误差方程可由式\ref{2.35}推导得到\cite{DengZZ(2012)}：
 \begin{equation}
 \left\{
 \begin{aligned}
-\delta\dot{\boldsymbol L} &= \frac{\delta V_n}{R_M+h}-\delta h \frac{V_n}{(R_M+h)^2}\\
-\delta\dot{\boldsymbol \lambda} &= \frac{\delta V_e}{R_N+h}\sec L+\delta L \frac{V_e}{R_N+h}\tan L\sec L - \delta h \frac{V_e\sec L}{(R_N+h)^2}\\
-\delta\dot{\boldsymbol h} &= \delta V_u
+\delta\dot{ L} &= \frac{\delta V_n}{R_M+h}-\delta h \frac{V_n}{(R_M+h)^2}\\
+\delta\dot{ \lambda} &= \frac{\delta V_e}{R_N+h}\sec L+\delta L \frac{V_e}{R_N+h}\tan L\sec L - \delta h \frac{V_e\sec L}{(R_N+h)^2}\\
+\delta\dot{ h} &= \delta V_u
 \end{aligned}
 \right.
 \label{4.24}
@@ -283,10 +263,41 @@ $\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式？减去？，忽略
 式中，$R_N$是地球参考椭圆卯酉圈上的曲率半径，$R_M$则是地球参考椭圆子午圈上各点的曲率半径。
 
 \subsection{系统状态方程}
-综合MEMS惯导的误差方程，可以得到GNSS/MEMS惯导组合系统的状态方程表达式\cite{ShinEH(2001),FuMengYin(2010)}：
+综合MEMS惯导的误差方程(\ref{4.12}、\ref{4.19}、\ref{4.24})，可以得到MEMS惯导/GNSS组合系统的状态方程表达式\cite{ShinEH(2001),FuMengYin(2010)}：
 \begin{equation}
 \dot X(t) = F(t)X(t)+G(t)W(t) \label{4.25}
 \end{equation}
+
+本设计中组合系统以15维导航误差作为系统的待估计状态，误差包括三维姿态、三维速度、三维位置、还有陀螺漂移及三个加速度计零偏，状态向量表示为：
+\begin{equation}
+ X = [\varphi_e \ \ \varphi_n \ \ \varphi_n\ \ \delta V_e\ \ \delta V_n\ \ \delta V_u\ \ \delta L\ \ \delta \lambda\ \ \delta h\ \  \varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z\ \  \bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T
+\label{4.9}
+\end{equation}
+
+其中：
+
+$[\varphi_e \ \ \varphi_n \ \ \varphi_n]^T$为导航坐标系上的东北天三维姿态误差角；
+
+$[\delta V_e\ \ \delta V_n\ \ \delta V_u]^T$为分别为东北天方向三维速度误差；
+
+$[\delta L\ \ \delta \lambda\ \ \delta h]^T$为纬度、经度和高度误差；
+
+$[\varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z]^T$为沿载体坐标系$x$、$y$、$z$轴上的陀螺漂移，模型建立为一阶高斯马尔可夫；
+
+$[\bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T$为沿载体坐标系$x$、$y$、$z$ 轴上的加速度计零偏，模型建立为一阶高斯马尔可夫；
+
+在误差建模时，不仅要考虑陀螺和加速度计的零偏，还应考虑刻度系数误差和安装误差，但考虑到增加了系统建模的复杂性且对导航结果提高有限，故只考虑陀螺和加速度计的零偏，其中$\varepsilon=[\varepsilon_x \ \ \varepsilon_y \ \ \varepsilon_z]^T$，$\bigtriangledown=[\bigtriangledown_x \ \bigtriangledown_y \ \bigtriangledown_z]^T$分别为陀螺和加速度计零偏，而$\varepsilon$,$\bigtriangledown$ 可写成以下形式一阶高斯马尔可夫模型：
+\begin{equation}
+\left\{
+\begin{aligned}
+\dot{\varepsilon}&=-\alpha\varepsilon + \eta_a\\
+\dot{\bigtriangledown}&=-\beta\bigtriangledown + \eta_b
+\end{aligned}
+\right.
+\label{4.10}
+\end{equation}
+其中，$\alpha$，$\beta$是马尔可夫过程的相关时间，$\eta_a$，$\eta_b$分别是陀螺和加速度计白噪声。
+
 $W(t)$是系统噪声：
 \begin{equation}
  W(t) = [\omega_gx\ \ \omega_gy\ \ \omega_gz\ \ \omega_ax\ \ \omega_ay\ \ \omega_az]^T \label{4.26}
@@ -315,6 +326,11 @@ G =
 F_N(1,2)=\omega\sin{L}+\frac{V_e}{R_N+h}\tan{L},\hspace{2cm} &F_N(1,3)=-(\omega\cos{L}+\frac{V_e}{R_N+h})\vspace{1ex}\\
 F_N(1,5)=-\frac{1}{R_M+h},\hspace{2cm} &F_N(1,9)=\frac{V_n}{(R_M+h)^2}\vspace{1ex}\\
 F_N(2,1)=-(\omega_{ie}\sin{L}+\frac{V_e}{R_N+h}\tan{L}),&F_N(2,3)=-\frac{V_n}{R_M+h}\vspace{1ex}\\
+\end{array}
+\end{equation}
+\begin{equation}
+\displaystyle
+\begin{array}{ll}
 F_N(2,4)=\frac{1}{R_N+h},&F_N(2,7)=-\omega_{ie}\sin{L}\vspace{1ex}\\
 F_N(2,9)=-\frac{V_e}{(R_N+h)^2},&F_N(3,1)=\omega\cos{L}+\frac{V_e}{R_N+h}\vspace{1ex}\\
 F_N(3,2)= \frac{V_n}{R_M+h} ,&F_N(3,4)=\frac{\tan{L}}{R_N+h}\vspace{1ex}\\
@@ -415,13 +431,13 @@ v_{IU}-v_{GU}\\
 根据前面章节系统总体设计和卡尔曼滤波算法的分析，车载组合导航软件设计主要有：硬件驱动的设计、外设传感器软件配置、数据的处理和导航算法移植等。软件设计时采用C语言编程来实现，方便程序代码的裁剪和移植。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.8\textwidth]{figures/chap4/chap4_software}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.7\textwidth]{figures/chap4/chap4_software}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{组合系统流程图}
  \label{chap4_Fig.1}
  \vspace{-0.4cm}
 \end{figure}
 
-低成本MEMS惯导/GNSS组合系统的软件流程如图\ref{chap4_Fig.1}所示，ARM处理首先初始化配置与传感器连接的接口和定时器，并通过定时器中断方式来不断接收和处理MEMS惯导和GNSS的数据。其中BMI160我们以100Hz取数，远高于GNSS1Hz 的采集频率，程序在循环中等待惯导的初始化对准，在对准完成之前，以GNSS数据为准进行导航，对准完成后，进行MEMS惯导和GNSS数据的时间同步，当GNSS数据标识位无效时，处理器只对MIMU信号处理并输出捷联导航系统的解算信息；当GNSS数据到来时，对其进行卡尔曼滤波解算，输出的组合导航信息可以以串口方式发送给上位机进行实时显示或保存至SD卡中。
+本课题设计的低成本MEMS惯导/GNSS组合系统的软件流程如图\ref{chap4_Fig.1}所示，首先对ARM硬件系统进行初始化，串口、SPI、SDIO接口等的初始化以及定时器的初始化，并通过定时器中断方式来不断接收和处理MEMS惯导和GNSS的数据。其中BMI160 我们以100Hz 取数，远高于GNSS1Hz 的采集频率。程序在循环中等待惯导的初始化对准，在对准完成之前，系统以GNSS数据为准进行导航，对准完成后，完成MEMS惯导和GNSS数据的时间同步。当GNSS数据标识位无效时，处理器只对MIMU信号处理并输出捷联导航系统的解算信息；当GNSS 数据有效时，数据导入卡尔曼滤波器中进行解算，得到的结果对惯导进行误差校正，最后输出的组合导航信息以串口方式发送给上位机进行实时显示或保存至SD卡中。
 
 \subsection{MEMS传感器配置}
 为了MEMS传感器能够正常工作，需要配置它的工作方式，传输速率和通信方式等,在设计加速度计软件驱动时，首先要考虑其测量范围，根据在载体实际所处的环境设置相应的测量范围：$\pm2g$，$\pm4g$，$\pm8g$，$\pm16g$，测量精度均为16位，车辆运行过程属于低动态，设计中加速度计采用$\pm2g$测量范围，陀螺仪量程选择$\pm125^\circ/s$。
@@ -471,7 +487,7 @@ TIM5作为一个1us的时间计数器，计算算法等待时间的长度，判断数据解算的有效性。
 
 (2)串口接收中断
 
-串口作为MCU的重要外部接口，是软件开发的重要调试手段。编写中断处理函数USART2\_IRQHandler()，主要给用户提供接口，方便程序的下载与调试。一方面在串口中断中，读取到接收到的数据，并将数据送入相应寄存器中，在其他服务函数中访问该寄存器的值，即可实现数据的赋值；另一方面判断接收到数据中是否含有相应标志位的字段，然后编写自己的的逻辑函数。如，检测串口接收数据中是否收到要进入程序升级的标志$\#up\$$，如果有，跳转至bootloader代码中执行更新，设计了如表\ref{chap4_Table 1}串口接收数据更新的协议：
+串口作为MCU的重要外部接口，是软件开发的重要调试手段。编写中断处理函数USART2\_IRQHandler()，主要给用户提供接口，方便程序的下载与调试。一方面系统采用USART进行两个控制器的数据传输，采用USART中断接收GNSS的数据，写入相应寄存器中，同时也通过USART接口完成与上位机的通信功能，其中USART2负责双机通信与上位机或其他设备通信，USART3 接收GNSS模块数据；此外通过检测串口接收数据中是否收到要进入程序升级的标志，跳转至bootloader 代码中执行更新中断服务程序，设计了如表\ref{chap4_Table 1} 串口接收数据更新的协议：
 \begin{table}[!h]
 \renewcommand\arraystretch{1.2}
 \centering
@@ -511,9 +527,9 @@ bootloader更新程序要满足以下要求：
 %而我们设置APP程序起始地址为0x08002800，即偏移量为0x4000(16K字节)，留给用户flash空间(size)是1024k-16k=1008K。偏移量是定义留给bootloader 程序的地址空间大小。这里我定义的是16K，偏移量为0x200 的倍数即可（本设计的bootloader只有6K左右），这里留有余量，方便bootloader以后的升级修改。在flash 中分配了一个四字节的空间(0x08004000-0x08004004)作为flash固件更新标志位。该标志位默认值为0xFFFF FFFF (flash掉电不擦除)，如果该值为0xFFFF FFFF说明flash中只有Bootloader程序，此时等待串口更新操作。设备上电后运行Bootloader 代码读取flash该标志位上的数据。若读取到数据为0x2B2B1A1A时说明不进入更新，直接跳入功能程序运行，当需要更新代码时，上位机通过串口发送更新指令给ARM，RAM读到更新信号后，重新给更新标志地址(0x08002000)写人数据0x4D4D3C3C，成功写入后软件复位重启。重启后bootloader 此时读到该地址的数据为0x4D4D3C3C，说明进入更新程序代码，选择程序二进制文件写入flash,更新完成后再重置标志位，软件复位重启，运行新的代码。
 
 \subsection{FAT32文件系统的移植}
-系统的数据调试选择SD卡保存数据，基于调试方便的原则，在程序中添加FAT32文件系统，来实现存储数据的管理。FAT文件系统是一个免费开源的FAT文件系统模块，专门为小型的嵌入式系统而设计。他完全用标准C 语言编写，具有良好的硬件平台独立性。
+系统的数据调试选择SD卡保存数据，基于调试方便的原则，在程序中添加FAT32文件系统，来实现存储数据的管理。FAT文件系统是一个免费开源的FAT文件系统模块，专门为小型的嵌入式系统而设计。他完全用标准C 语言编写，具有良好的硬件平台独立性。SD卡和ARM是通过SDIO通信接口连接的，相比于SPI通信方式，SDIO接口具有更快的读写速度，一般为SPI读写SD 卡的4倍速度左右。
 
-移植过程中，首先要完成SD的硬件初始化，系统检索是否存在SD卡，判断SD卡是否符合ARM支持的类型并提供文件系统与SD 卡底层接口，如果SD 驱动不成功，将返回STA\_NOINIT 标志位。SD 硬件初始化成功之后，文件系统将完成注册工作区功能，这一部分可以视为文件系统的初始化，该部分完成SD卡每个卷注册工作区。搜索根目录并显示完成对SD 卡根目录读取。主要执行流程：
+导航程序运行前，首先要完成SD的硬件初始化，系统检索是否存在SD卡，判断SD卡是否符合ARM支持的类型并提供文件系统与SD 卡底层接口，如果SD 驱动不成功，将返回STA\_NOINIT 标志位。SD 硬件初始化成功之后，文件系统将完成注册工作区功能，这一部分可以视为文件系统的初始化，该部分完成SD卡每个卷注册工作区。搜索根目录并显示完成对SD 卡根目录读取。主要执行流程：
 
 (1)使用$SD\_Init()$函数对Micro SD进行初始化。
 
@@ -528,10 +544,10 @@ bootloader更新程序要满足以下要求：
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_monitor}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{MEMS惯导/GNSS组合导航系统监控界面}
- \label{chap4_Fig.6}
+ \label{chap4_Fig.4}
  \vspace{-0.4cm}
 \end{figure}
-本论文PC端监控软件是在Visual Studio 2013环境下编写的，实现的功能有数据保存与导入、参数设置，结果显示，KML文件的生成，上位机软件界面如图\ref{chap4_Fig.5}。
+本论文PC端监控软件是在Visual Studio 2013环境下编写的，实现的功能有数据保存与导入、参数设置，结果显示，KML文件的生成，上位机软件界面如图\ref{chap4_Fig.4}。
 与定位相关的功能包括两大类：定位工程管理和定位信息处理。
 
 定位工程管理完成串口的配置，数据的保存与导入，定位信息的回放等功能。定位信息处理包括以下方面：
@@ -548,8 +564,6 @@ bootloader更新程序要满足以下要求：
  \caption{上位机软件流程图}
  \label{chap4_Fig.5}
  \vspace{-0.4cm}
-\end{figure} 
+\end{figure}
 
-导航设备与PC机之间信息传输遵循一定的数据格式如表\ref{chap4_Table 2}，导航设备将导航信息打包上传给PC处理。另一方面，设备也可以响应PC命令，开启定位功能。下表\ref{chap4_Table 2}展示其中的一帧信息：
-如表所示，该数据包的帧头用"\$PBSOL"表示，数据段中包含相应字节的时间、经纬度、速度姿态等导航信息，上位机在接受到该数据后完成解析和校验，即可按字段显示定位导航信息。显示界面如图\ref{chap4_Fig.6}所示：
-
+导航设备与PC机之间信息传输遵循一定的数据格式，导航设备将导航信息打包上传给PC处理，数据段中包含相应字节的时间、经纬度、速度姿态等导航信息，上位机在接受到该数据后完成解析和校验，即可按字段显示定位导航信息。另一方面，设备也可以响应PC命令，开启定位功能。上位机软件信息处理过程如流程图\ref{4.5}所示。

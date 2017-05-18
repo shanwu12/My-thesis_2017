@@ -15,18 +15,16 @@
 \contentsline {subsection}{\numberline {2.3.2}速度更新}{20}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}位置更新}{21}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}低成本惯导的姿态初始化}{22}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}组合定位系统方案分析与设计}{22}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}惯导/GNSS组合方式}{22}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.4}组合定位系统方案分析与设计}{23}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}惯导/GNSS组合方式}{23}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}MEMS惯性传感器的误差模型}{24}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}车载组合定位系统总体方案}{26}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}车载组合定位系统总体方案}{27}{subsection.2.4.3}
 \contentsline {section}{\numberline {2.5}本章小结}{29}{section.2.5}
 \contentsline {chapter}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 3\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ignorespaces 章\hspace {0.3em}}小型化车载组合导航系统硬件设计}{30}{chapter.3}
 \contentsline {section}{\numberline {3.1}引言}{30}{section.3.1}
-\contentsline {section}{\numberline {3.2}主要器件选型}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}核心处理器ARM芯片}{31}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}MEMS器件}{32}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}卫星接收模块}{33}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}电源管理模块}{34}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.2}硬件方案设计}{31}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}需求分析与电路规划}{31}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}核心器件选型}{32}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}硬件电路设计}{36}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}系统原理图设计}{36}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}系统PCB板设计}{42}{subsection.3.3.2}
@@ -35,25 +33,25 @@
 \contentsline {section}{\numberline {4.1}引言}{45}{section.4.1}
 \contentsline {section}{\numberline {4.2}组合系统模型的设计}{45}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}离散化卡尔曼滤波设计}{45}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}系统误差方程}{47}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}系统状态方程}{51}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}系统量测方程}{53}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.2}捷联惯导系统误差建模}{47}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}系统状态方程}{50}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}系统量测方程}{52}{subsection.4.2.4}
 \contentsline {section}{\numberline {4.3}嵌入式软件设计}{53}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}系统程序设计方案}{53}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}MEMS传感器配置}{55}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}GNSS模块配置}{56}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.2}MEMS传感器配置}{54}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}GNSS模块配置}{55}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}中断程序设计}{56}{subsection.4.3.4}
 \contentsline {subsection}{\numberline {4.3.5}Bootloader下载设计}{57}{subsection.4.3.5}
-\contentsline {subsection}{\numberline {4.3.6}FAT32文件系统的移植}{59}{subsection.4.3.6}
-\contentsline {section}{\numberline {4.4}系统上位机软件设计}{59}{section.4.4}
-\contentsline {chapter}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 5\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ignorespaces 章\hspace {0.3em}}小型化车载组合导航系统测试与分析}{62}{chapter.5}
-\contentsline {section}{\numberline {5.1}跑车试验}{62}{section.5.1}
-\contentsline {section}{\numberline {5.2}数据分析与结果}{63}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}组合定位结果}{63}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}卫星失锁时定位效果}{67}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}本章小结}{68}{section.5.3}
+\contentsline {subsection}{\numberline {4.3.6}FAT32文件系统的移植}{58}{subsection.4.3.6}
+\contentsline {chapter}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 5\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ignorespaces 章\hspace {0.3em}}小型化车载组合导航系统测试与分析}{60}{chapter.5}
+\contentsline {section}{\numberline {5.1}系统上位机软件设计}{60}{section.5.1}
+\contentsline {section}{\numberline {5.2}跑车试验}{62}{section.5.2}
+\contentsline {section}{\numberline {5.3}数据分析与结果}{63}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}组合定位结果}{63}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}卫星失锁时定位效果}{67}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}本章小结}{68}{section.5.4}
 \contentsline {chapter}{\numberline {第\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 6\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \ignorespaces 章\hspace {0.3em}}总结与展望}{69}{chapter.6}
 \contentsline {section}{\numberline {6.1}研究工作总结}{69}{section.6.1}
 \contentsline {section}{\numberline {6.2}工作展望}{70}{section.6.2}
-\contentsline {chapter}{参考文献}{71}{chapter*.57}
+\contentsline {chapter}{参考文献}{71}{chapter*.58}
 \contentsfinish 

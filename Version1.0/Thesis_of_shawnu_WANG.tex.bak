@@ -1,14 +1,13 @@
 % \documentclass[twoside,12pt,CJK]{cctbook}
-\documentclass[12pt,cs4size,fancyhdr,hyperref,fntef]{ctexbook}
+\documentclass[12pt,cs4size,fancyhdr,hyperref,fntef,openany]{ctexbook}
 \input setup.tex
+\usepackage{amsmath,bm}
 
 %  e\overrightarrow{}
 %\allowdisplaybreaks
 
 \begin{document}
 \frontmatter
-
-\documentclass[openany]{...}
 %\def\thepage{\roman{page}}
 %\input chapter/chap-cover
 

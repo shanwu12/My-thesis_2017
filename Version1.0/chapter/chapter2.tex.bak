@@ -1,7 +1,7 @@
 
 \chapter{Ð¡ÐÍ»¯³µÔØ×éºÏµ¼º½ÏµÍ³·½°¸Éè¼Æ}
 \section{ÒýÑÔ}
-³µÔØ×éºÏ¶¨Î»ÏµÍ³ÊÇ²ÉÓÃ³µÔØ´«¸ÐÆ÷½øÐÐ×éºÏ¶¨Î»µÄÊµÊ±ÏµÍ³£¬Ëæ×ÅMEMS ¹ßÐÔÆ÷¼þ¹¤³Ì»¯¼°¾«¶ÈµÄÌáÉý£¬ÆäÐ¡ÐÍ»¯¡¢µÍ³É±¾¡¢µÍ¹¦ºÄ¿¹ÎÈ¶¨ÐÔºÃµÄÌØµãÔÚ³µÁ¾×éºÏµ¼º½ÏµÍ³ÖÐµÃµ½ÁË¹ã·ºµÄÓ¦ÓÃ\cite{LiRongBing(2004)}¡£±¾ÎÄÖÂÁ¦ÓÚÉè¼ÆÐ¡ÐÍ»¯³µÔØ×éºÏ¶¨Î»ÏµÍ³£¬Í¨¹ýºÏÀíµÄ²¼¾Ö¼°ÏµÍ³Éè¿ª·¢£¬½«MEMS ¹ßÐÔÆ÷¼þ¡¢GNSS½ÓÊÕ»ú¡¢Êý¾Ý´¦ÀíÆ÷£¬Êý¾Ý´æ´¢µÈÉè±¸¸ß¶È¼¯³ÉÔÚÒ»¿é°å¿¨ÉÏ£¬²¢Éè¼ÆÏàÓ¦µ¼º½Èí¼þ£¬ÊµÏÖ³µÁ¾µÄÊµÊ±µ¼º½¶¨Î»¡£
+³µÔØ×éºÏ¶¨Î»ÏµÍ³ÊÇ²ÉÓÃ¶àÏî³µÔØ´«¸ÐÆ÷½øÐÐ×éºÏ¶¨Î»µÄÊµÊ±ÏµÍ³£¬Ëæ×ÅMEMS ¹ßÐÔÆ÷¼þ¹¤³Ì»¯¼°¾«¶ÈµÄÌáÉý£¬ÆäÐ¡ÐÍ»¯¡¢µÍ³É±¾¡¢µÍ¹¦ºÄ¿¹ÎÈ¶¨ÐÔºÃµÄÌØµãÔÚ³µÁ¾×éºÏµ¼º½ÏµÍ³ÖÐµÃµ½ÁË¹ã·ºµÄÓ¦ÓÃ\cite{LiRongBing(2004)}¡£±¾ÎÄÖÂÁ¦ÓÚÉè¼ÆÐ¡ÐÍ»¯³µÔØ×éºÏ¶¨Î»ÏµÍ³£¬Í¨¹ýºÏÀíµÄ²¼¾Ö¼°ÏµÍ³Éè¼Æ¿ª·¢£¬½«MEMS ¹ßÐÔÆ÷¼þ¡¢GNSS½ÓÊÕ»ú¡¢Êý¾Ý´¦ÀíÆ÷£¬Êý¾Ý´æ´¢µÈÉè±¸¸ß¶È¼¯³ÉÔÚÒ»¿é°å¿¨ÉÏ£¬²¢Éè¼ÆÏàÓ¦µ¼º½Èí¼þ£¬ÊµÏÖ³µÁ¾µÄÊµÊ±µ¼º½¶¨Î»¡£
 
 ±¾ÕÂÊ×ÏÈ½éÉÜµ¼º½ÏµÍ³ÑÐ¾¿ÖÐ¼¸ÖÖ³£¼ûµÄ×ø±êÏµ¼°Ïà»¥Ö®¼äµÄ×ª»»£¬·ÖÎö³µÔØ¶¨Î»ÏµÍ³µÄ¶¨Î»Ô­Àí²¢¸ø³ö»ùÓÚËÄÔªÊýºÍÐý×ªÊ¸Á¿·¨µÄMEMS¹ßµ¼×ËÌ¬¡¢Î»ÖÃºÍËÙ¶È¸üÐÂ·½³Ì£¬×îºó¸ø³ö³µÔØ×éºÏ¶¨Î»ÏµÍ³µÄ×ÜÌå·½°¸Éè¼Æ¡£
 
@@ -9,7 +9,7 @@
 ÔÚµ¼º½¶¨Î»¹ý³ÌÖÐ£¬ÐèÒªÎª³µÁ¾Ìá¹©×ËÌ¬¡¢ËÙ¶È¡¢Î»ÖÃµÈµ¼º½ÐÅÏ¢£¬ÕâÐ©ÐÅÏ¢ÐèÒª±ØÐë½¨Á¢ÔÚÏàÓ¦µÄ²Î¿¼×ø±êÏµÖÐ¡£¶ÔÓÚ²»Í¬µÄÑÐ¾¿¶ÔÏóºÍÈÎÎñÒªÇó£¬ÐèÒªÑ¡Ôñ²»Í¬µÄ×ø±êÏµ\cite{QinYY(2014),YanGM(2004)}¡£
 
 \subsection{µ¼º½×ø±êÏµ¶¨Òå}
-ÔÚÂ½µØ³µÁ¾×éºÏµ¼º½ÏµÍ³ÖÐ£¬³£¼ûµÄ×ø±êÏµÓÐ£º¹ßÐÔ×ø±êÏµ¡¢µØÇò×ø±êÏµ¡¢µØÀí×ø±êÏµ¡¢»úÌå×ø±êÏµ¡¢µ¼º½×ø±êÏµ¡£
+ÔÚÂ½µØ³µÁ¾×éºÏµ¼º½ÏµÍ³ÖÐ£¬³£¼ûµÄ×ø±êÏµÓÐ£º¹ßÐÔ×ø±êÏµ¡¢µØÇò×ø±êÏµ¡¢µØÀí×ø±êÏµ¡¢»úÌå×ø±êÏµ¡¢µ¼º½×ø±êÏµ\cite{DengZZ(2012)}¡£
 
 (1)¹ßÐÔ×ø±êÏµ(iÏµ)
 
@@ -281,7 +281,7 @@ $\textbf{C}^n_b$¾ÍÊÇµ¼º½ÏµÍ³ÖÐÍ¨³£Ëù³ÆµÄ½ÝÁª¾ØÕó£¬ÔØÌåµÄ×ËÌ¬½Ç¿ÉÒÔ¼ÆËãÈçÏÂ£º
 \label{2.12}
 \end{equation}
 
-ÌØ±ðµØ£¬µ±$\Vert{Q}\Vert=1$Ê±£¬¼´¶ÔÓÚµ¥Î»ËÄÔªÊý£¬ÓÐ$q_0=\cos\frac{\phi}{2}$£¬$\mathbf{q_v}=\bm{\mu}\sin\frac{\phi}{2}$ ÇÒ$q_0^2+\mathbf{q_v}^T\mathbf{q_v}=1$£»$\bm{\mu}$ Îªµ¥Î»³¤¶ÈµÄÈýÎ¬Ê¸Á¿£¬¼´$\bm{\mu}^T\bm {\mu}=1$£»$\phi$ÎªÄ³Ò»½Ç¶ÈÖµ¡£ÔÚ¸ÕÌå×ª¶¯ÀíÂÛÖÐ£¬ÔØÌåÏµÏà¶ÔÓÚµ¼º½ÏµµÄÎ»ÖÃ£¬¿ÉÒÔµÈÐ§³ÉÔØÌåÏµÈÆÄ³¶¨ÖáÐý×ªÒ»¶¨½Ç¶È$\theta$£¬ÓÃÏòÁ¿$\bm{\mu}$±íÊ¾¸Ã¶¨Öá£¬ÔòÁ½×ø±êÖ®¼äµÄÎ»ÖÃ¹ØÏµ¿ÉÒÔÓÃ½Ç¶È$\theta$ºÍµ¥Î»ÏòÁ¿$\bm{\mu}$À´±íÊ¾ÈçÏÂÍ¼\ref{chap2_Fig.3}¡£
+ÌØ±ðµØ£¬µ±$\Vert{Q}\Vert=1$Ê±£¬¼´¶ÔÓÚµ¥Î»ËÄÔªÊý£¬ÓÐ$q_0=\cos\frac{\phi}{2}$£¬$\mathbf{q_v}=\bm{\mu}\sin\frac{\phi}{2}$ ÇÒ$q_0^2+\mathbf{q_v}^T\mathbf{q_v}=1$£»$\bm{\mu}$ Îªµ¥Î»³¤¶ÈµÄÈýÎ¬Ê¸Á¿£¬¼´$\bm{\mu}^T\bm {\mu}=1$£»$\phi$ÎªÄ³Ò»½Ç¶ÈÖµ¡£ÔÚ¸ÕÌå×ª¶¯ÀíÂÛÖÐ£¬ÔØÌåÏµÏà¶ÔÓÚµ¼º½ÏµµÄÎ»ÖÃ£¬¿ÉÒÔµÈÐ§³ÉÔØÌåÏµÈÆÄ³¶¨ÖáÐý×ªÒ»¶¨½Ç¶È$\theta$£¬ÓÃÏòÁ¿$\bm{\mu}$±íÊ¾¸Ã¶¨Öá£¬ÔòÁ½×ø±êÖ®¼äµÄÎ»ÖÃ¹ØÏµ¿ÉÒÔÓÃ½Ç¶È$\theta$ºÍµ¥Î»ÏòÁ¿$\bm{\mu}$ À´±íÊ¾ÈçÏÂÍ¼\ref{chap2_Fig.3}¡£
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.4\textwidth]{figures/chap2/chap2_rotate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -422,7 +422,7 @@ q_3
 \omega_{nb}^b=\omega_{ib}^b-C_n^b(\omega_{ie}^n+\omega_{en}^n)  \label{2.25}
 \end{equation}
 
-ÉÏÊ½ÖÐ£¬$C_n^b$ÊÇ×ËÌ¬Õó£¬$\omega_{nb}^b$²»ÄÜÓÉMEMSÍÓÂÝÖ±½Ó²âÁ¿»ñµÃ£¬ÍÓÂÝÊä³öµÄ$\omega_{ib}^b$ÊÇÔØÌåÏµÏà¶ÔÓÚ¹ßÐÔÏµµÄ½ÇËÙ¶È£¬ÆäÖÐ°üº¬ÁËµØÇò×Ô×ªËÙÂÊ$\omega_{ie}^n$ºÍÎ»ÖÃËÙÂÊ$\omega_{en}^n$£¬¿ÉÒÔ¼ÆËãµÃ
+ÉÏÊ½ÖÐ£¬$C_n^b$ÊÇ×ËÌ¬Õó£¬$\omega_{nb}^b$²»ÄÜÓÉMEMSÍÓÂÝÖ±½Ó²âÁ¿»ñµÃ£¬ÍÓÂÝÊä³öµÄ$\omega_{ib}^b$ÊÇÔØÌåÏµÏà¶ÔÓÚ¹ßÐÔÏµµÄ½ÇËÙ¶È£¬ÆäÖÐ°üº¬ÁËµØÇò×Ô×ªËÙÂÊ$\omega_{ie}^n$ ºÍÎ»ÖÃËÙÂÊ$\omega_{en}^n$£¬¿ÉÒÔ¼ÆËãµÃ
 \cite{JinLi(1994)}£º
 \begin{equation}
 \omega_{ie}^n+\omega_{en}^n=
@@ -470,7 +470,7 @@ $\delta\theta_m$¡¢$\Delta{V}_m$Îª¸üÐÂÖÜÆÚÄÚµÄÍÓÂÝ½ÇÔöÁ¿ºÍ¼ÓËÙ¶È¼ÆËÙ¶ÈÔöÁ¿¡£ÒòÎªÔ
 ÓÉÓÚµÍ³É±¾MEMS´«¸ÐÆ÷ÊôÓÚµÍ¾«¶È£¬ÍÓÂÝ¾«¶È£¨ÁãÆ«ÎÈ¶¨ÐÔ¼°ÖØ¸´ÐÔ£©Îª$0.1^\circ$Á¿¼¶£¬¼ÓËÙ¶È¾«¶ÈÎª$5mg$£¬´«¸ÐÆ÷±ê¶¨ÔÚÏÂ½Ú½éÉÜ¾ßÌå·½·¨£¬´Ë´¦ºöÂÔ»®½°Ð§Ó¦£¬¿É¶ÔÆä×÷´ó·ù¼ò»¯¡£
 
 \subsection{Î»ÖÃ¸üÐÂ}
-ÔÚÍ¼\ref{chap2_Fig.1}£¬¼ÙÉèµØÇò±íÃæÔË¶¯µÄÎïÌåÔÚµØÀí×ø±êÏµÏÂµÄ×ø±ê¼ÇÎª$O_g(\lambda,L,h)$¡£Èç¹û$O_o$µãÊÇ$O_g$ÓëµØÐÄÁ¬ÏßÔÚµØÇò±íÃæµÄ½»µã£¬ÒÔ¸Ãµã½¨Á¢Ö±½Ç×ø±êÏµ£¬Î³È¦ÇÐÏßÖ¸¶«Îª$O_ox_o$Öá£¬¾­È¦ÇÐÏßÖ¸±±$O_oy_o$Öá¡¢ÍÖÇòÃæ·¨Ïß·½ÏòÖ¸Ìì$O_oz_o$Öá£¬$O_g$µãµÄµØÀí×ø±ê±íÊ¾£¬¼ÇÎª$O_g(\lambda,L,h)$¡£
+ÔÚÍ¼\ref{chap2_Fig.1}£¬¼ÙÉèµØÇò±íÃæÔË¶¯µÄÎïÌåÔÚµØÀí×ø±êÏµÏÂµÄ×ø±ê¼ÇÎª$O_g(\lambda,L,h)$¡£$O_o$µãÊÇ$O_g$ÓëµØÐÄÁ¬ÏßÔÚµØÇò±íÃæµÄ½»µã£¬ÒÔ¸Ãµã½¨Á¢Ö±½Ç×ø±êÏµ£¬Î³È¦ÇÐÏßÖ¸¶«Îª$O_ox_o$Öá£¬¾­È¦ÇÐÏßÖ¸±±$O_oy_o$Öá¡¢ÍÖÇòÃæ·¨Ïß·½ÏòÖ¸Ìì$O_oz_o$Öá¡£
 
 Èç¹û$O_o$µã¶ÔµØÇò×ø±êÏµ$Ox_ey_ez_e$µÄËÙ¶ÈÔÚ$Ox_oy_oz_o$ÏµµÄÍ¶Ó°¼ÇÎª$v_e^o=[v_{xo}\quad v_{yo}\quad v_{zo}]^T$¡£×¢Òâ£¬ÓÉÓÚ$O_oX_o$ ÖáÓëÎ³È¦ÏàÇÐ£¬¹Ê¾­¶È»áËæ×Å$v_{x0}$¶ø±ä»¯£¬Í¬Àí£¬Î³¶ÈÒ²»áËæ×Å$v_{y0}$²úÉú±ä»¯£º
 \begin{equation}
@@ -554,7 +554,7 @@ g\\
 
 2¡¢ÀûÓÃÎÀÐÇµ¼º½½øÐÐ·½Î»¶Ô×¼
 
-¶ÔÓÚ³µÁ¾µ¼º½À´Ëµ£¬ÆäÔË¶¯·½ÏòÒ»°ãÑØÔØÌåµÄÕýÇ°·½(×ÝÖá·½Ïò),ÔÚÍê³ÉË®Æ½¶Ô×¼ºó£¬ÔÚÎÀÐÇÐÅºÅ¿ÉÓÃµÄÇé¿öÏÂ£¬²âÁ¿µÃµ½ËÙ¶ÈÊ¸Á¿£¬¿ÉÒÔµÃµ½ÔØÌå×ÝÖáÏà¶ÔÓÚµØÀí±±ÏòµÄ·½Î»½Ç£¬ÀûÓÃ¸Ã·½Î»½Ç£¬ÓëÓÉ$\boldsymbol{C}^n_b$¼ÆËã»ñµÃµÄ¸©Ñö½ÇºÍºá¹ö½ÇÍê³É×ËÌ¬³õÊ¼»¯\cite{YanGM(2004)}¡£
+¶ÔÓÚ³µÁ¾µ¼º½À´Ëµ£¬ÆäÔË¶¯·½ÏòÒ»°ãÑØÔØÌåµÄÕýÇ°·½(×ÝÖá·½Ïò)£¬ÔÚÍê³ÉË®Æ½¶Ô×¼ºó£¬ÔÚÎÀÐÇÐÅºÅ¿ÉÓÃµÄÇé¿öÏÂ£¬²âÁ¿µÃµ½ËÙ¶ÈÊ¸Á¿£¬¿ÉÒÔµÃµ½ÔØÌå×ÝÖáÏà¶ÔÓÚµØÀí±±ÏòµÄ·½Î»½Ç£¬ÀûÓÃ¸Ã·½Î»½Ç£¬ÓëÓÉ$\boldsymbol{C}^n_b$¼ÆËã»ñµÃµÄ¸©Ñö½ÇºÍºá¹ö½ÇÍê³É×ËÌ¬³õÊ¼»¯\cite{YanGM(2004)}¡£
 
 
 \section{×éºÏ¶¨Î»ÏµÍ³·½°¸·ÖÎöÓëÉè¼Æ}
@@ -614,19 +614,20 @@ Allan·½²î×÷ÎªÍÓÂÝËæ»úÎó²îÒ»ÖÖÊ±Óò·ÖÎö¼¼Êõ,ÊÇ¹«ÈÏµÄIEEE±ê×¼¹æ·¶\cite{RStirling(20
 \sigma^2(\tau) = 4\int^{\infty}_{0}S_{\Omega}(f)\frac{\sin^4(\pi f\tau))}{(\pi f\tau)^2}df \label{2.44}
 \end{equation}
 
-ÆäÖÐ£¬$S_{\Omega}(f)$ÊÇ$\Omega(T)$µÄËæ»ú¹¦ÂÊÆ×ÃÜ¶È¡£ÓÉÓÚÍÓÂÝÊý¾ÝµÄAllan·½²îÓë¹¦ÂÊÆ×ÃÜ¶ÈÖ®¼ä´æÔÚ¶¨Á¿¹ØÏµ£¬ÀûÓÃ´Ë¹ØÏµ£¬½«ÍÓÂÝÊä³öÊý¾ÝÔÚÑù±¾³¤¶ÈÉÏ½øÐÐ¼ÆËã£¬¿ÉÒÔµÃµ½ÍÓÂÝÊý¾ÝÖÐµÄ¸÷ÖÖÔëÉùÌØÐÔ¡£Í¬Ê±£¬¸Ã½á¹û»¹ÎªºóÃæµÄKalmanÂË²¨Æ÷³õÊ¼²ÎÊýµÄÉèÖÃÌá¹©ÒÀ¾Ý£¬¿É¼õÐ¡ÂË²¨Æ÷ÒòÔëÉù²ÎÊýÍ³¼Æ²»×¼È·¶ø·¢É¢µÄ·çÏÕ¡£
-Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡£Í¨¹ýAllan ·½²î·¨¶ÔMEMS ÍÓÂÝÓë¼ÓËÙ¶È¼Æ³¤Ê±¼ä¾²Ö¹Êý¾Ý½øÐÐ´¦Àíºó£¬¿ÉÒÔµÃµ½ÀàËÆÍ¼\cite{ZhaoYM(2011)}µÄË«¶ÔÊýÇúÏßÍ¼¡£²»Í¬ÔëÉù³öÏÖÔÚ²»Í¬µÄ$\tau$ÇøÓòÉÏ¡£
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.8\textwidth]{figures/chap2/chap2_Allan}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.66\textwidth]{figures/chap2/chap2_Allan}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{Allan·½²î·ÖÎöÇúÏßÍ¼}
  \label{chap2_Fig.6}
  \vspace{-0.4cm}
 \end{figure}
 
+ÆäÖÐ£¬$S_{\Omega}(f)$ÊÇ$\Omega(T)$µÄËæ»ú¹¦ÂÊÆ×ÃÜ¶È¡£ÓÉÓÚÍÓÂÝÊý¾ÝµÄAllan·½²îÓë¹¦ÂÊÆ×ÃÜ¶ÈÖ®¼ä´æÔÚ¶¨Á¿¹ØÏµ£¬ÀûÓÃ´Ë¹ØÏµ£¬½«ÍÓÂÝÊä³öÊý¾ÝÔÚÑù±¾³¤¶ÈÉÏ½øÐÐ¼ÆËã£¬¿ÉÒÔµÃµ½ÍÓÂÝÊý¾ÝÖÐµÄ¸÷ÖÖÔëÉùÌØÐÔ¡£Í¬Ê±£¬¸Ã½á¹û»¹ÎªºóÃæµÄKalmanÂË²¨Æ÷³õÊ¼²ÎÊýµÄÉèÖÃÌá¹©ÒÀ¾Ý£¬¿É¼õÐ¡ÂË²¨Æ÷ÒòÔëÉù²ÎÊýÍ³¼Æ²»×¼È·¶ø·¢É¢µÄ·çÏÕ¡£
+Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡£Í¨¹ýAllan ·½²î·¨¶ÔMEMS ÍÓÂÝÓë¼ÓËÙ¶È¼Æ³¤Ê±¼ä¾²Ö¹Êý¾Ý½øÐÐ´¦Àíºó£¬¿ÉÒÔµÃµ½ÀàËÆÍ¼\ref{chap2_Fig.6}µÄË«¶ÔÊýÇúÏßÍ¼¡£²»Í¬ÔëÉù³öÏÖÔÚ²»Í¬µÄ$\tau$ÇøÓòÉÏ¡£
+
 ¸÷Îó²îÏîÔÚAllan±ê×¼²îË«¶ÔÊýÇúÏßÉÏµÄ¶ÔÓ¦µÄÐ±ÂÊºÍ$\tau$ÖµÈç±í\ref{chap2_Table 1}ËùÊ¾\cite{ZhaoYM(2011)}¡£
 \begin{table}[!h]
-\renewcommand\arraystretch{1}
+\renewcommand\arraystretch{0.8}
 \centering
 \caption{\label{chap2_Table 1}Allan·½²î}
 \begin{tabular}{c l l l}
@@ -649,7 +650,7 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 ½«ÖÆ×÷µÄÉè±¸¹Ì¶¨ÓÚ¾²Ö¹¹¤×÷Ì¨ÉÏ£¬ÉÏµçÔ¤ÈÈºó£¬ÒÔ50Hz²ÉÑùÆµÂÊ²É¼¯ÁË6hÊý¾Ý£¬ÔÚmatlabÉÏ¼ÆËãÊý¾ÝµÄAllan·½²î²¢»æÖÆ¶ÔÊýÍ¼£¬ÊµÑéÊý¾ÝµÄAllan·½²î·ÖÎö½á¹ûÈçÍ¼ËùÊ¾£»
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=9cm,width=14cm]{figures/chap2/chap2_Gyro}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.72\textwidth]{figures/chap2/chap2_Gyro}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{MEMSÍÓÂÝAllan·½²îË«¶ÔÊýÇúÏßÍ¼}
  \label{chap2_Fig.7}
  \vspace{-0.4cm}
@@ -657,7 +658,7 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=9cm,width=14cm]{figures/chap2/chap2_Acc}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.7\textwidth]{figures/chap2/chap2_Acc}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{MEMS¼ÓËÙ¶È¼ÆAllan·½²îË«¶ÔÊýÇúÏßÍ¼}
  \label{chap2_Fig.8}
  \vspace{-0.4cm}
@@ -672,9 +673,9 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 \toprule
 \hspace{0.5cm} &   \hspace{1cm}ÁãÆ«²»ÎÈ¶¨ÐÔ  &\hspace{1.5cm}½Ç¶ÈËæ»úÓÎ×ß  \\
 \hline
-\hspace{0.5cm}ÍÓÂÝXÖá &   \hspace{1cm}$14.43deg/h$  &\hspace{1.5cm} $deg/\sqrt{h}$\\
-\hspace{0.5cm}ÍÓÂÝYÖá &   \hspace{1cm}$9.93deg/h$  &\hspace{1.5cm} $deg/\sqrt{h}$\\
-\hspace{0.5cm}ÍÓÂÝZÖá &   \hspace{1cm}$9.35deg/h$  &\hspace{1.5cm} $deg/\sqrt{h}$\\
+\hspace{0.5cm}ÍÓÂÝXÖá &   \hspace{1cm}$14.43deg/h$  &\hspace{1.5cm} $0.883deg/\sqrt{h}$\\
+\hspace{0.5cm}ÍÓÂÝYÖá &   \hspace{1cm}$9.93deg/h$  &\hspace{1.5cm} $0.75deg/\sqrt{h}$\\
+\hspace{0.5cm}ÍÓÂÝZÖá &   \hspace{1cm}$9.35deg/h$  &\hspace{1.5cm} $0.75deg/\sqrt{h}$\\
 \toprule
 \end{tabular}
 \end{table}
@@ -685,7 +686,7 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 \caption{\label{chap2_Table 1}MEMS¼ÓËÙ¶È¼ÆËæ»úÎó²î²ÎÊý}
 \begin{tabular}{c c c}
 \toprule
-\hspace{0.5cm} &   \hspace{0.5cm}ÁãÆ«²»ÎÈ¶¨ÐÔ  &\hspace{0.5cm}½Ç¶ÈËæ»úÓÎ×ß  \\
+\hspace{0.5cm} &   \hspace{0.5cm}ÁãÆ«²»ÎÈ¶¨ÐÔ  &\hspace{0.5cm}ËÙ¶ÈËæ»úÓÎ×ß  \\
 \hline
 \hspace{0.5cm}¼ÓËÙ¶È¼ÆXÖá &   \hspace{0.5cm}$0.73m/s^2$  &\hspace{0.5cm} $m/s/\sqrt{h}$\\
 \hspace{0.5cm}¼ÓËÙ¶È¼ÆYÖá &   \hspace{0.5cm}$1.83m/s^2$  &\hspace{0.5cm} $m/s/\sqrt{h}$\\
@@ -696,7 +697,7 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 
 \subsection{³µÔØ×éºÏ¶¨Î»ÏµÍ³×ÜÌå·½°¸}
 ³µÔØ×éºÏ¶¨Î»ÏµÍ³ÊÇÒ»¸ö¸´ÔÓµÄÏµÍ³£¬°üÀ¨´«¸ÐÆ÷µÄÊý¾Ý²É¼¯Óë´¦Àí£¬ÊµÊ±Êý¾Ý½âËãºÍÈÚºÏ£¬ÉÏÎ»»úµ¼º½ÐÅÏ¢ÏÔÊ¾µÈ¡£±¾¿ÎÌâ¸ù¾Ý±¾ÕÂÇ°¼¸½ÚµÄµ¼º½½âËãÀíÂÛÖªÊ¶£¬¸ù¾ÝÊµ¼Ê¹¤×÷»·¾³Íê³ÉÐ¾Æ¬Ñ¡ÐÍÓëÓ²¼þÉè¼Æ£¬²¢±àÐ´µ¼º½Èí¼þÊµÏÖµ¼º½¶¨Î»¹¦ÄÜ£¬×îÖÕ¿ÉÒÔ³É¹¦µØÎªµØÃæ³µÁ¾Ìá¹©×ËÌ¬Î»ÖÃºÍËÙ¶ÈÐÅÏ¢£¬Íê³ÉÁËÒ»¿î×Ô¶¯¼ÝÊ»¸¨ÖúÏµÍ³µÄÐ¡ÐÍ»¯µ¼º½Ä£¿éµÄ¹¤³ÌÊµÏÖ¡£
-´ËÄ£¿éÒÔARM ´¦ÀíÆ÷ÎªºËÐÄ£¬Ö÷ÒªÓÉMEMS¹ßÐÔ´«¸ÐÆ÷£¬GNSSÎÀÐÇ½ÓÊÕ»úµÈÉè±¸×é³É¡£¹¹½¨µÄSOPC(system-on-a-programmable-chip)Ç¶ÈëÊ½ÏµÍ³¾ßÓÐÌå»ýÐ¡£¬¹¦ºÄµÍ£¬Êý¾Ý¼ÆËã¹¦ÄÜÇ¿µÈÓÅµã£¬ÎªÐ¡ÐÍ»¯¡¢µÍ¹¦ºÄ£¬µÍ³É±¾µ¼º½ÏµÍ³Ó²¼þÉè¼ÆÌá¹©ÁË½â¾ö·½°¸£¬Æä×ÜÌå·½°¸ÈçÍ¼\ref{chap2_Fig.9}ËùÊ¾£¬
+´ËÄ£¿éÒÔARM ´¦ÀíÆ÷ÎªºËÐÄ£¬Ö÷ÒªÓÉMEMS¹ßÐÔ´«¸ÐÆ÷£¬GNSSÎÀÐÇ½ÓÊÕ»úµÈÉè±¸×é³É¡£¹¹½¨µÄSOPC(system-on-a-programmable-chip)Ç¶ÈëÊ½ÏµÍ³¾ßÓÐÌå»ýÐ¡£¬¹¦ºÄµÍ£¬Êý¾Ý¼ÆËã¹¦ÄÜÇ¿µÈÓÅµã£¬ÎªÐ¡ÐÍ»¯¡¢µÍ¹¦ºÄ£¬µÍ³É±¾µ¼º½ÏµÍ³Ó²¼þÉè¼ÆÌá¹©ÁË½â¾ö·½°¸£¬Æä×ÜÌå·½°¸ÈçÍ¼\ref{chap2_Fig.9}ËùÊ¾£º
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_Principle}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]

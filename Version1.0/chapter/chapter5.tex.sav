@@ -1,38 +1,68 @@
 
-\chapter{小型化车载组合辅助系统测试与结果分析}
-基于所设计的MEMS惯导/GNSS组合导航系统设计，本章对设计的设备进行实地测试，通过采集的车载实验数据验证设备的工程实用性。
-%硬件方面，完成GNSS/惯导组合导航单元模块，数据采集电路等电路设计；在ARM基础上
+\chapter{小型化车载组合导航系统测试与分析}
 
-%在软件方面，完成组合导航信息融合Kalman滤波的软件编程；使用C语言实现系统采集、读写缓冲存储器FIFO以及
+\section{系统上位机软件设计}
+本系统从用户使用角度出发，设计了方便人机交互的上位机监控软件。一方面用户可以通过导航监控软件实时获取当前车辆的运行状态和位置，另一方面也可以由上位机发送管理指令，对导航系统进行软件配置。上位机软件界面如图\ref{chap5_monitor}所示，可实现对数据的保存、导航模式选择、数据加载、轨迹显示、历史记录回放等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.9\textwidth]{figures/chap4/chap4_monitor}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{MEMS惯导/GNSS组合导航系统监控界面}
+ \label{chap5_monitor}
+ \vspace{-0.4cm}
+\end{figure}
 
-\begin{figure}[htbp]
+本课题的PC端监控软件是在Visual Studio 2013环境下编写的，实现的功能有数据保存与导入、参数设置，结果显示，KML文件的生成等。定位相关的功能包括两大类：定位工程管理和定位信息处理。
+
+定位工程管理完成串口的配置，数据的保存与导入，定位信息的回放等功能。上位机通过串口与下位机硬件完成通讯，在导航软件中配置相关应用程序，从串口配置软件，方便切换导航模式和扩展后期的功能。
+
+定位信息处理包括以下方面：
+
+(1)获取串口实时数据，解析数据并画出运行轨迹，同时显示当前模块搜到的卫星；
+
+(2)解析存储的数据文件，并将数据文件中的数据回放在界面中，同时显示轨迹；
+
+(3)将已保存的数据文件转换成kml文件，KML文件是基于XML语法与格式的用于描述和保存地理信息的编码规范，可以被Google Earth识别并显示。
+%\subsection{数据通信协议}
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.8\textwidth]{figures/chap4/chap4_pbright}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{上位机软件流程图}
+ \label{chap5_pbright}
+ \vspace{-0.4cm}
+\end{figure}
+
+导航设备与PC机之间信息传输遵循一定的数据格式，导航设备将导航信息打包上传给PC处理，数据段中包含相应字节的时间、经纬度、速度姿态等导航信息，上位机在接受到该数据后完成解析和校验，即可按字段显示定位导航信息。另一方面，设备也可以响应PC命令，开启定位功能。上位机软件信息处理过程如流程图\ref{chap5_pbright}所示。
+
+\section{跑车试验}
+基于所设计的MEMS惯导/GNSS组合导航系统设计，本章对设计的设备进行实地测试，开启系统数据记录功能，将实时采集的数据及结算后的数据保存至SD中，并对数据进行分析验证设备的工程实用性。
+
+\begin{figure}[!htb]
 \begin{minipage}[t]{0.35\linewidth}
 \centering
 \includegraphics[height=6cm,width=7.5cm]{figures/chap5/chap5_platform}
 \caption{UGV实验平台}
- \label{chap3_Fig.10}
+ \label{chap5_Fig.1}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.5\linewidth}
 \centering
 \includegraphics[height=6cm,width=5.5cm]{figures/chap5/chap5_experiment}
 \caption{实验装置}
-\label{chap3_Fig.10}
+\label{chap5_Fig.2}
 \end{minipage}
 \end{figure}
-\section{测试实验}
 
-本次试验于2017年4月在北京理工大学附近进行，实验平台为北京理工大学组合导航与智能导航实验室的自主改装的红旗轿车。测试同时搭载实验室自主开发的高精度GNSS/SINS组合系统（位置1σ精度：2cm;姿态精度：0.06°）作为本设计精度判定的标准，各系统以输出的GPS时间（UTC时）作为数据时间对齐基准。
+本次试验于2017年4月在北京理工大学附近进行，实验平台为上图\ref{chap5_Fig.1}所示的北京理工大学组合导航与智能导航实验室的自主改装的红旗轿车。测试同时搭载实验室自主开发的高精度GNSS/SINS组合系统（位置1σ精度：2cm；姿态精度：0.06°）作为本设计精度判定的标准，各系统以输出的GPS时间（UTC时）作为数据时间对齐基准。
 
-跑车实验，将本课题设计的导航设备与作为基准的高精度组合系统一起固联于试验车内部，两系统的X-Y-Z轴分别对应车体右-前-上方向，GPS天线沿车体放置于车外，小型化导航设备通过串口转USB与笔记本电脑连接，可以实时观测数据情况，同时数据保存在设备的SD卡内。车载实验装置如图？所示。
+跑车实验，将本课题设计的导航设备与作为基准的高精度组合系统一起固联于试验车内部，两系统的X-Y-Z轴分别对应车体右-前-上方向，GPS天线沿车体放置于车外，小型化导航设备通过串口转USB与笔记本电脑连接，可以实时观测数据情况，同时数据保存在设备的SD卡内。车载实验装置如图\ref{chap5_Fig.2}所示。
 
-跑车实验轨迹如图？所示，车辆从北京理工大学自动化学院出发，绕过苏州桥底沿西三环辅路，魏公村路、沿北三环西路回到自动化学院。行驶过程中，GNSS 信号频繁受到高架桥，高楼，树木的遮挡，导致GNSS接收机定位精度差或无定位现象。其中路段1和路段2人为中断GNSS信号的时长分别约为20s和180s。
+跑车实验轨迹如图\ref{chap5_Fig.3}所示，车辆从北京理工大学自动化学院出发，绕过苏州桥底沿西三环辅路，魏公村路、沿北三环西路回到自动化学院。行驶过程中，GNSS信号频繁受到高架桥，高楼，树木的遮挡，导致GNSS接收机定位精度差或无定位现象。其中路段2和路段3人为中断GNSS信号的时长分别约为20s和180s。 图\ref{chap5_Fig.4}和图\ref{chap5_Fig.5}是设计的导航上位机所得的轨迹图和实时卫星显示结果，蓝色部分为卫星信号失锁时的路线。
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap5/chap5_Trajectory2}
+ \includegraphics[width=0.6\textwidth]{figures/chap5/chap5_Trajectory3}
  \caption{车载实验轨迹图}
- \label{chap5_Fig.1}
+ \label{chap5_Fig.3}
  \vspace{-0.4cm}
 \end{figure}
 
@@ -41,84 +71,139 @@
 \centering
 \includegraphics[height=6cm,width=7.5cm]{figures/chap5/chap5_pbright}
 \caption{PCB3D模型}
- \label{chap3_Fig.10}
+ \label{chap5_Fig.4}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.5\linewidth}
 \centering
 \includegraphics[height=6cm,width=7.5cm]{figures/chap5/chap5_GNSS}
 \caption{组合系统实物图}
-\label{chap3_Fig.10}
+\label{chap5_Fig.5}
 \end{minipage}
 \end{figure}
 
-
-
-
 \section{数据分析与结果}
 \subsection{组合定位结果}
-将实验所得到的数据结果和基准数据经matlab处理后，给出了组合系统的位置、速度和姿态误差曲线图，经RMS(root-mean-square)统计后得到系统精度。
-
-如图？给出了是位置误差，北向误差最大26m，东向误差最大45m，天向误差最大10m。
+将实验所得到的数据结果和基准数据经matlab处理后，给出了组合系统的位置、速度和姿态误差曲线图：
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap5/chap5_2D}
  \caption{车载实验轨迹图}
- \label{chap5_Fig.1}
+ \label{chap5_Fig.6}
  \vspace{-0.4cm}
 \end{figure}
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_errPos}
+ \includegraphics[height=8cm,width=16cm]{figures/chap5/chap5_errPos}
  \caption{GNSS/MEMS惯导组合结果位置误差图}
- \label{chap5_Fig.1}
+ \label{chap5_Fig.7}
  \vspace{-0.4cm}
 \end{figure}
+如图\ref{chap5_Fig.7}给出了组合导航系统输出的位置误差，将经纬度根据地球的地理模型转换成相应的距离可以得到有，北向误差最大为26m，东向误差最大为45m，天向误差最大为10m。从图中也可以看出在GNSS失效的区间内，卫星信号数据没有更新从而使组合后的数据误差有所增加。\\
+\\
 
-如图？给出了MEMS惯导/GNSS组合系统的姿态对比图，其中姿态角均为车在实验非静止时刻的数据，因对于MEMS器件而言，地球自转角速率完全湮没在陀螺的噪声里，因此不具备自助式的初始化对准功能。MEMS系统只能通过机动运动来增加系统滤波器的可观性从而完成动态的初始化对准，初始化阶段依据GNSS动态信息对其进行标定。
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_attitude}
+ \includegraphics[height=8cm,width=16cm]{figures/chap5/chap5_attitude}
  \caption{GNSS/MEMS惯导组合结果姿态对比图}
- \label{chap5_Fig.1}
+ \label{chap5_Fig.8}
  \vspace{-0.4cm}
 \end{figure}
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_erratt}
+ \includegraphics[height=8cm,width=16cm]{figures/chap5/chap5_erratt}
  \caption{GNSS/MEMS惯导组合结果姿态误差图}
- \label{chap5_Fig.1}
+ \label{chap5_Fig.9}
  \vspace{-0.4cm}
 \end{figure}
 
-经统计
+如图\ref{chap5_Fig.8}给出了MEMS惯导/GNSS组合系统的姿态对比图，其中姿态角均为车在实验非静止时刻的数据，因对于MEMS器件而言，地球自转角速率完全湮没在陀螺的噪声里，因此不具备自助式的初始化对准功能。MEMS系统只能通过机动运动来增加系统滤波器的可观性从而完成动态的初始化对准，初始化阶段依据GNSS 动态信息对其进行标定。
+
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_attitude}
- \caption{GNSS/MEMS惯导组合结果姿态对比图}
- \label{chap5_Fig.1}
+ \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_velocity}
+ \caption{GNSS/MEMS惯导组合结果速度对比图}
+ \label{chap5_Fig.10}
  \vspace{-0.4cm}
 \end{figure}
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_erratt}
- \caption{GNSS/MEMS惯导组合结果姿态误差图}
- \label{chap5_Fig.1}
+ \includegraphics[height=8cm,width=18cm]{figures/chap5/chap5_errVel}
+ \caption{GNSS/MEMS惯导组合结果速度误差图}
+ \label{chap5_Fig.11}
  \vspace{-0.4cm}
 \end{figure}
 
+经统计得出组合系统速度误差曲线图，从图\ref{chap5_Fig.10}中可以看出，速度大小与基准速度的曲线基本吻合，可以很好地跟随。
 
+经RMS(root-mean-square)统计后得到系统精度如表\ref{chap5_Table 1}中所示：
+\begin{table}[!h]
+\renewcommand\arraystretch{1}
+\centering
+\caption{\label{chap5_Table 1}位置、速度、姿态误差值}
+\begin{tabular}{c c c ccccccc}
+\toprule
+类型 &      & 位置(m)  &       &\hspace{1cm}      & 速度($m/s$)  &       &\hspace{1cm}      & 姿态$(^\circ$)  &   \\
+     & 东向 & 北向     & 高度  &\hspace{1cm} 东向 & 北向         &  高度 &\hspace{1cm}偏航  &俯仰             &  横滚 \\
+\hline
 
-
+RMS          & 6.68 & 5.53     & 5.15  &\hspace{1cm}0.43  & 0.27         &  0.08 &\hspace{1cm}8.06  &2.25             &  1.01 \\
+最大误差     & 47.0 & 30.5     & 11.8  &\hspace{1cm} 4.12 & 1.72         &  0.78 &\hspace{1cm}22.09  &5.7             &  3.86 \\
+\toprule
+\end{tabular}
+\end{table}
 
 
 \subsection{卫星失锁时定位效果}
-为验证本设计的导航系统在卫星接收信号弱或无定位时。仍然可以通过惯性导航实现定位，当GPS无有用信号时，导航系统仍可以为车辆提高定位信息，在该阶段，定位误差有所增加，但所得到的运行轨迹与基准轨迹也基本吻合，能够满足车辆导航要求。
+为验证本设计的导航系统在卫星接收信号弱或无定位时，仍然可以通过惯性导航实现定位。试验中人为断开天线使GNSS卫星接收机信号失效三分钟，失效时车辆处于红绿灯路口处，图\ref{chap5_Fig.12}和\ref{chap5_Fig.13}为组合系统在卫星失效情况下的导航情况，
+
+当GNSS无有用信号时，导航系统仍可以为车辆提高定位信息，在该阶段，定位误差有所增加，当有效GPS信号到来时迅速将位置拉回，所得到的运行轨迹与基准轨迹也基本吻合，能够满足车辆导航要求。
+%\begin{figure}[!htb]
+% \centering
+% \includegraphics[height=6cm,width=9cm]{figures/chap5/chap5_GNSSInvalid}
+% \caption{GNSS失锁情况下定位效果}
+% \label{chap5_Fig.12}
+% \vspace{-0.4cm}
+%\end{figure}
+\begin{figure}[htbp]
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\includegraphics[height=6.5cm,width=4.5cm]{figures/chap5/chap5_GNSSInv00}
+\caption{GNSS失锁路段一}
+ \label{chap5_Fig.12}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=5cm,width=8.5cm]{figures/chap5/chap5_GNSSInv01}
+\caption{GNSS失锁路段二}
+\label{chap5_Fig.13}
+\end{minipage}
+\end{figure}
+
+为进一步评价GNSS失效时间内本文设计的组合导航模块工作性能，对比了在GNSS遮挡的时间内系统与基准数据的位置误差和航向角误差，在路段二（失效时间930s-960s）和路段三(失效时间10200s-1800s)位置在信号丢失的短时间内还可以与基准数据保持一致，在GNSS 信号长时间遮挡，此时无外部传感器辅助的情况下，MEMS-SINS累积位置误差会逐渐增大，达到每秒数米的量级，位置误差大小如图\ref{chap5_Fig.14}所示，很明显在断开GPS之后，误差增加明显，北向最大误差约20m，东向位置误差最大约40m。当GPS信号接收正常后，误差迅速收敛。
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=9cm,width=11cm]{figures/chap5/chap5_GNSSout}
+ \caption{GNSS失效段位置误差图}
+ \label{chap5_Fig.14}
+ \vspace{-0.4cm}
+\end{figure}
 
 
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[height=4cm,width=11cm]{figures/chap5/chap5_Yawerr}
+ \caption{GNSS失效段航向误差图}
+ \label{chap5_Fig.15}
+ \vspace{-0.4cm}
+\end{figure}
 
-\section{工作展望}
+\clearpage
+\section{本章小结}
+本章从测试角度出发，设计了对设计的组合系统进行了动态试验，整个实验结果表明本设计的组合导航系统虽然具有一定的误差，但仍然具有一定的工程意义，为导航组合系统提供了一套简单有效的低成本导航方法。

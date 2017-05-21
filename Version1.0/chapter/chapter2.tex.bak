@@ -1,11 +1,11 @@
 
-\chapter{Ð¡ÐÍ»¯³µÔØ×éºÏµ¼º½ÏµÍ³·½°¸Éè¼Æ}
+\chapter{×éºÏµ¼º½ÏµÍ³·½°¸Éè¼Æ}
 \section{ÒýÑÔ}
 ³µÔØ×éºÏ¶¨Î»ÏµÍ³ÊÇ²ÉÓÃ¶àÏî³µÔØ´«¸ÐÆ÷½øÐÐ×éºÏ¶¨Î»µÄÊµÊ±ÏµÍ³£¬Ëæ×ÅMEMS ¹ßÐÔÆ÷¼þ¹¤³Ì»¯¼°¾«¶ÈµÄÌáÉý£¬ÆäÐ¡ÐÍ»¯¡¢µÍ³É±¾¡¢µÍ¹¦ºÄ¿¹ÎÈ¶¨ÐÔºÃµÄÌØµãÔÚ³µÁ¾×éºÏµ¼º½ÏµÍ³ÖÐµÃµ½ÁË¹ã·ºµÄÓ¦ÓÃ\cite{LiRongBing(2004)}¡£±¾ÎÄÖÂÁ¦ÓÚÉè¼ÆÐ¡ÐÍ»¯³µÔØ×éºÏ¶¨Î»ÏµÍ³£¬Í¨¹ýºÏÀíµÄ²¼¾Ö¼°ÏµÍ³Éè¼Æ¿ª·¢£¬½«MEMS ¹ßÐÔÆ÷¼þ¡¢GNSS½ÓÊÕ»ú¡¢Êý¾Ý´¦ÀíÆ÷£¬Êý¾Ý´æ´¢µÈÉè±¸¸ß¶È¼¯³ÉÔÚÒ»¿é°å¿¨ÉÏ£¬²¢Éè¼ÆÏàÓ¦µ¼º½Èí¼þ£¬ÊµÏÖ³µÁ¾µÄÊµÊ±µ¼º½¶¨Î»¡£
 
 ±¾ÕÂÊ×ÏÈ½éÉÜµ¼º½ÏµÍ³ÑÐ¾¿ÖÐ¼¸ÖÖ³£¼ûµÄ×ø±êÏµ¼°Ïà»¥Ö®¼äµÄ×ª»»£¬·ÖÎö³µÔØ¶¨Î»ÏµÍ³µÄ¶¨Î»Ô­Àí²¢¸ø³ö»ùÓÚËÄÔªÊýºÍÐý×ªÊ¸Á¿·¨µÄMEMS¹ßµ¼×ËÌ¬¡¢Î»ÖÃºÍËÙ¶È¸üÐÂ·½³Ì£¬×îºó¸ø³ö³µÔØ×éºÏ¶¨Î»ÏµÍ³µÄ×ÜÌå·½°¸Éè¼Æ¡£
 
-\section{³µÔØ×éºÏµ¼º½ÏµÍ³×ø±ê¶¨Òå¼°×ª»»»»}
+\section{µ¼º½ÏµÍ³×ø±ê¶¨Òå¼°×ª»»}
 ÔÚµ¼º½¶¨Î»¹ý³ÌÖÐ£¬ÐèÒªÎª³µÁ¾Ìá¹©×ËÌ¬¡¢ËÙ¶È¡¢Î»ÖÃµÈµ¼º½ÐÅÏ¢£¬ÕâÐ©ÐÅÏ¢ÐèÒª±ØÐë½¨Á¢ÔÚÏàÓ¦µÄ²Î¿¼×ø±êÏµÖÐ¡£¶ÔÓÚ²»Í¬µÄÑÐ¾¿¶ÔÏóºÍÈÎÎñÒªÇó£¬ÐèÒªÑ¡Ôñ²»Í¬µÄ×ø±êÏµ\cite{QinYY(2014),YanGM(2004)}¡£
 
 \subsection{µ¼º½×ø±êÏµ¶¨Òå}
@@ -557,7 +557,7 @@ g\\
 ¶ÔÓÚ³µÁ¾µ¼º½À´Ëµ£¬ÆäÔË¶¯·½ÏòÒ»°ãÑØÔØÌåµÄÕýÇ°·½(×ÝÖá·½Ïò)£¬ÔÚÍê³ÉË®Æ½¶Ô×¼ºó£¬ÔÚÎÀÐÇÐÅºÅ¿ÉÓÃµÄÇé¿öÏÂ£¬²âÁ¿µÃµ½ËÙ¶ÈÊ¸Á¿£¬¿ÉÒÔµÃµ½ÔØÌå×ÝÖáÏà¶ÔÓÚµØÀí±±ÏòµÄ·½Î»½Ç£¬ÀûÓÃ¸Ã·½Î»½Ç£¬ÓëÓÉ$\boldsymbol{C}^n_b$¼ÆËã»ñµÃµÄ¸©Ñö½ÇºÍºá¹ö½ÇÍê³É×ËÌ¬³õÊ¼»¯\cite{YanGM(2004)}¡£
 
 
-\section{×éºÏ¶¨Î»ÏµÍ³·½°¸·ÖÎöÓëÉè¼Æ}
+\section{×éºÏÏµÍ³·½°¸·ÖÎöÓëÉè¼Æ}
 \subsection{¹ßµ¼/GNSS×éºÏ·½Ê½}
 ½áºÏGPS¶¨Î»µÄ³¤ÆÚÎÈ¶¨ÐÔÓëSINSÏµÍ³¶¨Î»µÄ¶ÌÆÚ¾«È·ÐÔ£¬ÕûºÏÁ½Ì×Éè±¸µÄµ¼º½ÐÅÏ¢¿ÉÒÔÌá¸ßÕû¸öÏµÍ³µÄ¶¨Î»ÐÔÄÜ£¬Ä¿Ç°³£¼ûµÄ×éºÏ·½·¨ÓÐ£ºGPS/SINSËÉ×éºÏ¡¢½ô×éºÏºÍ³¬½ô×éºÏµÈÄ£Ê½\cite{YongY(2007)}¡£
 
@@ -658,7 +658,7 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.7\textwidth]{figures/chap2/chap2_Acc}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.75\textwidth]{figures/chap2/chap2_Acc}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{MEMS¼ÓËÙ¶È¼ÆAllan·½²îË«¶ÔÊýÇúÏßÍ¼}
  \label{chap2_Fig.8}
  \vspace{-0.4cm}
@@ -688,15 +688,15 @@ Allan·½²î·ÖÎöÍ¨³£ÄÜ±æÊ¶³öÁãÆ«²»ÎÈ¶¨ÐÔB¡¢Ëæ»úÓÎ×ßÏµÊýN¡¢Á¿»¯ÔëÉùQ µÈ¶àÖÖËæ»úÔëÉù¡
 \toprule
 \hspace{0.5cm} &   \hspace{0.5cm}ÁãÆ«²»ÎÈ¶¨ÐÔ  &\hspace{0.5cm}ËÙ¶ÈËæ»úÓÎ×ß  \\
 \hline
-\hspace{0.5cm}¼ÓËÙ¶È¼ÆXÖá &   \hspace{0.5cm}$0.73m/s^2$  &\hspace{0.5cm} $m/s/\sqrt{h}$\\
-\hspace{0.5cm}¼ÓËÙ¶È¼ÆYÖá &   \hspace{0.5cm}$1.83m/s^2$  &\hspace{0.5cm} $m/s/\sqrt{h}$\\
-\hspace{0.5cm}¼ÓËÙ¶È¼ÆZÖá &   \hspace{0.5cm}$0.93m/s^2$  &\hspace{0.5cm} $m/s/\sqrt{h}$\\
+\hspace{0.5cm}¼ÓËÙ¶È¼ÆXÖá &   \hspace{0.5cm}$0.73m/s^2$  &\hspace{0.5cm} $0.2m/s/\sqrt{h}$\\
+\hspace{0.5cm}¼ÓËÙ¶È¼ÆYÖá &   \hspace{0.5cm}$1.83m/s^2$  &\hspace{0.5cm} $0.2m/s/\sqrt{h}$\\
+\hspace{0.5cm}¼ÓËÙ¶È¼ÆZÖá &   \hspace{0.5cm}$0.93m/s^2$  &\hspace{0.5cm} $0.2m/s/\sqrt{h}$\\
 \toprule
 \end{tabular}
 \end{table}
 
-\subsection{³µÔØ×éºÏ¶¨Î»ÏµÍ³×ÜÌå·½°¸}
-³µÔØ×éºÏ¶¨Î»ÏµÍ³ÊÇÒ»¸ö¸´ÔÓµÄÏµÍ³£¬°üÀ¨´«¸ÐÆ÷µÄÊý¾Ý²É¼¯Óë´¦Àí£¬ÊµÊ±Êý¾Ý½âËãºÍÈÚºÏ£¬ÉÏÎ»»úµ¼º½ÐÅÏ¢ÏÔÊ¾µÈ¡£±¾¿ÎÌâ¸ù¾Ý±¾ÕÂÇ°¼¸½ÚµÄµ¼º½½âËãÀíÂÛÖªÊ¶£¬¸ù¾ÝÊµ¼Ê¹¤×÷»·¾³Íê³ÉÐ¾Æ¬Ñ¡ÐÍÓëÓ²¼þÉè¼Æ£¬²¢±àÐ´µ¼º½Èí¼þÊµÏÖµ¼º½¶¨Î»¹¦ÄÜ£¬×îÖÕ¿ÉÒÔ³É¹¦µØÎªµØÃæ³µÁ¾Ìá¹©×ËÌ¬Î»ÖÃºÍËÙ¶ÈÐÅÏ¢£¬Íê³ÉÁËÒ»¿î×Ô¶¯¼ÝÊ»¸¨ÖúÏµÍ³µÄÐ¡ÐÍ»¯µ¼º½Ä£¿éµÄ¹¤³ÌÊµÏÖ¡£
+\subsection{ÏµÍ³×ÜÌå·½°¸}
+³µÔØ×éºÏ¶¨Î»ÏµÍ³ÊÇÒ»¸ö¸´ÔÓµÄÏµÍ³£¬°üÀ¨´«¸ÐÆ÷µÄÊý¾Ý²É¼¯Óë´¦Àí£¬ÊµÊ±Êý¾Ý½âËãºÍÈÚºÏ£¬ÉÏÎ»»úµ¼º½ÐÅÏ¢ÏÔÊ¾µÈ¡£±¾¿ÎÌâÒÔµ¼º½½âËã»ù±¾ÀíÂÛÎª»ù´¡£¬¸ù¾ÝÊµ¼Ê¹¤×÷»·¾³Íê³ÉÁËÐ¾Æ¬Ñ¡ÐÍÓëÓ²¼þÉè¼Æ£¬²¢±àÐ´µ¼º½Èí¼þÊµÏÖµ¼º½¶¨Î»¹¦ÄÜ£¬×îÖÕ¿ÉÒÔ³É¹¦µØÎªµØÃæ³µÁ¾Ìá¹©×ËÌ¬Î»ÖÃºÍËÙ¶ÈÐÅÏ¢£¬ Íê³ÉÁËÒ»¿îÐ¡ÐÍ»¯µ¼º½Ä£¿éµÄ¹¤³ÌÊµÏÖ¡£
 ´ËÄ£¿éÒÔARM ´¦ÀíÆ÷ÎªºËÐÄ£¬Ö÷ÒªÓÉMEMS¹ßÐÔ´«¸ÐÆ÷£¬GNSSÎÀÐÇ½ÓÊÕ»úµÈÉè±¸×é³É¡£¹¹½¨µÄSOPC(system-on-a-programmable-chip)Ç¶ÈëÊ½ÏµÍ³¾ßÓÐÌå»ýÐ¡£¬¹¦ºÄµÍ£¬Êý¾Ý¼ÆËã¹¦ÄÜÇ¿µÈÓÅµã£¬ÎªÐ¡ÐÍ»¯¡¢µÍ¹¦ºÄ£¬µÍ³É±¾µ¼º½ÏµÍ³Ó²¼þÉè¼ÆÌá¹©ÁË½â¾ö·½°¸£¬Æä×ÜÌå·½°¸ÈçÍ¼\ref{chap2_Fig.9}ËùÊ¾£º
 \begin{figure}[!htb]
  \centering

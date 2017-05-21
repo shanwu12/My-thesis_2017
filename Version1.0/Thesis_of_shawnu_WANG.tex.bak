@@ -1,18 +1,17 @@
 % \documentclass[twoside,12pt,CJK]{cctbook}
 \documentclass[12pt,cs4size,fancyhdr,hyperref,fntef,openany]{ctexbook}
 \input setup.tex
-\usepackage{amsmath,bm}
 
 %  e\overrightarrow{}
 %\allowdisplaybreaks
 
 \begin{document}
 \frontmatter
-%\def\thepage{\roman{page}}
-%\input chapter/chap-cover
+\def\thepage{\roman{page}}
+\input chapter/chap-cover
 
 %\input chap/chap-copyright
-%\input chapter/chap-shengming
+\input chapter/chap-shengming
 
 \pagestyle{plain}
 \input chapter/chap-abstract
@@ -25,7 +24,7 @@
 \tableofcontents
 }
 
-\clearpage
+$\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                ÕýÎÄ
@@ -43,7 +42,7 @@
 \include {chapter/chapter6}
 \include {chapter/chap-bibs}
 %\include {chapter/chap-pubs}
-%\include {chapter/chap-ack}
+\include {chapter/chap-ack}
 
 
 \end{document}

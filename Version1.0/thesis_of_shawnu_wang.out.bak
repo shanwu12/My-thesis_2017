@@ -5,9 +5,9 @@
 \BOOKMARK [2][]{subsection.1.2.2}{1.2.2 卫星导航}{section.1.2}% 5
 \BOOKMARK [1][]{section.1.3}{1.3 组合导航定位系统发展及现状}{chapter.1}% 6
 \BOOKMARK [1][]{section.1.4}{1.4 论文的内容及编排}{chapter.1}% 7
-\BOOKMARK [0][]{chapter.2}{第 2 章 \040小型化车载组合导航系统方案设计}{}% 8
+\BOOKMARK [0][]{chapter.2}{第 2 章 \040组合导航系统方案设计}{}% 8
 \BOOKMARK [1][]{section.2.1}{2.1 引言}{chapter.2}% 9
-\BOOKMARK [1][]{section.2.2}{2.2 车载组合导航系统坐标定义及转换换}{chapter.2}% 10
+\BOOKMARK [1][]{section.2.2}{2.2 导航系统坐标定义及转换}{chapter.2}% 10
 \BOOKMARK [2][]{subsection.2.2.1}{2.2.1 导航坐标系定义}{section.2.2}% 11
 \BOOKMARK [2][]{subsection.2.2.2}{2.2.2 坐标系变换原理}{section.2.2}% 12
 \BOOKMARK [1][]{section.2.3}{2.3 捷联惯导定位原理}{chapter.2}% 13
@@ -15,12 +15,12 @@
 \BOOKMARK [2][]{subsection.2.3.2}{2.3.2 速度更新}{section.2.3}% 15
 \BOOKMARK [2][]{subsection.2.3.3}{2.3.3 位置更新}{section.2.3}% 16
 \BOOKMARK [2][]{subsection.2.3.4}{2.3.4 低成本惯导的姿态初始化}{section.2.3}% 17
-\BOOKMARK [1][]{section.2.4}{2.4 组合定位系统方案分析与设计}{chapter.2}% 18
+\BOOKMARK [1][]{section.2.4}{2.4 组合系统方案分析与设计}{chapter.2}% 18
 \BOOKMARK [2][]{subsection.2.4.1}{2.4.1 惯导/GNSS组合方式}{section.2.4}% 19
 \BOOKMARK [2][]{subsection.2.4.2}{2.4.2 MEMS惯性传感器的误差模型}{section.2.4}% 20
-\BOOKMARK [2][]{subsection.2.4.3}{2.4.3 车载组合定位系统总体方案}{section.2.4}% 21
+\BOOKMARK [2][]{subsection.2.4.3}{2.4.3 系统总体方案}{section.2.4}% 21
 \BOOKMARK [1][]{section.2.5}{2.5 本章小结}{chapter.2}% 22
-\BOOKMARK [0][]{chapter.3}{第 3 章 \040小型化车载组合导航系统硬件设计}{}% 23
+\BOOKMARK [0][]{chapter.3}{第 3 章 \040组合导航系统硬件设计}{}% 23
 \BOOKMARK [1][]{section.3.1}{3.1 引言}{chapter.3}% 24
 \BOOKMARK [1][]{section.3.2}{3.2 硬件方案设计}{chapter.3}% 25
 \BOOKMARK [2][]{subsection.3.2.1}{3.2.1 需求分析与电路规划}{section.3.2}% 26
@@ -29,7 +29,7 @@
 \BOOKMARK [2][]{subsection.3.3.1}{3.3.1 系统原理图设计}{section.3.3}% 29
 \BOOKMARK [2][]{subsection.3.3.2}{3.3.2 系统PCB板设计}{section.3.3}% 30
 \BOOKMARK [1][]{section.3.4}{3.4 本章小结}{chapter.3}% 31
-\BOOKMARK [0][]{chapter.4}{第 4 章 \040小型化车载组合导航系统算法软件设计}{}% 32
+\BOOKMARK [0][]{chapter.4}{第 4 章 \040组合导航系统算法软件设计}{}% 32
 \BOOKMARK [1][]{section.4.1}{4.1 引言}{chapter.4}% 33
 \BOOKMARK [1][]{section.4.2}{4.2 卡尔曼滤波原理}{chapter.4}% 34
 \BOOKMARK [2][]{subsection.4.2.1}{4.2.1 线性离散系统的数学模型}{section.4.2}% 35
@@ -40,20 +40,19 @@
 \BOOKMARK [2][]{subsection.4.3.3}{4.3.3 系统量测方程}{section.4.3}% 40
 \BOOKMARK [1][]{section.4.4}{4.4 嵌入式软件设计}{chapter.4}% 41
 \BOOKMARK [2][]{subsection.4.4.1}{4.4.1 系统程序设计方案}{section.4.4}% 42
-\BOOKMARK [2][]{subsection.4.4.2}{4.4.2 MEMS传感器配置}{section.4.4}% 43
-\BOOKMARK [2][]{subsection.4.4.3}{4.4.3 GNSS模块配置}{section.4.4}% 44
-\BOOKMARK [2][]{subsection.4.4.4}{4.4.4 中断程序设计}{section.4.4}% 45
-\BOOKMARK [2][]{subsection.4.4.5}{4.4.5 Bootloader下载设计}{section.4.4}% 46
-\BOOKMARK [2][]{subsection.4.4.6}{4.4.6 FAT32文件系统的移植}{section.4.4}% 47
-\BOOKMARK [1][]{section.4.5}{4.5 本章小结}{chapter.4}% 48
-\BOOKMARK [0][]{chapter.5}{第 5 章 \040小型化车载组合导航系统测试与分析}{}% 49
-\BOOKMARK [1][]{section.5.1}{5.1 系统上位机软件设计}{chapter.5}% 50
-\BOOKMARK [1][]{section.5.2}{5.2 跑车试验}{chapter.5}% 51
-\BOOKMARK [1][]{section.5.3}{5.3 数据分析与结果}{chapter.5}% 52
-\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 组合定位结果}{section.5.3}% 53
-\BOOKMARK [2][]{subsection.5.3.2}{5.3.2 卫星失锁时定位效果}{section.5.3}% 54
-\BOOKMARK [1][]{section.5.4}{5.4 本章小结}{chapter.5}% 55
-\BOOKMARK [0][]{chapter.6}{第 6 章 \040总结与展望}{}% 56
-\BOOKMARK [1][]{section.6.1}{6.1 研究工作总结}{chapter.6}% 57
-\BOOKMARK [1][]{section.6.2}{6.2 工作展望}{chapter.6}% 58
-\BOOKMARK [0][]{chapter*.59}{参考文献}{}% 59
+\BOOKMARK [2][]{subsection.4.4.2}{4.4.2 中断程序设计}{section.4.4}% 43
+\BOOKMARK [2][]{subsection.4.4.3}{4.4.3 Bootloader下载设计}{section.4.4}% 44
+\BOOKMARK [2][]{subsection.4.4.4}{4.4.4 FAT32文件系统的移植}{section.4.4}% 45
+\BOOKMARK [1][]{section.4.5}{4.5 本章小结}{chapter.4}% 46
+\BOOKMARK [0][]{chapter.5}{第 5 章 \040组合导航系统测试与分析}{}% 47
+\BOOKMARK [1][]{section.5.1}{5.1 系统上位机软件设计}{chapter.5}% 48
+\BOOKMARK [1][]{section.5.2}{5.2 跑车试验}{chapter.5}% 49
+\BOOKMARK [1][]{section.5.3}{5.3 数据分析与结果}{chapter.5}% 50
+\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 组合定位结果}{section.5.3}% 51
+\BOOKMARK [2][]{subsection.5.3.2}{5.3.2 卫星失锁时定位效果}{section.5.3}% 52
+\BOOKMARK [1][]{section.5.4}{5.4 本章小结}{chapter.5}% 53
+\BOOKMARK [0][]{chapter.6}{第 6 章 \040总结与展望}{}% 54
+\BOOKMARK [1][]{section.6.1}{6.1 研究工作总结}{chapter.6}% 55
+\BOOKMARK [1][]{section.6.2}{6.2 工作展望}{chapter.6}% 56
+\BOOKMARK [0][]{chapter*.59}{参考文献}{}% 57
+\BOOKMARK [0][]{chapter*.60}{ \040致谢}{}% 58

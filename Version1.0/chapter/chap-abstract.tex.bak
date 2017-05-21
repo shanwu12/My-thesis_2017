@@ -1,4 +1,3 @@
-
 \newpage
 \pagenumbering{Roman}
 
@@ -6,17 +5,17 @@
 %                                中文摘要
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \centerline{\large \zihao{3}\heiti \hbox{摘要}} \vskip 0.3cm
-车载组合导航是现代智能车辆必不可少的一项重要功能。为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题针对微电子机械系统(MEMS)惯性传感器和卫星导航模块，完成了小型化MEMS惯导/GNSS组合导航模块的设计。
+车载组合导航是现代智能车辆必不可少的一项重要功能。为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题基于微电子机械系统(MEMS)惯性传感器和全球定位系统，完成了MEMS惯导/GNSS组合导航模块的设计。
 
-本文着重理解分析了组合定位的基本原理，确定采用位置/速度级的松组合导航算法，建立MEMS惯导姿态、速度和位置误差模型，并推导了卡尔曼滤波的状态方程和观测方程，完成导航系统数据的信息融合。整个系统设计主要可以分成硬件设计和软件设计。主要研究内容如下：
+本文着重理解分析了组合定位的基本原理，建立MEMS惯导姿态、速度和位置误差模型，推导了卡尔曼滤波的状态方程和观测方程。系统采用位置/速度松组合导航算法，以卡尔曼滤波器完成导航系统数据的信息融合，研究过程主要可以可分成硬件设计和软件设计。主要研究内容如下：
 
-1、模块以ARM微处理器、MEMS惯性器件、卫星定位模块中等为主要组成部分，详细给出系统硬件体系结构和具体的硬件选型及接口设计，完成硬件原理图和电路板制作，并进行硬件调试。
+1、导航模块以ARM微处理器、MEMS惯性器件、卫星接收机等为主要组成部分，详细给出系统硬件结构框架、硬件选型方案及接口设计。最后完成硬件原理图和电路板实物制作。
 
-2、在硬件实验平台的基础上，给出了软件设计流程图，并编写软件底层驱动程序和导航应用程序，实现多传感器通信，组合系统数据的融合解算、导航信息的存储等功能。
+2、以MEMS惯导15维导航参数误差作为状态量，建立组合系统数学模型。在硬件实验平台的基础上，本文给出了软件设计流程图，并编写软件底层驱动程序和组合导航算法软件，实现了多传感器通信，组合系统数据的融合解算、导航信息的存储等功能。
 
-3、设计了MEMS惯导/GNSS组合系统的实时监控界面，实现对数据的保存，模式选择、数据加载、轨迹显示等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
+3、设计了MEMS惯导/GNSS组合系统的实时监控软件，可以实现导航模式选择、运行轨迹显示、历史数据加载、数据的保存等功能，可以直观地显示车辆的运行状态。
 
-最后，对设计的组合导航模块进行车载实验，结果表明本设计的MEMS惯导/GNSS组合系统完成了实时导航系统的基本功能，且位置误差约$5\~7m$，速度误差约$0.2\~0.5m/s$，姿态误差约为$8^\circ$，满足车载组合系统小型化、低成本和实时性的设计要求。
+最后，对所设计的组合导航模块进行车载实验，结果表明本设计的MEMS惯导/GNSS组合系统完成了实时导航系统的基本功能，且位置误差约$5\sim7m$，速度误差约$0.2\sim0.5m/s$，姿态误差约为$8^\circ$，满足车载组合系统小型化、低成本和实时性的设计要求。
 
 \vskip 0.3cm \textbf{关键词}: 小型化；低成本；MEMS惯导；组合导航；卡尔曼滤波
 
@@ -28,9 +27,18 @@
 
 $\\$ \centerline{\large \zihao{3}\heiti\hbox{Abstract}}
 
+Vehicle Integrated Navigation system is an essential part of modern smart automobile.In order to satisfy Autopilot's demand for miniaturized navigation system with low cost and low energy consumption,A diminutive MEMS(Micro-Electro-Mechanical-Systems)-SINS/GNSS integrated navigation module was designed.
 
+In This thesis, we has addressed the basic principles of vehicle integrated navigation at first,established the error models in attitude, speed and location of MEMS SINS,and deduced equations of state and measurement of Kalman filtering.Finally,we determined to employ location/speed integrated navigation algorithm and choose the Kalman filter to completed the data integration of the navigation system.The design work of the system includes the hardware design and software design, and the main researches include:
 
-\textbf{Keywords}:
+(1)The navigation module consists of ARM microprocessor, MEMS inertial devices ,satellite navigation module and so on. The hardware system framework, chip selection and communication interface design are demonstrated in detail, and the production of hardware scheme and circuit board are finished.
 
+(2)The algorithm uses 15 navigation parameters of MEMS INS as status values,established the mathematical model of the combination system.This thesis produced the diagram of software design,software driver and navigation application based on the hardware platform. The functions including multi-sensor communications,integrated settlement and navigation information storage of integrated system can be reached.
+
+(3)This thesis has designed real-time monitoring software for MEMS SINS/GNSS integrated system, and brought the functions including data storage, model selection, data loading and trajectory display in realization, which can clearly shows the operating condition of the automobile featuring its practical application in engineering community.
+
+Finally,the project has carried on-site experiment of designed integrated navigation module, and the result shows that the MEMS(SINS)/GNSS integrated system has completed the basic functions of real-time navigation system as planned with the position error of $5\sim7m$, velocity error of$0.2\sim0.5m/s$ and attitude error around $8^\circ$. The result indicates that the designed module satisfies the demands for being miniaturized, low-cost and real-time of automotive system.
+
+\textbf{Keywords}:miniaturized;low cost;MEMS INS;integrated navigation;Kalman filtering
 
 \newpage

@@ -6,19 +6,19 @@
 %                                中文摘要
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \centerline{\large \zihao{3}\heiti \hbox{摘要}} \vskip 0.3cm
-车载组合导航是现代智能车辆必不可少的一项重要功能，为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题针对集成化MEMS惯性传感器和卫星导航模块，完成了小型化组合导航模块的设计。最后对整个导航模块进行实际测试，验证本设计组合导航系统能实现导航功能，满足导航模块小型化低成本的设计要求。
+车载组合导航是现代智能车辆必不可少的一项重要功能。为满足自动辅助驾驶系统对小型化低成本低功耗导航系统的需求，本课题针对微电子机械系统(MEMS)惯性传感器和卫星导航模块，完成了小型化MEMS惯导/GNSS组合导航模块的设计。
 
-在硬件基础上编写软件算法实现多传感器通信，数据的传输、存储等功能。
+本文着重理解分析了组合定位的基本原理，确定采用位置/速度级的松组合导航算法，建立MEMS惯导姿态、速度和位置误差模型，并推导了卡尔曼滤波的状态方程和观测方程，完成导航系统数据的信息融合。整个系统设计主要可以分成硬件设计和软件设计。主要研究内容如下：
 
-本文着重理解分析组合定位的基本原理，确定采用位置、速度的松组合导航算法，推导了卡尔曼滤波的状态方程和观测方程，完成导航系统数据的信息融合。设计主要可以分成硬件设计和软件设计两个方面。主要研究成果如下：
+1、模块以ARM微处理器、MEMS惯性器件、卫星定位模块中等为主要组成部分，详细给出系统硬件体系结构和具体的硬件选型及接口设计，完成硬件原理图和电路板制作，并进行硬件调试。
 
-1、模块以ARM微处理器、MEMS惯性器件、卫星定位模块中等为主要组成部分，详细给出系统硬件体系结构和具体的硬件选型及接口设计，给出硬件原理图和PCB设计，并进行硬件调试。
+2、在硬件实验平台的基础上，给出了软件设计流程图，并编写软件底层驱动程序和导航应用程序，实现多传感器通信，组合系统数据的融合解算、导航信息的存储等功能。
 
-2、设计驱动程序和应用程序。
+3、设计了MEMS惯导/GNSS组合系统的实时监控界面，实现对数据的保存，模式选择、数据加载、轨迹显示等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
 
-最后，设计了MEMS惯导/GNSS组合系统的实时监控界面，实现对数据的保存，模式选择、数据加载、轨迹显示等功能，可以直观地显示车辆的运行状态，具有很强的工程应用性。
+最后，对设计的组合导航模块进行车载实验，结果表明本设计的MEMS惯导/GNSS组合系统完成了实时导航系统的基本功能，且位置误差约$5\sim7m$，速度误差约$0.2\sim0.5m/s$，姿态误差约为$8^\circ$，满足车载组合系统小型化、低成本和实时性的设计要求。
 
-\vskip 0.3cm \textbf{关键词}: 模型预测控制；分布式控制；终端成本；终端控制器； 终端集。
+\vskip 0.3cm \textbf{关键词}: 小型化；低成本；MEMS惯导；组合导航；卡尔曼滤波
 
 \newpage
 
@@ -27,28 +27,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 $\\$ \centerline{\large \zihao{3}\heiti\hbox{Abstract}}
+Vehicle Integrated Navigation system is an essential part of modern smart automobile.In order to satisfy Autopilot’s demand for miniaturized navigation system with low cost and low energy consumption, this thesis designed diminutive Micro-Electro-Mechanical-Systems (MEMS) SINS/GNSS integrated navigation module.
 
-In the practical applications, the complex systems have the features of complex model, large scale, a great amount of variables and constraints. However, the traditional control methods cannot satisfy the requirements of the complex systems. Over the past years, distributed model predictive control (DMPC) is becoming an important tool to handle the large-scale complex systems due to its good control performance, capability of handling constraints and the structural
-flexibility. In the embryonic stage, the research of DMPC is confronted with many difficulties. For example, how to deal with the couplings between subsystems in order to make the optimization problem of each subsystem solvable; how to design the terminal ingredients (terminal cost, terminal controller and positive invariant terminal set) for each subsystem; how to guarantee the recursive feasibility and the closed-loop stability of the whole system.
+The thesis has addressed the basic principles of vehicle integrated navigation,established the error models in attitude, speed and location of MEMS SINS,and deduced equations of state and measurement of Kalman filtering.Finally,this thesis determined to employ location/speed integrated navigation algorithm and choose the Kalman filter to completed the data integration of the navigation system.The design work of the system includes the hardware design and software design, and the main researches include:
 
-Motivated by this, this dissertation focuses on the research of DMPC for multi-agent systems and explores the problems of regulation, consensus and formation, respectively. The
-main contents and results in this dissertation are summarized as follows:
+(1)The navigation module consists of ARM microprocessor, MEMS inertial devices ,satellite navigation module and so on. The hardware system framework, chip selection and communication interface design are demonstrated in detail, and the production of hardware scheme and circuit board are finished.
 
-1. A DMPC algorithm is presented for the regulation of linear multi-agent systems with the coupled cost and coupled constraints. At each sampling time, all the agents are permitted to synchronously optimise. An improved compatibility constraint is constructed to ensure the consistency between the actual state trajectory of each agent and its assumed one. With the parameters of the coupled constraints, a positive invariant terminal set, which can definitely ensure the satisfaction of the coupled constraint, and an associated terminal cost (a local Lyapunov function) are
-designed in a distributed manner. By applying the proposed distributed optimization algorithm, the recursive feasibility with respect to both local and coupled constraints and the closed-loop stability of the whole system are guaranteed. In final, the numerical results of the comparisons between the DMPC algorithm and the centralised model predictive control (CMPC) are given to show the effectiveness of the proposed algorithm. The results show that the DMPC algorithm
- not only dramatically decreases the optimizing time but also maintains
-most of the control performance of CMPC.
+(2)The algorithm uses 15 navigation parameters of MEMS INS as status values,established the mathematical model of the combination system.This thesis based on the hardware researching platform,produced the diagram of software design, the software driver and navigation application, with which the , and functions including multi-sensor communications,integrated settlement and navigation information storage of integrated system can be reached.
 
-2. A DMPC algorithm is investigated for the consensus of second-order nonlinear multi-agent systems with coupled cost. All the agents share one reference trajectory. With the synchronous update strategy, a time-varying compatibility constraint, which plays an important to ensure the stability, is presented to ensure that the actual state trajectory of each subsystem does not deviate too much from its assumed
-one. Furthermore, a positively invariant terminal region and a corresponding auxiliary controller are developed for each agent. Given the designed terminal ingredients and compatibility constraints, the recursive feasibility and closed-loop stability of the whole system are guaranteed. A numerical example of 2-Degree-of-Freedom (2-DoF) robotic manipulator illustrates the efficacy of the proposed algorithm.
 
-3. A DMPC algorithm is explored for the formation of second-order linear multi-agent systems with collision avoidance. With the synchronous update strategy, the improved compatibility constraints with respect to both the position compatibility and the state compatibility,  are designed for each agent. The collision avoidance constraints are tightened by replacing the actual positions of each agent's neighbors with their assumed ones. By using the second-order model and the formation, the terminal ingredients are designed. Particularly, the states in the positively invariant terminal sets satisfy the collision avoidance constraints. By implementing the proposed distributed optimization algorithm, the recursive feasibility of the optimization problem, the closed-loop stability of the whole system and the collision avoidance between agents are guaranteed. A numerical example illustrates the effectiveness of the proposed algorithm.
 
-At the end of this dissertation, the main results are concluded and the problems to
-be solved in the future are presented.
-
-\textbf{Keywords}: Model predictive control (MPC); Distributed control; Terminal cost;
-Terminal controller; Terminal set.
+\textbf{Keywords}:
 
 
 \newpage

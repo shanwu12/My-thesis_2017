@@ -1,32 +1,33 @@
-\chapter{小型化车载组合导航系统算法软件设计}
+\chapter{组合导航系统软件设计}
 
 \section{引言}
-组合导航技术的发展，一方面得益于电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法也为组合导航系统提供了有力的理论基础\cite{QinYong(2015)}。在上一章完成硬件平台的设计的基础上，本章讲述MEMS惯导和GPS 传感器组合系统的软件工程实现，主要从嵌入式软件，卡尔曼滤波算法，上位机显示等方面进行说明。
+%组合导航技术的发展，一方面得益于电子硅工艺技术的提高，另一方面现代控制理论，特别是最优估计理论的数据处理方法也为组合导航系统提供了有力的理论基础\cite{QinYong(2015)}。
+在上一章完成硬件平台的设计的基础上，本节讨论MEMS惯导/GNSS组合系统基本滤波器的设计，采用第二章中图\ref{chap2_Fig.4}所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中子系统各自分开工作，选则导航参数误差作为系统状态量\cite{JinLi(1994)}，以位置、速度信息为外部观测量，通过卡尔曼滤波器对惯导解算数据修正后求出导航最优解，该算法具有实现简单，可靠性较高，计算量低等优点。本章着重编写MEMS 惯导/GNSS组合系统的软件算法，主要从嵌入式软件，组合导航算法等方面进行说明。
 
-\section{组合系统模型的设计}
-本节讨论MEMS惯导/GNSS组合系统基本滤波器的设计，采用第二章中图\ref{chap2_Fig.4}所示的松组合结构，松组合是一种简单、直观的组合方式，此模式中MEMS 惯导和GNSS接收机保持独立工作，选则导航误差作为系统状态量\cite{JinLi(1994)}，以位置、速度信息作为外部观测量，通过卡尔曼滤波对数据进行融合并将得到的误差量反馈给MEMS惯导进行修正求出导航最优解，给出低成本IMU/GNSS 组合导航系统滤波组合算法，该算法具有实现简单，可靠性较高，计算量低等优点。
-\subsection{离散化卡尔曼滤波设计}
-卡尔曼滤波器是组合导航系统中最常用的一种数据融合算法。它是在上世纪60年代随着现代控制理论的发展提出的一种最优估计技术，对于具有零均值高斯分布噪声的线性系统而言，是通过与信号有关的观测量估计出所需信号的一种实时递推的最小方差估计方法，可以估计系统的各种误差状态，利用误差状态的估计可以校正补偿系统，达到系统组合的目的。因此，设计组合导航系统的卡尔曼滤波器的设计是非常重要的一步。
+\section{卡尔曼滤波原理}
+
+\subsection{线性离散系统的数学模型}
+卡尔曼滤波器是在上世纪60年代随着现代控制理论的发展提出的一种最优估计技术，对于具有零均值高斯分布噪声的线性系统而言，是通过与信号有关的观测量估计出所需信号的一种实时递推的最小方差估计方法，可以估计系统的各种误差状态，利用误差状态的估计可以校正补偿系统，达到系统组合的目的。因此，设计组合导航系统的卡尔曼滤波器的设计是非常重要的一步。
 
 在实际的应用设计中，为了便于计算机进行迭代运算，通常需要将连续形式的的系统方程进行离散化。离散后的系统方程如下\cite{QinYong(2015)}：
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{X}_k &= \boldsymbol{\phi}_{k,k-1}\boldsymbol{X}_{k-1}+\boldsymbol{\Gamma}_{k-1}\boldsymbol{W}_{k-1}\\
-\boldsymbol{Z}_k &= \boldsymbol{H}_{k}\boldsymbol{X}_{k}+\boldsymbol{V}_{k}
+{X}_k &= {\phi}_{k,k-1}{X}_{k-1}+{\Gamma}_{k-1}{W}_{k-1}\\
+{Z}_k &= {H}_{k}{X}_{k}+{V}_{k}
 \end{aligned}
 \right.
 \label{4.1}
 \end{equation}
 
-式中，$\boldsymbol{\phi}_{k,k-1}$是$k-1$时刻至$k$时刻的$n$阶的一步状态转移矩阵，$\boldsymbol{\Gamma}_{k-1}$是$n\times p$维系统噪声输入矩阵，$W_{k-1}$为$k-1$时刻的系统噪声。$\boldsymbol{H}_{k}$ 为$k$时刻的量测矩阵，$\boldsymbol{V}_k$是$k$时刻的量测噪声。
+式中，${\phi}_{k,k-1}$是$k-1$时刻至$k$时刻的$n$阶的一步状态转移矩阵，${\Gamma}_{k-1}$是$n\times p$维系统噪声输入矩阵，$W_{k-1}$为$k-1$时刻的系统噪声。${H}_{k}$ 为$k$时刻的量测矩阵，${V}_k$是$k$时刻的量测噪声。
 
-在卡尔曼滤波计算中，对系统的模型要求十分严格，要求${\boldsymbol{W}_{k}}$和${\boldsymbol{V}_{k}}$ 是互不相关的，同时两者为零均值的白噪声序列，他们满足如下式子\cite{QinYong(2015)}：
+在卡尔曼滤波计算中，要求${{W}_{k}}$和${{V}_{k}}$ 是互不相关的，同时两者为零均值的白噪声序列，他们满足如下式子\cite{QinYong(2015)}：
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol E[\boldsymbol{W}_{k}] &= 0\\
-\boldsymbol E[\boldsymbol{W}_{k}\boldsymbol{W}_{j}^T] &= Q_k\delta_{kj}
+\boldsymbol E[{W}_{k}] &= 0\\
+\boldsymbol E[{W}_{k}{W}_{j}^T] &= Q_k\delta_{kj}
 \end{aligned}
 \right.
 \label{4.2}
@@ -34,8 +35,8 @@
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{E}[\boldsymbol{V}_{k}] &= 0\\
-\boldsymbol{E}[\boldsymbol{V}_{k}\boldsymbol{V}_{j}^T] &= R_k\delta_{kj}
+\boldsymbol{E}[{V}_{k}] &= 0\\
+\boldsymbol{E}[{V}_{k}{V}_{j}^T] &= R_k\delta_{kj}
 \end{aligned}
 \right.
 \label{4.3}
@@ -43,6 +44,7 @@
 
 $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足对称正定阵；$\delta_{kj}$为$Kronecker-\delta $函数，且过程噪声和观测噪声均满足与初始状态$X_0$不相关。这在实际工程环境下，观测误差的特性与数值实际上不会受到系统初始状态的影响；其次，系统的过程噪声理论也不会受到初始状态的影响。
 
+\subsection{离散化卡尔曼滤波基本方程}
 若被估计状态$X_k$与其观测量$Z_k$满足卡尔曼滤波的约束条件，假设$K$ 时刻的观测为$Z_k$，且已获得$k-1$时刻状态$X_{k-1}$的最优估计值$\hat{X}_{k-1}$，则状态$X_k$的估计值$\hat{X}_{k}$可由如下方程求解\cite{QinYong(2015)}；
 
 离散系统$k-1$时刻至$k$时刻的状态一部预测：
@@ -72,21 +74,22 @@ $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足
 
 公式(\ref{4.4}-\ref{4.8})即为随机离散系统的卡尔曼滤波递推方程。只需要给定初始的${\hat{X}}_{0}$、 初始噪声误差协方差矩阵${P}_{0}$、系统初始过程噪声方差矩阵${Q}_{k}$与初始观测噪声方差矩阵${R}_{k}$，则可以通过卡尔曼滤波递推的方式根据$k$时刻的观测值$Z_k$计算出该时刻的状态最优估计值${\hat{X}}_{k}$。本文中的MEMS 惯导/GNSS组合系统中的误差量看成小量，误差量的高阶项可看做高阶小量而略去，可将误差方程描述为线性方程，采用的是线性卡尔曼滤波器，在下一节将推导导航系统的状态方程和量测方程来构造卡尔曼滤波器，对MEMS惯导进行反馈校正。
 
-\subsection{捷联惯导系统误差建模}
+\section{组合系统模型设计}
 
+\subsection{MEMS惯导系统误差模型}
 (1)姿态误差方程
 
-不考虑任何误差时，理想姿态四元数满足：
+不考虑任何误差时，理想四元数满足：
 \begin{equation}
-\dot{Q} = \frac{1}{2}\mathbf{Q}\otimes\omega_{nb}^b %\label{2.22}
+\dot{\mathbf{Q}} = \frac{1}{2}\mathbf{Q}\otimes\omega_{nb}^b \label{quaternion_att}
 \end{equation}
 
-考虑实际误差时，真实的四元数表示为：
+考虑实际误差时，真实的四元数满足：
 \begin{equation}
-\dot{\hat{Q}} = \frac{1}{2}\hat{Q}\otimes\hat{\omega}_{nb}^b %\label{2.22}
+\dot{\mathbf{\hat{Q}}} = \frac{1}{2}\hat{\mathbf{Q}}\otimes\hat{\omega}_{nb}^b %\label{2.22}
 \end{equation}
 
-记$\varphi$为姿态误差角矢量，即$\hat{Q}$和$Q$确定的两个导航坐标系之间的偏差角矢量，$\omega_{nb}^b$参考式\ref{2.26}。根据文献\citep{YanGM(2004),MiaoYW(2013)}推导，可以得到MEMS惯导姿态误差方程矢量形式:
+记$\varphi$为姿态误差角矢量，即$\hat{Q}$和$Q$确定的两个导航系之间的偏差角矢量，$\omega_{nb}^b$参考式\ref{2.25}。根据文献\citep{YanGM(2004),MiaoYW(2013)}推导，可以得到MEMS惯导姿态误差方程矢量形式:
 \begin{equation}
 \dot{\varphi}=\varphi\times\omega_{in}^n+\delta\omega_{in}^n-\varepsilon^n
 \label{4.11}
@@ -152,26 +155,26 @@ $Q_k$是系统过程噪声方差矩阵，满足非负定的条件；$R_k$是系统观测噪声方差矩阵，满足
 
 根据式(\ref{2.31})的MEMS惯导比力方程，理想状态下当忽略系统误差时速度解算方程表示为：
 \begin{equation}
-{\dot{V}}^n= \boldsymbol{C}^n_b{f}^b-(2\omega_{ie}^n+\omega_{en}^n)\times V^n + g^n
+{\dot{V}}^n= \mathbf{C}^n_b{f}^b-(2\omega_{ie}^n+\omega_{en}^n)\times V^n + g^n
 \label{4.15}
 \end{equation}
 
-若考虑系统中存在的各种扰动误差，则实际的速度计算应该表示为\cite{DengZZ(2012)}：
+若考虑系统中各种扰动误差，则实际的速度计算应该表示为\cite{DengZZ(2012)}：
 \begin{equation}
-{\dot{V}}^c= \mathbf{\hat{C}}^n_b\mathbf{\tilde{f}}^b-(2\omega_{ie}^c+\omega_{en}^c)\times V^c + g^c
+{\dot{V}}^c= \mathbf{\hat{C}}^n_b{\tilde{f}}^b-(2\omega_{ie}^c+\omega_{en}^c)\times V^c + g^c
 \label{4.16}
 \end{equation}
 
 式中：
 \begin{align}
 V^c&=V^n+\delta V^n ,\quad\omega_{ie}^c=\omega_{ie}^n+\delta \omega_{ie}^n ,\quad \omega_{en}^c=\omega_{en}^n+\delta \omega_{en}^n ,\quad  g^c=g^n+\delta g \notag\\
-\mathbf{\hat{C}}^n_b &= \mathbf{C}^{n'}_n\mathbf{C}^n_b=(\mathbf{I}-\varphi^n \times)\mathbf{C}^n_b, \quad \mathbf{\tilde{f}}^b=\mathbf{f}^b+\bigtriangledown^b
+\mathbf{\hat{C}}^n_b &= \mathbf{C}^{n'}_n\mathbf{C}^n_b=(\mathbf{I}-\varphi^n \times)\mathbf{C}^n_b, \quad {\tilde{f}}^b={f}^b+\bigtriangledown^b
 \label{4.17}
 \end{align}
 其中，
-$\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去\ref{4.17}，忽略$\delta g$的影响，并略去二阶小量，得速度误差方程：
+$\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去\ref{4.15}，忽略$\delta g$的影响，得速度误差方程：
 \begin{equation}
-\mathbf{\delta\dot{V}}^n=-\varphi^n \times \mathbf{f}^n+\delta V^n\times(2 \omega^n_{ie}+\omega^n_{en})+ \mathbf{V}^n\times(2\delta{\omega}^n_{ie}+\delta{\omega}^n_{en})+\bigtriangledown^n
+\mathbf{\delta\dot{V}}^n=-\varphi^n \times {f}^n+\delta V^n\times(2 \omega^n_{ie}+\omega^n_{en})+ \mathbf{V}^n\times(2\delta{\omega}^n_{ie}+\delta{\omega}^n_{en})+\bigtriangledown^n
 \label{4.18}
 \end{equation}
 
@@ -189,9 +192,9 @@ $\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去
 \varphi_n & -\varphi_e & 0 \\
 \end{array}\right]
 \left [\begin{array}{ccc}
-\mathbf{f}_e\\
-\mathbf{f}_n\\
-\mathbf{f}_u\\
+{f}_e\\
+{f}_n\\
+{f}_u\\
 \end{array}\right]
 +
 \left [\begin{array}{ccc}
@@ -233,6 +236,8 @@ $\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去
 & \quad +\delta h \frac{V_eV_n-V_eV_n\tan L}{(R_N+h)^2}+\bigtriangledown_e \label{4.20}\\
 \delta\dot{\mathbf V}_n &= -\varphi_u f_e + \varphi_e f_u - \delta V_e\cdot2(\omega\sin L+\frac{V_e}{R_N+h}\tan L)-\delta V_n\frac{V_u}{R_M+h}-\delta V_u\frac{V_n}{R_M+h}\notag\\
 & \quad -\delta L(2V_e\omega_{ie}\cos L + \frac{V_e^2}{R_N+h}\sec^2L)+\delta h [\frac{V_uV_n}{(R_M+h)^2}+\frac{V_e^2\tan L}{(R_N+h)^2}]+\bigtriangledown_n \label{4.21}\\
+\end{align}
+\begin{align}
 \delta\dot{\mathbf V}_u &= \varphi_e f_e - \varphi_e f_n + 2\delta V_e(\omega_{ie}\cos L+\frac{V_e}{R_N+h})+\delta V_n\frac{2V_n}{R_M+h}-2V_e\delta L\omega_{ie}\sin L\notag\\
 & \quad -\delta h[\frac{V_e^2}{(R_N+h)^2}+\frac{V_n^2}{(R_M+h)^2}]+\bigtriangledown_u \label{4.22}\\ \notag
 \end{align}
@@ -263,12 +268,12 @@ $\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去
 式中，$R_N$是地球参考椭圆卯酉圈上的曲率半径，$R_M$则是地球参考椭圆子午圈上各点的曲率半径。
 
 \subsection{系统状态方程}
-综合MEMS惯导的误差方程，可以得到GNSS/MEMS惯导组合系统的状态方程表达式\cite{ShinEH(2001),FuMengYin(2010)}：
+综合MEMS惯导的误差方程(\ref{4.12}、\ref{4.19}、\ref{4.24})，可以得到MEMS惯导/GNSS组合系统的状态方程表达式\cite{ShinEH(2001),FuMengYin(2010)}：
 \begin{equation}
 \dot X(t) = F(t)X(t)+G(t)W(t) \label{4.25}
 \end{equation}
 
-本设计中组合系统以15维导航误差作为系统的待估计状态，误差包括三维姿态、三维速度、三维位置、还有陀螺漂移及三个加速度计零偏，状态向量表示为：
+本设计中系统以15维导航误差作为系统的待估计状态，包括三维姿态、三维速度、三维位置、还有陀螺漂移及三个加速度计零偏，状态向量表示为：
 \begin{equation}
  X = [\varphi_e \ \ \varphi_n \ \ \varphi_n\ \ \delta V_e\ \ \delta V_n\ \ \delta V_u\ \ \delta L\ \ \delta \lambda\ \ \delta h\ \  \varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z\ \  \bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T
 \label{4.9}
@@ -276,17 +281,17 @@ $\varphi$为姿态误差角，$\bigtriangledown$为加速度计随机误差， 用式\ref{4.16}减去
 
 其中：
 
-$[\varphi_e \ \ \varphi_n \ \ \varphi_n]^T$为导航坐标系上的东北天三维姿态误差角；
+$[\varphi_e \ \ \varphi_n \ \ \varphi_n]^T$为导航系上的东北天三维姿态误差角；
 
 $[\delta V_e\ \ \delta V_n\ \ \delta V_u]^T$为分别为东北天方向三维速度误差；
 
 $[\delta L\ \ \delta \lambda\ \ \delta h]^T$为纬度、经度和高度误差；
 
-$[\varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z]^T$为沿载体坐标系$x$、$y$、$z$轴上的陀螺漂移，模型建立为一阶高斯马尔可夫；
+$[\varepsilon_x\ \ \varepsilon_y\ \ \varepsilon_z]^T$为陀螺仪沿载体坐标系$x$、$y$、$z$轴上的漂移，模型建立为一阶高斯马尔可夫；
 
-$[\bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T$为沿载体坐标系$x$、$y$、$z$ 轴上的加速度计零偏，模型建立为一阶高斯马尔可夫；
+$[\bigtriangledown_x\ \ \bigtriangledown_y\ \ \bigtriangledown_z]^T$为加速度计沿载体坐标系$x$、$y$、$z$ 轴上的零偏，模型建立为一阶高斯马尔可夫；
 
-在误差建模时，不仅要考虑陀螺和加速度计的零偏，还应考虑刻度系数误差和安装误差，但考虑到增加了系统建模的复杂性且对导航结果提高有限，故只考虑陀螺和加速度计的零偏，其中$\varepsilon=[\varepsilon_x \ \ \varepsilon_y \ \ \varepsilon_z]^T$，$\bigtriangledown=[\bigtriangledown_x \ \bigtriangledown_y \ \bigtriangledown_z]^T$分别为陀螺和加速度计零偏，而$\varepsilon$,$\bigtriangledown$ 可写成以下形式一阶高斯马尔可夫模型：
+在误差建模时，考虑到增加了系统建模的复杂性且对导航结果提高有限，故只考虑陀螺和加速度计的零偏，其中$\varepsilon=[\varepsilon_x \ \ \varepsilon_y \ \ \varepsilon_z]^T$，$\bigtriangledown=[\bigtriangledown_x \ \bigtriangledown_y \ \bigtriangledown_z]^T$分别为陀螺和加速度计零偏，而$\varepsilon$,$\bigtriangledown$ 可写成以下形式一阶高斯马尔可夫模型：
 \begin{equation}
 \left\{
 \begin{aligned}
@@ -317,8 +322,7 @@ G =
 0_{9\times3} & 0_{9\times3}\\
 \end{array}\right]_{15\times6}
 \label{4.27}
-\end{equation}
-
+\end{equation}\\
 其中各式子矩阵表达式如下\cite{YanGM(2004),DengZZ(2012)}：
 \begin{equation}
 \displaystyle
@@ -326,6 +330,11 @@ G =
 F_N(1,2)=\omega\sin{L}+\frac{V_e}{R_N+h}\tan{L},\hspace{2cm} &F_N(1,3)=-(\omega\cos{L}+\frac{V_e}{R_N+h})\vspace{1ex}\\
 F_N(1,5)=-\frac{1}{R_M+h},\hspace{2cm} &F_N(1,9)=\frac{V_n}{(R_M+h)^2}\vspace{1ex}\\
 F_N(2,1)=-(\omega_{ie}\sin{L}+\frac{V_e}{R_N+h}\tan{L}),&F_N(2,3)=-\frac{V_n}{R_M+h}\vspace{1ex}\\
+\end{array}
+\end{equation}
+\begin{equation}
+\displaystyle
+\begin{array}{ll}
 F_N(2,4)=\frac{1}{R_N+h},&F_N(2,7)=-\omega_{ie}\sin{L}\vspace{1ex}\\
 F_N(2,9)=-\frac{V_e}{(R_N+h)^2},&F_N(3,1)=\omega\cos{L}+\frac{V_e}{R_N+h}\vspace{1ex}\\
 F_N(3,2)= \frac{V_n}{R_M+h} ,&F_N(3,4)=\frac{\tan{L}}{R_N+h}\vspace{1ex}\\
@@ -347,7 +356,6 @@ F_N(8,9)=-\frac{V_e\sec{L}}{(R_N+h)^2},&F_N(9,6)=1\\
 \label{4.28}
 \end{equation}
 
-
 $F_s(t)$和$F_\tau(t)$是基本导航参数与惯性仪表误差之间的转换矩阵:
 \begin{equation}
 F_s =
@@ -366,7 +374,7 @@ F_\tau =
 \end{equation}
 
 \subsection{系统量测方程}
-GNSS/MEMS惯导松组合模型的观测方程我们采用速度和位置的方式，即选择GNSS信号得到的速度和位置与惯性解算得到的速度与位置之差作为观测量\cite{WangXL(2015)}。
+GNSS/MEMS惯导松组合系统选择MEMS惯性解算得到的速度与位置同GNSS信号得到的速度和位置与之差作为观测量\cite{WangXL(2015)}。
 
 位置观测向量$Z_P$为：
 \begin{equation}
@@ -382,7 +390,7 @@ h_I-h_G\\
 \end{equation}
 
 其中，$\boldsymbol{H_P}=[0_{3\times6} \ \ I_{3\times3}\ \ 0_{3\times6}]$,下标$I$表示MEMS惯导，下标$G$表示卫星信号，$V_p$为卫星信号的位置观测噪声。
-同理，速度观测量$Z_v$为
+同理，速度观测量$Z_v$为：
 \begin{equation}
 \boldsymbol{Z}_v(t) =
 \left [\begin{array}{l}
@@ -423,22 +431,23 @@ v_{IU}-v_{GU}\\
 \section{嵌入式软件设计}
 
 \subsection{系统程序设计方案}
-根据前面章节系统总体设计和卡尔曼滤波算法的分析，车载组合导航软件设计主要有：硬件驱动的设计、外设传感器软件配置、数据的处理和导航算法移植等。软件设计时采用C语言编程来实现，方便程序代码的裁剪和移植。
+根据前面章节总体设计和卡尔曼滤波算法的分析，导航软件设计主要有：硬件驱动的设计、传感器初始化配置和导航算法移植等。软件设计时采用C语言编程来实现，方便程序的裁剪和移植\cite{Liusen(2006)}。
+
+本课题设计的低成本MEMS惯导/GNSS组合系统的软件流程如图\ref{chap4_Fig.1}所示，首先对ARM硬件系统进行初始化，串口、SPI、SDIO接口等的初始化以及定时器的初始化，并通过定时器中断方式来不断接收和处理MEMS惯导和GNSS 的数据。其中BMI160 我们以100Hz 取数，远高于GNSS1Hz 的采集频率。程序在循环中等待惯导的初始化对准，在对准完成之前，系统以GNSS数据为准进行导航，对准完成后，完成MEMS惯导和GNSS数据的时间同步。当GNSS数据标识位无效时，处理器只对MIMU信号处理并输出捷联导航系统的解算信息；当GNSS 数据有效时，数据导入滤波器中进行解算，得到的结果对惯导进行误差校正，最后输出的组合导航信息以串口方式发送给上位机进行实时显示或保存至SD卡中。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.7\textwidth]{figures/chap4/chap4_software}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.65\textwidth]{figures/chap4/chap4_software}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{组合系统流程图}
  \label{chap4_Fig.1}
  \vspace{-0.4cm}
-\end{figure}
+\end{figure}\\
+%\subsection{MEMS传感器配置}
+一、MEMS传感器配置
 
-本课题设计的低成本MEMS惯导/GNSS组合系统的软件流程如图\ref{chap4_Fig.1}所示，首先对ARM硬件系统进行初始化，串口、SPI、SDIO接口等的初始化以及定时器的初始化，并通过定时器中断方式来不断接收和处理MEMS惯导和GNSS的数据。其中BMI160 我们以100Hz 取数，远高于GNSS1Hz 的采集频率。程序在循环中等待惯导的初始化对准，在对准完成之前，系统以GNSS数据为准进行导航，对准完成后，完成MEMS惯导和GNSS数据的时间同步。当GNSS数据标识位无效时，处理器只对MIMU信号处理并输出捷联导航系统的解算信息；当GNSS 数据有效时，数据导入卡尔曼滤波器中进行解算，得到的结果对惯导进行误差校正，最后输出的组合导航信息以串口方式发送给上位机进行实时显示或保存至SD卡中。
+为了MEMS传感器能够正常工作，需要配置它的工作方式，传输速率和通信方式等,在设计加速度计软件驱动时，要以车辆的运行环境设置相应的测量范围：$\pm2g$，$\pm4g$，$\pm8g$，$\pm16g$，测量精度均为16位，车辆运行过程属于低动态，设计中加速度计采用$\pm2g$测量范围，陀螺仪量程选择$\pm125^\circ/s$。
+MEMS陀螺仪初始化配置程序主要完成陀螺仪的初始化配置，首先是设置数据采样率，即数据输出率，同时需要设置信号带宽及截止频率。然后设置工作模式，BMI160设计有低功耗模式，在不采集数据时，可以设置成睡眠模式，降低系统功耗，数据输出格式采用二进制补码数据格式，在软件上编写数据转换代码即可得到所需要的数据，由于误差，导致输出数据时常出现异常，在软件中做逻辑分析，滤掉无效数据，由于零漂，还要配置偏移寄存器完成补偿。
 
-\subsection{MEMS传感器配置}
-为了MEMS传感器能够正常工作，需要配置它的工作方式，传输速率和通信方式等,在设计加速度计软件驱动时，首先要考虑其测量范围，根据在载体实际所处的环境设置相应的测量范围：$\pm2g$，$\pm4g$，$\pm8g$，$\pm16g$，测量精度均为16位，车辆运行过程属于低动态，设计中加速度计采用$\pm2g$测量范围，陀螺仪量程选择$\pm125^\circ/s$。
-MEMS陀螺仪初始化配置程序主要完成陀螺仪的初始化配置，首先是设置数据采样率，即数据输出率，同时需要设置信号带宽及截止频率。然后设置工作模式，BMI160设计有低功耗模式，在不采集数据时，可以设置成睡眠模式，降低系统功耗，数据输出格式采用二进制补码数据格式，在软件上编写数据转换代码即可得到所需要的数据，由于误差，导致输出数据时常出现临界跳变，在软件中做相应逻辑分析，剔除无效数据，由于常值漂移，还要设置BMI160的偏移寄存器，补偿常值漂移。
-
-先利用sensor\_BMI160\_init()对BMI160初始化，使用SPI\_writed单字节写入函数写入寄存器数据，配置陀螺仪、加速度计量程，设置采样频率等，每次采样结束后，加载数据到输出寄存器中，然后在定时器中断函数中的\\
+先利用sensor\_BMI160\_init()对BMI160初始化，使用SPI\_writed单字节写入函数写入寄存器数据，配置陀螺仪、加速度计量程，设置采样频率等，每次采样结束后，加载数据到输出寄存器中，然后在定时采样中通过\\
 s8 \ bmi160\_read\_sensor\_data(\&bmi160\_data$[$ g8BmiWrPt $]$ )
 函数对BMI160里面的数据进行获取。
 
@@ -450,9 +459,10 @@ uint \ timeTag;   \hspace{4.5cm}$/*time \ in \ \lbrack ms \rbrack */$
 
 int \ \ \  sensor \lbrack MAX\_DR\_NUM\_SNSR \rbrack ; \hspace{0.3cm} $/*3 \ gyro \ deg/s , \ \ 3 \ accel \ m/s^2 , scaled \ by \ 1000;*/$ \\% /* 3 gyro in deg/s, 3 accel in m/s^2; scaled by 1000 */\\
 \} tExternalDRSensorData;
+\\%\subsection{GNSS模块配置}
+二、GNSS模块配置
 
-\subsection{GNSS模块配置}
-NEO\-M8N模块同处理器芯片采用UART(串口)方式，默认波特率115200bps,输出的GNSS定位数据采用NMEA-0183 协议。在开启GPS模块前，首先要使能给该模块单独供电的稳压芯片，然后对模块以及串口进行初始化。
+NEO-M8N模块同处理器芯片采用UART(串口)方式，默认波特率115200bps,输出的GNSS定位数据采用NMEA-0183 协议。硬件上在开启GPS模块前，首先要使能给该模块单独供电的电源稳压芯片，继而初始化该模块以及串口。
 
 (1)模块初始化：
 
@@ -482,7 +492,7 @@ TIM5作为一个1us的时间计数器，计算算法等待时间的长度，判断数据解算的有效性。
 
 (2)串口接收中断
 
-串口作为MCU的重要外部接口，是软件开发的重要调试手段。编写中断处理函数USART2\_IRQHandler()，主要给用户提供接口，方便程序的下载与调试。一方面系统采用USART进行两个控制器的数据传输，采用USART中断接收GNSS的数据，写入相应寄存器中，同时也通过USART接口完成与上位机的通信功能，其中USART2负责双机通信与上位机或其他设备通信，USART3 接收GNSS模块数据；此外通过检测串口接收数据中是否收到要进入程序升级的标志，跳转至bootloader 代码中执行更新中断服务程序，设计了如表\ref{chap4_Table 1} 串口接收数据更新的协议：
+串口作为MCU的重要外部接口，是软件开发的重要调试手段。编写中断处理函数USART2\_IRQHandler()，主要给用户提供接口，方便程序的下载与调试。一方面系统采用USART进行两个控制器的数据传输，采用USART中断接收GNSS的数据，写入相应寄存器中，同时也通过USART接口完成与上位机的通信功能，其中USART2负责双机通信与上位机或其他设备通信，USART3 接收GNSS模块数据；此外通过检测串口接收数据中是否收到要进入程序升级的标志，跳转至bootloader 代码中执行更新服务程序，设计了如表\ref{chap4_Table 1} 串口接收数据更新的协议：
 \begin{table}[!h]
 \renewcommand\arraystretch{1.2}
 \centering
@@ -503,7 +513,7 @@ TIM5作为一个1us的时间计数器，计算算法等待时间的长度，判断数据解算的有效性。
  \label{chap4_Fig.3}
  \vspace{-0.4cm}
 \end{figure}
-在嵌入式系统中，Bootloader即是系统的引导程序，其作用与电脑操作系统上的BIOS非常类似，通过Bootloader可以完成对ARM板上的主要器件如CPU、FLASH、串口等进行初始化，还可以对Flash进行读写操作实现软件升级功能，简而言之，Bootloader就是在操作系统内核运行之前运行的一段程序，通过这段程序，我们可以初始化硬件设备、建立内存空间的映射图，从而将系统的软硬件环境分配处在一个合适的状态。本课题为方便产品程序的下载，单独编写了一个用于下载程序的上位机程序，界面如图\ref{chap4_Fig.3}所示。MDK编译可以生成二进制BIN文件，在得到XX.bin文件后,用户程序在运行过程中对User Flash的部分区域重新烧写即可更新设备的软件代码，这样后期可以方便的通过预留通信接口对产品进行更新升级。
+在嵌入式系统中，Bootloader即是系统的引导程序，其作用与电脑操作系统上的BIOS非常类似，通过Bootloader可以完成对ARM板上的主要器件如CPU、FLASH、串口等进行初始化，还可以对Flash进行读写操作实现软件升级功能，简而言之，Bootloader就是在应用程序在运行之前的一段程序，运行这段程序可以完成系统的自检和程序自启动。本课题为方便产品程序的下载，单独编写了一个用于下载程序的上位机程序，界面如图\ref{chap4_Fig.3}所示。MDK编译可以生成二进制BIN 文件，在得到XX.bin 文件后,通过串口中断重写烧写处理器中Flash的部分区域，即可更新设备的软件代码，这样在后期维护中可以方便的进行版本升级。
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.7\textwidth]{figures/chap4/chap4_flash}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -512,17 +522,18 @@ TIM5作为一个1us的时间计数器，计算算法等待时间的长度，判断数据解算的有效性。
  \vspace{-0.4cm}
 \end{figure}
 
-图\ref{chap4_Fig.4}展示了STM32F405的flash地址映射表，可以看出STM32F4的内部闪存(flash)容量有1M字节，起始于0X08000000,该部分用来存放代码和数据常数，设备falsh上刷写了两部分程序，一个bootloader引导程序和一个出厂时最初的导航程序。当BOOT0、BOOT1 都接地时，就是从该位置开始运行代码的。此外STM32 是基于Cortex-M4 内核的微控制器，其内部通过一张“中断向量表”来响应中断，程序启动后，将首先从“中断向量表”取出复位中断向量执行复位中断程序完成启动，而这张“中断向量表”的起始地址是0x08000004，当中断来临，STM32F4 的内部硬件机制亦会自动将PC 指针定位到“中断向量表”处，并根据中断源取出对应的中断向量执行中断服务程序。
+图\ref{chap4_Fig.4}展示了STM32F405的flash地址映射表，可以看出STM32F4的内部闪存(flash)容量大小为1M字节，起始于0X08000000，用来存放代码和数据常数，设备在falsh上刷写了两部分程序，一个bootloader引导程序和一个出厂时最初的导航程序。当BOOT0、BOOT1 都接地时，就是从该位置开始运行代码的。STM32F405微控制器是基于Cortex-M4 内核的，由内部“中断向量表”响应中断，向量表起始地址为0x08000004，当程序触发时，程序指针跳转到中断向量表，执行终端服务程序。
+
 bootloader更新程序要满足以下要求：
 
-(1)新程序必须在bootloader程序之后的某个偏移量为X的地址开始。
+(1)重新烧录的程序要重新定位到bootloader代码之后的某个偏移量的地址开始。
 
-(2)必须将新程序的中断向量表相应的移动X个偏移量。
+(2)新程序的中断向量表也必须向后移动X个偏移量，在程序开始阶段完成配置。
 
-%而我们设置APP程序起始地址为0x08002800，即偏移量为0x4000(16K字节)，留给用户flash空间(size)是1024k-16k=1008K。偏移量是定义留给bootloader 程序的地址空间大小。这里我定义的是16K，偏移量为0x200 的倍数即可（本设计的bootloader只有6K左右），这里留有余量，方便bootloader以后的升级修改。在flash 中分配了一个四字节的空间(0x08004000-0x08004004)作为flash固件更新标志位。该标志位默认值为0xFFFF FFFF (flash掉电不擦除)，如果该值为0xFFFF FFFF说明flash中只有Bootloader程序，此时等待串口更新操作。设备上电后运行Bootloader 代码读取flash该标志位上的数据。若读取到数据为0x2B2B1A1A时说明不进入更新，直接跳入功能程序运行，当需要更新代码时，上位机通过串口发送更新指令给ARM，RAM读到更新信号后，重新给更新标志地址(0x08002000)写人数据0x4D4D3C3C，成功写入后软件复位重启。重启后bootloader 此时读到该地址的数据为0x4D4D3C3C，说明进入更新程序代码，选择程序二进制文件写入flash,更新完成后再重置标志位，软件复位重启，运行新的代码。
+如我们设置APP程序起始地址为0x08008000，即偏移量为0x8000(32K字节)，留下flash空间(size)是1024k-32k=992K。偏移量是定义留给bootloader 程序的地址空间大小。这里我定义的是32K，偏移量为0x200 的倍数即可。在flash 中分配了一个四字节的空间(0x08004000-0x08004004)作为flash固件更新标志位。该标志位默认值为0xFFFF FFFF。设备上电后先运行Bootloader 代码读取flash上该标志位的数据。若读取到数据为0x2B2B1A1A时说明不进入更新，直接跳入功能程序运行，当需要更新代码时，上位机通过串口发送更新指令给ARM，RAM读到更新信号后，重新给更新标志地址(0x08004000)写人数据0x4D4D3C3C，成功写入后软件复位重启。重启后bootloader 此时读到该地址的数据为0x4D4D3C3C，说明进入更新程序代码，选择程序二进制文件写入flash，更新完成后再重置标志位，软件复位重启，运行新的代码。
 
 \subsection{FAT32文件系统的移植}
-系统的数据调试选择SD卡保存数据，基于调试方便的原则，在程序中添加FAT32文件系统，来实现存储数据的管理。FAT文件系统是一个免费开源的FAT文件系统模块，专门为小型的嵌入式系统而设计。他完全用标准C 语言编写，具有良好的硬件平台独立性。SD卡和ARM是通过SDIO通信接口连接的，相比于SPI通信方式，SDIO接口具有更快的读写速度，一般为SPI读写SD 卡的4倍速度左右。
+系统的数据调试选择SD卡保存数据，基于调试方便的原则，在程序中添加FAT32文件系统，来实现存储数据的管理。FAT32文件系统是由C语言编写，适合小型的嵌入式系统。 SD卡和ARM是通过SDIO通信接口连接的，相比于SPI通信方式，SDIO 接口具有更快的读写速度，一般为SPI 读写SD 卡的4倍速度左右。
 
 导航程序运行前，首先要完成SD的硬件初始化，系统检索是否存在SD卡，判断SD卡是否符合ARM支持的类型并提供文件系统与SD 卡底层接口，如果SD 驱动不成功，将返回STA\_NOINIT 标志位。SD 硬件初始化成功之后，文件系统将完成注册工作区功能，这一部分可以视为文件系统的初始化，该部分完成SD卡每个卷注册工作区。搜索根目录并显示完成对SD 卡根目录读取。主要执行流程：
 
@@ -534,31 +545,5 @@ bootloader更新程序要满足以下要求：
 
 (4)使用FAT32文件系统管理SD卡，完成数据文件的读写。
 
-\section{系统上位机软件设计}
-\begin{figure}[!htb]
- \centering
- \includegraphics[width=0.6\textwidth]{figures/chap4/chap4_monitor}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
- \caption{MEMS惯导/GNSS组合导航系统监控界面}
- \label{chap4_Fig.4}
- \vspace{-0.4cm}
-\end{figure}
-本论文PC端监控软件是在Visual Studio 2013环境下编写的，实现的功能有数据保存与导入、参数设置，结果显示，KML文件的生成，上位机软件界面如图\ref{chap4_Fig.4}。
-与定位相关的功能包括两大类：定位工程管理和定位信息处理。
-
-定位工程管理完成串口的配置，数据的保存与导入，定位信息的回放等功能。定位信息处理包括以下方面：
-
-(1)取串口实时数据，解析数据并画出运行轨迹，同时显示当前模块搜到的卫星；
-
-(2)解析存储的数据文件，并将数据文件中的数据回放在界面中，同时显示轨迹；
-
-(3)将已保存的数据文件转换成kml文件，KML文件是基于XML语法与格式的用于描述和保存地理信息的编码规范，可以被Google Earth识别并显示。
-%\subsection{数据通信协议}
-\begin{figure}[!htb]
- \centering
- \includegraphics[width=0.7\textwidth]{figures/chap4/chap4_pbright}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
- \caption{上位机软件流程图}
- \label{chap4_Fig.5}
- \vspace{-0.4cm}
-\end{figure}
-
-导航设备与PC机之间信息传输遵循一定的数据格式，导航设备将导航信息打包上传给PC处理，数据段中包含相应字节的时间、经纬度、速度姿态等导航信息，上位机在接受到该数据后完成解析和校验，即可按字段显示定位导航信息。另一方面，设备也可以响应PC命令，开启定位功能。上位机软件信息处理过程如流程图\ref{4.5}所示。
+\section{本章小结}
+本章详细说明了组合导航系统的软件工程设计情况，首先从组合导航系统的工作原理出发，基于MEMS惯导的误差方程推导组合系统的状态方程，并结合惯导与卫星信号的位置、速度差值作为观测量推导系统的观测方程，完成了系统的建模。并在硬件设计基础上，给出导航流程图，编写软件架构，进行系统编程，完成系统软件上的设计。

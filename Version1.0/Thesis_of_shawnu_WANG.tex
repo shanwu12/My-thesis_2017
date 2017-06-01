@@ -1,5 +1,6 @@
 % \documentclass[twoside,12pt,CJK]{cctbook}
-\documentclass[12pt,cs4size,fancyhdr,hyperref,fntef,openany]{ctexbook}
+%\documentclass[12pt,cs4size,fancyhdr,hyperref,fntef,openany]{ctexbook}
+\documentclass[12pt,cs4size,fancyhdr,hyperref,fntef]{ctexbook}
 \input setup.tex
 
 %  e\overrightarrow{}
@@ -7,24 +8,25 @@
 
 \begin{document}
 \frontmatter
-\def\thepage{\roman{page}}
+\input chapter/chap-firstpage
 \input chapter/chap-cover
-
-%\input chap/chap-copyright
+\input chapter/chap-name
 \input chapter/chap-shengming
 
 \pagestyle{plain}
+\def\thepage{\xiaowuzi\roman{page}}
 \input chapter/chap-abstract
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                目录
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \setcounter{chapter}{0}
+\titleformat{\chapter}[hang]{\vspace{-1.8cm}\chapterfmt}{\chaptername}{1em}{}[\vspace{-1cm}] %更改目录标题行间距
 {\baselineskip=20pt
 \tableofcontents
 }
 
-%\clearpage
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                正文

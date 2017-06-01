@@ -1,11 +1,25 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Thesis_of_shawnu_WANG.aux
 A level-1 auxiliary file: chapter/chapter1.aux
+White space in argument---line 28 of file chapter/chapter1.aux
+ : \citation{Veth
+ :                M(2006)}
+I'm skipping whatever remains of this command
+White space in argument---line 29 of file chapter/chapter1.aux
+ : \citation{Veth
+ :                M(2006)}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapter/chapter2.aux
 A level-1 auxiliary file: chapter/chapter3.aux
 A level-1 auxiliary file: chapter/chapter4.aux
 A level-1 auxiliary file: chapter/chapter5.aux
 A level-1 auxiliary file: chapter/chapter6.aux
-I found no \citation commands---while reading file Thesis_of_shawnu_WANG.aux
+A level-1 auxiliary file: chapter/chap-bibs.aux
+I couldn't open style file GBT7714-2005NLang_Upp.bst
+---line 2 of file chapter/chap-bibs.aux
+ : \bibstyle{GBT7714-2005NLang_Upp
+ :                                }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapter/chap-ack.aux
 I found no \bibdata command---while reading file Thesis_of_shawnu_WANG.aux
-I found no \bibstyle command---while reading file Thesis_of_shawnu_WANG.aux
-(There were 3 error messages)
+I found no style file---while reading file Thesis_of_shawnu_WANG.aux
+(There were 5 error messages)

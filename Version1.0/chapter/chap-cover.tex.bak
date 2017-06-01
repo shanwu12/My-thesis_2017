@@ -22,14 +22,14 @@ $$\text{\bf  \LARGE 自动辅助驾驶系统小型化导航模块设计与实现}$$\\\\
 \begin{center}%
 {\zihao{4}\heiti
 \begin{tabular}{p{8em}l@{\extracolsep{0.5em}}l}
-作~~者~~姓~~名&\underline{汪善武\hspace{60pt}}\\
-学~~院~~名~~称&\underline{自动化学院\hspace{32pt}}\\
-指~~导~~教~~师&\underline{刘华\quad讲师\hspace{20pt}}\\
-答辩委员会主席&\underline{\quad教授\hspace{20pt}}\\
-申请学位级别&\underline{工学硕士\hspace{47pt}}\\
-学~~科~~专~~业&\underline{控制科学与工程\hspace{8pt}}\\
-授予学位单位&\underline{北京理工大学\hspace{22pt}}\\
-论文答辩时间&\underline{2017年6月\quad\hspace{6pt}}
+作~~者~~姓~~名\textbf{:}&\underline{\makebox[6cm][c]{汪善武}}\\
+学~~院~~名~~称\textbf{:}&\underline{\makebox[6cm][c]{自动化学院}}\\
+指~~导~~教~~师\textbf{:}&\underline{\makebox[6cm][c]{刘华~讲师}}\\
+答辩委员会主席\textbf{:}&\underline{\makebox[6cm][c]{~孙常胜教授}}\\
+申请学位级别\textbf{:}&\underline{\makebox[6cm][c]{工程硕士}}\\
+学~~科~~专~~业\textbf{:}&\underline{\makebox[6cm][c]{控制工程}}\\
+授予学位单位\textbf{:}&\underline{\makebox[6cm][c]{北京理工大学}}\\
+论文答辩时间\textbf{:}&\underline{\makebox[6cm][c]{2017~年~6~月}}
 \end{tabular}
 }
 \end{center}
@@ -41,22 +41,22 @@ $$\text{\bf  \LARGE 自动辅助驾驶系统小型化导航模块设计与实现}$$\\\\
 \quad\\
 \quad\\
 \begin{center}%
-\text{\bf\large  Miniaturization navigation module in Automatic Assistance System Design and Implementation  }\\
-%\text{\bf\large Mars Precision Landing}
+\text{\bf\large  Miniaturization navigation module in Automatic Assistance System }\\
+\text{\bf\large Design and Implementation}
 \end{center}
 
 \vspace{5cm}
 \begin{center}%
 {\zihao{4}\heiti
 \begin{tabular}{p{12em}l@{\extracolsep{0.5em}}l}
-Candidate:&Shanwu Wang\\
-School or Department:&School of Automation\\
-Faculty Mentor:&Hua Liu\\
-Chair, Thesis Committee:&Prof.\\
-Degree Applied:&Master of Engineering\\
-Major:&Control Engineering\\
-Degree by:&Beijing Institute of Technology\\
-Date:&June, 2017
+Candidate:&\underline{\makebox[7cm][c]{Shanwu Wang}}\\
+School or Department:&\underline{\makebox[7cm][c]{School of Automation}}\\
+Faculty Mentor:&\underline{\makebox[7cm][c]{Hua Liu}}\\
+Chair, Thesis Committee:&\underline{\makebox[7cm][c]{Prof.}}\\
+Degree Applied:&\underline{\makebox[7cm][c]{Master of Science in Engineering}}\\
+Major:&\underline{\makebox[7cm][c]{Control Engineering}}\\
+Degree by:&\underline{\makebox[7cm][c]{Beijing Institute of Technology}}\\
+Date:&\underline{\makebox[7cm][c]{June, 2017}}
 \end{tabular}
 }
 \end{center}

@@ -1,7 +1,7 @@
 
 \chapter{×éºÏµ¼º½ÏµÍ³Ó²¼þÉè¼Æ}
 \section{ÒýÑÔ}
-¸ù¾ÝÇ°Ò»ÕÂÏµÍ³×ÜÌå·½°¸µÄÉè¼Æ£¬±¾ÕÂµÄÖØµã¹¤×÷ÊÇÖÆ×÷ÏµÍ³µÄÓ²¼þÆ½Ì¨¡£±¾³µÔØ×éºÏ¶¨Î»ÏµÍ³Ó²¼þÉè¼Æ·ÖÎª£ºÐèÇó·ÖÎö¡¢Ó²¼þ·½°¸Éè¼Æ¡¢Æ÷¼þÑ¡ÐÍ¡¢Ç¶ÈëÊ½ARMÏµÍ³Éè¼Æ¡¢ÍâÎ§Éè±¸Éè¼Æ¡¢Êý¾Ý´«¸ÐÆ÷Éè¼Æ£¬µçÂ·²âÊÔµÈ¡£±¾¿ÎÌâÉè¼Æ¹ý³Ì ¿¼ÂÇµ½³É±¾¡¢Ó²¼þ³ß´ç¡¢²úÆ·¹¦ºÄ¡¢¿¹¸ÉÈÅÐÔÄÜºÍ²úÆ·ÊµÓÃÐÔµÈÎÊÌâ£¬Ìá³ö×Ô¼ºµÄ½â¾ö·½°¸£¬Éè¼ÆÁËÒ»¸öµÍ³É±¾¡¢¾«¶È¿É½ÓÊÜµÄMEMS \ SINS/GNSS ×éºÏµÄÐ¡ÐÍ»¯×éºÏµ¼º½ÏµÍ³¡£Éè¼ÆÁ÷³ÌÈçÏÂÍ¼\ref{chap3_Fig.1} ËùÊ¾£º
+¸ù¾ÝÄ£¿é×ÜÌå·½°¸Éè¼Æ£¬±¾ÕÂµÄÖØµã¹¤×÷ÊÇÖÆ×÷ÏµÍ³µÄÓ²¼þÆ½Ì¨¡£±¾³µÔØ×éºÏ¶¨Î»ÏµÍ³Ó²¼þÉè¼Æ·ÖÎª£ºÐèÇó·ÖÎö¡¢Ó²¼þ·½°¸Éè¼Æ¡¢Æ÷¼þÑ¡ÐÍ¡¢Ç¶ÈëÊ½ARMÏµÍ³Éè¼Æ¡¢ÍâÎ§Éè±¸Éè¼Æ¡¢Êý¾Ý´«¸ÐÆ÷Éè¼Æ£¬µçÂ·²âÊÔµÈ¡£±¾¿ÎÌâÔÚÉè¼Æ¹ý³ÌÖÐ¿¼ÂÇµ½³É±¾¡¢Ó²¼þ³ß´ç¡¢²úÆ·¹¦ºÄ¡¢¿¹¸ÉÈÅÐÔÄÜºÍ²úÆ·ÊµÓÃÐÔµÈÎÊÌâ£¬Ìá³ö×Ô¼ºµÄ½â¾ö·½°¸£¬ÊµÏÖÁËÒ»¸öµÍ³É±¾¡¢µÍ¹¦ºÄµÄMEMS \ SINS/GNSS ×éºÏµÄÐ¡ÐÍ»¯×éºÏµ¼º½ÏµÍ³¡£Éè¼ÆÁ÷³ÌÈçÏÂÍ¼\ref{chap3_Fig.1} ËùÊ¾£º
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_process}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -10,11 +10,11 @@
  \vspace{-0.4cm}
 \end{figure}
 
-Ó²¼þµçÂ·µÄÉè¼ÆÊÇÔÚAltium Designer 10 ÉÏ½øÐÐÉè¼ÆµÄ¡£ÕâÊÇÒ»¿îÓÉAltium ¹«Ë¾¿ª·¢µÄ»ùÓÚWindows»·¾³ÏÂµÄµçÂ·°åÉè¼ÆÈí¼þ£¬ÔÚµç×ÓÐÐÒµÔËÓÃÊ®·ÖÆÕ±é£¬ÊÇµç×Ó¹¤³ÌÊ¦Éè¼ÆÓ¡Ë¢ÏßÂ·°åµÄÊ×Ñ¡¹¤¾ß£¬Ëü¾ßÓÐ¼òµ¥Ò×Ñ§£¬²Ù×÷±ã½Ý£¬×ÊÔ´·á¸»£¬ÈË»ú½»»¥Á¼ºÃµÈÓÅµã¡£
+Ó²¼þµçÂ·µÄÉè¼ÆÊÇÔÚAltium Designer 10 ÉÏ½øÐÐÉè¼ÆµÄ¡£ÕâÊÇÒ»¿îÓÉAltium ¹«Ë¾¿ª·¢µÄµçÂ·°åÉè¼ÆÈí¼þ£¬ÔÚµç×ÓÐÐÒµÔËÓÃÊ®·ÖÆÕ±é£¬ÊÇµç×Ó¹¤³ÌÊ¦Éè¼ÆÓ¡Ë¢ÏßÂ·°åµÄ³£ÓÃ¹¤¾ß£¬Ëü¾ßÓÐ¼òµ¥Ò×Ñ§£¬²Ù×÷±ã½Ý£¬×ÊÔ´·á¸»£¬ÈË»ú½»»¥Á¼ºÃµÈÓÅµã¡£
 
 \section{Ó²¼þ·½°¸Éè¼Æ}
 \subsection{ÐèÇó·ÖÎöÓëµçÂ·¹æ»®}
-±¾¿ÎÌâÊÇÀûÓÃMIMU¹¹½¨½ÝÁª¹ßÐÔµ¼º½ÏµÍ³£¬È»ºó½ÓÊÕÎÀÐÇÐÅºÅ¶Ôµ¼º½½á¹û½øÐÐ²¹³¥ºÍÈÚºÏ£¬µÃµ½¿ÉÐÅ¶È¸ßµÄ×ËÌ¬¡¢ËÙ¶ÈºÍÎ»ÖÃµÈÐÅÏ¢£¬×îÖÕ¿ÉÒÔÓ¦ÓÃÔÚµØÃæ³µÁ¾ÉÏ£¬²¢¾ß±¸Á¼ºÃµÄÎÈ¶¨ÐÔºÍ¿¹¸ÉÈÅÄÜÁ¦¡£ËùÒÔ£¬ÔÚÉè¼ÆÊ±ÐèÒª¶ÔÆä½øÐÐ¹æ»®·ÖÎö£¬»¹Òª¸ù¾Ý¹¤×÷»·¾³ºÍÔËÐÐÌõ¼þ½øÐÐÐ¾Æ¬µÄÑ¡ÐÍ¡£Ê×ÏÈ£¬Íê³É¸ø³öÓ²¼þ×ÜÌå·½°¸µÄÉè¼Æ¡£
+±¾¿ÎÌâÊÇÀûÓÃMIMU¹¹½¨½ÝÁª¹ßÐÔµ¼º½ÏµÍ³£¬È»ºó½ÓÊÕÎÀÐÇÐÅºÅ¶Ôµ¼º½½á¹û½øÐÐ²¹³¥ºÍÈÚºÏ£¬µÃµ½¿ÉÐÅ¶È¸ßµÄ×ËÌ¬¡¢ËÙ¶ÈºÍÎ»ÖÃµÈÐÅÏ¢£¬²¢¾ß±¸Á¼ºÃµÄÎÈ¶¨ÐÔºÍ¿¹¸ÉÈÅÄÜÁ¦×îÖÕ¿ÉÒÔ³É¹¦Ó¦ÓÃÔÚµØÃæ³µÁ¾ÉÏ¡£±¾½Ú¶ÔÏµÍ³Éè¼Æ½øÐÐºÏÀíµÄ¹æ»®·ÖÎö£¬²¢¸ø³öÓ²¼þ×ÜÌå·½°¸µÄÉè¼Æ¡£
 
 \begin{figure}[!htb]
  \centering
@@ -23,35 +23,35 @@
  \label{chap3_Fig.19}
  \vspace{-0.4cm}
 \end{figure}
-¸ù¾ÝÏµÍ³ÒªÊµÏÖµÄ¹¦ÄÜºÍÌØµã£¬Ó²¼þÏµÍ³ÉÏ¿ÉÒÔ·ÖÎªµçÔ´Éè¼Æ¡¢´«¸ÐÆ÷Í¨ÐÅ¡¢´¦ÀíÆ÷Éè¼Æ¡¢Êý¾Ý±£´æµÈ¼¸¸ö²¿·Ö¡£
+¸ù¾ÝÏµÍ³ÒªÊµÏÖµÄ¹¦ÄÜºÍÌØµã£¬Ó²¼þÏµÍ³ÉÏ¿ÉÒÔ·ÖÎªµçÔ´Éè¼Æ¡¢´«¸ÐÆ÷Í¨ÐÅ¡¢×îÐ¡ÏµÍ³¡¢Êý¾Ý±£´æµÈ¼¸¸ö²¿·Ö¡£
 
-(1)µçÔ´Éè¼Æ£ºµçÔ´ÊÇÏµÍ³µÄ¹¤×÷»ù´¡£¬µçÔ´µÄÉè¼ÆÖ±½ÓÓ°Ïìµ½ÏµÍ³ÄÜ·ñÕý³£¹¤×÷¡£¸ù¾ÝÉè¼ÆÒªÇó£¬Ä£¿é¿ÉÍ¨¹ýUSB¹©µç»òÕßÒý³öµçÔ´½Ó¿ÚÓÉÍâ²¿µçÔ´¹©µç£¬ÔÙÓÉÏµÍ³ÎÈÑ¹Ð¾Æ¬Êä³öÎÈ¶¨µÄµçÑ¹¡£¿¼ÂÇÏµÍ³ÖÐÔª¼þ¹¤×÷ÒªÇóºÍÏµÍ³¿ÉÀ©Õ¹ÐÔ£¬ÐèÒªµÄµçÑ¹ÓÐ3.3V ºÍ5V£¬Òò´Ë±¾ÏµÍ³¶ÔµçÔ´×öÁËÁ½¼¶´¦Àí£¬Ç°¼¶µçÔ´Êä³ö5VµÄµçÑ¹£¬½Ó×ÅÁ¬½Ó3.3VµÄÎÈÑ¹Ð¾Æ¬£¬±£Ö¤ÁËÏµÍ³¹©µçµÄÎÈ¶¨ÐÔ¡£½µÑ¹Ä£¿éÑ¡ÔñÊä³öµçÑ¹ÎÈ¶¨ÐÔ¸ß£¬ÎÆ²¨ÔëÉùÐ¡µÄÏßÐÔÎÈÑ¹Ð¾Æ¬¡£
+(1)µçÔ´²¿·Ö£ºµçÔ´ÊÇµ¼º½Ä£¿éµÄ¹¤×÷»ù´¡£¬µçÔ´µÄÉè¼ÆÖ±½ÓÓ°Ïìµ½Ä£¿éÄÜ·ñÕý³£¹¤×÷¡£¸ù¾ÝÉè¼ÆÒªÇó£¬Ä£¿é¿ÉÍ¨¹ýUSB¹©µç»òÕßÒý³öµçÔ´½Ó¿ÚÓÉÍâ²¿µçÔ´¹©µç£¬ÔÙÓÉÏµÍ³ÎÈÑ¹Ð¾Æ¬Êä³öÎÈ¶¨µÄµçÑ¹¡£¿¼ÂÇÏµÍ³ÖÐÔª¼þ¹¤×÷ÒªÇóºÍÏµÍ³¿ÉÀ©Õ¹ÐÔ£¬ÐèÒªµÄµçÑ¹ÓÐ3.3V ºÍ5V£¬Òò´Ë±¾ÏµÍ³¶ÔµçÔ´×öÁËÁ½¼¶´¦Àí£¬Ç°¼¶µçÔ´Êä³ö5VµÄµçÑ¹£¬½Ó×ÅÁ¬½Ó3.3VµÄÎÈÑ¹Ð¾Æ¬£¬±£Ö¤ÁËÏµÍ³¹©µçµÄÎÈ¶¨ÐÔ¡£½µÑ¹Ä£¿éÑ¡ÔñÊä³öÎÈ¶¨ÐÔ¸ß¡¢ÎÆ²¨ÔëÉùÐ¡µÄÏßÐÔÎÈÑ¹Ð¾Æ¬¡£
 
-(2)Í¨ÐÅÉè¼Æ£ºMEMS¹ßÐÔÆ÷¼þ²É¼¯µ½Êý¾ÝÍ¨¹ýSPI½Ó¿Ú´«ËÍ¸ø´¦ÀíÆ÷£¬SPIÊÇÈ«Ë«¹¤¹¤×÷£¬ËÙ¶ÈºÜ¿ì£¬ÊÊºÏMEMS Êý¾Ý¸ßËÙÍ¨ÐÅµÄ³¡ºÏ£»GNSSÄ£¿é½«²É¼¯µÄGPSÊý¾ÝÍ¨¹ý´®¿ÚÌá¹©¸ø´¦ÀíÆ÷£»ÏµÍ³Éæ¼°µ½µÄÍ¨ÐÅ·½Ê½»¹ÓÐSDIO¡¢USB´Ó»úÍ¨ÐÅµÈ¡£
+(2)Í¨ÐÅ½Ó¿Ú²¿·Ö£ºMEMS¹ßÐÔÆ÷¼þÍ¨¹ýSPIÍ¨ÐÅ½Ó¿ÚºÍ´¦ÀíÆ÷Í¨ÐÅ£¬SPIÊÇÈ«Ë«¹¤¹¤×÷£¬ËÙ¶ÈºÜ¿ì£¬ÊÊºÏMEMS Êý¾Ý¸ßËÙÍ¨ÐÅµÄ³¡ºÏ£»GNSSÄ£¿é½«²É¼¯µÄGPSÊý¾ÝÍ¨¹ý´®¿ÚÌá¹©¸ø´¦ÀíÆ÷£»ÏµÍ³Éæ¼°µ½µÄÍ¨ÐÅ·½Ê½»¹ÓÐSDIO¡¢USB´Ó»úÍ¨ÐÅµÈ¡£
 
-(3)´¦ÀíÆ÷Éè¼Æ£ºµçÂ·ÖÐµÄÊý×Ö´¦ÀíÆ÷ÒªÍê³ÉÐÅºÅ²É¼¯¡¢Êý¾ÝÂË²¨¡¢½ÝÁª½âËãµÄµÈ·þÎñ£¬ÔÚ¶Ô´¦ÀíÆ÷Ñ¡ÐÍÊ±£¬Ó¦µ±ÐèÒª¾ßÓÐ¾«¶È¸ß¡¢ËÙ¶È¿ì£¬ÊµÊ±ÐÔºÃ¡¢¹¦ºÄµÍ£¬Ìå»ýÐ¡µÈÌØµã¡£Í¬Ê±£¬½âËãºóµÄµ¼º½Êý¾Ý»¹¿ÉÒÔ±£´æ»òÍ¨¹ý´®¿ÚÁ¬½Óµ½ÉÏÎ»»ú½øÐÐÏÔÊ¾ºÍ´¦Àí¡£ËùÒÔ»¹ÐèÒª¿¼ÂÇ´¦ÀíÆ÷ÏàÓ¦µÄ½Ó¿ÚÉè¼Æ¡£
+(3)×îÐ¡ÏµÍ³²¿·Ö£ºµçÂ·ÖÐµÄÊý×Ö´¦ÀíÆ÷ÒªÍê³ÉÐÅºÅ²É¼¯¡¢Êý¾ÝÂË²¨¡¢½ÝÁª½âËãµÄµÈ·þÎñ£¬ÊÇÕû¸öÏµÍ³µÄ¹Ø¼ü¡£´¦ÀíÆ÷Ó¦µ±ÐèÒª¾ßÓÐ¾«¶È¸ß¡¢ËÙ¶È¿ì£¬ÊµÊ±ÐÔºÃ¡¢¹¦ºÄµÍ£¬Ìå»ýÐ¡µÈÌØµã¡£Í¬Ê±£¬½âËãºóµÄµ¼º½Êý¾Ý»¹¿ÉÒÔ±£´æ»òÍ¨¹ý´®¿ÚÁ¬½Óµ½ÉÏÎ»»ú½øÐÐÏÔÊ¾ºÍ´¦Àí£¬ËùÒÔ»¹ÐèÒª¿¼ÂÇ´¦ÀíÆ÷ÊÇ·ñ¾ßÓÐÏàÓ¦¹¦ÄÜÍâÉè£¬×îºó»ùÓÚËùÑ¡Æ÷¼þ¿ª·¢×îÐ¡ÏµÍ³¡£
 
-Í¨¹ýÉÏÃæµÄ·ÖÎö£¬¶Ô×éºÏµ¼º½ÏµÍ³µÄÓ²¼þµçÂ·ÓÐÒ»¶¨µÄ¹æ»®ºó£¬¾­¹ýÕûÀíºÍÐÞ¸Ä£¬ÖÆ¶¨ÈçÍ¼\ref{chap3_Fig.19}ËùÊ¾µÄÏµÍ³Ó²¼þµçÂ·¿òÍ¼¡£Îª±£Ö¤ÏµÍ³¿É¿¿ÎÈ¶¨µÄÔËÐÐ£¬¿¼ÂÇµ½×éºÏÏµÍ³µÄ¹¤×÷»·¾³ºÍ³ß´çÒªÇó£¬¾¡Á¿²ÉÓÃ¼¼Êõ³ÉÊì¡¢ÊÐ³¡Í¨ÓÃµÄ¸ß¼¯³É¶ÈÔªÆ÷¼þ£¬ÒÔÏÂ½éÉÜÆ÷¼þÑ¡ÐÍµÄ¹ý³Ì¡£
+Í¨¹ýÈ«ÃæµÄ¹æ»®ºÍ·ÖÎö£¬ÖÆ¶¨ÁËÈçÍ¼\ref{chap3_Fig.19}ËùÊ¾µÄÏµÍ³Ó²¼þµçÂ·¿òÍ¼¡£¿¼ÂÇµ½³µÔØ×éºÏÏµÍ³µÄ¹¤×÷»·¾³ºÍ³ß´çÒªÇó£¬Îª±£Ö¤ÏµÍ³¿É¿¿ÎÈ¶¨µÄÔËÐÐ£¬¾¡Á¿²ÉÓÃ¼¼Êõ³ÉÊì¡¢ÊÐ³¡Í¨ÓÃµÄ¸ß¼¯³É¶ÈÔªÆ÷¼þ£¬ÒÔÏÂ½éÉÜÆ÷¼þÑ¡ÐÍµÄ¹ý³Ì¡£
 
 \subsection{ºËÐÄÆ÷¼þÑ¡ÐÍ}
 Ò»¡¢ARM´¦ÀíÆ÷Ð¾Æ¬
-
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.3\textwidth]{figures/chap3/chap3_stm32}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.2\textwidth]{figures/chap3/chap3_stm32}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{Ö÷¿ØÖÆÆ÷Ð¾Æ¬}
  \label{chap3_Fig.2}
  \vspace{-0.4cm}
 \end{figure}
-ÔÚÉè¼Æµ¼º½ÏµÍ³Ê±£¬ÐèÒª¿¼ÂÇCPUµÄ´¦ÀíÄÜÁ¦¡¢´æ´¢ÈÝÁ¿¼°ÔËÐÐËÙ¶È¡¢IO¶Ë¿ÚµÄ·ÖÅä¡¢Í¨ÐÅ½Ó¿Ú¡¢µçÆ½ÒªÇóµÈµÈ£¬Í¬Ê±Ò²ÒªÂú×ã×éºÏµ¼º½ÏµÍ³µÄ¾«¶ÈÒªÇóºÍÊµÊ±ÐÔ£¬×ÛºÏÕâÐ©ÒòËØ¿¼ÂÇ±¾ÏµÍ³²ÉÓÃµÄ´¦ÀíÐ¾Æ¬ÎªST¹«Ë¾µÄSTM32F405VGT6ÐÍºÅµÄARM Ð¾Æ¬£¬¸Ã´¦ÀíÆ÷ÄÚºË¼Ü¹¹ÊÇ»ùÓÚCortex-M4 ÄÚºËµÄ£¬ÊÇÒ»¿îÉý¼¶°æµÄ´¦ÀíÆ÷£¬¾ßÓÐ¸ßÐÔÄÜ¡¢µÍ³É±¾¡¢µÍ¹¦ºÄ¶à·½ÃæµÄÓÅÊÆ\cite{JiYu(2005)}£¬ÍâÐÎÈçÍ¼\ref{chap3_Fig.2}ËùÊ¾£¬¸ÃÐ¾Æ¬µÄÌØµãÈçÏÂ£º
+
+ÔÚÉè¼Æµ¼º½ÏµÍ³Ê±£¬ÐèÒª¿¼ÂÇCPUµÄ´¦ÀíÄÜÁ¦¡¢´æ´¢ÈÝÁ¿¼°ÔËÐÐËÙ¶È¡¢IO¶Ë¿ÚµÄ·ÖÅä¡¢Í¨ÐÅ½Ó¿Ú¡¢µçÆ½ÒªÇóµÈµÈ£¬Í¬Ê±Ò²ÒªÂú×ã×éºÏµ¼º½ÏµÍ³µÄÊµÊ±ÐÔºÍ¾«¶ÈÒªÇó£¬×ÛºÏÕâÐ©ÒòËØ¿¼ÂÇ±¾ÏµÍ³²ÉÓÃµÄ´¦ÀíÐ¾Æ¬ÎªST¹«Ë¾µÄSTM32F405VGT6ÐÍºÅµÄARM Ð¾Æ¬£¬¸Ã´¦ÀíÆ÷ÄÚºË¼Ü¹¹ÊÇ»ùÓÚCortex-M4 ÄÚºËµÄ£¬ÊÇÒ»¿îÉý¼¶°æµÄ´¦ÀíÆ÷£¬¾ßÓÐ¸ßÐÔÄÜ¡¢µÍ³É±¾¡¢µÍ¹¦ºÄ¶à·½ÃæµÄÓÅÊÆ\cite{JiYu(2005)}£¬ÍâÐÎÈçÍ¼\ref{chap3_Fig.2}ËùÊ¾£¬¸ÃÐ¾Æ¬µÄÌØµãÈçÏÂ£º
 
 (a)Ïà±ÈÓÚCortex M3Ð¾Æ¬,STM32F4×î´óµÄÓÅÊÆ¾ÍÊÇÄÚÖÃµ¥¾«¶ÈFPUºÍDSPÖ¸Áî£¬¿ÉÌáÉý¿ØÖÆËã·¨µÄÖ´ÐÐËÙ¶È£¬Ìá¸ß´úÂëÖ´ÐÐÐ§ÂÊ£¬±¾Éè¼ÆÖÐÉæ¼°µ¼º½Êý¾ÝµÄ½âËã¶øÇÒµ¼º½½âËã¶ÔÊµÊ±ÐÔÒªÇó±È½Ï¸ß£¬¸ÃÓÅÊÆ¿ÉÒÔºÜºÃµØÕ¹ÏÖ³öÀ´¡£
 
-(b)Ð¾Æ¬Ö÷Æµ´ïµ½168Mhz£¬Æ¬ÉÏflash¿É´ï1MB,SRAMÓÐ192KB£¬ÓÐ×Å·á¸»µÄÄÚ´æ×ÊÔ´£¬Âú×ã±¾Éè¼Æ³ÌÐòºÍÊý¾ÝµÄ´¦ÀíºÍ´æ´¢ÒªÇó¡£
+(b)Ð¾Æ¬Ö÷Æµ´ïµ½168Mhz£¬Æ¬ÉÏflash¿É´ï1MB,SRAMÓÐ192KB£¬ÓÐ×Å·á¸»µÄÄÚ´æ×ÊÔ´£¬Âú×ã±¾³ÌÐòÉè¼ÆµÄÊý¾Ý´¦ÀíºÍ´æ´¢ÒªÇó¡£
 
-(c)ÔÚÊµÏÖ¸ßÐÔÄÜºÍµÍ¹¦ºÄ·½Ãæ¸üÁé»î¡£±¾Éè¼ÆµÄÄ¿µÄÊÇÊµÏÖÐ¡ÐÍ»¯µÍ¹¦ºÄµÄµ¼º½Ä£¿é,¶øSTM32F40xµÄ¹¦ºÄÎª£ºÔÚÖ÷Æµ168MHzÇé¿öÏÂ£¬ÔÚÉÁ´æÖÐÖ´ÐÐ»ù×¼²âÊÔ³ÌÐò£¬¹¦ºÄ½öÎª230uA/MHz¡£ÔÚÔËÐÐÄ£Ê½ÏÂ£¬STM32F4¾ßÓÐ¸ü¸ßµÄ¹¦ºÄÐ§ÂÊ£¬ÌØ±ðÊÊºÏÐèÒªÒ»¶¨ÔËËãÁ¿µÄÓ¦ÓÃ³¡ºÏ¡£
+(c)±¾Éè¼ÆµÄÄ¿µÄÊÇÊµÏÖÐ¡ÐÍ»¯µÍ¹¦ºÄµÄµ¼º½Ä£¿é,¶øSTM32F40xµÄ¹¦ºÄÎª£ºÔÚÖ÷Æµ168MHzÇé¿öÏÂ£¬ÔÚÉÁ´æÖÐÖ´ÐÐ»ù×¼²âÊÔ³ÌÐò£¬¹¦ºÄ½öÎª230uA/MHz¡£ÔÚÔËÐÐÄ£Ê½ÏÂ£¬STM32F4¾ßÓÐ¸ü¸ßµÄ¹¦ºÄÐ§ÂÊ£¬ÌØ±ðÊÊºÏÐèÒªÒ»¶¨ÔËËãÁ¿µÄÓ¦ÓÃ³¡ºÏ¡£
 
-(d)¹¦ÄÜÇ¿´ó¡¢¼Û¸ñµÍÁ®£¬ÐÔ¼Û±È¸ß¡£
+(d)Ð¾Æ¬¼Û¸ñµÍÁ®£¬¹¦ÄÜ·á¸»£¬ÐÔ¼Û±È¸ß¡£
 
 STM32F405RGT6ÊÇF4ÏµÁÐµÄÒ»¿îÉè±¸£¬ÎÒÃÇÑ¡ÓÃLQNF100·â×°£¬ÄÚÖÃÓÐ1MÉÁ´æ¡£ÆäÖ÷ÒªÍ¨Ñ¶½Ó¿ÚºÍÍâÉèÈçÏÂ:
 \begin{itemize}
@@ -74,7 +74,7 @@ STM32F405RGT6ÊÇF4ÏµÁÐµÄÒ»¿îÉè±¸£¬ÎÒÃÇÑ¡ÓÃLQNF100·â×°£¬ÄÚÖÃÓÐ1MÉÁ´æ¡£ÆäÖ÷ÒªÍ¨Ñ¶½Ó
  \vspace{-0.4cm}
 \end{figure}
 
-±¾Éè¼Æ²ÉÓÃµÄMEMS¹ßÐÔÆ÷¼þÊÇµÂ¹ú²©ÊÀ¹«Ë¾ÑÐ·¢µÄÁùÖá¹ßÐÔ´«¸ÐÆ÷Ð¾Æ¬BMI160£¬¸ÃÄ£¿éÕûºÏÁËÈýÖáÍÓÂÝÒÇ¡¢ÈýÖá¼ÓËÙ¶È¼ÆºÍÎÂ¶È´«¸ÐÆ÷£¬²¢º¬ÓÐIICºÍSPI½Ó¿Ú£¬¿ÉÓÃÓÚÁ¬½ÓÍâ²¿Ö÷´ÓÉè±¸£¬ÏòÓ¦ÓÃ¶ËÊä³öÍêÕûµÄÁùÖá¹ßÐÔÊý¾Ý£¬Ïà±È½Ï¶à×é¼þ·½°¸£¬Ãâ³ýÁË×éºÏÍÓÂÝÒÇÓë¼ÓËÙ¶ÈÊ±Ö®Öá¼ä²îµÄÎÊÌâ£¬¼õÐ¡ÁË°²×°¿Õ¼ä£¬µ±¼ÓËÙ¶È¼ÆºÍÍÓÂÝÒÇÔÚÈ«ËÙÄ£Ê½ÏÂÔËÐÐÊ±£¬ºÄµçµäÐÍÖµµÍÖÁ950$\mu$A£¬ÇÒÍâÐÎ³ß´ç½öÎª$2.5mm\times3.0\times0.83mm$£¬Ê®·Ö·ûºÏ±¾Éè¼ÆÐ¡ÐÍ»¯µÍ¹¦ºÄµÄÉè¼ÆÒªÇó£¬ÊµÎïÍ¼Èç\ref{chap3_Fig.3} ËùÊ¾¡£BMIµÄÌØµã°üÀ¨£º
+±¾Éè¼Æ²ÉÓÃµÄMEMS¹ßÐÔÆ÷¼þÊÇµÂ¹ú²©ÊÀ¹«Ë¾ÑÐ·¢µÄÁùÖá¹ßÐÔ´«¸ÐÆ÷Ð¾Æ¬BMI160£¬¸ÃÄ£¿éÕûºÏÁËÈýÖáÍÓÂÝÒÇ¡¢ÈýÖá¼ÓËÙ¶È¼ÆºÍÎÂ¶È´«¸ÐÆ÷£¬²¢º¬ÓÐIICºÍSPI½Ó¿Ú£¬¿ÉÓÃÓÚÁ¬½ÓÍâ²¿Ö÷´ÓÉè±¸£¬ÏòÓ¦ÓÃ¶ËÊä³öÍêÕûµÄÁùÖá¹ßÐÔÊý¾Ý£¬Ïà±È½Ï¶à×é¼þ·½°¸£¬Ãâ³ýÁË×éºÏÍÓÂÝÒÇÓë¼ÓËÙ¶ÈÊ±Ö®Öá¼ä²îµÄÎÊÌâ£¬¼õÐ¡ÁË°²×°¿Õ¼ä£¬µ±¼ÓËÙ¶È¼ÆºÍÍÓÂÝÒÇÔÚÈ«ËÙÄ£Ê½ÏÂÔËÐÐÊ±£¬ºÄµçµäÐÍÖµµÍÖÁ950$\mu$A£¬ÇÒÍâÐÎ³ß´ç½öÎª$2.5mm\times3.0mm\times0.83mm$£¬Ê®·Ö·ûºÏ±¾Éè¼ÆÐ¡ÐÍ»¯µÍ¹¦ºÄµÄÉè¼ÆÒªÇó£¬ÊµÎïÍ¼Èç\ref{chap3_Fig.3} ËùÊ¾¡£BMIµÄÌØµã°üÀ¨£º
 
 (1)¼¯³É¿É³ÌÐò¿ØÖÆ£¬·¶Î§$\pm2g$¡¢$\pm4g$¡¢$\pm8g$ºÍ$\pm16g$µÄÈýÖá¼ÓËÙ¶È´«¸ÐÆ÷¡£
 
@@ -86,19 +86,19 @@ STM32F405RGT6ÊÇF4ÏµÁÐµÄÒ»¿îÉè±¸£¬ÎÒÃÇÑ¡ÓÃLQNF100·â×°£¬ÄÚÖÃÓÐ1MÉÁ´æ¡£ÆäÖ÷ÒªÍ¨Ñ¶½Ó
 
 (5)×Ô´ø1024×Ö½ÚFIFO£¬ÓÐÖúÓÚ½µµÍÏµÍ³¹¦ºÄ¡£
 
-¹ßÐÔÆ÷¼þÄÜÍ¨¹ýÐÅºÅµ÷½Ú¹¦ÄÜÓÅ»¯¶¯Ì¬ÐÔÄÜ£¬ÇÒ¹¤³§Ð£×¼ÎªÃ¿Ò»¸ö´«¸ÐÆ÷Ìá¹©ÁËÁéÃô¶È¡¢Æ«ÖÃ¡¢´ø¿í¡¢ÁãÆ«µÈ²ÎÊý£¬²¢ÎªÄÚ²¿Ã¿¸ö´«¸ÐÆ÷Ìá¹©²¹³¥£¬¿ÉÒÔÌá¹©¸ß¾«¶ÈµÄ´«¸ÐÆ÷Êä³ö¡£
+¹¤³§Ð£×¼ÎªÃ¿Ò»¸ö´«¸ÐÆ÷Ìá¹©ÁËÁéÃô¶È¡¢Æ«ÖÃ¡¢´ø¿í¡¢ÁãÆ«µÈ²ÎÊý£¬²¢ÎªÄÚ²¿Ã¿¸ö´«¸ÐÆ÷Ìá¹©²¹³¥£¬¿ÉÒÔÌá¹©¸ß¾«¶ÈµÄ´«¸ÐÆ÷Êä³ö¡£
 
 BMI160µÄÐÔÄÜÖ¸±êÈç±í\ref{chap3_Table 1}ËùÊ¾
 \begin{table}[!h]
-\renewcommand\arraystretch{1.2}
+\renewcommand\arraystretch{1}
 \centering
-\caption{\label{chap3_Table 1}BMI160ÐÔÄÜÖ¸±êÍ¼}
+\caption{\label{chap3_Table 1}BMI160ÐÔÄÜÖ¸±ê}
 \begin{tabular}{ccc}
 \toprule
 \hspace{0.5cm}Ö¸±ê     & \hspace{1cm}ÍÓÂÝ                &\hspace{1cm}¼ÓËÙ¶È¼Æ   \\
 \hline
 \hspace{0.5cm}Á¿³Ì     & \hspace{1cm}$\pm125^\circ/s$            &\hspace{1cm} $\pm2g$ \\
-\hspace{0.5cm}³õÊ¼Æ«ÖÃ     & \hspace{1cm}$\pm3^\circ/s$      &\hspace{1cm}  $\pm70mg$\\
+\hspace{0.5cm}ÁãÆ¯     & \hspace{1cm}$\pm3^\circ/s$      &\hspace{1cm}  $\pm70mg$\\
 \hspace{0.5cm}·Ö±æÂÊ   & \hspace{1cm}$16bit$             &\hspace{1cm} $16bit$  \\
 \hspace{0.5cm}´ø¿í     & \hspace{1cm}$25\sim3200Hz$      &\hspace{1cm} $12.5\sim1600Hz$ \\
 %\hspace{0.5cm}ÔëÉù & \hspace{1cm}$262.4LSB/^\circ/s$ &\hspace{1cm} $16384LSB/g$\\
@@ -110,10 +110,10 @@ BMI160µÄÐÔÄÜÖ¸±êÈç±í\ref{chap3_Table 1}ËùÊ¾
 
 Èý¡¢ÎÀÐÇ½ÓÊÕÄ£¿é
 
-ÎÀÐÇ½ÓÊÕÄ£¿é²ÉÓÃµÄÊÇU-blox¹«Ë¾µÄNEO-M8NÏµÁÐÐ¾Æ¬¡£NEO-M8NÊÇÒ»¿î¸ßÐÔÄÜ,¸ßÁéÃô¶ÈµÄÎÀÐÇÐÅºÅ½ÓÊÕÄ£¿é£¬ËäÈ»ÆäÍâÐÎ³ß´çÖ»ÓÐ$16\times12.2\times2.4mm$,È´¿ÉÒÔÌá¹©·á¸»µÄÎÀÐÇÊý¾ÝÐÅÏ¢£¬Ä£¿éµÄ¸ßÁéÃô¶È¡¢µÍ¹¦ºÄ¼°ÇáÇÉµÄÌå»ý£¬·Ç³£ÊÊÓÃÓÚ³µÔØ¡¢ÊÖ»ú¡¢ÎÞÈË»ú¼°ÆäËûÒÆ¶¯¶¨Î»ÏµÍ³µÄÓ¦ÓÃ¡£ÆäÊµÎïÈçÍ¼ÈçÍ¼\ref{chap3_Fig.4}ËùÊ¾£º
+ÎÀÐÇ½ÓÊÕÄ£¿é²ÉÓÃµÄÊÇU-blox¹«Ë¾µÄNEO-M8NÏµÁÐÐ¾Æ¬¡£NEO-M8NÊÇÒ»¿î¸ßÐÔÄÜ,¸ßÁéÃô¶ÈµÄÎÀÐÇÐÅºÅ½ÓÊÕÄ£¿é£¬ËäÈ»ÆäÍâÐÎ³ß´çÖ»ÓÐ$16mm\times12.2mm\times2.4mm$,È´¿ÉÒÔÌá¹©·á¸»µÄÎÀÐÇÊý¾ÝÐÅÏ¢£¬Ä£¿éµÄ¸ßÁéÃô¶È¡¢µÍ¹¦ºÄ¼°ÇáÇÉµÄÌå»ý£¬·Ç³£ÊÊÓÃÓÚ³µÔØ¡¢ÊÖ»ú¡¢ÎÞÈË»ú¼°ÆäËûÒÆ¶¯¶¨Î»ÏµÍ³µÄÓ¦ÓÃ¡£ÆäÊµÎïÈçÍ¼ÈçÍ¼\ref{chap3_Fig.4}ËùÊ¾£º
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.2\textwidth]{figures/chap3/chap3_NEO}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+\includegraphics[width=0.3\textwidth]{figures/chap3/chap3_NEO}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
 \caption{ÎÀÐÇ½ÓÊÕÄ£¿é}
 \label{chap3_Fig.4}
 \vspace{-0.4cm}
@@ -153,7 +153,7 @@ NEO-M8NÓÐ¶àÖÖ½Ó¿Ú·½Ê½£ºUART¡¢SPIÒÔ¼°USB½Ó¿ÚÈýÖÖÄ£Ê½£»Êý¾ÝÊä³ö¸ñÊ½ÓÐ£ºNMEA¡¢UBXºÍ
 
 \section{Ó²¼þµçÂ·Éè¼Æ}
 \subsection{ÏµÍ³Ô­ÀíÍ¼Éè¼Æ}
-±¾½ÚµÄ¹¤×÷ÊÇÉè¼ÆÏµÍ³µÄÔ­ÀíÍ¼£¬Éè¼ÆÊ±ÐèÒª²Î¿¼ËùÑ¡Æ÷¼þµÄÐ¾Æ¬ÊÖ²á£¬¹æ·¶µçÂ·µÄÉè¼Æ£¬¿¼ÂÇµçÔ´ÐÅºÅÂË²¨µÈ·ÀÖ¹µç´Å¸ÉÈÅµÄ´ëÊ©¡£¸ù¾ÝÏµÍ³Éè¼ÆµÄÒªÇó£¬Ô­ÀíÍ¼Éè¼ÆµÄÖØµãÔÚARMµÄÍâÎ§µçÂ·£¬ÐÅºÅIO½Ó¿ÚµçÂ·¡£µçÔ´Éè¼Æ¡¢¸÷Ä£¿éµÄµçÂ·Éè¼ÆµÈ¡£
+±¾½ÚµÄ¹¤×÷ÊÇÉè¼ÆÏµÍ³µÄÔ­ÀíÍ¼£¬Éè¼ÆÊ±ÐèÒª²Î¿¼ËùÑ¡Æ÷¼þµÄÐ¾Æ¬ÊÖ²á£¬¹æ·¶µçÂ·µÄÉè¼Æ£¬¿¼ÂÇµçÔ´ÐÅºÅÂË²¨µÈ·ÀÖ¹µç´Å¸ÉÈÅµÄ´ëÊ©¡£¸ù¾ÝÏµÍ³Éè¼ÆµÄÒªÇó£¬Ô­ÀíÍ¼Éè¼ÆµÄÖØµãÔÚARMµÄÍâÎ§µçÂ·£¬ÐÅºÅIO ½Ó¿ÚµçÂ·¡£µçÔ´Éè¼Æ¡¢¸÷Ä£¿éµÄµçÂ·Éè¼ÆµÈ¡£
 
 ARM×îÐ¡ÏµÍ³Ô­ÀíÍ¼ÈçÍ¼\ref{chap3_Fig.6}ÈçÏÂËùÊ¾£º
 \begin{figure}[!htb]
@@ -211,7 +211,7 @@ STM32µÄ³ÌÐòÏÂÔØÓÐ¶àÖÖ·½·¨£ºUSB¡¢´®¿Ú¡¢JTAG¡¢SWD¡£ÉÏÃæ½éÉÜÁË³ÌÐòµÄÆô¶¯Ä£Ê½£¬ÎÒÃÇÅ
 \end{tabular}
 \end{table}
 
-µçÔ´ÎÈ¶¨µÄÊä³öÊÇÏµÍ³Õý³£¹¤×÷µÄÇ°Ìá£¬Òò´ËÒªÑ¡ÔñÊä³öµçÑ¹ÎÈ¶¨ÐÔ¸ß¡¢ÎÆ²¨ÔëÉùÐ¡µÄÎÈÑ¹Ð¾Æ¬¡£ÎªÊ¹´«¸ÐÆ÷ÄÜ¹»ÎÈ¶¨¹¤×÷£¬Éè¼Æ¹ý³ÌÖÐ²ÉÓÃ¸ôÀëµÄ¹©µç·½Ê½£¬ÅäÖÃÁËÁ½¸öÎÈÑ¹Ð¾Æ¬£¬ÆäÖÐÒ»¸öµ¥¶À¹©GPS ´«¸ÐÆ÷¹©µç£¬¿ÉÒÔÍ¨¹ý³ÌÐò¿ØÖÆ¸ÃÐ¾Æ¬Ê¹ÄÜ¹Ü½ÅµÄµçÆ½¿ØÖÆµçÑ¹Êä³ö£¬ÁíÍâÒ»Â·ÎÈÑ¹Ð¾Æ¬ÎªÖ÷¿ØÐ¾Æ¬ºÍÆäËûÍâÉè¹©µç¡£ÔÚÊäÈëÊä³öÔö¼Ó100nFµÄÐ¡µçÈÝÒÔ´ËÀ´ÂËµô¸ßÆµµÄ¸ÉÈÅÐÅºÅ£¬¶øÂËµÍÆµ¸ÉÈÅµÄµçÈÝÓÃ4.7UF´óµçÈÝ£¬»¹¼ÓÈë500mAµÄ±£ÏÕË¿×÷Îª¹ýÁ÷±£»¤¡£µçÔ´µçÂ·ÈçÍ¼\ref{chap3_Fig.8} ËùÊ¾£º
+µçÔ´ÎÈ¶¨µÄÊä³öÊÇÏµÍ³Õý³£¹¤×÷µÄÇ°Ìá£¬ÎªÊ¹´«¸ÐÆ÷ÄÜ¹»ÎÈ¶¨¹¤×÷£¬Éè¼Æ¹ý³ÌÖÐ²ÉÓÃ¸ôÀëµÄ¹©µç·½Ê½£¬ÅäÖÃÁËÁ½¸öÎÈÑ¹Ð¾Æ¬£¬ÆäÖÐÒ»¸öµ¥¶À¹©GPS ´«¸ÐÆ÷¹©µç£¬¿ÉÒÔÍ¨¹ý³ÌÐò¿ØÖÆ¸ÃÐ¾Æ¬Ê¹ÄÜ¹Ü½ÅµÄµçÆ½¿ØÖÆµçÑ¹Êä³ö£¬ÁíÍâÒ»Â·ÎÈÑ¹Ð¾Æ¬ÎªÖ÷¿ØÐ¾Æ¬ºÍÆäËûÍâÉè¹©µç¡£ÔÚÊäÈëÊä³öÔö¼Ó100nFµÄÐ¡µçÈÝÒÔ´ËÀ´ÂËµô¸ßÆµµÄ¸ÉÈÅÐÅºÅ£¬¶øÂËµÍÆµ¸ÉÈÅµÄµçÈÝÓÃ4.7UF´óµçÈÝ£¬»¹¼ÓÈë500mAµÄ±£ÏÕË¿×÷Îª¹ýÁ÷±£»¤¡£µçÔ´µçÂ·ÈçÍ¼\ref{chap3_Fig.8} ËùÊ¾£º
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.5\textwidth]{figures/chap3/chap3_Power}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -229,7 +229,7 @@ MEMS´«¸ÐÆ÷Ä£¿éÉè¼ÆÏàÓ¦µÄÔ­ÀíÍ¼ÈçÍ¼\ref{chap3_Fig.9}£¬Í¼ÖÐ²ÉÓÃÍËñîµçÈÝC18¡¢C21Ïû³
  \vspace{-0.4cm}
 \end{figure}
 
-BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍÄ¿±êµØÖ·¸øBMI160 Ê±£¬Ö÷Éè±¸ÄÜ¹»¶ÁÈ¡Æä¼Ä´æÆ÷µÄÄÚÈÝ£¬ÕâÒ»¹ý³ÌÔÚÍ¬Ò»¸öÊ±ÖÓÐÅºÅSCLKÖÐÍê³É¡£Êý¾Ý²ÉÓÃÑ¡ÔñÆÕÍ¨Ä£Ê½£¬ÈçÍ¼\ref{chap3_Fig.10}ËùÊ¾¡£
+BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃËÄÏßÖÆSPI½Ó¿Ú£¬ÊÇÒ»ÖÖ¸ßËÙµÄ¡¢È«Ë«¹¤Í¬²½Í¨ÐÅ×ÜÏß¡£µ±Éè±¸·¢ËÍÄ¿±êµØÖ·¸øBMI160 Ê±£¬Ö÷Éè±¸ÄÜ¹»¶ÁÈ¡Æä¼Ä´æÆ÷µÄÄÚÈÝ£¬ÕâÒ»¹ý³ÌÔÚÍ¬Ò»¸öÊ±ÖÓÐÅºÅSCLKÖÐÍê³É¡£Êý¾Ý²ÉÓÃÑ¡ÔñÆÕÍ¨Ä£Ê½£¬ÈçÍ¼\ref{chap3_Fig.10} ËùÊ¾¡£
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/chap3/chap3_spi}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -238,7 +238,7 @@ BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍ
  \vspace{-0.4cm}
 \end{figure}
 
-²éÔÄÐ¾Æ¬ÊÖ²á£¬ÕÒµ½ÏàÓ¦¼Ä´æÆ÷µØÖ·£¬¶Á³öÄ¿±ê²âÁ¿µÄÊý¾Ý¡£¼Ä´æÆ÷¶ÔÓ¦±íÈçÏÂ±í\ref{chap3_Table 5}£º´Ó±íÖÐ¿ÉÒÔ¿´³ö£¬BMI160ÄÚ²¿¼Ä´æÆ÷¶¼ÊÇ°ËÎ»¿í¶È£¬Í¨¹ýÒ»¸ö×Ö½ÚµÄµØÖ·¿ÉÒÔ·ÃÎÊ¸Ã¼Ä´æÆ÷¡£Èç¼ÓËÙ¶È¼Æ²âÁ¿Öµ¼Ä´æÆ÷¡¢ÍÓÂÝÒÇ²âÁ¿Öµ¼Ä´æÆ÷ºÍÎÂ¶ÈµÈÍâ²¿´«¸ÐÆ÷Êý¾Ý´æ´¢Æ÷¶¼ÊÇÓÉ2¸ö¼Ä´æÆ÷¼¯ºÏ×é³É£¬ÀýÈçXÖá¼ÓËÙ¶È¼ÆÊä³ö¼Ä´æÆ÷XACCL\_OUT£¬ÊÇÓÉ2²¿·Ö·Ö¸ßµÍ°ËÎ»Á½¸ö×Ö½Ú×é³ÉµÄ16Î»ÊýÖµ£¬´æ´¢×î½üX Öá¼ÓËÙ¶È¼ÆµÄ²âÁ¿Öµ£¬µ±ÐèÒª¶ÁÈ¡XÖá¼ÓËÙ¶È¼ÆµÄÊä³öÊý¾ÝÊ±£¬Ö»ÐèÒªÍ¨¹ý±à³ÌÔÚ¸øÐ¾Æ¬Ð´Èë0x12ºÍ0x13µÄÊý¾Ý£¬SPI¼´¿ÉÔÚÊä³ö¶Ë·µ»Ø¼Ä´æÆ÷µÄÊý¾Ý£¬ÔÙÍ¨¹ý¶þ½øÖÆ²¹ÂëµÄ¸ñÊ½½«Æä×ª»»³ÉÊ®½øÖÆ£¬³ËÒÔÏàÓ¦µÄ¿Ì¶È¼´¿ÉµÃµ½XÖá¼ÓËÙ¶È¼ÆµÄÊý¾Ý¡£
+²éÔÄÐ¾Æ¬ÊÖ²á£¬ÕÒµ½ÏàÓ¦¼Ä´æÆ÷µØÖ·£¬¶Á³öÄ¿±ê²âÁ¿µÄÊý¾Ý¡£¼Ä´æÆ÷¶ÔÓ¦±íÈçÏÂ±í\ref{chap3_Table 5}£º´Ó±íÖÐ¿ÉÒÔ¿´³ö£¬BMI160ÄÚ²¿¼Ä´æÆ÷¶¼ÊÇ°ËÎ»¿í¶È£¬Í¨¹ýÒ»¸ö×Ö½ÚµÄµØÖ·¿ÉÒÔ·ÃÎÊ¸Ã¼Ä´æÆ÷¡£Èç¼ÓËÙ¶È¼Æ²âÁ¿Öµ¼Ä´æÆ÷¡¢ÍÓÂÝÒÇ²âÁ¿Öµ¼Ä´æÆ÷ºÍÎÂ¶ÈµÈÍâ²¿´«¸ÐÆ÷Êý¾Ý´æ´¢Æ÷¶¼ÊÇÓÉ2¸ö¼Ä´æÆ÷¼¯ºÏ×é³É£¬ÀýÈçXÖá¼ÓËÙ¶È¼ÆÊä³ö¼Ä´æÆ÷XACCL\_OUT£¬ÊÇÓÉ2²¿·Ö·Ö¸ßµÍ°ËÎ»Á½¸ö×Ö½Ú×é³ÉµÄ16Î»ÊýÖµ£¬´æ´¢×î½üX Öá¼ÓËÙ¶È¼ÆµÄ²âÁ¿Öµ£¬µ±ÐèÒª¶ÁÈ¡XÖá¼ÓËÙ¶È¼ÆµÄÊä³öÊý¾ÝÊ±£¬Ö»ÐèÒªÍ¨¹ý±à³ÌÔÚ¸øÐ¾Æ¬Ð´Èë0x12ºÍ0x13µÄÊý¾Ý£¬SPI¼´¿ÉÔÚÊä³ö¶Ë·µ»Ø¼Ä´æÆ÷µÄÊý¾Ý£¬ÔÙÍ¨¹ý¶þ½øÖÆ²¹ÂëµÄ¸ñÊ½½«Æä×ª»»³ÉÊ®½øÖÆ£¬³ËÒÔÏàÓ¦µÄÏµÊý¼´¿ÉµÃµ½XÖá¼ÓËÙ¶È¼ÆµÄÊý¾Ý¡£
 \begin{table}[!htp]
 \renewcommand\arraystretch{0.8}
 \centering
@@ -283,8 +283,7 @@ BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍ
  \label{chap3_Fig.12}
  \vspace{-0.4cm}
 \end{figure}
-ÔÚÉè¼ÆÎÀÐÇ½ÓÊÜÄ£¿éµçÂ·Ê±£¬Îª¼õÐ¡ÐÅºÅ¼äµÄ´®ÈÅ²ÉÓÃÁË¸ôÀë¹©µçµÄ·½Ê½£¬Ä£¿éÒý³öµçÔ´Òý½ÅÁ¬½ÓÎÈÑ¹Ð¾Æ¬$3V3\_2$£¬¿ÉÒÔÓÉ´¦ÀíÆ÷±à³Ì¿ØÖÆÎÈÑ¹µçÔ´Ð¾Æ¬µÄÊä³öÊ¹ÄÜÀ´´ïµ½¿ØÖÆÎÀÐÇÐ¾Æ¬¹¤×÷µÄÄ¿µÄ¡£IPXÌìÏß½Ó¿Ú¿ÉÓÃÓÚÀ©Õ¹GPSÓÐÔ´ÌìÏß£¬ÊÊºÏµØÃæ³µÁ¾µÄÊ¹ÓÃ¡£Éè±¸TIMEPULSE¶Ë¿ÚÁ¬½Óµ½×´Ì¬Ö¸Ê¾µÆD4£¬´Ë¶Ë¿ÚµÄÊä³öÌØÐÔ¿ÉÒÔÍ¨¹ý³ÌÐò½øÐÐÉèÖÃ£¬ÔÚÄ¬ÈÏÇé¿öÏÂ£¬ÓÐÁ½¸ö×´Ì¬£¬ÕâÑùÍ¨¹ýÖ¸Ê¾µÆ¿ÉÒÔ·½±ãÅÐ¶Ïµ±Ç°ÎÀÐÇ¶¨Î»µÄÇé¿ö¡£Ñ¡ÔñSTM32µÄUSART3Á¬½ÓÉèÖÃNEO-M8NÄ£¿é£¬Á¬ÏßÒý½ÅÍ¼ÈçÍ¼\ref{chap3_Fig.11}ËùÊ¾
-
+ÔÚÉè¼ÆÎÀÐÇ½ÓÊÕÄ£¿éµçÂ·Ê±£¬Îª¼õÐ¡ÐÅºÅ¼äµÄ´®ÈÅ²ÉÓÃÁË¸ôÀë¹©µçµÄ·½Ê½£¬Ä£¿éÒý³öµçÔ´Òý½ÅÁ¬½ÓÎÈÑ¹Ð¾Æ¬$3V3\_2$£¬¿ÉÒÔÓÉ´¦ÀíÆ÷±à³Ì¿ØÖÆÎÈÑ¹µçÔ´Ð¾Æ¬µÄÊä³öÊ¹ÄÜÀ´´ïµ½¿ØÖÆÎÀÐÇÐ¾Æ¬¹¤×÷µÄÄ¿µÄ¡£IPXÌìÏß½Ó¿Ú¿ÉÓÃÓÚÀ©Õ¹GPSÓÐÔ´ÌìÏß£¬ÊÊºÏµØÃæ³µÁ¾µÄÊ¹ÓÃ¡£Éè±¸TIMEPULSE¶Ë¿ÚÁ¬½Óµ½×´Ì¬Ö¸Ê¾µÆD4£¬´Ë¶Ë¿ÚµÄÊä³öÌØÐÔ¿ÉÒÔÍ¨¹ý³ÌÐò½øÐÐÉèÖÃ£¬ÔÚÄ¬ÈÏÇé¿öÏÂ£¬ÓÐÁ½¸ö×´Ì¬£¬ÕâÑùÍ¨¹ýÖ¸Ê¾µÆ¿ÉÒÔ·½±ãÅÐ¶Ïµ±Ç°ÎÀÐÇ¶¨Î»µÄÇé¿ö¡£Ñ¡ÔñSTM32µÄUSART3Á¬½ÓÉèÖÃNEO-M8NÄ£¿é£¬µçÂ·Éè¼ÆÈçÍ¼\ref{chap3_Fig.11}ËùÊ¾
 
 \begin{table}[!h]
 \centering
@@ -309,7 +308,7 @@ BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍ
  \vspace{-0.4cm}
 \end{figure}
 
-ÀûÓÃSTÌá¹©µÄUSB \ OTG¿â£¬Éè¼ÆUSBµÄÇý¶¯³ÌÐò£¬³É¹¦ÅäÖÃUSBºó£¬Á¬½ÓUSBÏßµçÄÔÌáÊ¾·¢ÏÖÐÂÓ²¼þ\ref{chap3_Fig.14}£¬²¢¿ªÊ¼×Ô¶¯°²×°Çý¶¯£¬¾Í¿ÉÒÔÔÚµçÄÔÉÏ¿´µ½µ¼º½Éè±¸µÄ´ÅÅÌÈçÍ¼\ref{chap3_Fig.15}
+ÀûÓÃSTÌá¹©µÄUSB \ OTG¿â£¬Éè¼ÆÇý¶¯³ÌÐò£¬³É¹¦ÅäÖÃÐ¾Æ¬ºóÁ¬½ÓUSBÏßÖÁµçÄÔÌáÊ¾·¢ÏÖÐÂÓ²¼þ\ref{chap3_Fig.14}£¬²¢¿ªÊ¼×Ô¶¯°²×°Çý¶¯£¬¾Í¿ÉÒÔÔÚµçÄÔÉÏ¿´µ½µ¼º½Éè±¸µÄ´ÅÅÌÈçÍ¼\ref{chap3_Fig.15}
 \begin{figure}[htbp]
 \begin{minipage}[t]{0.35\linewidth}
 \centering
@@ -327,22 +326,22 @@ BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍ
 \end{figure}
 
 
-\subsection{ÏµÍ³PCB°åÉè¼Æ}
-Ê¹ÓÃAltium DesignerÍê³ÉÔ­ÀíÍ¼Éè¼Æºó£¬»¹Òª»æÖÆPCBÍ¼À´ÖÆ×÷Ó¡Ë¢µçÂ·°å£¬PCB°åÊÇµçÂ·Ôª¼þµÄÔØÌå£¬Ìá¹©ÁËÔªÆ÷¼þÖ®¼äµÄµçÆøÁ¬½Ó¡£ÔÚÉè¼ÆPCB Ê±£¬±ØÐë×ñÊØµçÂ·Éè¼ÆµÄÒ»°ã¹æÔò£¬²»½öÒª½â¾öºÃÐÅºÅµÄ´«ÊäÎÊÌâ£¬»¹ÒªÏû³ýµç´ÅñîºÏµÄÓ°Ïì¡£ÔÚÉè¼ÆµçÂ·°åÊ±£¬Ö÷Òª×ñÑ­ÁËÒÔÏÂ¼¸¸ö¹æÔò£º
+\subsection{ÏµÍ³PCBÉè¼Æ}
+PCB°åÊÇµçÂ·Ôª¼þµÄÔØÌå£¬Ìá¹©ÁËÔªÆ÷¼þÖ®¼äµÄµçÆøÁ¬½Ó¡£ÔÚÉè¼ÆPCB Ê±£¬±ØÐë×ñÊØµçÂ·Éè¼ÆµÄÒ»°ã¹æÔò£¬²»½öÒª½â¾öºÃÐÅºÅµÄ´«ÊäÎÊÌâ£¬»¹ÒªÏû³ýµç´ÅñîºÏµÄÓ°Ïì¡£ÔÚÉè¼ÆÊ±£¬Ö÷Òª×ñÑ­ÁËÒÔÏÂ¼¸¸ö¹æÔò\cite{ZhangS(2008)}£º
 
 (1)Æ÷¼þ²¼¾Ö
 
-ÔÚÉè¼ÆÖÐ£¬ÔªÆ÷¼þ²¼¾ÖÉÏ³ÐÔ­ÀíÍ¼Éè¼Æ£¬ÏÂ½ÓPCB²¼ÏßÉè¼Æ£¬²¼¾Ö·½Ê½µÄÓÅÁÓÖ±½Ó¾ö¶¨²¼ÏßµÄ³É¹¦ÓëÏµÍ³×îÖÕ¹¤×÷µÄÐÔÄÜ£¬ºÏÀíµÄ²¼¾ÖÌØ±ðÊÇ¾§Õñ¡¢ÏµÍ³½Ó¿Ú¡¢µç×èµçÈÝµÈ¹Ø¼üÆ÷¼þµÄÊÇÕû¸öµçÂ·ÐÅºÅÍêÕûÐÔµÄ¹Ø¼ü£¬ÔÚÈ·¶¨PCBÐÎ×´ºÍ³ß´çºó£¬Æ÷¼þ°Ú·ÅÒª¾¡Á¿½ô´Õ£¬¸÷Ä£¿éÖ®¼äÒÔÖ÷´¦ÀíÆ÷ÎªÖÐÐÄ£¬ÆäËûÆ÷¼þÒÔÉÈÐÎ×´Ì¬ÖÃÓÚÔªÆ÷¼þÖÜÎ§£¬Ê¹µÃ×ÜµÄÁ¬Ïß¾¡¿ÉÄÜ¶Ì£¬¹Ø¼üÐÅºÅÏß×î¶Ì¡£Ê¹ÓÃÍ¬Ò»µçÔ´µÄÆ÷¼þ¾¡¿ÉÄÜµÄ·ÅÔÚÒ»¿é£¬±ãÓÚµçÔ´¹ÜÀí¡£
+ÔªÆ÷¼þµÄ²¼¾ÖÉÏ³ÐÔ­ÀíÍ¼Éè¼Æ£¬ÏÂ½ÓPCBµçÂ·²¼ÏßÉè¼Æ£¬²¼¾Ö·½Ê½µÄÓÅÁÓÖ±½Ó¾ö¶¨²¼ÏßµÄ³É¹¦ÓëÏµÍ³×îÖÕ¹¤×÷µÄÐÔÄÜ£¬ÔÚÈ·¶¨PCBÐÎ×´ºÍ³ß´çºó£¬Æ÷¼þ°Ú·ÅÒª¾¡Á¿½ô´Õ£¬¸÷Ä£¿éÖ®¼äÒÔÖ÷´¦ÀíÆ÷ÎªÖÐÐÄ£¬ÆäËûÆ÷¼þÒÔÉÈÐÎ×´Ì¬ÖÃÓÚÔªÆ÷¼þÖÜÎ§£¬Ê¹µÃ×ÜµÄÁ¬Ïß¾¡¿ÉÄÜ¶Ì¡£Í¬Ò»µçÔ´ÏÂµÄÔª¼þ¾¡Á¿½ô´Õ£¬±ãÓÚµçÔ´¹ÜÀí¡£
 
 (2)²¼Ïß
 
-²¼ÏßÊÇÔÚ²¼¾ÖÍê³Éºó½«ÊÇÏµÍ³Ó²¼þÉè¼ÆÖÐÒ»¸ö¹Ø¼ü»·½Ú£¬±¾Éè¼ÆÖÐ²¼Ïß×ñÑ­ÁË»·Â·×îÐ¡Ô­Ôò£¬¼´ÐÅºÅÏßÓëÆä»ØÂ·¹¹³ÉµÄ»·Ãæ»ýÒª¾¡¿ÉÄÜÐ¡£¬»·Ãæ»ýÔ½Ð¡£¬¶ÔÍâµÄ·øÉäÔ½ÉÙ£¬½ÓÊÕÍâ½çµÄ¸ÉÈÅÒ²Ô½Ð¡£»ÐÅºÅÏßÖ®¼ä»áÒò½Ï³¤µÄÆ½ÐÐ²¼ÏßÒýÆðÏà»¥¸ÉÈÅ£¬Ö÷ÒªÊÇÓÉÓÚÆ½ÐÐÏß¼äµÄ·Ö²¼µçÈÝºÍ·Ö²¼µç¸ÐµÄ×÷ÓÃ£¬À©´óÏß¼ä¾à¡¢¾¡¿ÉÄÜÉÙ×ßÆ½ÐÐÏß£¬²»×ß»·ÐÐÏßÒÔ´ËÀ´¿Ë·þ´®ÈÅ¡£Ôö¼ÓÏß¿í¶È£¬ÖØÒªÐÅºÅ¼ä£¬Æ½ÐÐµØÏßµÄ·½·¨¸ôÀë¡£
+ÒòÎª±¾¿ÎÌâÉè¼ÆµÄµ¼º½Ä£¿éÔÚÌå»ýÉÏÒªÇó¾¡¿ÉÄÜÐ¡£¬Òò´ËÔÚ·ÅÖÃÍêËùÓÐÔª¼þºó£¬¸ø²¼ÏßµÄ¿Õ¼äÊ®·ÖÓÐÏÞ£¬µ«»¹ÐèÒª×ñÑ­»­ÏßµÄ¹æÔò£¬ÏßÓëÏßÖ®¼ä£¬ÏßÓë¿×Ö®¼äµÄ¾àÀëµÈÂú×ãÖÆ×÷µÄÒªÇó£¬ÖØµã»æÖÆÒ»Ð©¹Ø¼üÐÅºÅÏßºÍµçÔ´Ïß£¬²ÉÈ¡×î¼Ñ´ëÊ©£¬Èç£º¿Õ¼äÔÊÐíÏÂÀ©´óÏß¼ä¾à£¬Ôö´óÏß¿í¡¢ÊäÈë¼°Êä³öÏßÒª¾¡Á¿·Ö¿ª±ÜÃâ´®ÈÅ¡£
 
 (3)½ÓµØ
 
-½ÓµØ¼¼ÊõµÄÄ¿µÄÊÇ×îÐ¡»¯½ÓµØ×è¿¹£¬ÒÔ¼õÉÙ´ÓµçÂ··µ»Øµ½µçÔ´Ö®¼äµÄ½ÓµØ»ØÂ·µÄµçÊÆ¡£È¥ñîµçÈÝ·ÅÖÃÔÚ¾àÀëIC ¹©µçÏßºÍ½ÓµØ²ãÖ®¼ä¾¡¿ÉÄÜ½üµÄµØ·½¡£
+ÓÉÓÚµçÂ·°å³ß´çÐ¡µÄÔ­Òò£¬ÔÚPCBÆÌÍ­ºó¿ÉÄÜÓÐÐ©µØ¹Ü½ÅÎÞ·¨Á¬½ÓµØÏß£¬ËùÒÔÔÚÉè¼ÆÊ±ÊÖ¶¯Á¬½ÓËùÓÐµØµÄÒý½Å£¬²ÉÓÃ¶àµã½ÓµØµÄ·½Ê½¡£½ÓµØµÄÄ¿µÄÊÇÎªÁËÓÐÐ§½µµÍ½ÓµØ×è¿¹¡£È¥ñîµçÈÝÒª·ÅÖÃÔÚÐ¾Æ¬µçÔ´¹©µçÏß¾à½ÓµØ×î½üµÄµØ·½£¬Ð¾Æ¬¹¤×÷µçÁ÷»á·¢Éú±ä»¯£¬ÒýÆð¹©µçµçÑ¹¸ßÆµ²¨¶¯£¬Ó°ÏìÏµÍ³¹¤×÷ÐÔÄÜ£¬ËùÒÔÔÚ¹©µç½ÅÔö¼Ó´¢ÄÜµçÈÝºÍÍËñîµçÈÝ¡£
 
-ÏÔÈ»£¬ÓÉÓÚµçÂ·°åÃæ»ý£¬×ÜÌå°²×°Î»ÖÃµÈµÄÏÞÖÆ£¬°´ÉÏÊöÔ­ÔòÉè¼Æ»áÊÜµ½Ò»¶¨µÄÏÞÖÆ¡£Òò´Ë£¬ÔÚÉè¼ÆÊ±ÐèÒª¶Ô²¼¾ÖºÍ²¼Ïß·Ö±ð¿¼ÂÇ£¬´ïµ½×î¼ÑµÄ×´Ì¬¡£Éè¼ÆÍê³ÉµÄPCB°å3DÄ£ÐÍÈçÍ¼(\ref{chap3_Fig.16})ËùÊ¾µÄºÍÊµÎïÈçÍ¼(\ref{chap3_Fig.17})£º
+ÔÚÊµ¼ÊÉè¼ÆµçÂ·Ê±»¹Ðè¸ù¾Ý¿Í¹ÛÇé¿ö£¬ºÏÀíµÄ²¼¾ÖÀ´´ïµ½×îÓÅµÄ×´Ì¬¡£Éè¼ÆÍê³ÉµÄPCB°å3DÄ£ÐÍÈçÍ¼(\ref{chap3_Fig.16})ËùÊ¾µÄºÍÊµÎïÈçÍ¼(\ref{chap3_Fig.17})£º
 \begin{figure}[htbp]
 \begin{minipage}[t]{0.35\linewidth}
 \centering
@@ -367,7 +366,7 @@ BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍ
 % \vspace{-0.4cm}
 %\end{figure}
 
-µçÂ·°åÉè¼Æ¼Ó¹¤Íê³Éºó£¬Òª½øÐÐÓ²¼þµçÂ·µÄ²âÊÔ£¬µ÷ÊÔÃ»ÓÐÎÊÌâºó²Å¿ÉÒÔ¼ÌÐø½øÐÐÏµÍ³Èí¼þ²âÊÔ¡£½«Ö÷Ð¾Æ¬Í¨¹ýJLINKµ÷ÊÔÆ÷Á¬½Óµ½µçÄÔ£¬Ê¹ÓÃJTAGµ÷ÊÔ´úÀíÈí¼þ£¬¾Í¿ÉÒÔ¼ì²éµ½°åÉÏµÄÐ¾Æ¬£¬ËµÃ÷Ó²¼þÉè¼ÆÕý³£¡£±àÐ´Ò»¶Î²âÊÔ³ÌÐò£¬ÑéÖ¤¸÷Ä£¿éÕý³£¹¤×÷£¬ÖÁ´Ë£¬Ó²¼þÉè¼ÆÍê³É¡£µç×ÓµçÂ·¾­¾²Ì¬ºÍ¶¯Ì¬µ÷ÊÔÕý³£Ö®ºó£¬²âÊÔÏµÍ³³¤Ê±¼ä¹¤×÷×´Ì¬£¬±ã¿É¶Ô¿ÎÌâÒªÇóµÄ¼¼ÊõÖ¸±ê½øÐÐ²âÁ¿£¬²âÊÔ²¢¼ÇÂ¼Êý¾Ý£¬È·¶¨µçÂ·¼¼ÊõÖ¸±ê·ûºÏÉè¼ÆÒªÇó¡£´ËÄ£¿éµÄÐÔÄÜ²ÎÊýÓÐ£º
+µçÂ·°åÉè¼Æ¼Ó¹¤Íê³Éºó£¬Òª½øÐÐÓ²¼þµçÂ·µÄ²âÊÔ£¬µ÷ÊÔÃ»ÓÐÎÊÌâºó²Å¿ÉÒÔ¼ÌÐø½øÐÐÏµÍ³Èí¼þ²âÊÔ¡£½«Ö÷Ð¾Æ¬Í¨¹ýµ÷ÊÔÆ÷Á¬½Óµ½µçÄÔ£¬¿ÉÒÔ¼ì²éµ½°åÉÏµÄÐ¾Æ¬£¬ËµÃ÷Ó²¼þÉè¼ÆÕý³£¡£±àÐ´Ò»¶Î²âÊÔ³ÌÐò£¬ÑéÖ¤¸÷Ä£¿éÕý³£¹¤×÷£¬ÖÁ´Ë£¬Ó²¼þÉè¼ÆÍê³É¡£¾­ÏµÍ³³¤Ê±¼ä¹¤×÷²âÊÔ£¬±ã¿É¶Ô¿ÎÌâÒªÇóµÄÖ¸±ê½øÐÐ²âÁ¿£¬²¢¼ÇÂ¼Êý¾Ý£¬ÑéÖ¤¼¼ÊõÖ¸±ê·ûºÏÉè¼ÆÒªÇó¡£²âÊÔºó´ËÄ£¿éµÄÐÔÄÜ²ÎÊýÓÐ£º
 
 1¡¢¹¤×÷µçÑ¹£º$3V\sim6V$£»
 
@@ -380,4 +379,4 @@ BMI160×÷Îª´ÓÉè±¸£¬ÓëÖ÷Éè±¸½øÐÐÍ¨Ñ¶²ÉÓÃSPI½Ó¿Ú£¬SPI²ÉÓÃÈ«Ë«¹¤Ä£Ê½£¬ÕâÑùµ±Éè±¸·¢ËÍ
 5¡¢Êý¾Ý½Ó¿Ú£º´®¿Ú£¨TTLµçÆ½£¬²¨ÌØÂÊÖ§³Ö×î´ó230400bps£©¡¢USB½Ó¿Ú¡¢SD¿¨½Ó¿Ú¡¢IPXÌìÏß½Ó¿Ú¡¢SWDÏÂÔØµ÷ÊÔ½Ó¿Ú£»
 
 \section{±¾ÕÂÐ¡½á}
-±¾ÕÂÖ÷ÒªËµÃ÷ÁË×éºÏµ¼º½ÏµÍ³µÄÓ²¼þÊµÏÖÇé¿ö£¬Ê×ÏÈ¸ù¾Ý×ÜÌå·½°¸µÄÉè¼ÆÒªÇó£¬¶Ô¸÷Ð¾Æ¬Ä£¿é¹¦ÄÜºÍÔ­Àí½øÐÐËµÃ÷²¢Íê³ÉÑ¡ÐÍ£¬Éè¼ÆÏàÓ¦Ð¾Æ¬µÄÓ²¼þ½Ó¿Ú¼°Í¨ÐÅ·½Ê½£¬×îºó¸ø³öÏµÍ³Ô­ÀíÍ¼ºÍPCB Í¼µÄÉè¼Æ£¬ÖÆ×÷³öÍêÕûµÄÏµÍ³Ó²¼þÆ½Ì¨£¬ÎªºóÐøÈí¼þËã·¨Éè¼ÆÌá¹©ÎïÀí»ù´¡¡£
+±¾ÕÂÖ÷ÒªËµÃ÷ÁË×éºÏµ¼º½ÏµÍ³µÄÓ²¼þÉè¼Æ¹ý³Ì¡£Ê×ÏÈ¸ù¾Ý×ÜÌå·½°¸µÄ¹æ»®£¬¶Ô¸÷Ð¾Æ¬Ä£¿é¹¦ÄÜºÍÔ­Àí½øÐÐËµÃ÷²¢Ñ¡ÐÍ£¬Éè¼ÆÏàÓ¦Ð¾Æ¬µÄÓ²¼þ½Ó¿Ú¼°Í¨ÐÅ·½Ê½£¬²¢Íê³ÉÓ²¼þÖÆ×÷ÒÔ¼°»ù±¾µÄÓ²¼þ²âÊÔ£¬ÎªºóÐøÈí¼þËã·¨ÑéÖ¤Ìá¹©ÎïÀí»ù´¡¡£

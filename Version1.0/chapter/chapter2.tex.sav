@@ -1,26 +1,26 @@
 
-\chapter{小型化车载导航组合系统方案设计}
+\chapter{组合导航系统方案设计}
 \section{引言}
-车载组合定位系统是采用车载传感器进行组合定位的实时系统，随着MEMS 惯性器件工程化及精度的提升，其小型化、低成本、低功耗抗稳定性好的应用特点在航姿测量系统得到广泛的应用。本文致力于设计小型化车载组合定位系统，通过合理的布局及系统设开发，将MEMS惯性器件、GNSS接收机、数据处理器，数据存储等设备高度集成在一块板卡上，并设计相应导航软件，实现车辆的快速定位。
+自动辅助驾驶系统是经多项传感器数据融合后为车辆进行辅助导航驾驶的实时系统\cite{QiGF(2015)}，其中的导航模块为车辆提供丰富的位置、速度和姿态等导航信息，是车辆驾驶系统的关键设备之一。随着MEMS惯性器件工艺水平和精度提升，其小型化、低成本、低功耗抗稳定性好的特点在车辆导航系统中得到了广泛的应用。本文致力于设计小型化车载组合定位系统，通过合理的布局及系统设计开发，将MEMS 惯性器件、GNSS接收机、数据处理器，数据存储等设备高度集成在一块板卡上，并设计相应导航软件，实现车辆的实时导航定位。
 
-本章首先介绍导航系统研究中几种常见的坐标系及相互之间的转换，分析车载定位系统的定位原理并给出基于四元数和旋转矢量法的MEMS惯导姿态、位置和速度更新方程，最后给出车载组合定位系统的总体方案设计。
+本章首先介绍导航系统研究中几种常见的坐标系及相互之间的转换，并给出基于四元数和旋转矢量法的MEMS惯导姿态、位置和速度更新方程，对MEMS 惯导误差进行了辨识，通过Allan 方差对实验采集的器件数据进行随机误差分析。最后给出导航模块的总体方案设计。
 
-\section{车载组合导航系统坐标定义及转换换}
-宇宙中的物体小到分子原子大到行星恒星都在不停地运动，但运动是相对的，单个没有参考的物体是无运动可言的。一个物体在空间的位置只能相对另一个物体确定，后一个物体就是描述前一个物体运动的参考系，可以在该物体上建立直角坐标系。在导航定位过程中，运动体的姿态、速度、位置等信息的确定都必须建立在相应的参考坐标系中。对于不同的研究对象和任务要求，需要选择不同的坐标系。
+\section{导航系统坐标定义及转换}
+在导航定位过程中，需要为车辆提供姿态、速度、位置等导航信息，这些信息需要必须建立在相应的参考坐标系中，设计中根据不同的研究对象选择相应的坐标系\cite{QinYY(2014),YanGM(2004)}。
 
 \subsection{导航坐标系定义}
-在陆地车辆组合导航系统中，常见的坐标系有：惯性坐标系、地球坐标系、地理坐标系、机体坐标系、导航坐标系。
+在陆用车辆导航系统中，常见的参考坐标系有以下几种\cite{DengZZ(2012)}：
 
 (1)惯性坐标系(i系)
 
-惯性坐标系(以下简称惯性系)是遵循牛顿定律的坐标系，即相对于惯性空间做匀速直线运动或绝对静止的坐标系，惯性坐标系为惯性器件测量的参考基准。完全理想的惯性坐标系本身并不存在，在实际应用中通过使用近似的地心惯性坐标系来代替惯性坐标系进行运算。
+惯性坐标系(以下简称惯性系)是遵循牛顿定律的坐标系，即相对于惯性空间做匀速直线运动或绝对静止的坐标系，惯性坐标系为惯性器件测量的参考基准。完全理想的惯性坐标系本身并不存在，在实际应用中通过使用近似的地心惯性坐标系来代替惯性坐标系进行运算。惯性坐标系用O-$X_iY_iZ_i$表示，以地球中心作为坐标原点，坐标系$x_i$轴与$y_i$轴在赤道平面内相互垂直，$x_i$轴指向春分点，$Z_i$轴平行于地球自转轴指向北极方向，满足右手定律。
 
 (2)地球坐标系(e系)
 
-与地球固连，以地球质心为坐标原点，轴与地球自转轴方向一致。
+如图\ref{chap2_Fig.1}，地球系O-$X_eY_eZ_e$与地球固连，以地球质心为原点，$X_e$轴指向本初子午线，$Y_e$轴位于赤道平面指向东经$90^\circ$方向，$Z_e$轴平行于极轴，X-Y-Z构成由右手系随着地球一起转动，又称为地心地固坐标系。地球系非惯性系，但可以很方便的描述地球表面点的位置。
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap2/chap2_coordinate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.4\textwidth]{figures/chap2/chap2_coordinate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{地球坐标系与地理坐标系示意图}
  \label{chap2_Fig.1}
  \vspace{-0.4cm}
@@ -28,7 +28,7 @@
 
 (3)地理坐标系(g系)
 
-如图所示，地理坐标系OEN$\xi$的原点O取在载体的重心，E轴在当地水平面内的指东，N轴在当地水平面指北，$\xi$轴则沿当地地垂线指向天空的方向，EN$\xi$三轴构成右手直角坐标系。地理系是随着载体运动的，可以按“东北天”“北西天”或者“北东地”顺序构成，本文中的地理坐标系选择“东北天”坐标系描述。
+如图\ref{chap2_Fig.1}所示，地理坐标系O-$X_gY_gZ_g$用来表示载体所在位置，原点O取在载体的重心，$X_g$轴在水平面内指东，$Y_g$轴水平面指北，$Z_g$轴则沿地垂线指向天空的方向，三轴构成右手直角坐标系，即是“东北天”坐标系。
 
 (4)载体坐标系(b系)
 \begin{figure}[!htb]
@@ -39,24 +39,23 @@
  \vspace{-0.4cm}
 \end{figure}
 
-如图\ref{chap2_Fig.2}所示，载体坐标系的原点$O_b$位于载体重心位置，与运载体固联，$x_b$轴沿载体的横轴方向，$y_b$沿载体的纵轴方向，$z_b$垂直机体水平面向上，$x_by_bz_b$轴构成右手直角坐系，载体坐标系相对于地理坐标系的方位称为载体的姿态和航向。
+如图\ref{chap2_Fig.2}所示，载体坐标系的原点$O_b$位于载体重心位置，与运载体固联，$X_b$轴沿载体的横轴方向，$Y_b$沿载体的纵轴方向，$Z_b$垂直机体水平面向上，$X_bY_bZ_b$轴构成右手直角坐系，当载体在水平面内，绕$x_b-y_b-z_b$三个轴转动形成的夹角对应载体姿态的俯仰角、横滚角和偏航角。
 
 (5)导航坐标系(n系)
 
-导航坐标系是惯性导航系统求解导航参数时所采用的坐标系用$Ox_ny_nz_n$。针对捷联惯导来说，传感器所采的数据是沿载体坐标系轴向的，必须将该采集的信息分解到便于描述和求解导航参数的坐标系内，然后进行导航解算，这个坐标系即导航坐标系。本文选择的导航坐标系为地理坐标系即东北天坐标系。
+导航坐标系在物理上并不真实存在，只是在导航时根据计算描述的需要而选取的一个导航基准坐标系。本文选择东北天坐标系为导航坐标系，惯导的数学方程都建立在该坐标系上。
 
-当物体在地球上运动时，物体相对地球的位置是不断改变的，与此同时，地球上某点的地理坐标系相对于地球系的角位置也是不同。运载体相对地球运动引起地理坐标系相对地球坐标系的转动。地理坐标系相对惯性坐标系的转动角速度有两部分组成：一个是地球坐标系相对于惯性坐标系的转动角速度；另一部分是地理坐标系相对于地球坐标系的转动角速度。两部分具体的计算过程在后续章节详细介绍。确定物体的地理位置，就是确定地理坐标系相对于地球坐标系的方位关系，即经度$\lambda$纬度$\varphi$和到地球地心的距离R；而物体的姿态则是确定载体坐标系相对于地理坐标系的方位关系。
 \subsection{坐标系变换原理}
-由上面定义的几种坐标系可知，在分析惯性导航系统运动时，将用到多种坐标系，而这些坐标系并不是相互孤立的。虽然空间中一个向量在不同的坐标系里的坐标是不同的，但是通过坐标变换，可以将一个坐标系下的向量坐标转换到另一个坐标系下。这种变换包括平移和旋转，在惯性导航中坐标系的变换我们更关注坐标之间的角度关系，即旋转坐标变换，具体的转换方法见文献。以下介绍两种坐标之间的转换。
+由上面定义的几种坐标系可知，在分析惯性导航系统运动时，将用到多种坐标系，而这些坐标系并不是相互孤立的。在不同的坐标系下同一向量的坐标表示是不同的，但是通过坐标平移和旋转变换，可以将一个坐标系下的向量坐标转换到另一个坐标系下。在惯性导航中我们更关注坐标变换之间的角度关系，即旋转坐标变换，更多的转换方法见文献\citep{GaoZhongY(2012)}。以下介绍两种坐标之间的转换。
 
-(1)地球坐标系与地理坐标系之间的转换
+(1)地球系与地理系之间的转换
 
-根据图（\ref{chap2_Fig.1}）可知，地球坐标系和地理坐标系的原点不重合，当用经度$\lambda$ 和纬度$\varphi$来表示旋转角度时，其转动过程可以描述为地球坐标系绕$Z_e$轴转动($90^{\circ}$+$\lambda$)，再绕变换后的$x$轴转动($90^{\circ}$-$\varphi$),最后绕变换后的z轴旋转$90^{\circ}$而得到地理坐标系。
-\begin{align*}
+根据图(\ref{chap2_Fig.1})可知，地球系$(X_e,Y_e,Z_e)$和地理系$(X_g,Y_g,Z_g)$的原点并不重合，设当前位置地理坐标系的纬度为L、经度为$\lambda$，则其转动过程可以描述为地球坐标系绕$Z_e$轴转动($\lambda$)，再绕变换后的$X$ 轴转动($90^{\circ}$-$L$), 最后绕变换后的$Z$轴旋转$90^{\circ}$，整个过程的表达式如式\ref{2.1}所示：
+\begin{align}
 \left [\begin{array}{ccc}
-E\\
-N\\
-\xi\\
+X_g\\
+Y_g\\
+Z_g\\
 \end{array}\right]&=
 \left [\begin{array}{ccc}
 {0}  & {1} & {0} \\
@@ -64,9 +63,9 @@ N\\
 {0}  & {0} & {1} \\
 \end{array}\right]
 \left [\begin{array}{ccc}
-{\cos(90^{\circ}-\varphi)}  & {0} & {-\sin(90^{\circ}-\varphi)} \\
+{\cos(90^{\circ}-L)}  & {0} & {-\sin(90^{\circ}-L)} \\
 {0} & {1} & {0} \\
-{\sin(90^{\circ}-\varphi)}  & {0} & {\cos(90^{\circ}-\varphi)} \\
+{\sin(90^{\circ}-L)}  & {0} & {\cos(90^{\circ}-L)} \\
 \end{array}\right]
 \left [\begin{array}{ccc}
 {\cos \lambda}  & {\sin \lambda} & {0} \\
@@ -81,47 +80,51 @@ z_e\\
 &=
 \left [\begin{array}{ccc}
 {-\sin \lambda}  & {\cos \lambda} & {0} \\
-{-\sin \varphi \cos \lambda} & {-\sin \varphi \sin \lambda} & {\cos \varphi} \\
-{\cos \varphi \cos \lambda}  & {\cos \varphi \sin \lambda} & {\sin \varphi} \\
+{-\sin L \cos \lambda} & {-\sin L \sin \lambda} & {\cos L} \\
+{\cos L \cos \lambda}  & {\cos L \sin \lambda} & {\sin L} \\
 \end{array}\right]
 \left [\begin{array}{ccc}
 x_e\\
 y_e\\
 z_e\\
-\end{array}\right]\tag{1.1}
-\end{align*}
-用$\textbf{C}^n_e$表示变换矩阵，有
+\end{array}\right]%\tag{1.1}
+\label{2.1}
+\end{align}
+
+用$\textbf{C}^n_e$表示变换矩阵有：
 \begin{eqnarray}
 \textbf{C}^n_e&=
 \left [\begin{array}{ccc}
 {-\sin \lambda}  & {\cos \lambda} & {0} \\
-{-\sin \varphi \cos \lambda} & {-\sin \varphi \sin \lambda} & {\cos \varphi} \\
-{\cos \varphi \cos \lambda}  & {\cos \varphi \sin \lambda} & {\sin \varphi} \\
+{-\sin L \cos \lambda} & {-\sin L \sin \lambda} & {\cos L} \\
+{\cos L \cos \lambda}  & {\cos L \sin \lambda} & {\sin L} \\
 \end{array}\right]\triangleq
 \left [\begin{array}{ccc}
 {\textbf{C}_{11}} & {\textbf{C}_{12}} & {\textbf{C}_{13}} \\
 {\textbf{C}_{21}} & {\textbf{C}_{22}} & {\textbf{C}_{23}} \\
 {\textbf{C}_{31}} & {\textbf{C}_{32}} & {\textbf{C}_{33}} \\
 \end{array}\right]
+\label{2.2}
 \end{eqnarray}
-式中，$\textbf{C}^n_e$为地球坐标系到地理坐标系的变换矩阵；$\textbf{C}_{ij}$为变换矩阵的元素($i=1,2,3;j=1,2,3$)。
 
-(2)地理坐标系和载体坐标系之间的转换
+$\textbf{C}^n_e$为地球系到地理系的位置矩阵；$\textbf{C}_{ij}$为变换矩阵的元素($i=1,2,3;j=1,2,3$)。
 
-载体的姿态和航向实际上就是载体坐标系和地理坐标系之间的方位关系。载体的姿态可用如下欧拉角表示：
+(2)地理系和载体系之间的转换
 
-俯仰角($\theta$):载体绕横轴$x_b$转动时，载体的纵轴与水平面之间会形成一个夹角，该角即为俯仰角，一般用$\theta$表示,向上角度为正，向下为负，俯仰角取值范围为$[-90^\circ,90^\circ]$。
+载体的姿态实际上就是载体系和地理系之间的转换关系。载体的姿态可用如下欧拉角表示：
 
-翻滚角($\gamma$):载体绕纵轴$y_b$转动时，载体的横轴与水平面之间会形成一个夹角，该角即为翻滚角，一般用$\gamma$表示，以右端向下为正，翻滚角取值范围为$[-90^\circ,90^\circ]$。
+俯仰角（$\theta$）：载体绕横轴$X_b$转动时，载体的纵轴与水平面之间会形成一个夹角，该角即为俯仰角，一般用$\theta$表示,向上角度为正，向下为负，俯仰角取值范围为$[-90^\circ,90^\circ]$。
 
-航向角($\psi$):载体绕方位轴转动时，载体纵轴$y_b$在地理坐标系下的水平投影与地理子午线$N$的夹角称为航向角，一般用$psi$表示，以正北方向为起点并以北偏东方向逐渐增加，航向角取值范围为$[0^\circ,360^\circ]$。
+翻滚角（$\gamma$）：载体绕纵轴$Y_b$转动时，载体纵向铅垂面与纵向对称面间形成的夹角，该角即为翻滚角，一般用$\gamma$表示，相对于铅垂面右倾为正值、左倾为负值，翻滚角取值范围为$[-90^\circ,90^\circ]$。
 
-载体坐标系和导航坐标系之间可以绕$Z-X-Y$的顺序转动三次完成转换，载体姿态矩阵$\textbf{C}^n_b$实现转换,变换公式如下：
+航向角（$\Psi$）：载体绕方位轴$Z_b$转动时，载体纵轴$Y_b$在地理坐标系下的水平投影与地理子午线$N$ 的夹角称为航向角，一般用$\Psi$表示，以正北方向为起点并以北偏东方向逐渐增加，航向角取值范围为$[0^\circ,360^\circ]$。
+
+载体系和导航系之间可以通过三次按规定的顺序转动完成转换。本文采取的方式为：先绕Z轴负向转动$\Psi$角，其次绕X轴正向转动$\theta$角度，最后绕Y轴转动$\gamma$角度。三次转动的余弦矩阵$\textbf{C}^n_b$表示如下：
 \begin{eqnarray}
 \left [\begin{array}{ccc}
 x_n\\
 y_n\\
-z_N\\
+z_n\\
 \end{array}\right]
 &=
 \textbf{C}^n_b
@@ -130,18 +133,22 @@ x_b\\
 y_b\\
 z_b\\
 \end{array}\right]
+\label{2.3}
 \end{eqnarray}
-第一次转动：坐标系绕$Z$轴负向转动角$\psi$：
+
+绕$Z$轴负向转动角$\Psi$：
 \begin{eqnarray}
 \textbf{C}^{n1}_b
 &=
 \left [\begin{array}{ccc}
-{\cos \psi}  & {-\sin \psi} & {0} \\
-{\sin \psi} & {\cos \psi} & {0} \\
+{\cos \Psi}  & {-\sin \Psi} & {0} \\
+{\sin \Psi} & {\cos \Psi} & {0} \\
 {0}  & {0} & {1} \\
 \end{array}\right]
-\end{eqnarray}\\
-第二次转动：坐标系绕$X$轴负向转动角$\theta$：
+\label{2.4}
+\end{eqnarray}
+
+绕$X$轴负向转动角$\theta$：
 \begin{eqnarray}
 \textbf{C}^{n2}_{n1}
 &=
@@ -150,8 +157,10 @@ z_b\\
 {0} & {\cos \theta} & {\sin \theta} \\
 {0}  & {-\sin \theta} & {\cos \theta} \\
 \end{array}\right]
+\label{2.5}
 \end{eqnarray}
-第三次转动：坐标系绕$Y$轴负向转动角$\gamma$：
+
+绕$Y$轴负向转动角$\gamma$：
 \begin{eqnarray}
 \textbf{C}^n_{n2}
 &=
@@ -160,13 +169,15 @@ z_b\\
 {0} & {1} & {0} \\
 {\sin \gamma}  & {0} & {\cos \gamma} \\
 \end{array}\right]
+\label{2.6}
 \end{eqnarray}
-\begin{align*}
+
+\begin{align}
 \textbf{C}^n_b
 &=\textbf{C}^n_{n2}\textbf{C}^{n2}_{n1}\textbf{C}^{n1}_b=
 \left [\begin{array}{ccc}
-{\cos \psi}  & {-\sin \psi} & {0} \\
-{\sin \psi} & {\cos \psi} & {0} \\
+{\cos \Psi}  & {-\sin \Psi} & {0} \\
+{\sin \Psi} & {\cos \Psi} & {0} \\
 {0}  & {0} & {1} \\
 \end{array}\right]
 \left [\begin{array}{ccc}
@@ -178,14 +189,16 @@ z_b\\
 {\cos \gamma}  & {0} & {-\sin \gamma} \\
 {0} & {1} & {0} \\
 {\sin \gamma}  & {0} & {\cos \gamma} \\
-\end{array}\right]\\
+\end{array}\right]\notag \\
 &=
 \left [\begin{array}{ccc}
-{\cos\gamma\cos\psi+\sin \gamma \sin \psi \sin \theta}  & {\sin \psi \cos \theta} & {\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} \\
-{-\cos \gamma \cos \psi+\sin \gamma \sin \psi \sin \theta} & {\cos \psi \cos \theta} & {-\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} \\
+{\cos\gamma\cos\Psi+\sin \gamma \sin \Psi \sin \theta}  & {\sin \Psi \cos \theta} & {\sin \gamma \cos \Psi-\cos \gamma \sin \Psi\sin \theta} \\
+{-\cos \gamma \cos \Psi+\sin \gamma \sin \Psi \sin \theta} & {\cos \Psi \cos \theta} & {-\sin \gamma \cos \Psi-\cos \gamma \sin \Psi\sin \theta} \\
 {-\sin \gamma \cos \theta}  & {\sin \theta} & {\cos \gamma \cos \theta} \\
 \end{array}\right]
-\end{align*}
+\label{2.7}
+\end{align}
+
 定义$\textbf{C}^n_b$为如下形式：
 \begin{eqnarray}
 \textbf{C}^n_b&=
@@ -194,88 +207,87 @@ z_b\\
 {\textbf{T}_{21}} & {\textbf{T}_{22}} & {\textbf{T}_{23}} \\
 {\textbf{T}_{31}} & {\textbf{T}_{32}} & {\textbf{T}_{33}} \\
 \end{array}\right]
+\label{2.8}
 \end{eqnarray}
-$\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
+
+$\textbf{C}^n_b$即为载体系转化为导航系所需的姿态矩阵，载体的姿态角可由式\ref{2.7}和式\ref{2.8}计算表示如下：
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{\psi_{\mbox{\zihao{7}主}}}&= \arctan(\frac{\textbf{T}_{13}}{\textbf{T}_{22}})\\
-\boldsymbol{\theta_{\mbox{\zihao{7}主}}} &= \arcsin(\textbf{T}_{32})\\
-\boldsymbol{\gamma_{\mbox{\zihao{7}主}}} &= \arctan(\frac{-\textbf{T}_{31}}{\textbf{T}_{33}})
+{\Psi_{\mbox{\zihao{7}主}}}&= \arctan(\frac{\textbf{T}_{13}}{\textbf{T}_{22}})\\
+{\theta_{\mbox{\zihao{7}主}}} &= \arcsin(\textbf{T}_{32})\\
+{\gamma_{\mbox{\zihao{7}主}}} &= \arctan(\frac{-\textbf{T}_{31}}{\textbf{T}_{33}})
 \end{aligned}
 \right.
+\label{2.9}
 \end{equation}
 
-对于地面车辆导航系统，式中，俯仰角$\theta$ 、翻滚角$\gamma$定义在区间$[-90^\circ,90^\circ]$中，在计算反正弦和反正切函数中没有多值问题；航向角$psi$定义在$[0^\circ,360^\circ]$区间，需要分情况考虑根据主值区间和方向矩阵的数值来确定角度大小，其真值表如表所示。
+对于地面车辆导航系统，式\ref{2.9}中，俯仰角$\theta$ 、翻滚角$\gamma$定义在区间$[-90^\circ,90^\circ]$中，在计算反正弦和反正切函数中不存在多值问题；航向角$\Psi$定义在$[0^\circ,360^\circ]$区间，需要分情况考虑根据主值区间和方向矩阵的数值来确定角度大小，其真值表如表\ref{chap2_Table 1}所示\cite{YanGM(2004),QinYY(2014)}。
 \begin{table}[!h]
-\renewcommand\arraystretch{1.2}
+\renewcommand\arraystretch{1}
 \centering
-\caption{\label{chap2_Table 1}航向角$\psi$的真值表}
+\caption{\label{chap2_Table 1}航向角$\Psi$的真值表}
 \begin{tabular}{c c c}
 %\hline
 \toprule
-\hspace{1cm}$\textbf{T}_{22}$ \hspace{2cm} &  $\textbf{T}_{12}$ \hspace{2cm} & $\boldsymbol{\psi}$\\
+\hspace{1cm}$\textbf{T}_{22}$ \hspace{2cm} &  $\textbf{T}_{12}$ \hspace{2cm} & $\boldsymbol{\Psi}$\\
 \hline
 \hspace{1cm}$\to0$ \hspace{2cm} & $+$ \hspace{2cm} & $90^\circ$\\
 \hspace{1cm}$\to0$ \hspace{2cm} & $-$ \hspace{2cm} & $270^\circ$\\
-\hspace{1cm}$+$    \hspace{2cm} & $+$ \hspace{2cm} & $\psi_{\mbox{\zihao{7}主}}$\\
-\hspace{1cm}$+$    \hspace{2cm} & $-$ \hspace{2cm} & $180^\circ+\psi_{\mbox{\zihao{7}主}}$\\
-\hspace{1cm}$-$    \hspace{2cm} & $+$ \hspace{2cm} & $\psi_{\mbox{\zihao{7}主}}+180^\circ$\\
-\hspace{1cm}$-$    \hspace{2cm} & $-$ \hspace{2cm} & $\psi_{\mbox{\zihao{7}主}}-180^\circ$\\
-\hline
+\hspace{1cm}$+$    \hspace{2cm} & $+$ \hspace{2cm} & $\Psi_{\mbox{\zihao{7}主}}$\\
+\hspace{1cm}$+$    \hspace{2cm} & $-$ \hspace{2cm} & $180^\circ+\Psi_{\mbox{\zihao{7}主}}$\\
+\hspace{1cm}$-$    \hspace{2cm} & $+$ \hspace{2cm} & $\Psi_{\mbox{\zihao{7}主}}+180^\circ$\\
+\hspace{1cm}$-$    \hspace{2cm} & $-$ \hspace{2cm} & $\Psi_{\mbox{\zihao{7}主}}-180^\circ$\\
+\toprule
 \end{tabular}
 \end{table}
-%\caption{\label{chap2_Table 1}航向角$psi$的真值表}
-%\begin{tabular}{ l l l}
-%\toprule[1.5pt]
-%$\textbf{T}_{22}$ &  $\textbf{T}_{12}$ & $\boldsymbol{\psi}$\\
-%\hline
-%$\to0$ & $+$ & $90^\circ$\\
-%\hline
-%$\to0$ & $-$ & $270^\circ$
-%\end{tabular}
-%\end{table}
+
 \section{捷联惯导定位原理}
-在捷联惯性导航系统(SINS)中惯性测量器件(陀螺仪和加速度计)直接与运载体固联，通过导航计算机采集惯性器件的输出信息并进行数值积分求解运载体的姿态、速度和位置等导航信息，这三个过程分别是姿态更新、速度更新和位置更新。MEMS惯导一般采用角速率输出采样方式，简单的将输出信号乘以采样间隔$T_s$即可变换为近似的角增量，利用单位时间角增量数据可以实现载体姿态的更新，姿态指的是载体坐标系相对于导航坐标系的角位置。MEMS惯导信息的解算核心是姿态更新，对整个系统的解算精度影响最为突出，具有重要的研究和应用价值。
+在捷联惯性导航系统（SINS）中惯性测量器件直接与运载体固联，通过导航计算机采集惯性器件的输出信息并进行数值积分求解运载体的姿态、速度和位置等导航信息，这三个过程分别是姿态更新、速度更新和位置更新。MEMS惯导一般采用角速率输出采样方式，简单的将输出信号乘以采样间隔$T_s$即可变换为近似的角增量，利用单位时间角增量数据可以实现载体姿态的更新，姿态指的是载体坐标系相对于导航坐标系的角位置。MEMS惯导信息的解算核心是姿态更新，对整个算法的解算精度影响最为突出，具有重要的研究意义。
 
 \subsection{四元数与姿态更新}
-根据所选的变量参数不同，常用的姿态更新算法有方向余弦法、欧拉角法和四元数法(Quaternations)。这几种姿态解算方法分别适合不同的姿态变化情况。
+MEMS 惯导的姿态更新是指实时地将陀螺仪测得的角速度转化为载体的姿态，通过求解姿态微分方程来完成。根据所选变量参数不同，常用的姿态更新算法有四元数法(Quaternations)、方向余弦法和欧拉角法\cite{GaoZhongY(2012)}。 这几种方法分别适合不同的姿态变化情况。
 
-欧拉角算法通过求解欧拉角微分方程直接求解姿态角。欧拉角解算简单明了，概念直观，容易理解，但求解过程中需要频繁解算三角函数，运算比较困难，而且当俯仰角接近$90^\circ$时会引起万向节死锁问题，所以该方法适合水平姿态变化不大，实时性要求不高的情况下。
+欧拉角算法通过求解欧拉角微分方程直接求解航向角、俯仰角和横滚角。欧拉角算法概念非常清晰，容易理解，但是由于其微分方程的特点，需要频繁求解三角函数。而且当俯仰角接近$90^\circ$时会引起万向节死锁问题，所以该方法适合水平姿态变化不大，实时性要求不高的情况下。
 
-方向余弦和欧拉角并没有本质上的区别，因为是用欧拉角表示的方向余弦阵，避免了退化的问题，可以计算全姿态，但是姿态矩阵微分方程包含九个未知量，因此算法设计计算量大，实时性差，不利于工程上的应用。
+方向余弦法对姿态矩阵微分方程求解，避免了退化的问题，可计算运载体全姿态，但是姿态矩阵微分方程包含九个未知量，因此计算量大，实时性差，不适用工程上的实践。
 
-四元数表示方法虽然有些抽象，但它的优点有很多，利用起来非常方便，算法实现上简单易操作，是很实用的工程方法。本课题是基于四元数法完成姿态矩阵的解算。四元数是由威廉卢云哈密尔顿在1843年爱尔兰提出的数学概念，其基础思想为：一个坐标系到另一个坐标系的变换可以通过绕一个定义在参考系中的矢量$\mu$的单次转动来实现，四元数提供该转动的数学描述，一个单位四元数可以为表示一个旋转。四元数法实质上是旋转矢量法中的单子样算法，对有限旋转引起的的补偿程度不够，只适用于低动态运载体的姿态解算，而对于高动态运载体的姿态解算中漂移非常严重，对于低动态的车载组合导航系统来说，四元数方法十分适用。
+四元数表示方法虽然有些抽象，但它的优点有很多，利用起来非常方便，算法实现上简单易操作，是很实用的工程方法。本课题是基于四元数法完成姿态矩阵的解算。四元数是由威廉卢云哈密尔顿在1843年爱尔兰提出的数学概念，其基础思想为：一个坐标系到另一个坐标系的变换可以通过绕一个定义在参考系中的矢量$\bm{\mu}$的单次转动来实现，四元数提供该转动的数学描述，一个单位四元数可以为表示一个旋转。对于低动态的车载组合导航系统来说，四元数方法比较适用。
 
 1、四元数定义
 
-四元数是由四个元构成的数：
-\begin{equation}\label{2.13}
-  Q(q_0,q_1,q_2,q_3)=q_0+q_1\boldsymbol{i}+q_2\boldsymbol{j}+q_3\boldsymbol{k}=\boldsymbol{q}_0 + \boldsymbol{q}_v
+四元数表达方式如下\cite{JBKuipers(1999)}：
+\begin{equation}
+  \mathbf{Q}(q_0,q_1,q_2,q_3)=q_0+q_1\mathbf{i}+q_2\mathbf{j}+q_3\mathbf{k}=q_0 + \textbf{q}_v \label{2.10}\\
 \end{equation}
-其中，$q_0$、$q_1$、$q_2$、$q_3$是实数，$q_0$也称为实部，$q_v=\boldsymbol{q}_1\boldsymbol{i}+\boldsymbol{q}_2\boldsymbol{j}+\boldsymbol{q}_3\boldsymbol{k}$ 称为虚部，$\boldsymbol{i}$、$\boldsymbol{j}$、$\boldsymbol{k}$是互相正交的单位向量，可以将四元数看作是四维空间中的一个向量或者一个超复数。四元数的虚单位$\boldsymbol{i}$、$\boldsymbol{j}$、$\boldsymbol{k}$之间满足如下乘法运算规则
-\begin{equation}\label{2.14}
+
+式\ref{2.10}中，$q_0$、$q_1$、$q_2$、$q_3$是实数，$q_0$也称为实部，$q_v={q}_1\mathbf{i}+{q}_2\mathbf{j}+{q}_3\mathbf{k}$ 称为虚部，$\mathbf{i}$、$\mathbf{j}$、$\mathbf{k}$ 是互相正交的单位向量，可以将四元数看作是四维空间中的一个向量或者一个超复数。四元数的虚单位$\mathbf{i}$、$\mathbf{j}$、$\mathbf{k}$之间满足如下乘法运算规则\cite{LiBowen(2014)}:
+\begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{i}\otimes\boldsymbol{i}&=\boldsymbol{j}\otimes\boldsymbol{j}=\boldsymbol{k}\otimes\boldsymbol{k}=-1\\
-\boldsymbol{i}\otimes\boldsymbol{j}&=\boldsymbol{k},
-\boldsymbol{j}\otimes\boldsymbol{k}=\boldsymbol{i},
-\boldsymbol{k}\otimes\boldsymbol{i}=\boldsymbol{j},
-\boldsymbol{j}\otimes\boldsymbol{i}=-\boldsymbol{k},
-\boldsymbol{k}\otimes\boldsymbol{j}=-\boldsymbol{i},
-\boldsymbol{i}\otimes\boldsymbol{k}=-\boldsymbol{j}
+\mathbf{i}\otimes\mathbf{i}&=\mathbf{i}\otimes\mathbf{j}=\mathbf{k}\otimes\mathbf{k}=-1\\
+\mathbf{i}\otimes\mathbf{j}&=\mathbf{k},
+\mathbf{j}\otimes\mathbf{k}=\mathbf{i},
+\mathbf{k}\otimes\mathbf{i}=\mathbf{j},
+\mathbf{j}\otimes\mathbf{i}=-\mathbf{k},
+\mathbf{k}\otimes\mathbf{j}=-\mathbf{i},
+\mathbf{i}\otimes\mathbf{k}=-\mathbf{j}
 \end{aligned}
 \right.
+\label{2.11}
 \end{equation}
-其中，运算符"$\otimes$"表示四元数乘法运算，虚部单位矢量的叉乘运算特点，可以将四元数的虚数部分$\boldsymbol{q}_v = \boldsymbol{q}_1\boldsymbol{i}+\boldsymbol{q}_2\boldsymbol{j}+\boldsymbol{q}_3\boldsymbol{k}$ 看成是在三维空间中的映像，反之，一个三维矢量可以看做一个零标量四元数。
+
+其中，运算符"$\otimes$"表示四元数乘法运算，虚部单位矢量的叉乘运算特点，可以将四元数的虚数部分$\boldsymbol{q}_v = {q}_1\bm{i}+{q}_2\bm{j}+{q}_3\bm{k}$ 看成是在三维空间中的映像，反之，一个三维矢量可以看做一个零标量四元数。
 
 2、四元数与姿态矩阵的转换
 
-类比于复数的三角表示法，四元数写成三角函数为
+类比于复数的三角表示法，四元数写成三角函数为\cite{GaoZY(2009),QinYY(2014)}:
 \begin{equation}
-\boldsymbol{Q}=\Vert\boldsymbol{Q}\Vert(\cos\frac{\phi}{2}+\boldsymbol{\mu}\sin\frac{\phi}{2})
+{Q}=\Vert{Q}\Vert(\cos\frac{\phi}{2}+\bm{\mu}\sin\frac{\phi}{2})\\
+\label{2.12}
 \end{equation}
-特别地，当$\Vert\boldsymbol{Q}\Vert=1$时，即对于单位四元数，有，$q_0=\cos\frac{\phi}{2}$,$\boldsymbol{q_v}=\boldsymbol{\mu}\sin\frac{\phi}{2}$ 且$q_0^2+\boldsymbol{q_v}^T\boldsymbol{q_v}=1$;$\boldsymbol{\mu}$ 为单位长度的三维矢量，即$\boldsymbol{\mu}^T\boldsymbol{\mu}=1$;$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\mu$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\mu$来表示如下图。
+
+特别地，当$\Vert{Q}\Vert=1$时，即对于单位四元数，有$q_0=\cos\frac{\phi}{2}$，$\mathbf{q_v}=\bm{\mu}\sin\frac{\phi}{2}$ 且$q_0^2+\mathbf{q_v}^T\mathbf{q_v}=1$；$\bm{\mu}$ 为单位长度的三维矢量，即$\bm{\mu}^T\bm {\mu}=1$；$\phi$为某一角度值。在刚体转动理论中，载体系相对于导航系的位置，可以等效成载体系绕某定轴旋转一定角度$\theta$，用向量$\bm{\mu}$表示该定轴，则两坐标之间的位置关系可以用角度$\theta$和单位向量$\bm{\mu}$ 来表示如下图\ref{chap2_Fig.3}。
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.4\textwidth]{figures/chap2/chap2_rotate}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
@@ -284,7 +296,7 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
  \vspace{-0.4cm}
 \end{figure}
 
-因此，推导出由四元数表示的载体系至导航系的转换矩阵：
+根据文献\citep{QinYY(2014)}的推导，由四元数表示的载体系至导航系的转换矩阵如式\ref{2.13}所示：
 \begin{equation}
 \boldsymbol{C}_b^n=
 \left [\begin{array}{ccc}
@@ -292,13 +304,14 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 {2(q_1q_2+q_0q_3)} & {1-2(q_1^2+q_3^2)} & {2(q_2q_3-q_0q_1)} \\
 {2(q_1q_3-q_0q_2)} & {2(q_2q_3+q_0q_1)} & {1-2(q_1^2+q_2^2)} \\
 \end{array}\right]
+\label{2.13}
 \end{equation}
 
 3、姿态更新四元数算法
 
-根据四元数理论，坐标系转换过程可以表示为：
-\begin{align*}
-\boldsymbol{v}^b &=\boldsymbol{Q}_b^n\otimes\boldsymbol{v}^n\otimes(\boldsymbol{Q}_b^n)^*\\
+由四元数表示向量和不同坐标系下的转换关系\cite{JBKuipers(1999)}：
+\begin{align}
+\textbf{v}^b &=\mathbf{Q}_b^n\otimes\textbf{v}^n\otimes(\mathbf{Q}_b^n)^* \notag \\
 &=
 \left [\begin{array}{cccc}
 {q_0^2+q_1^2+q_2^2+q_3^2} & {0} & {0} & {0}\\
@@ -306,32 +319,42 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 {0} & {2(q_1q_2+q_0q_3)} & {q_0^2-q_1^2+q_2^2-q_3^2} & {2(q_2q_3-q_0q_1)} \\
 {0} & {2(q_1q_3-q_0q_2)} & {2(q_2q_3+q_0q_1)} & {q_0^2-q_1^2-q_2^2+q_3^2}
 \end{array}\right]
-\end{align*}
-式中，$\boldsymbol{Q}_b^n$表示导航系n到载体系b的变换四元数；$(\boldsymbol{Q}_b^n)^*$是$\boldsymbol{Q}_b^n$的共轭表示，$\boldsymbol{v}^n$和$\boldsymbol{v}^b$为同一向量在导航系n和载体系b下的表示，该向量分别为
-\begin{align*}
-\boldsymbol{v}_n&=
+\left [\begin{array}{c}
+{0}\\
+{\mathbf{v}_x^n}\\
+{\mathbf{v}_y^n}\\
+{\mathbf{v}_z^n}
+\end{array}\right]
+\label{2.14}
+\end{align}
+
+式中，$\mathbf{Q}_b^n$表示坐标系间的变换四元数，$(\mathbf{Q}_b^n)^*$是$\mathbf{Q}_b^n$的共轭表示，$\mathbf{v}^n$和$\mathbf{v}^b$为同一向量在导航系n和载体系b下的表示，该向量分别为；
+\begin{align}
+\mathbf{v}^n&=
 \left [\begin{array}{cccc}
-{0} & {\boldsymbol{v}_x^n} & {\boldsymbol{v}_y^n} & {\boldsymbol{v}_z^n}
-\end{array}\right]^T\\
-\boldsymbol{v}_b&=
+{0} & {\mathbf{v}_x^n} & {\mathbf{v}_y^n} & {\mathbf{v}_z^n}
+\end{array}\right]^T \label{2.15}\\
+\textbf{v}^b&=
 \left [\begin{array}{cccc}
-{0} & {\boldsymbol{v}_x^b} & {\boldsymbol{v}_y^b} & {\boldsymbol{v}_z^b}
+{0} & {\mathbf{v}_x^b} & {\mathbf{v}_y^b} & {\mathbf{v}_z^b}
 \end{array}\right]^T
-\end{align*}
-根据方向余弦理论：
-\begin{align*}
-\boldsymbol{v}^b
+\label{2.16}
+\end{align}
+
+由式(\ref{2.3}-\ref{2.7})方向余弦理论对坐标系的转换可得：
+\begin{align}
+\mathbf{v}^b
 &=
 \left [\begin{array}{cc}
 {*} & {0}\\
-{0} & {\boldsymbol{C}_t^b}
-\end{array}\right]\boldsymbol{v}^t\\
+{0} & {\mathbf{C}_n^b}
+\end{array}\right]\boldsymbol{v}^n\notag \\
 &=
 \left [\begin{array}{cccc}
 {*} & {0} & {0} & {0}\\
-{0} & {\cos\gamma\cos\psi+\sin \gamma \sin \psi \sin \theta} & {-\cos \gamma \cos \psi+\sin \gamma \sin \psi \sin \theta} & {-\sin \gamma \cos \theta}\\
-{0} & {\sin \psi \cos \theta} & {\cos \psi \cos \theta} & {\sin \theta}\\
-{0} & {\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} & {-\sin \gamma \cos \psi-\cos \gamma \sin \psi\sin \theta} & {\cos \gamma \cos \theta}\\
+{0} & {\cos\gamma\cos\Psi+\sin \gamma \sin \Psi \sin \theta} & {-\cos \gamma \cos \Psi+\sin \gamma \sin \Psi \sin \theta} & {-\sin \gamma \cos \theta}\\
+{0} & {\sin \Psi \cos \theta} & {\cos \psi \cos \theta} & {\sin \theta}\\
+{0} & {\sin \gamma \cos \Psi-\cos \gamma \sin \Psi\sin \theta} & {-\sin \gamma \cos \Psi-\cos \gamma \sin \Psi\sin \theta} & {\cos \gamma \cos \theta}\\
 \end{array}\right]
 \left [\begin{array}{c}
 {0}\\
@@ -339,43 +362,51 @@ $\textbf{C}^n_b$就是导航系统中通常所称的捷联矩阵，载体的姿态角可以计算如下：
 {\boldsymbol{v}_y^n}\\
 {\boldsymbol{v}_z^n}
 \end{array}\right]
-\end{align*}
-这样可以得到变换过程中姿态角的四元数计算方法：
+\label{2.17}
+\end{align}
+
+比较式\ref{2.14}和\ref{2.17}，可以得到变换过程中姿态角的四元数计算方法：
 \begin{equation}
 \left\{
 \begin{aligned}
-\boldsymbol{\psi_{\mbox{\zihao{7}主}}}&= -\arctan(\frac{2(q_1q_2+q_0q_3)}{q_0^2-q_1^2+q_2^2-q_3^2})\\
+\boldsymbol{\Psi_{\mbox{\zihao{7}主}}}&= \arctan(\frac{2(q_1q_2+q_0q_3)}{q_0^2-q_1^2+q_2^2-q_3^2})\\
 \boldsymbol{\theta_{\mbox{\zihao{7}主}}} &= \arcsin(2(q_2q_3-q_0q_1))\\
 \boldsymbol{\gamma_{\mbox{\zihao{7}主}}} &= \arctan(\frac{2(q_1q_3+q_0q_2)}{q_0^2-q_1^2-q_2^2+q_3^2})
 \end{aligned}
 \right.
+\label{2.18}
 \end{equation}
-四元数微分方程
 
-已知Q为导航系至载体系的四元数表达式，对两端求导得四元数的微分方程：
-\begin{align*}
-d\frac{\boldsymbol{Q}}{t} &= -\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\boldsymbol{\mu}^R\frac{\dot{\theta}}{2}\cos\frac{\theta}{2}+\sin\frac{\theta}{2}\frac{d\boldsymbol{\mu}^R}{dt}\\
-&=-\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\boldsymbol{\mu}^R\frac{\dot{\theta}}{2}\cos\frac{\theta}{2}\\
+由式(\ref{2.12})已知Q为导航系至载体系的四元数描述，对两端求导得微分方程：
+\begin{align}
+d\frac{\mathbf{Q}}{t} &= -\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\boldsymbol{\mu}^R\frac{\dot{\theta}}{2}\cos\frac{\theta}{2}+\sin\frac{\theta}{2}\frac{d\bm{\mu}^R}{dt}\notag \\
+&=-\sin\frac{\dot{\theta}}{2}\sin\frac{\theta}{2}+\bm{\mu}^R\frac{\dot{\theta}}{2}\cos\frac{\theta}{2}\notag \\
 &=\frac{\dot{\theta}}{2}\boldsymbol{\mu}^R\otimes\boldsymbol{Q}
-\end{align*}
-由刚体动力学知识可知
-\begin{align*}
-\omega_{nb}^n &=\dot{\theta}\boldsymbol{\mu}^R\\
-\omega_{nb}^n &=\boldsymbol{Q}\otimes\omega_{nb}^b\otimes\boldsymbol{Q^*}
-\end{align*}
-式？中$\omega_{nb}^b$是MEMS陀螺测量载体系相对于导航系下的角速度，结合上述两式式？可以计算记为
+\label{2.19}
+\end{align}
+
+由刚体动力学知识可知\cite{YanGM(2004),QinYY(2014)}
+\begin{align}
+\omega_{nb}^n &=\dot{\theta}\boldsymbol{\mu}^R \label{2.20}\\
+\omega_{nb}^n &=\boldsymbol{Q}\otimes\omega_{nb}^b\otimes\boldsymbol{Q^{*}}
+\label{2.21}
+\end{align}
+
+其中，$\omega_{nb}^b$是载体系相对于导航系下的角速度，将式\ref{2.20}和\ref{2.21}代入式\ref{2.19}可得：
 \begin{equation}
-d\frac{\boldsymbol{Q}}{t} = \frac{1}{2}\boldsymbol{Q}\otimes\omega_{nb}^b
+d\frac{\boldsymbol{Q}}{t} = \frac{1}{2}\boldsymbol{Q}\otimes\omega_{nb}^b \label{2.22}
 \end{equation}
-记
+
+记：
 \begin{equation}
 \omega_{nb}^b=
 \left [\begin{array}{ccc}
 \omega_x&\omega_y&\omega_z
-\end{array}\right]^T
+\end{array}\right]^T \label{2.23}
 \end{equation}
 
-矩阵形式：
+
+将式(\ref{2.22})写成矩阵形式：
 \begin{equation}
 \left [\begin{array}{ccc}
 \dot{q}_0\\
@@ -396,13 +427,16 @@ q_1\\
 q_2\\
 q_3
 \end{array}\right]
+\label{2.24}
 \end{equation}
 
-其中，$\omega_{nb}^b$可以由下式得
+其中，$\omega_{nb}^b$表示如下\cite{YanGM(2004)}：
 \begin{equation}
-\omega_{nb}^b=\omega_{ib}^b-C_n^b(\omega_{ie}^n+\omega_{en}^n)
+\omega_{nb}^b=\omega_{ib}^b-C_n^b(\omega_{ie}^n+\omega_{en}^n)  \label{2.25}
 \end{equation}
-上式中，$C_n^b$是姿态阵，$\omega_{nb}^b$不能直接测量获得，MEMS陀螺的输出是载体系相对于惯性系的角速度$\omega_{ib}^b$，其中包含了$\omega_{ie}^n$是地球自转速率，$\omega_{en}^n$是位置速率，大小为：
+
+上式中，$C_n^b$是姿态阵，$\omega_{nb}^b$不能由MEMS陀螺直接测量获得，陀螺输出的$\omega_{ib}^b$是载体系相对于惯性系的角速度，其中包含了地球自转速率$\omega_{ie}^n$ 和位置速率$\omega_{en}^n$，可以计算得
+\cite{JinLi(1994)}：
 \begin{equation}
 \omega_{ie}^n+\omega_{en}^n=
 \left [\begin{array}{c}
@@ -410,61 +444,76 @@ q_3
 \omega_{ie}\cos{L}+\frac{V_E}{R_N}\\
 \omega_{ie}\sin{L}+\frac{V_E}{R_N}\tan{L}
 \end{array}\right]
+\label{2.26}
 \end{equation}
-其中，L是导航系所在地理纬度，$V_E$、$V_N$为当时时刻载体的东向和北向速度，$\omega_{ie}$是地球自转角速度。
+
+其中，L是导航系所在地理纬度，$V_E$、$V_N$为当时时刻载体的东向和北向速度，$\omega_{ie}$是地球自转角速度。本课题对式(\ref{2.24})中微分方程的求解是通过龙格库塔法实现，文献\citep{QinYY(2014)}、\citep{DengZZ(2012)}给出了详细的求解步骤。
 
 \subsection{速度更新}
-本文选择“东-北-天”导航坐标系($n$系)，则有惯导比力方程
+本文选择“东-北-天”地理作为导航坐标系($n$系)，则有惯导比力方程\cite{ShiJing(2010)}：
 \begin{equation}
-\boldsymbol{\dot{V}}_{en}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{sf}^b-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}_{en}^n+\boldsymbol{g}^n
+{\dot{V}}_{en}^n={C}_b^n{f}_{sf}^b-(2{\omega}_{ie}^n+\omega_{en}^n)\times{V}_{en}^n+{g}^n
+\label{2.27}
 \end{equation}
 
-其中$\boldsymbol{f}_{sf}$为加速度计测量的比力，$2\boldsymbol{\omega}_{ie}^n\times\boldsymbol{v}_{en}^n$为由载体运动和地球自转引起的哥氏加速度，$\boldsymbol{\omega}_{en}^n\times\boldsymbol{v}_{en}^n$为由载体运动引起的对地向心加速度，$\boldsymbol{g}^n$为重力加速度，$-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{v}_{en}^n+\boldsymbol{g}^n$。 式表明，在加速度计输出中去掉有害加速度后，就可获得载体在导航系下的真实加速度$\boldsymbol{\dot{V}}_{en}^n$,设速度的更新周期为$T$，在每个更新周期内对角增量和速度增量作$N$次采样，对上式作积分运算，得到$t_m$时刻载体在导航系内的速度：
+其中${f}_{sf}$为加速度计测量的比力，$2{\omega}_{ie}^n\times{v}_{en}^n$为由载体运动和地球自转引起的哥氏加速度，${\omega}_{en}^n\times{v}_{en}^n$为由载体运动引起的对地向心加速度，${g}^n$为重力加速度，$-(2{\omega}_{ie}^n+\omega_{en}^n)\times{v}_{en}^n+{g}^n$。 式表明，在加速度计输出中去掉有害加速度后，就可获得载体在导航系下的真实加速度${\dot{V}}_{en}^n$,设速度的更新周期为$T$，在每个更新周期作$N$次采样，对上式作积分运算，得到$t_m$时刻载体在导航系内的速度更新方程：
 \begin{equation}
-\boldsymbol{V}_m^n=\boldsymbol{V}_{m-1}^n+\boldsymbol{C}_{b(m-1)}^{n(m-1)}\int_{t_{m-1}}^{t_m}\boldsymbol{C}_{b(t)}^{b(m-1)}\boldsymbol{f}_{ib}^{b}dt+\int_{t_{m-1}}^{t_m}[\boldsymbol{g}^n-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}_{en}^n]dt
+{V}_m^n={V}_{m-1}^n+{C}_{b(m-1)}^{n(m-1)}\int_{t_{m-1}}^{t_m}{C}_{b(t)}^{b(m-1)}{f}_{ib}^{b}dt+\int_{t_{m-1}}^{t_m}[{g}^n-(2{\omega}_{ie}^n+\omega_{en}^n)\times{V}_{en}^n]dt
+\label{2.28}
 \end{equation}
 
-式中，$\boldsymbol{V}_m$$\boldsymbol{V}_{m-1}$分别是$t_m$和$t_{m-1}$时刻载体的速度；$\boldsymbol{C}_{b(m-1)}^{n(m-1)}$是$t_{m-1}$时刻的姿态矩阵。若$\delta\boldsymbol{V}_{g/corm}^{n}$表示在时间$[t_{m-1},t_m]$ 内有害加速度引起的速度补偿量，$\delta\boldsymbol{V}_{sfm}$是由比力引起的速度补偿量，则式？可以改写成
+式\ref{2.28}中，${V}_m$${V}_{m-1}$分别是$t_m$和$t_{m-1}$时刻载体的速度；${C}_{b(m-1)}^{n(m-1)}$ 是$t_{m-1}$时刻的姿态矩阵。若$\delta{V}_{g/corm}^{n}$表示在时间$[t_{m-1},t_m]$ 内有害加速度对应的速度补偿量，$\delta{V}_{sfm}$是由比力对应的速度补偿量，则式\ref{2.27}可以改写成:
 \begin{equation}
-\boldsymbol{V}_m^n=\boldsymbol{V}_{m-1}^n+\boldsymbol{C}_{b(m-1)}^{n(m-1)}\delta\boldsymbol{V}_{sfm}+\delta\boldsymbol{V}_{g/corm}^{n}
-\end{equation}
-\begin{equation}
-\delta\boldsymbol{V}_{sfm}^n=\delta\boldsymbol{V}_{m}^n+\frac{1}{2}\delta\theta_m\times\delta\boldsymbol{V}_m^n+\frac{1}{2}\int_{t_{m-1}}^{t_m}[\Delta\theta(t)\times\boldsymbol{f}_{ib}^{b}+\Delta\boldsymbol{V}(t)\times\boldsymbol{\omega}(t)]dt
+{V}_m^n={V}_{m-1}^n+{C}_{b(m-1)}^{n(m-1)}\delta{V}_{sfm}+\delta{V}_{g/corm}^{n}
+\label{2.29}
 \end{equation}
 
-式？在MEMS惯导速度更新中的第二项和第三项分别进行了旋转效应和划桨效应的补偿，旋转效应指的是运动物体在某个方向进行线运动的同时发生空间旋转变化引起，划桨效应指运动物体在纵轴方向做线振动时又在横轴方向发生同向频的角振动。$\delta\theta_m$、$\Delta\boldsymbol{V}_m$为更新周期内的陀螺角增量和加速度计速度增量。因为载体角速度和加速度变化复杂，无法通过确定的数学公式加以描述，工程中常采用曲线拟合的方法来近似求解。
+\begin{equation}
+\delta{V}_{sfm}^n=\delta{V}_{m}^n+\frac{1}{2}\delta\theta_m\times\delta{V}_m^n+\frac{1}{2}\int_{t_{m-1}}^{t_m}[\Delta\theta(t)\times{f}_{ib}^{b}+\Delta{V}(t)\times{\omega}(t)]dt
+\label{2.30}
+\end{equation}
+
+
+$\delta\theta_m$、$\Delta{V}_m$为更新周期内的陀螺角增量和加速度计速度增量。因为载体角速度和加速度变化复杂，无法通过确定的数学公式加以描述，工程中常采用曲线拟合的方法来近似求解。
 根据比力方程，可以得到离散系统时速度在导航系的增量为：
 \begin{equation}
-\delta\boldsymbol{V}^n=\boldsymbol{C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2\boldsymbol{\omega}_{ie}^n+\omega_{en}^n)\times\boldsymbol{V}^n\cdot T+\boldsymbol{g}^n\cdot T
+\delta{V}^n={C}_b^n\boldsymbol{f}_{ib}^b\cdot T-(2{\omega}_{ie}^n+\omega_{en}^n)\times{V}^n\cdot T+{g}^n\cdot T
+\label{2.31}
 \end{equation}
 
-由于低成本MEMS传感器属于低精度，陀螺精度（零偏稳定性及重复性）为$0.1^\circ$量级，加速度精度为$5mg$,传感器标定在下节介绍具体方法，此处忽略划桨效应，可对其作大幅简化。
+由于低成本MEMS传感器属于低精度，传感器标定在下节介绍具体方法，此处忽略划桨效应，可对其作大幅简化。
 
 \subsection{位置更新}
-如图，假设地球表面运动的物体在地理坐标系下的坐标记为$O_g(\lambda,L,h)$。如果$O_o$点是$O_g$与地心连线在地球表面的交点，以该点建立直角坐标系，纬圈切线指东为$O_ox_o$轴，经圈切线指北$O_oy_o$轴、椭球面法线方向指天$O_oz_o$轴，$O_g$点的地理坐标表示，记为$O_g(\lambda,L,h)$。
+在图\ref{chap2_Fig.1}中假设地球表面运动的物体在地理系下记为$O_g(\lambda,L,h)$。$O_o$点是$O_g$与地心连线在地球表面的交点，以该点建立直角坐标系，纬圈切线指东为$O_ox_o$轴，经圈切线指北$O_oy_o$轴、椭球面法线方向指天$O_oz_o$轴。
 
-在图？，如果$O_o$点对地球坐标系$Ox_ey_ez_e$的速度在$Ox_oy_oz_o$系的投影记为$v_e^o=[v_{xo}\quad v_{yo}\quad v_{zo}]^T$。注意，由于$O_oX_o$轴与纬圈相切，故经度会随着$v_{x0}$而变化，根据地理几何有：
+如果$O_o$点对地球坐标系$Ox_ey_ez_e$的速度在$Ox_oy_oz_o$系的投影记为$v_e^o=[v_{xo}\quad v_{yo}\quad v_{zo}]^T$。注意，由于$O_oX_o$ 轴与纬圈相切，故经度会随着$v_{x0}$而变化，同理，纬度也会随着$v_{y0}$产生变化：
 \begin{equation}
-\dot{\lambda}=\frac{v_{x_0}}{R_N\cos{L}}
+\dot{\lambda}=\frac{v_{x_0}}{R_N\cos{L}} ，\ \ \qquad
+\dot{L}=\frac{v_{y_0}}{R_M}
+\label{2.32}
 \end{equation}
 
-对于地理高度为$h$的$O_g$点，假设其速度为$\boldsymbol{v}_{eg}^{g}=[v_x\quad v_y\quad  v_z]^T$,根据图？中几何关系，有
-
+对于地理高度为$h$的$O_g$点，假设其速度为${v}_{eg}^{g}=[v_x\quad v_y\quad  v_z]^T$,根据图\ref{chap2_Fig.1}中地理几何关系，有：
 \begin{equation}
-\frac{v_{x_0}}{R_N}=\frac{v_x}{R_N+h}
+\frac{v_{x_0}}{R_N}=\frac{v_x}{R_N+h} \label{2.33}
 \end{equation}
 \begin{equation}
-\frac{v_{y_0}}{R_M}=\frac{v_y}{R_M+h}
+\frac{v_{y_0}}{R_M}=\frac{v_y}{R_M+h}  \label{2.34}
 \end{equation}
-上述两式分别带入
-\begin{align}
+上述两式分别带入式\ref{2.32}:
+\begin{equation}
+\left\{
+\begin{aligned}
 \dot{\lambda}&=\frac{v_x}{(R_N+h)\cos{L}}\\
 \dot{L}&=\frac{v_y}{(R_M+h)}\\
 \dot{h}&=v_z
-\end{align}
+\end{aligned}
+\right.
+\label{2.35}
+\end{equation}
 记：
 \begin{equation}
-\boldsymbol{p}=
+{p}=
 \left [\begin{array}{ccc}
 \lambda\\
 L\\
@@ -476,30 +525,29 @@ h
 1/(R_M+h)&0&0\\
 0&0&1
 \end{array}\right]
+\label{2.36}
 \end{equation}
-则矩阵形式，
+写成矩阵形式有：
 \begin{equation}
-\dot{\boldsymbol{p}}=\boldsymbol{M}_{pv}\boldsymbol{v}^n
+\dot{{p}}=\boldsymbol{M}_{pv}{v}^n \label{2.37}
 \end{equation}
 
-与捷联惯导姿态和速度更新算法相比，位置更新算法引起的误差一般比较小，采用梯形积分法将上式离散化，得
+位置增量通过对速度值的梯形积分近似求解\cite{JinLi(1994)}，得
 \begin{equation}
-\boldsymbol{p}_t=\boldsymbol{p}_{t-1}+\boldsymbol{M}_{pv}\times(\boldsymbol{v}_{t-1}^n+\boldsymbol{v}_t^n)\times\frac{T}{2}
+{p}_t={p}_{t-1}+\boldsymbol{M}_{pv}\times({v}_{t-1}^n+{v}_t^n)\times\frac{T}{2} \label{2.38}
 \end{equation}
 
 \subsection{低成本惯导的姿态初始化}
-对于MEMS器件而言，地球自转角速率完全湮没在陀螺的噪声里，陀螺精度
+对于MEMS器件的低精度惯导系统而言，地球自转角速率完全湮没在陀螺的噪声里，陀螺精度相对较低，因此利用陀螺来进行方位对准，其对准精度很难达到要求，因此不具备自助式的初始化对准功能，MEMS系统只能通过机动运动来增加系统滤波器的可观性从而完成动态的初始化。这里，在导航初始化时，水平姿态角可以在静止状态下通过加速度计输出，而方位对准在运动条件下依靠卫星导航信息来完成。
 
-在导航初始化时，低精度惯导系统在静止状态下可以通过加速度计输出水平姿态角，因此不具备自助式的初始化对准功能。MEMS系统只能通过机动运动来增加系统滤波器的可观性从而完成动态的初始化，采用地磁辅助或者在运动条件下依靠卫星导航信息来完成方位对准。
+1、使用加速度计进行水平姿态对准
 
-1、利用加速度计进行水平姿态对准
-
-在静态环境下，运载体的线运动及其导数均为0，比力方程可以简化为
+在静态环境下，运载体的线运动及其导数均为0，比力方程可以简化为\cite{YanGM(2004),ZhangShiY(2010)}
 \begin{equation}
-0=\boldsymbol{C}^n_b\boldsymbol{f}^b_{sf}+\boldsymbol{g}^n
+0=\boldsymbol{C}^n_b{f}^b_{sf}+{g}^n  \label{2.39}
 \end{equation}
 
-记$\boldsymbol{f}^b_{sf}=[f^b_{X} \ f^b_{Y} \ f^b_{Z}]$，$\boldsymbol{g}^n=[0 \ 0 \ g]^T$，$g$为当地重力加速度的大小。转换有
+记${f}^b_{sf}=[f^b_{X} \ f^b_{Y} \ f^b_{Z}]$，${g}^n=[0 \ 0 \ g]^T$，$g$为当地重力加速度的大小。转换有
 \begin{equation}
 \left [\begin{array}{ccc}
 0\\
@@ -511,130 +559,198 @@ g\\
 \sin{\gamma}\sin{\theta}f^b_{X}+\cos{\theta}f^b_{Y}-\cos{\gamma}\sin{\theta}f^b_{Z}\\
 -\sin{\gamma}\cos{\theta}f^b_{X}+\sin{\theta}f^b_{Y}+\cos{\gamma}\cos{\theta}f^b_{Z}\\
 \end{array}\right]
+\label{2.40}
 \end{equation}
 可以推出：
 \begin{equation}
-\gamma=\arctan(-f^b_X/f^b_Z) \ \ \ \theta=\arctan(f^b_Y/\sqrt{(f^b_X)^2+(f^b_Z)^2})
+\gamma=\arctan(-f^b_X/f^b_Z) \ \ \ \theta=\arctan(f^b_Y/\sqrt{(f^b_X)^2+(f^b_Z)^2}) \label{2.41}
 \end{equation}
 
 2、利用卫星导航进行方位对准
 
-对于车辆导航来说，其运动方向一般沿载体的正前方(纵轴方向),在完成水平对准后，在卫星信号可用的情况下，测量得到速度矢量，可以得到载体纵轴相对于地理北向的方位角，利用该方位角，与由$\boldsymbol{C}^n_b$计算获得的俯仰角和横滚角完成姿态初始化。
+对于车辆导航来说，其运动方向一般沿载体的正前方(纵轴方向)，在完成水平对准后，在卫星信号可用的情况下，测量得到速度矢量，可以得到载体纵轴相对于地理北向的方位角，利用该方位角，与由$\boldsymbol{C}^n_b$计算的俯仰角和横滚角完成姿态初始化\cite{YanGM(2004)}。
 
 
-\section{小型化车载组合定位原理}
-结合GPS定位的长期稳定性与SINS系统定位的短期精确性，整合两套设备的导航信息可以提高整个系统的定位性能，目前常见的组合方法有：GPS/SINS松组合、紧组合和超紧组合等模式。
-(1)GPS/SINS松组合
+\section{组合系统方案分析与设计}
+\subsection{惯导/GNSS组合方式}
+结合GPS定位的长期稳定性与SINS系统定位的短期精确性，融合不同传感器信息可以提高导航信息的精度，目前常见的组合方法有：GPS/SINS松组合、紧组合和超紧组合等模式\cite{YongY(2007)}。
 
-松组合是采用滤波计算的较为基础的组合方式，从GNSS接收机和惯导系统各自输出的速度、位置之差作为系统量测，通过组合滤波器对惯导系统的速度、位置误差和姿态误差进行估计，然后作为反馈信息完成对MEMS惯导传感器的校正，从而实现对SINS系统的累积误差的消除，提高组合系统的导航精度。
-
-松组合的特点是：系统结构简单，易于实现，计算量小等，GNSS可以限制惯导误差的增长，当GNSS失去信号时惯导可短时间内自主导航，惯性传感器误差实时估计并修正。适合车载导航、民用航空等领域。其结构示意图如下？
+(1)GNSS/SINS松组合
+\ref{chap2_Fig.4}
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap2/chap2_loose}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.7\textwidth]{figures/chap2/chap2_loose}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{松组合示意图}
- \label{chap2_Fig.1}
+ \label{chap2_Fig.4}
  \vspace{-0.4cm}
 \end{figure}
 
-(2)紧组合
-紧组合是在松组合得基础上增加了伪距与伪距率作为滤波输入，属于高水平的组合模式，原理框图如下所示；
+松组合结构如图\ref{chap2_Fig.4}，是一种简单直观较为基础的组合方式\cite{SavagePG(2012)}，在MEMS惯导/GNSS松组合模式下体现了卫星信号对MEMS惯导的辅助，两个系统独立工作，通过卡尔曼滤波器对两者的数据进行融合并输出导航误差信息的最优估计，反馈给MEMS系统进行修正。松组合系统工作时，各系统独立工作，保持各自特性，系统结构简单，容易实现。缺点是在当其中一个系统失效时，滤波器容易发散导致系统精度下降。
+
+松组合的特点是：系统结构简单，易于实现，计算量小等，GNSS可以限制惯导误差的增长，当GNSS失去信号时惯导可短时间内自主导航，惯性传感器误差实时估计并修正，适合车载导航、民用航空等领域。
+
+(2)GNSS/SINS紧组合
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.6\textwidth]{figures/chap2/chap2_tight}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.65\textwidth]{figures/chap2/chap2_tight}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{紧组合示意图}
- \label{chap2_Fig.1}
+ \label{chap2_Fig.5}
  \vspace{-0.4cm}
 \end{figure}
-该组合方式中，用GNSS给出的星历数据和SINS 给出的位置和速度计算出相应于SINS位置的伪距和伪距率，并将其与GPS 测量的伪距和伪距率相比较作为量测值，通过Kalman 滤波器估计SINS 和GPS 的误差量，然后对两个系统进行校正，由于GPS 的测距容易建模，因而可以把它扩充为状态，通过滤波器加以估计，然后对GPS 接收机进行校正。GNSS/MEMS惯导紧组合系统也逐渐成为欧美发达国家陆地车辆导航辅助的主要装备。
 
-紧组合的特点是：可以实现GNSS与惯导内部相互辅助，在小于四个卫星的情况下依然可以正常输出定位信息更新，相比松组合具有更高的定位精度及输出稳定性，抗干扰能力强等特点，但是需要参与大量的GNSS接收机的基带处理过程，导致计算量增大，软硬件架构复杂，应用有一定限制。
+紧组合在算法融合上增加了伪距与伪距率作为滤波输入，属于高水平的组合模式，原理框图如图\ref{chap2_Fig.5}所示，该组合方式中，GNSS卫星系统卫星信号的伪距、伪距率原始信息， MEMS惯导根据速度位置计算出相应于的伪距和伪距率，并将其与GPS 测量的伪距和伪距率做差作为量测值，通过数据融合得到MEMS惯导状态误差的最优估计对系统进行校正。紧组合算法将卫星的原始伪距、伪距率信息作为观测量，系统的可观测性大大增强。
+
+紧组合的特点是：可以实现GNSS与惯导内部相互辅助，在小于四个卫星的情况下依然可以正常输出定位信息更新，定位精度高，抗干扰能力强，但是需要参与大量的GNSS接收机的基带处理过程，导致计算量增大，软硬件架构复杂，应用有一定限制。
 
 \subsection{MEMS惯性传感器的误差模型}
-MEMS惯性传感器的输出信号中误差主要由确定性误差和随机性误差组成。确定性误差不随传感器工作时间的长短发生变化，可通过建模和测试予以补偿，在传感器数据导入惯导解算之前，这部分的误差应该首先被补偿。确定性误差包括零偏、刻度因子误差、传感器三个轴之间的非正交性以及刻度因子的非线性误差。而一般所指的惯性器件精度习惯上为静态条件下测试的随机误差，一般包括：零偏稳定性、白噪声、零偏重复性、加速度计速度随机游走、角度随机游走等，随机性误差比较复杂，通常可以用随机常数、随机游走和一阶高斯马尔可夫过程等统计方法来对随机误差进行建模。
+MEMS惯性传感器的误差可以分为两类：一类是有规律的，可以用确定的函数关系表述；另一类是由随机干扰因素引起的随机性误差，无法用确定的函数关系描述。
 
-目前对于低精度低成本的惯性传感器，越来越多的建模方法被使用，如自相关函数法、功率谱密度法、自回归平滑模型法和Allan方差法等。由于Allan方差分析简单和有效，是针对传感器随机误差参数确定的常用方法之一，本课题采用此方法对MEMS惯导的随机误差进行分析。
+(1)确定性误差不随传感器工作时间的长短发生变化，可通过建模和测试予以补偿，在传感器数据导入惯导解算之前，这部分的误差应该首先被补偿，包括常值漂移、刻度因数误差、交叉耦合误差、轴失准误差等。MEMS惯导确定性误差部分可以通过测试与标定进行补偿。
 
-Allan方差作为陀螺随机误差一种时域分析技术,是公认的IEEE标准规范。他是美国学者David Allan为研究原子钟的震荡器稳定性而提出的概念，Allan方差随后被引入到中、低精度陀螺的随机误差辨识中，实用性很强，取得良好效果。
+(2)而一般所指的惯性器件精度习惯上为静态条件下测试的随机误差，一般包括：零偏稳定性、零偏重复性、速度随机游走、角度随机游走等。通常可以用随机常数、随机游走和一阶高斯马尔可夫过程等统计方法来统计变化规律。
 
-1、Allan方差的定义
+目前对于低精度低成本的惯性传感器，越来越多的建模方法被使用，如自相关函数法、功率谱密度法、自回归平滑模型法和Allan方差法等。由于Allan方差分析简单和有效，是针对传感器随机误差参数确定的常用方法之一\cite{EISheimy(2008)}，本课题采用此方法对MEMS惯导的随机误差进行分析。
+
+Allan方差是一种公认的IEEE标准规范\cite{RStirling(2005)}。他是美国学者David Allan为研究原子钟的震荡器稳定性而提出的概念，Allan方差随后被引入到中、低精度陀螺的随机误差辨识中，实用性很强，取得良好效果。
+
+1、Allan方差的定义\cite{HouH(2003)}
 
 如图，数轴上有N个连续的采样点，每个采样点的间隔都是$\Delta t$，然后连续n数据点可以创建一个簇$(n<N/2)$。每一簇的时间为$\tau = n\Delta t$。
 
 假设传感器的瞬时采样速率为$\boldsymbol\Omega(t)$，那么在时间$t_k$ 和$t_(k+1)$内的第K簇平均值为：
 \begin{equation}
-\overline{\boldsymbol{\Omega}}_k(\tau)=\frac{1}{\tau}\int_{t_k}^{t_{k+\tau}}\boldsymbol{\Omega}(t)dt
+\overline{\boldsymbol{\Omega}}_k(\tau)=\frac{1}{\tau}\int_{t_k}^{t_{k+\tau}}\boldsymbol{\Omega}(t)dt \label{2.42}
 \end{equation}
 
-其中，$\bar{\boldsymbol{\Omega}}_k(\tau)$代表从第$k$个数据点开始，持续n个数据点输出的速率平均值。则Allan方差定义为：
+其中，$\bar{\boldsymbol{\Omega}}_k(\tau)$代表从第$k$个数据点开始，持续n个数据点输出的速率平均值。则Allan方差定义为\cite{ZhaoYM(2011)}：
 \begin{equation}
-\sigma^2(\tau) = \frac{1}{2}\langle(\overline{\boldsymbol{\Omega}}_{k+n}-\overline{\boldsymbol{\Omega}}_k)^2\rangle \approx\frac{1}{2(N-2n)}\sum^{N-2n}_{k=1}(\overline{\boldsymbol{\Omega}}_{k+n}((\tau))-\overline{\boldsymbol{\Omega}}_k((\tau)))^2
+\sigma^2(\tau) = \frac{1}{2}\langle(\overline{\boldsymbol{\Omega}}_{k+n}-\overline{\boldsymbol{\Omega}}_k)^2\rangle \approx\frac{1}{2(N-2n)}\sum^{N-2n}_{k=1}(\overline{\boldsymbol{\Omega}}_{k+n}((\tau))-\overline{\boldsymbol{\Omega}}_k((\tau)))^2  \label{2.43}
 \end{equation}
 
-式中符号$\langle \rangle$代表无穷时间内的平均值，在实际中，对于有限N个MEMS惯导数据，时间长度为$\tau$的簇的数目也是有有限的，测试试验中$n$已知，则$\Omega(t)$是可以测量的，Allan方差$\sigma^2(\tau)$ 和MEMS惯导各项随机噪声的功率谱密度(PSD)有唯一对应关系(IEEE Std.952-1997)：
+式中符号$\langle \rangle$代表无穷时间内的平均值，在实际中，对于N个有限数据，时间长度为$\tau$的簇的数目也是有有限的，测试试验中$n$已知，则$\Omega(t)$是可以测量的，Allan方差$\sigma^2(\tau)$ 和MEMS惯导各项随机噪声的功率谱密度(PSD)有唯一对应关系(IEEE Std.952-1997)：
 \begin{equation}
-\sigma^2(\tau) = 4\int^{\infty}_{0}S_{\Omega}(f)\frac{\sin^4(\pi f\tau))}{(\pi f\tau)^2}df
+\sigma^2(\tau) = 4\int^{\infty}_{0}S_{\Omega}(f)\frac{\sin^4(\pi f\tau))}{(\pi f\tau)^2}df \label{2.44}
 \end{equation}
-其中，$S_{\Omega}(f)$是$\Omega(T)$的随机功率谱密度。由于陀螺数据的Allan方差与功率谱密度之间存在定量关系，利用此关系，将陀螺输出数据在样本长度上进行计算，可以得到陀螺数据中的各种噪声特性。同时，该结果还为后面的Kalman滤波器初始参数的设置提供依据，可减小滤波器因噪声参数统计不准确而发散的风险。
-Allan方差分析通常能辨识出零偏不稳定性B、随机游走系数N、量化噪声Q 等多种随机噪声。通过Allan 方差法对MEMS 陀螺与加速度计长时间静止数据进行处理后，可以得到类似如下？的双对数曲线图。不同噪声出现在不同的$\tau$区域上，
+
 \begin{figure}[!htb]
  \centering
- \includegraphics[width=0.9\textwidth]{figures/chap2/chap2_Allan}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \includegraphics[width=0.66\textwidth]{figures/chap2/chap2_Allan}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{Allan方差分析曲线图}
- \label{chap2_Fig.2}
+ \label{chap2_Fig.6}
  \vspace{-0.4cm}
 \end{figure}
 
-各误差项在Allan标准差双对数曲线上的对应的斜率和$\tau$值如表？所示。
+其中，$S_{\Omega}(f)$是$\Omega(T)$的随机功率谱密度。上式\ref{2.44}表明通过一个传递函数，Allan方差与惯性器件输出数据输出噪声有着对应的关系，Allan 方差对辨识MEMS 惯导数据中不同的随机噪声项具有很好的效果。通过Allan 方差法对MEMS 陀螺与加速度计长时间静止数据进行处理后，可以得到类似图\ref{chap2_Fig.6}的双对数曲线图。不同噪声出现在不同的$\tau$区域上，通常能辨识出零偏不稳定性B、随机游走系数N、量化噪声Q 等多种随机噪声。该结果还为后面的Kalman滤波器初始参数的设置提供依据，可减小滤波器因噪声参数统计不准确而发散的风险。
+
+各误差项在Allan标准差双对数曲线上的对应的斜率和$\tau$值如表\ref{chap2_Table 2}所示\cite{ZhaoYM(2011)}。
 \begin{table}[!h]
-\renewcommand\arraystretch{1}
+\renewcommand\arraystretch{0.8}
 \centering
-\caption{\label{chap2_Table 1}Allan方差}
+\caption{\label{chap2_Table 2}Allan方差}
 \begin{tabular}{c l l l}
 \toprule
-\hspace{0.5cm}随机噪声项 &   \hspace{1cm}Allan方差  &\hspace{1.5cm}斜率  &\hspace{1.5cm}$\tau$ 取值(h)\\
+\hspace{0.2cm}随机噪声项 &   \hspace{0.5cm}Allan方差  &\hspace{0.5cm}斜率  &\hspace{1cm}$\tau$ 取值(h)\\
 \hline
-\hspace{0.5cm}量化噪声Q &   \hspace{1cm}$\sigma(\tau)=\sqrt(3)Q/\tau$  &\hspace{1.5cm}-1  &\hspace{1.5cm}$\sqrt(3)$\\
-\hspace{0.5cm}随机游走系数N &   \hspace{1cm}$\sigma(\tau)=N/\tau^(\frac{1}{2})$  &\hspace{1.5cm}-1/2  &\hspace{1.5cm}1\\
-\hspace{0.5cm}零偏不稳定性B &   \hspace{1cm}$\sigma(\tau)=B\sqrt(2ln2/\pi)=B/0.664$  &\hspace{1.5cm}0  &\hspace{1.5cm}\ \\
-\hspace{0.5cm}速率随机游走K &   \hspace{1cm}$\sigma(\tau)=K\tau^{1/2}/\sqrt(3)$  &\hspace{1.5cm}1/2  &\hspace{1.5cm}3 \\
-\hspace{0.5cm}速率斜坡R &   \hspace{1cm}$\sigma(\tau)=R\tau/\sqrt(2)$  &\hspace{1.5cm}1  &\hspace{1.5cm}$\sqrt(2)$ \\
+\hspace{0.2cm}量化噪声Q &   \hspace{0.5cm}$\sigma(\tau)=\sqrt(3)Q/\tau$  &\hspace{0.5cm}-1  &\hspace{1cm}$\sqrt(3)$\\
+\hspace{0.2cm}随机游走系数N &   \hspace{0.5cm}$\sigma(\tau)=N/\tau^{\frac{1}{2}}$  &\hspace{0.5cm}-1/2  &\hspace{1cm}1\\
+\hspace{0.2cm}零偏不稳定性B &   \hspace{0.5cm}$\sigma(\tau)=B\sqrt(2ln2/\pi)=B/0.664$  &\hspace{0.5cm}0  &\hspace{1cm} / \\
+\hspace{0.2cm}速率随机游走K &   \hspace{0.5cm}$\sigma(\tau)=K\tau^{1/2}/\sqrt(3)$  &\hspace{0.5cm}1/2  &\hspace{1cm}3 \\
+\hspace{0.2cm}速率斜坡R &   \hspace{0.5cm}$\sigma(\tau)=R\tau/\sqrt(2)$  &\hspace{0.5cm}1  &\hspace{1cm}$\sqrt(2)$ \\
 \toprule
 \end{tabular}
 \end{table}
 
-在曲线图上绘制某一斜率的直线，在该斜率直线上找到对应$\tau$处的$\sigma(\tau)$值，便可以分离出相应的随机噪声系数。
-\subsection{MEMS惯性传感器Allan方差实验}
-将制作的设备固定于静止工作台上，上电预热后，以50Hz采样频率采集了6h数据，在matlab上计算数据的Allan方差并绘制对数图，实验数据的Allan方差分析结果如图所示；
+在曲线图上绘制某一斜率的直线，在该斜率直线上找到对应$\tau$处的$\sigma(\tau)$值，便可以分离出相应的随机噪声系数\cite{HouH(2003)}。
 
-根据上述结果可以得到MEMS惯导的随机误差参数，如表所示，
+2、MEMS惯性传感器Allan方差实验
 
-\section{车载组合定位系统总体方案设计}
-车载组合定位系统是一个复杂的系统，包括传感器的数据采集与处理，实时数据解算和融合，上位机导航信息显示等。本课题根据本章前几节的导航解算理论知识，根据实际工作环境完成芯片选型与硬件设计，并编写导航软件实现导航定位功能，最终可以成功地为地面车辆提供姿态位置和速度信息，完成了一款自动驾驶辅助系统的小型化导航模块的工程实现。
-此模块以ARM 处理器为核心，主要由MEMS惯性传感器，GNSS卫星接收机等设备组成。构建的SOPC(system-on-a-programmable-chip)嵌入式系统具有体积小，功耗低，数据计算功能强等优点，为小型化、低功耗，低成本导航系统硬件设计提供了解决方案，其总体方案如图\ref{chap3_Fig.2}所示，
+将制作的设备固定于静止工作台上，上电预热后，以50Hz采样频率采集了6h数据，经matlab处理后，实验数据的Allan方差分析结果如图\ref{chap2_Fig.7}和\ref{chap2_Fig.8}所示；
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.75\textwidth]{figures/chap2/chap2_Gyro}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{MEMS陀螺Allan方差双对数曲线图}
+ \label{chap2_Fig.7}
+ \vspace{-0.4cm}
+\end{figure}
+
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[width=0.75\textwidth]{figures/chap2/chap2_Acc}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
+ \caption{MEMS加速度计Allan方差双对数曲线图}
+ \label{chap2_Fig.8}
+ \vspace{-0.4cm}
+\end{figure}
+
+根据上述结果可以得到MEMS惯导的随机误差参数，如表\ref{chap2_Table 3}和\ref{chap2_Table 4} 所示：
+\begin{table}[!h]
+\renewcommand\arraystretch{0.9}
+\centering
+\caption{\label{chap2_Table 3}MEMS陀螺随机误差参数}
+\begin{tabular}{c c c}
+\toprule
+\hspace{0.5cm} &   \hspace{0.5cm}零偏不稳定性  &\hspace{0.5cm}角度随机游走  \\
+\hline
+\hspace{0.5cm}陀螺X轴 &  \hspace{0.5cm}$14.43deg/h$  &\hspace{0.5cm} $0.883deg/\sqrt{h}$\\
+\hspace{0.5cm}陀螺Y轴 &  \hspace{0.5cm}$9.93deg/h$   &\hspace{0.5cm} $0.75deg/\sqrt{h}$\\
+\hspace{0.5cm}陀螺Z轴 &  \hspace{0.5cm}$9.35deg/h$   &\hspace{0.5cm} $0.75deg/\sqrt{h}$\\
+\toprule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\renewcommand\arraystretch{0.9}
+\centering
+\caption{\label{chap2_Table 4}MEMS加速度计随机误差参数}
+\begin{tabular}{c c c}
+\toprule
+\hspace{0.5cm} &   \hspace{0.5cm}零偏不稳定性  &\hspace{0.5cm}速度随机游走  \\
+\hline
+\hspace{0.5cm}加速度计X轴 &   \hspace{0.5cm}$0.73mg$  &\hspace{0.5cm} $0.2m/s/\sqrt{h}$\\
+\hspace{0.5cm}加速度计Y轴 &   \hspace{0.5cm}$1.83mg$  &\hspace{0.5cm} $0.2m/s/\sqrt{h}$\\
+\hspace{0.5cm}加速度计Z轴 &   \hspace{0.5cm}$0.93mg$  &\hspace{0.5cm} $0.2m/s/\sqrt{h}$\\
+\toprule
+\end{tabular}
+\end{table}
+
+\subsection{系统总体方案}
+自动辅助驾驶系统是一个复杂的系统集合，汽车依靠人工智能、视觉计算、雷达、监控装置和组合导航系统间协同合作，并结合高精度地图获取车辆的运行状态。其中车载组合导航系统包括传感器的数据采集与处理，实时数据解算和融合，导航信息显示等是自动辅助驾驶的重要组成部分。
+
+本课题以组合导航解算理论为基础，根据实际工作环境完成了芯片选型与硬件设计，并编写相关导航算法软件，最终可以成功地为地面车辆提供姿态位置和速度信息，完成了一款小型化导航模块的工程实现。此模块以ARM 处理器为核心，主要由MEMS惯性传感器，多模卫星接收机等设备组成。构建的SOPC(system-on-a-programmable-chip) 嵌入式系统具有体积小，功耗低，数据计算功能强等优点，为小型化、低功耗，低成本导航模块设计提供了解决方案，其总体方案如图\ref{chap2_Fig.9}所示：
+
+从图中可以看出，首先将MEMS惯性器件通过SPI通信接口以100Hz的频率采样，降频至10Hz送入ARM芯片数据缓存区，降频采用简单的均值滤波并做误差补偿，供后续系统做惯导解算使用；另一路GNSS模块通过串口连接到ARM 芯片，并以1Hz 速率将数据送入数据缓存区；ARM芯片在解析惯导数据和GNSS数据后，通MEMS数据进行时间对齐，然后用卡尔曼滤波融合对导航数据进行最优估计，最后通过串行总线把导航解算数据传送到PC端进行显示，并将结果实时记录在SD中，方便后期对数据的分析和系统的调试。
+
 \begin{figure}[!htb]
  \centering
  \includegraphics[width=0.9\textwidth]{figures/chap3/chap3_Principle}\\    % e.g.,[scale=0.75], [width=0.75\textwidth ]
  \caption{系统总体方案图}
- \label{chap3_Fig.2}
+ \label{chap2_Fig.9}
  \vspace{-0.4cm}
 \end{figure}
 
-从图中可以看出，首先将MEMS惯性器件通过SPI通信接口以100Hz的频率采样，降频至10Hz送入ARM芯片数据缓存区，降频采用简单的均值滤波并做误差补偿，供后续系统做惯导解算使用；另一路GNSS模块通过串口连接到ARM 芯片，并以1Hz 速率将数据送入数据缓存区；ARM芯片在解析惯导数据和GNSS数据后，对结果进行时间对准后进行卡尔曼滤波融合对导航数据进行最优估计，最后通过串行总线把导航解算数据传送到PC端进行显示，同时也可将结果实时记录在SD中，方便对实时工作环境的测试。
-
-根据上述系统总体方案的介绍，GNSS/INS组合导航系统中，不仅要完成导航信息解算等软件问题、首先要完成硬件平台的开发。结合本系统的功能及特点可以将设计的主要任务主要分成以下几点：
+根据上述系统总体方案的介绍，GNSS/INS组合导航系统中，不仅要完成还要完成硬件平台的开发、还要编写导航信息解算等算法软件。结合本系统的功能及特点可以将设计的主要任务主要分成以下几点：
 
 1、硬件平台设计及模块调试
 
-导航模块硬件设计是整个任务要求的第一步，再设计最初，要根据平台的设计功能和算法需求特点进行主要器件的选型，然后依据电气连接规则绘制电路原理图和PCB图并加工制作电路板，硬件设计的过程在将在第三章详细介绍。
+导航模块硬件设计是整个任务要求的第一步，设计最初，要根据平台的设计功能和算法需求特点进行主要器件的选型，然后依据设计方案绘制电路原理图和PCB图制作硬件实验平台，硬件设计的过程在将在第三章详细介绍。
 
 2、软件设计
-在硬件平台搭建完成之后，要实现导航定位的功能还需要软件系统的支持。根据系统总体设计思想，软件设计分为相关芯片驱动部分、惯导数据解算、以及组合滤波误差处理几部分。具体过程为：首先对ARM硬件系统进行初始化，定时器、串口、SPI接口等外设初始化，然后通过定时器对IMU 和GNSS数据进行采集，对惯导数据进行导航解算，解算结果与GPS观测量通过卡尔曼滤波得到最优的导航信息，软件的设计将在本文第四章进行介绍。
 
-3、导航数据输出显示
-一个完整的系统设计最终需要一个人机交互的功能，导航解算后的数据要给用户显示出来，最终的设计将导航结果通过串口连接至电脑端，并能实时监测物体的运行状态和轨迹，同时显示当前搜索到的卫星，并将导航数据保存下来以便调试使用。
+在硬件平台搭建完成之后，还需要编写算法软件实现导航定位的功能。软件的设计包括有硬件系统驱动程序、组合导航算法设计、嵌入式软件流程设计等，具体设计将在本文第四章进行介绍。
+
+3、监控上位机设计
+
+编写导航系统的实时监控界面，增加系统人机交互的功能，可实现对数据的保存、导航模式选择、数据加载、轨迹显示、历史记录回放等功能，可以直观地显示车辆的运行状态和当前卫星搜索状态。
 
 较之传统定位系统，本系统具有导航定位独立，运行设计可靠，利于在中低端设备上实现等优点。
 
 \section{本章小结}
-本章主要介绍了捷联惯导的基本原理，推导了MEMS惯导的位置、姿态、速度更新算法，以及MEMS惯导的误差模型，给出了航位推算的方法，结合卫星导航与SINS导航组合原理，最后整合各传感器的特点，给出了小型化组合导航系统的总体方案，提出了系统设计的任务要求及需要实现的功能，为后文提供理论基础。
+本章主要研究了MEMS惯导的基本原理，系统地推导了MEMS惯导的位置、姿态、速度更新算法，并对MEMS惯导随机误差进行了分析和处理。
+主要工作有：
+
+(1)定义常用坐标系，并基于四元数法与旋转矢量法完成了MEMS 惯导更新算法的推导。
+
+(2)基于Allan方差法完成了对实验采集的MEMS惯导三个半小时静止数据的随机误差辨识。
+
+(3)结合卫星导航与SINS导航组合原理，整合各传感器的特点，给出了小型化组合导航系统的总体方案，给出了系统设计的任务要求及需要实现的功能，为后文提供理论基础。
+
+

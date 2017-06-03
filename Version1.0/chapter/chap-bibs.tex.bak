@@ -10,12 +10,11 @@
 \providecommand{\doi}[1]{doi: #1}\else
 \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{WangXiao(2006)}
-王笑京, 沈鸿飞, 汪林. 中国智能交通系统发展战略研究[J]. 交通运输系统工程与信息, 2006, 6(4): 9-12.
-
 \bibitem{XiaoZQ(2017)}
 肖自乾,陈经优,符石. 大数据背景下智能交通系统发展综述[J]. 软件导刊,2017,(01):182-184.
 
+\bibitem{WangXiao(2006)}
+王笑京, 沈鸿飞, 汪林. 中国智能交通系统发展战略研究[J]. 交通运输系统工程与信息, 2006, 6(4): 9-12.
 
 \bibitem{ZhangShiY(2010)}
 张士钰. 基于MEMS惯性传感器的车辆组合导航研究[D]. 南京: 南京航空航天大学, 2010: 1-6.
@@ -32,8 +31,8 @@
 \bibitem{DaiWJ(2006)}
 戴吾蛟, 丁晓利, 朱建军,等. 基于经验模式分解的滤波去噪法及其在GPS多路径效应中的应用[J]. 测绘学报, 2006, 35(4): 321-327.
 
-\bibitem{Liuwei(2004)}
-刘危. 基于MEMS的低成本MIMU的应用研究[D]. 长沙: 国防科技大学. 2004.
+\bibitem{XiaoYC(2016)}
+肖应超. MEMS传感器发展现状与应用[J]. 中国高新技术企业,2016,(35):46-47.
 
 \bibitem{MaoB(2013)}
 毛奔. 微惯性系统及应用[M]. 哈尔滨工程大学出版社, 2013.
@@ -44,17 +43,11 @@
 \bibitem{CuiLZ(2014)}
 崔留争. MEMS-SINS/GPS组合导航关键技术研究[D]. 中国科学院大学, 2014.
 
-\bibitem{SunLiN(2002)}
-孙立宁, 周兆英, 龚振邦. MEMS国内外发展状况及我国MEMS发展战略的思考[J]. 机器人技术与应用, 2002(2).
-
 \bibitem{Veth M(2006)}
 Veth M, J Raquet. Fusion of Low-Cost Imaging and Inertial Senser for Navigation. Proceedings of the 19th International Technical Meeting of the satellite Division of The Institute of Navigation [C]. Fort Worth: The Institude of Navigation GNSS, 2006, 1193-1103.
 
 \bibitem{LiBowen(2014)}
 李博文, 姚丹亚. 低成本车载MEMS惯导导航定位方法[J]. 中国惯性技术学报, 2014, 22(6).
-
-\bibitem{LiRongBing(2004)}
-李荣冰, 刘建业, 曾庆化. 基于MEMS技术的微型惯性导航系统的发展现状[J]. 中国惯性学报, 2004, 12(6): 88-94.
 
 \bibitem{JiangS(2016)}
 江山. 最后一颗GPS-2F导航卫星发射[J]. 太空探索, 2016(3): 17-17.
@@ -76,6 +69,9 @@ Veth M, J Raquet. Fusion of Low-Cost Imaging and Inertial Senser for Navigation.
 
 \bibitem{Quentin(2001)}
 Quentin Ladetto, Vincent Gabaglio, Bertrand Merminod. Combining Gyroscopes, Magnetic Compass and GPS for Pedestrian Navigation[J]. International Symposium on Kinematic Systems in Geodesy, Geomatics and Navigation (KIS), Banff, Canada, 2001: 205-212.
+
+\bibitem{LiuZP(2011)}
+刘智平, 于帆, 陈国绍. 低成本组合导航系统的数据融合算法[J]. 现代电子技术, 2011, 34(4): 204-207.
 
 \bibitem{RStirling(2005)}
 R. Stirling, K. Fyfe, G. Lachapelle. Evaluation of a new method of heading estimation for pedestrian dead reckoning using shoe mounted sensors[J]. The Journal of Navigation, 2005, 58(01): 31–45.
@@ -138,9 +134,6 @@ Lee H K, Lee J G, Jee G I. GPS multipath detection based on sequence of successi
 \bibitem{GaoZY(2009)}
 高钟毓. 惯性导航系统初始化对准与标定最优化方法[J]. 中国惯性学报, 2009, 17(1): 1-7
 
-\bibitem{WahabNA(2008)}
-张石. ARM嵌入式系统教程[M]. 北京: 机械工业出版社, 2008: 90-98
-
 \bibitem{SavagePG(2012)}
 Savage P G. Strapdown inertial navigation integration algorithm design. I: Attitude algorithms.[J]. Journal of Guidance Control  Dynamics, 2012, 21(1):19-28.
 
@@ -156,11 +149,11 @@ Hou H, EI-Sheimy N. Inertial sensor error modeling using allan variance.Proceedi
 \bibitem{ShiJing(2010)}
 石静, 缪玲娟, 高伟熙. 提高MEMS惯导系统速度解算精度的方法研究[J]. 北京理工大学学报, 2010, 30(1): 50-54.
 
-\bibitem{LiuZP(2011)}
-刘智平, 于帆, 陈国绍. 低成本组合导航系统的数据融合算法[J]. 现代电子技术, 2011, 34(4): 204-207.
-
 \bibitem{LiuHua(2013)}
 刘华, 刘彤, 张继伟. 陆地车辆GNSS/MEMS 惯性组合导航机体系约束算法研究[J]. 北京理工大学学报, 2013, 33(5): 510-515.
+
+\bibitem{ZhangS(2008)}
+张石. ARM嵌入式系统教程[M]. 北京: 机械工业出版社, 2008: 90-98
 
 \bibitem{Dissanayake(2001)}
 Dissanayake G, Sukkarieh S, Nebot E, et al. The aiding of a low-cost strapdown inertial measurement unit using vehicle model constraints for land vehicle applications[J]. IEEE Transactions on Robotics  Automation, 2001, 17(5): 731-747.
@@ -183,11 +176,6 @@ Bonnifait P, Bouron P, Crubille P, et al. Data fusion of four ABS sensors and GP
 \bibitem{Liusen(2006)}
 刘森. 嵌入式系统接口设计与Linux驱动程序开发[M]. 北京: 北京航空航天大学出版, 2006: 21 1-221.
 
-
-
 \bibitem{WangXL(2015)}
 王新龙. SINS/GPS 组合导航技术[M]. 北京航空航天大学出版社, 2015.
-
-
-
 \end{thebibliography}

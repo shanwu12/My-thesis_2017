@@ -1,4 +1,3 @@
-
 \chapter{组合导航系统硬件设计}
 \section{引言}
 根据模块总体方案设计，本章的重点工作是制作系统的硬件平台。本车载组合定位系统硬件设计分为：需求分析、硬件方案设计、器件选型、嵌入式ARM系统设计、外围设备设计、数据传感器设计，电路测试等。本课题在设计过程中考虑到成本、硬件尺寸、产品功耗、抗干扰性能和产品实用性等问题，提出自己的解决方案，实现了一个低成本、低功耗的MEMS \ SINS/GNSS 组合的小型化组合导航系统。设计流程如下图\ref{chap3_Fig.1} 所示：
@@ -98,7 +97,6 @@ BMI160的性能指标如表\ref{chap3_Table 1}所示
 \hspace{0.5cm}指标     & \hspace{1cm}陀螺                &\hspace{1cm}加速度计   \\
 \hline
 \hspace{0.5cm}量程     & \hspace{1cm}$\pm125^\circ/s$            &\hspace{1cm} $\pm2g$ \\
-\hspace{0.5cm}零漂     & \hspace{1cm}$\pm3^\circ/s$      &\hspace{1cm}  $\pm70mg$\\
 \hspace{0.5cm}分辨率   & \hspace{1cm}$16bit$             &\hspace{1cm} $16bit$  \\
 \hspace{0.5cm}带宽     & \hspace{1cm}$25\sim3200Hz$      &\hspace{1cm} $12.5\sim1600Hz$ \\
 %\hspace{0.5cm}噪声 & \hspace{1cm}$262.4LSB/^\circ/s$ &\hspace{1cm} $16384LSB/g$\\

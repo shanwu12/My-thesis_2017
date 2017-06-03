@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  30 MAY 2017 10:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.3.13)  2 JUN 2017 23:24
 entering extended mode
 **Thesis_of_shawnu_WANG.tex
 
@@ -377,6 +377,49 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks17
 )
+(C:\CTEX\MiKTeX\tex\latex\base\fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(C:\CTEX\MiKTeX\tex\latex\base\t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(C:\CTEX\MiKTeX\tex\latex\psnfss\mathptmx.sty
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
 (C:\CTEX\MiKTeX\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip63
@@ -389,16 +432,19 @@ Package: hypernat 2001/07/09 v1.0b hyperref and natbib compatibility (jb)
 )
 (C:\CTEX\CTeX\tex\latex\ccmap\ccmap.sty
 Package: ccmap 2006/11/18
+
+
+Package ccmap Warning: fontenc already loaded - some fonts may be unprocessed.
+
 \CCT@hooka@@=\toks18
-)
-(C:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+) (C:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
 (C:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks19
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
@@ -469,7 +515,7 @@ Package: varioref 2011/10/02 v1.4z package for extended references (FMi)
 ))
 (C:\CTEX\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup6
+\symrsfs=\mathgroup8
 )
 (C:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
@@ -518,46 +564,7 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
 (C:\CTEX\MiKTeX\tex\latex\tools\bm.sty
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup7
-\symboldletters=\mathgroup8
-\symboldsymbols=\mathgroup9
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
-)
-(C:\CTEX\MiKTeX\tex\latex\psnfss\times.sty
-Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)
-(C:\CTEX\MiKTeX\tex\latex\psnfss\mathptmx.sty
-Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-\symbold=\mathgroup10
-\symitalic=\mathgroup11
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
-LaTeX Info: Redefining \hbar on input line 50.
 )
 (C:\CTEX\MiKTeX\tex\latex\geometry\geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -797,16 +804,16 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `CJKbookmarks' set `true' on input line 250.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 250.
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 244.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 244.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 250.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 250.
+(hyperref)                setting the option has no effect on input line 244.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 250.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 244.
+Package hyperref Info: Option `colorlinks' set `true' on input line 244.
 )
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\Thesis_of_sha
 wnu_WANG.aux"
@@ -828,6 +835,8 @@ bibs.aux"
 Package natbib Warning: Citation `RStirling(2005)' multiply defined.
 
 )
+("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
+pubs.aux")
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
 ack.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -910,10 +919,10 @@ LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 9.
- (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)<<ot1.cmap>>
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 9.
+ (C:\CTEX\MiKTeX\tex\latex\psnfss\t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)<<t1.cmap>>
 (C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count302
@@ -939,18 +948,18 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
 * h-part:(L,W,R)=(76.82234pt, 460.65031pt, 76.82234pt)
-* v-part:(T,H,B)=(105.2751pt, 604.33662pt, 85.35826pt)
+* v-part:(T,H,B)=(105.2751pt, 601.49118pt, 88.2037pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=460.65031pt
-* \textheight=604.33662pt
+* \textheight=601.49118pt
 * \oddsidemargin=4.55235pt
 * \evensidemargin=4.55235pt
 * \topmargin=-15.32143pt
 * \headheight=28.45274pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
-* \footskip=31.2982pt
+* \footskip=36.98866pt
 * \marginparwidth=98.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
@@ -1081,7 +1090,7 @@ LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 16
 .
 (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
+)<<ot1.cmap>>
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 16
 .
 
@@ -1100,12 +1109,10 @@ LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 16
 (C:\CTEX\MiKTeX\tex\latex\psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )<<omx.cmap>>
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 16.
 
-LaTeX Warning: File u.cmap not found on input line 16.
-
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 16.
-(C:\CTEX\MiKTeX\tex\latex\jknappen\ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
@@ -1113,8 +1120,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 16.
+
+
+LaTeX Warning: File u.cmap not found on input line 16.
+
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 16.
+(C:\CTEX\MiKTeX\tex\latex\jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
@@ -1125,6 +1142,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.54> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.53> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.54> not available
 (Font)              size <10.95> substituted on input line 24.
@@ -1133,14 +1156,11 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.54> not available
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.53> not available
 (Font)              size <8> substituted on input line 24.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.54> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.53> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
-<<c1950.cmap>><<c1958.cmap>><<c1954.cmap>><<c1938.cmap>><<c1946.cmap>><<c1949.c
-map>><<c1939.cmap>><<c1937.cmap>><<c1956.cmap>><<c1953.cmap>><<c1961.cmap>>
+<<c1950.cmap>>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.05> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 25.
+<<c1958.cmap>><<c1954.cmap>><<c1938.cmap>><<c1946.cmap>><<c1949.cmap>><<c1939.c
+map>><<c1937.cmap>><<c1956.cmap>><<c1953.cmap>><<c1961.cmap>>
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 40--43
 
@@ -1156,31 +1176,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--43
 
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 44.
 )
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
 name.tex" [4]
 LaTeX Font Info:    Calculating math sizes for size <16> on input line 11.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 11.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11.84009> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.6001> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 11.
+
 )
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
-shengming.tex" [5]<<c1926.cmap>>
+shengming.tex" [5]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <16> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
+<<c1926.cmap>>
 Package CJKpunct Info: punctuation spaces for family 'zhsong' do not exist. Use
  family 'def' instead. on input line 9.
 <<c1925.cmap>><<c1936.cmap>><<c1952.cmap>>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <42> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <42> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
 )
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
 abstract.tex"
@@ -1194,77 +1217,62 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [6] [1] [2])
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\Thesis_of_sha
-wnu_WANG.toc"
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 1.
+wnu_WANG.toc" [3
 
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.40009> not available
-(Font)              size <8> substituted on input line 1.
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.36008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-[3
-
-]
-Overfull \hbox (173.64853pt too wide) in paragraph at lines 58--58
+] [4]
+Overfull \hbox (170.79608pt too wide) in paragraph at lines 59--59
 []|[][][] 
  []
 
 )
 \tf@toc=\write4
- [4]
+ [5] [6
+
+
+]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
 er1.tex"
 µ⁄\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 1\hspace {0.25em plus
  0.125em minus 0.08em}\ignorespaces \ignorespaces ’¬
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 [1
 
 
-
-
 ] [2]<<c1929.cmap>>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7326) has occurred while \output is active []
 
  [3]
-<figures/chap1/chap1_Beidou.jpg, id=529, 288.47775pt x 192.72pt>
+<figures/chap1/chap1_Beidou.jpg, id=544, 288.47775pt x 192.72pt>
 File: figures/chap1/chap1_Beidou.jpg Graphic file (type jpg)
 
 <use figures/chap1/chap1_Beidou.jpg>
 Package pdftex.def Info: figures/chap1/chap1_Beidou.jpg used on input line 37.
 (pdftex.def)             Requested size: 230.32515pt x 153.8733pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 
-Overfull \hbox (29.02846pt too wide) in paragraph at lines 50--63
+Overfull \hbox (29.02843pt too wide) in paragraph at lines 50--63
  [][] 
  []
 
 [4 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/cha
 p1/chap1_Beidou.jpg>]
-<figures/chap1/chap1_Nav440.png, id=544, 202.356pt x 192.72pt>
+<figures/chap1/chap1_Nav440.png, id=559, 202.356pt x 192.72pt>
 File: figures/chap1/chap1_Nav440.png Graphic file (type png)
 
 <use figures/chap1/chap1_Nav440.png>
-Package pdftex.def Info: figures/chap1/chap1_Nav440.png used on input line 72.
+Package pdftex.def Info: figures/chap1/chap1_Nav440.png used on input line 73.
 (pdftex.def)             Requested size: 184.25731pt x 175.49309pt.
- [5]
-<figures/chap1/chap1_XW-GI5610.jpg, id=556, 176.733pt x 125.1585pt>
+ [5] [6 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figure
+s/chap1/chap1_Nav440.png>]
+<figures/chap1/chap1_XW-GI5610.jpg, id=579, 176.733pt x 125.1585pt>
 File: figures/chap1/chap1_XW-GI5610.jpg Graphic file (type jpg)
 
 <use figures/chap1/chap1_XW-GI5610.jpg>
 Package pdftex.def Info: figures/chap1/chap1_XW-GI5610.jpg used on input line 8
-4.
+7.
 (pdftex.def)             Requested size: 184.25731pt x 130.49596pt.
- [6 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap1/chap1_Nav440.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [7 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
 ap1/chap1_XW-GI5610.jpg>]) [8]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
@@ -1272,13 +1280,13 @@ er2.tex"
 µ⁄\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 2\hspace {0.25em plus
  0.125em minus 0.08em}\ignorespaces \ignorespaces ’¬
 
-LaTeX Warning: File ot154.cmap not found on input line 20.
+LaTeX Warning: File t154.cmap not found on input line 20.
 
 [9
 
 
 
-] <figures/chap2/chap2_coordinate.jpg, id=593, 421.575pt x 333.6465pt>
+] <figures/chap2/chap2_coordinate.jpg, id=607, 421.575pt x 333.6465pt>
 File: figures/chap2/chap2_coordinate.jpg Graphic file (type jpg)
 
 <use figures/chap2/chap2_coordinate.jpg>
@@ -1286,7 +1294,7 @@ Package pdftex.def Info: figures/chap2/chap2_coordinate.jpg used on input line
 23.
 (pdftex.def)             Requested size: 184.25731pt x 145.82742pt.
 
-<figures/chap2/chap2_body.png, id=595, 449.42906pt x 356.0803pt>
+<figures/chap2/chap2_body.png, id=609, 449.42906pt x 356.0803pt>
 File: figures/chap2/chap2_body.png Graphic file (type png)
 
 <use figures/chap2/chap2_body.png>
@@ -1295,130 +1303,126 @@ Package pdftex.def Info: figures/chap2/chap2_body.png used on input line 36.
  [10 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap2/chap2_coordinate.jpg> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draf
 t/Version1.0/figures/chap2/chap2_body.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
-
- []
-
-
-Overfull \hbox (0.56659pt too wide) in paragraph at lines 94--94
+Overfull \hbox (0.56659pt too wide) in paragraph at lines 92--92
 [] 
  []
 
-
-Underfull \vbox (badness 5533) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 112--115
-
- []
-
-[12]
-
-Package mathptmx Warning: There are no bold math fonts on input line 217.
-
+[11] [12]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 229.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 229.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 229.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13]
-
-LaTeX Warning: File ot141.cmap not found on input line 253.
-
-[14] <figures/chap2/chap2_rotate.png, id=652, 190.311pt x 167.4255pt>
+[13] [14] <figures/chap2/chap2_rotate.png, id=666, 190.311pt x 167.4255pt>
 File: figures/chap2/chap2_rotate.png Graphic file (type png)
 
 <use figures/chap2/chap2_rotate.png>
 Package pdftex.def Info: figures/chap2/chap2_rotate.png used on input line 293.
 
 (pdftex.def)             Requested size: 184.25731pt x 162.11128pt.
- [15]<<c1978.cmap>> [16 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/V
-ersion1.0/figures/chap2/chap2_rotate.png>]
-Overfull \hbox (7.21393pt too wide) in paragraph at lines 366--366
+ [15]<<c1978.cmap>>
+Overfull \hbox (5.83075pt too wide) in paragraph at lines 366--366
 [] 
  []
 
+[16 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap2/chap2_rotate.png>]
+
+Package mathptmx Warning: There are no bold math fonts on input line 372.
+
 [17] [18]
 Missing character: There is no ß in font zptmcm7t!
- [19]<<c1975.cmap>>
-
-LaTeX Warning: File ot163.cmap not found on input line 542.
-
-[20] <figures/chap2/chap2_loose.png, id=750, 453.8556pt x 130.8087pt>
+ [19]<<c1975.cmap>> [20]
+<figures/chap2/chap2_loose.png, id=762, 453.8556pt x 130.8087pt>
 File: figures/chap2/chap2_loose.png Graphic file (type png)
 
 <use figures/chap2/chap2_loose.png>
-Package pdftex.def Info: figures/chap2/chap2_loose.png used on input line 583.
-(pdftex.def)             Requested size: 322.45381pt x 92.93867pt.
- [21]
-<figures/chap2/chap2_tight.png, id=762, 493.6041pt x 174.53204pt>
+Package pdftex.def Info: figures/chap2/chap2_loose.png used on input line 581.
+(pdftex.def)             Requested size: 345.48773pt x 99.5773pt.
+
+Overfull \hbox (5.9591pt too wide) in paragraph at lines 587--588
+[]\C19/zhsong/m/n/12/56 t \C19/zhsong/m/n/12/65 | \C19/zhsong/m/n/12/43 ‹ \C19/
+zhsong/m/n/12/46 ( \C19/zhsong/m/n/12/43  \C19/zhsong/m/n/12/54 X \C19/zhsong/
+m/n/12/57 „[][]\T1/ptm/m/n/12 2.4[][]|\C19/rm/m/n/12/26 ß| \C19/zhsong/m/n/12/5
+5 ¥ \C19/zhsong/m/n/12/61 ò \C19/zhsong/m/n/12/64 ´ \C19/zhsong/m/n/12/45 { \C1
+9/zhsong/m/n/12/39 ¸ \C19/zhsong/m/n/12/64 Ü \C19/zhsong/m/n/12/43 * \C19/zhson
+g/m/n/12/46  \C19/zhsong/m/n/12/58 è \C19/zhsong/m/n/12/44 ƒ \C19/zhsong/m/n/1
+2/39 : \C19/zhsong/m/n/12/40  \C19/zhsong/m/n/12/65 | \C19/zhsong/m/n/12/43 ‹ 
+\C19/zhsong/m/n/12/41 ê \C19/zhsong/m/n/12/55 ™$[]$|\C19/rm/m/n/12/26 ß| \C19/z
+hsong/m/n/12/63 3\T1/ptm/m/n/12 MEMS\C19/zhsong/m/n/12/43 . \C19/zhsong/m/n/12/
+40 \T1/ptm/m/n/12 /GNSS\C19/zhsong/m/n/12/56 t
+ []
+
+[21 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap2/chap2_loose.png>]
+<figures/chap2/chap2_tight.png, id=775, 493.6041pt x 174.53204pt>
 File: figures/chap2/chap2_tight.png Graphic file (type png)
 
 <use figures/chap2/chap2_tight.png>
-Package pdftex.def Info: figures/chap2/chap2_tight.png used on input line 596.
-(pdftex.def)             Requested size: 299.41989pt x 105.8705pt.
- [22 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap2/chap2_loose.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Ver
-sion1.0/figures/chap2/chap2_tight.png>]<<c1984.cmap>> [23]
-<figures/chap2/chap2_Allan.png, id=786, 676.32675pt x 348.1005pt>
-File: figures/chap2/chap2_Allan.png Graphic file (type png)
+Package pdftex.def Info: figures/chap2/chap2_tight.png used on input line 594.
+(pdftex.def)             Requested size: 345.48773pt x 122.16093pt.
+<<c1984.cmap>> [22 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versio
+n1.0/figures/chap2/chap2_tight.png>]
+<figures/chap2/chap2_interval.png, id=788, 496.254pt x 132.495pt>
+File: figures/chap2/chap2_interval.png Graphic file (type png)
 
-<use figures/chap2/chap2_Allan.png>
-Package pdftex.def Info: figures/chap2/chap2_Allan.png used on input line 634.
-(pdftex.def)             Requested size: 304.03088pt x 156.48442pt.
+<use figures/chap2/chap2_interval.png>
+Package pdftex.def Info: figures/chap2/chap2_interval.png used on input line 61
+9.
+(pdftex.def)             Requested size: 304.03088pt x 81.1736pt.
+ [23 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap2/chap2_interval.png>]
+<figures/chap2/chap2_Allan.jpg, id=806, 621.522pt x 327.624pt>
+File: figures/chap2/chap2_Allan.jpg Graphic file (type jpg)
 
-
-LaTeX Warning: File ot145.cmap not found on input line 664.
-
-[24 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap2/chap2_Allan.png>]
-<figures/chap2/chap2_Gyro.jpg, id=802, 670.9065pt x 442.0515pt>
+<use figures/chap2/chap2_Allan.jpg>
+Package pdftex.def Info: figures/chap2/chap2_Allan.jpg used on input line 645.
+(pdftex.def)             Requested size: 276.39299pt x 145.69972pt.
+ [24 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap2/chap2_Allan.jpg>]
+<figures/chap2/chap2_Gyro.jpg, id=819, 590.205pt x 433.62pt>
 File: figures/chap2/chap2_Gyro.jpg Graphic file (type jpg)
 
 <use figures/chap2/chap2_Gyro.jpg>
-Package pdftex.def Info: figures/chap2/chap2_Gyro.jpg used on input line 667.
-(pdftex.def)             Requested size: 345.48773pt x 227.6422pt.
+Package pdftex.def Info: figures/chap2/chap2_Gyro.jpg used on input line 675.
+(pdftex.def)             Requested size: 276.39299pt x 203.06699pt.
 
-<figures/chap2/chap2_Acc.jpg, id=803, 779.3115pt x 452.892pt>
+<figures/chap2/chap2_Acc.jpg, id=820, 614.295pt x 450.483pt>
 File: figures/chap2/chap2_Acc.jpg Graphic file (type jpg)
 
 <use figures/chap2/chap2_Acc.jpg>
-Package pdftex.def Info: figures/chap2/chap2_Acc.jpg used on input line 675.
-(pdftex.def)             Requested size: 345.48773pt x 200.77959pt.
+Package pdftex.def Info: figures/chap2/chap2_Acc.jpg used on input line 683.
+(pdftex.def)             Requested size: 276.39299pt x 202.68797pt.
+ [25 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap2/chap2_Gyro.jpg> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Vers
+ion1.0/figures/chap2/chap2_Acc.jpg>] [26]
+<figures/chap3/chap3_Principle.jpg, id=838, 523.9575pt x 289.08pt>
+File: figures/chap3/chap3_Principle.jpg Graphic file (type jpg)
+
+<use figures/chap3/chap3_Principle.jpg>
+Package pdftex.def Info: figures/chap3/chap3_Principle.jpg used on input line 7
+29.
+(pdftex.def)             Requested size: 437.61638pt x 241.4493pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[25 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap2/chap2_Gyro.jpg> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versi
-on1.0/figures/chap2/chap2_Acc.jpg>] [26]
-<figures/chap3/chap3_Principle.png, id=820, 903.375pt x 510.708pt>
-File: figures/chap3/chap3_Principle.png Graphic file (type png)
-
-<use figures/chap3/chap3_Principle.png>
-Package pdftex.def Info: figures/chap3/chap3_Principle.png used on input line 7
-21.
-(pdftex.def)             Requested size: 414.58246pt x 234.38303pt.
-
-
-LaTeX Warning: File ot146.cmap not found on input line 741.
+LaTeX Warning: File t137.cmap not found on input line 747.
 
 [27 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3/chap3_Principle.png>]) [28]
+ap3/chap3_Principle.jpg>]) [28]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
 er3.tex"
 µ⁄\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 3\hspace {0.25em plus
  0.125em minus 0.08em}\ignorespaces \ignorespaces ’¬
-<figures/chap3/chap3_process.png, id=832, 195.129pt x 233.673pt>
+<figures/chap3/chap3_process.png, id=848, 195.129pt x 233.673pt>
 File: figures/chap3/chap3_process.png Graphic file (type png)
 
 <use figures/chap3/chap3_process.png>
-Package pdftex.def Info: figures/chap3/chap3_process.png used on input line 7.
+Package pdftex.def Info: figures/chap3/chap3_process.png used on input line 6.
 (pdftex.def)             Requested size: 230.32515pt x 275.82445pt.
  [29
 
@@ -1426,22 +1430,26 @@ Package pdftex.def Info: figures/chap3/chap3_process.png used on input line 7.
 
  <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/chap3
 /chap3_process.png>]
-<figures/chap3/chap3_frame.jpg, id=839, 834.7185pt x 461.92575pt>
+<figures/chap3/chap3_frame.jpg, id=856, 834.7185pt x 461.92575pt>
 File: figures/chap3/chap3_frame.jpg Graphic file (type jpg)
 
 <use figures/chap3/chap3_frame.jpg>
-Package pdftex.def Info: figures/chap3/chap3_frame.jpg used on input line 21.
+Package pdftex.def Info: figures/chap3/chap3_frame.jpg used on input line 30.
 (pdftex.def)             Requested size: 414.58246pt x 229.4328pt.
- [30 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3/chap3_frame.jpg>]
-<figures/chap3/chap3_stm32.png, id=846, 298.716pt x 234.8775pt>
+
+<figures/chap3/chap3_stm32.png, id=857, 298.716pt x 234.8775pt>
 File: figures/chap3/chap3_stm32.png Graphic file (type png)
 
 <use figures/chap3/chap3_stm32.png>
 Package pdftex.def Info: figures/chap3/chap3_stm32.png used on input line 40.
 (pdftex.def)             Requested size: 92.12865pt x 72.43854pt.
- [31 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3/chap3_stm32.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+[31 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap3/chap3_frame.jpg> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Vers
+ion1.0/figures/chap3/chap3_stm32.png>]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 59.
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\omsptm.fd
@@ -1450,43 +1458,42 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
 
-<figures/chap3/chap3_BMI.png, id=856, 323.70938pt x 216.05719pt>
+<figures/chap3/chap3_BMI.png, id=874, 323.70938pt x 216.05719pt>
 File: figures/chap3/chap3_BMI.png Graphic file (type png)
 
 <use figures/chap3/chap3_BMI.png>
-Package pdftex.def Info: figures/chap3/chap3_BMI.png used on input line 71.
+Package pdftex.def Info: figures/chap3/chap3_BMI.png used on input line 74.
 (pdftex.def)             Requested size: 92.12865pt x 61.49121pt.
 
-Overfull \hbox (9.0192pt too wide) in paragraph at lines 81--82
-[]\OT1/ptm/m/n/12 (2)\C19/zhsong/m/n/12/46 ‰ \C19/zhsong/m/n/12/62 k$\OT1/ztmcm
-/m/n/12 263\OML/ztmcm/m/it/12 LSBs[]=s$\C19/rm/m/n/12/50 Ø \C19/zhsong/m/n/12/4
-2 a \C19/zhsong/m/n/12/40 › \C19/zhsong/m/n/12/62 Ü \C19/zhsong/m/n/12/54  \C1
-9/zhsong/m/n/12/42 Ç a \C19/zhsong/m/n/12/37 ˇ \C19/zhsong/m/n/12/41 â \C19/zhs
-ong/m/n/12/58 å è$\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 125[]\OML/ztmcm/m/it/12 
-=s$|\C19/rm/m/n/12/25 !| $\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 250[]\OML/ztmcm/
-m/it/12 =s$|\C19/rm/m/n/12/25 !| $\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 500[]\OM
-L/ztmcm/m/it/12 =s$|\C19/rm/m/n/12/25 !| $\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 
-1000[]\OML/ztmcm/m/it/12 =s$|\C19/rm/m/n/12/25 !|
+Overfull \hbox (9.0192pt too wide) in paragraph at lines 82--83
+[]\T1/ptm/m/n/12 (2)\C19/zhsong/m/n/12/46 ‰ \C19/zhsong/m/n/12/62 k$\OT1/ztmcm/
+m/n/12 263\OML/ztmcm/m/it/12 LSBs[]=s$\C19/rm/m/n/12/50 Ø \C19/zhsong/m/n/12/42
+ a \C19/zhsong/m/n/12/40 › \C19/zhsong/m/n/12/62 Ü \C19/zhsong/m/n/12/54  \C19
+/zhsong/m/n/12/42 Ç a \C19/zhsong/m/n/12/37 ˇ \C19/zhsong/m/n/12/41 â \C19/zhso
+ng/m/n/12/58 å è$\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 125[]\OML/ztmcm/m/it/12 =
+s$|\C19/rm/m/n/12/25 !| $\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 250[]\OML/ztmcm/m
+/it/12 =s$|\C19/rm/m/n/12/25 !| $\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 500[]\OML
+/ztmcm/m/it/12 =s$|\C19/rm/m/n/12/25 !| $\OMS/ztmcm/m/n/12 \OT1/ztmcm/m/n/12 1
+000[]\OML/ztmcm/m/it/12 =s$|\C19/rm/m/n/12/25 !|
  []
 
-[32 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3/chap3_BMI.png>]
-<figures/chap3/chap3_NEO.png, id=865, 319.1925pt x 236.38312pt>
+[32] <figures/chap3/chap3_NEO.png, id=882, 319.1925pt x 236.38312pt>
 File: figures/chap3/chap3_NEO.png Graphic file (type png)
 
 <use figures/chap3/chap3_NEO.png>
 Package pdftex.def Info: figures/chap3/chap3_NEO.png used on input line 116.
-(pdftex.def)             Requested size: 138.19649pt x 102.3425pt.
- [33] [34 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figu
-res/chap3/chap3_NEO.png>]
-<figures/chap3/chap3_Arm.png, id=880, 484.05844pt x 424.58624pt>
+(pdftex.def)             Requested size: 92.12865pt x 68.22472pt.
+ [33 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap3/chap3_BMI.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versi
+on1.0/figures/chap3/chap3_NEO.png>] [34]
+<figures/chap3/chap3_Arm.png, id=896, 484.05844pt x 424.58624pt>
 File: figures/chap3/chap3_Arm.png Graphic file (type png)
 
 <use figures/chap3/chap3_Arm.png>
 Package pdftex.def Info: figures/chap3/chap3_Arm.png used on input line 161.
 (pdftex.def)             Requested size: 322.45381pt x 282.85164pt.
 
-<figures/chap3/chap3_RST.png, id=883, 289.83281pt x 301.8778pt>
+<figures/chap3/chap3_RST.png, id=899, 289.83281pt x 301.8778pt>
 File: figures/chap3/chap3_RST.png Graphic file (type png)
 
 <use figures/chap3/chap3_RST.png>
@@ -1496,7 +1503,7 @@ Package pdftex.def Info: figures/chap3/chap3_RST.png used on input line 172.
 
  <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/chap3
 /chap3_Arm.png>]
-<figures/chap3/chap3_Power.png, id=894, 314.97675pt x 428.802pt>
+<figures/chap3/chap3_Power.png, id=910, 314.97675pt x 428.802pt>
 File: figures/chap3/chap3_Power.png Graphic file (type png)
 
 <use figures/chap3/chap3_Power.png>
@@ -1504,15 +1511,15 @@ Package pdftex.def Info: figures/chap3/chap3_Power.png used on input line 217.
 (pdftex.def)             Requested size: 230.32515pt x 313.56592pt.
  [36 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_RST.png>]
-<figures/chap3/chap3_Bmi160.png, id=902, 409.53pt x 316.93407pt>
+<figures/chap3/chap3_Bmi160.png, id=918, 409.53pt x 316.93407pt>
 File: figures/chap3/chap3_Bmi160.png Graphic file (type png)
 
 <use figures/chap3/chap3_Bmi160.png>
 Package pdftex.def Info: figures/chap3/chap3_Bmi160.png used on input line 226.
 
-(pdftex.def)             Requested size: 253.35907pt x 196.07635pt.
+(pdftex.def)             Requested size: 276.39299pt x 213.91159pt.
 
-<figures/chap3/chap3_spi.png, id=904, 501.072pt x 237.2865pt>
+<figures/chap3/chap3_spi.png, id=920, 501.072pt x 237.2865pt>
 File: figures/chap3/chap3_spi.png Graphic file (type png)
 
 <use figures/chap3/chap3_spi.png>
@@ -1522,40 +1529,40 @@ Package pdftex.def Info: figures/chap3/chap3_spi.png used on input line 235.
 hap3/chap3_Power.png>] [38 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draf
 t/Version1.0/figures/chap3/chap3_Bmi160.png> <D:/Shan_5/shan_5/Graduation proje
 ct/BIT_thesis/Draft/Version1.0/figures/chap3/chap3_spi.png>]
-<figures/chap3/chap3_SDIO.png, id=921, 572.89032pt x 325.96782pt>
+<figures/chap3/chap3_SDIO.png, id=938, 572.89032pt x 325.96782pt>
 File: figures/chap3/chap3_SDIO.png Graphic file (type png)
 
 <use figures/chap3/chap3_SDIO.png>
 Package pdftex.def Info: figures/chap3/chap3_SDIO.png used on input line 272.
-(pdftex.def)             Requested size: 230.32515pt x 131.0513pt.
+(pdftex.def)             Requested size: 276.39299pt x 157.26355pt.
 
-<figures/chap3/chap3_m8n.png, id=922, 517.18219pt x 239.39438pt>
+<figures/chap3/chap3_m8n.png, id=939, 517.18219pt x 239.39438pt>
 File: figures/chap3/chap3_m8n.png Graphic file (type png)
 
 <use figures/chap3/chap3_m8n.png>
 Package pdftex.def Info: figures/chap3/chap3_m8n.png used on input line 281.
-(pdftex.def)             Requested size: 322.45381pt x 149.26312pt.
+(pdftex.def)             Requested size: 345.48773pt x 159.92583pt.
  [39 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_SDIO.png>]
-<figures/chap3/chap3_usb.png, id=931, 514.17094pt x 214.55156pt>
+<figures/chap3/chap3_usb.png, id=947, 514.17094pt x 214.55156pt>
 File: figures/chap3/chap3_usb.png Graphic file (type png)
 
 <use figures/chap3/chap3_usb.png>
 Package pdftex.def Info: figures/chap3/chap3_usb.png used on input line 305.
 (pdftex.def)             Requested size: 253.35907pt x 105.72046pt.
 
-<figures/chap3/chap3_usbpc.png, id=934, 163.812pt x 131.89275pt>
+<figures/chap3/chap3_usbpc.png, id=950, 163.812pt x 131.89275pt>
 File: figures/chap3/chap3_usbpc.png Graphic file (type png)
 
 <use figures/chap3/chap3_usbpc.png>
 Package pdftex.def Info: figures/chap3/chap3_usbpc.png used on input line 315.
-(pdftex.def)             Requested size: 213.41298pt x 156.49141pt.
+(pdftex.def)             Requested size: 213.41298pt x 128.03844pt.
 
 Overfull \hbox (52.18257pt too wide) in paragraph at lines 315--316
  [][] 
  []
 
-<figures/chap3/chap3_disk.png, id=935, 268.75406pt x 94.85437pt>
+<figures/chap3/chap3_disk.png, id=951, 268.75406pt x 94.85437pt>
 File: figures/chap3/chap3_disk.png Graphic file (type png)
 
 <use figures/chap3/chap3_disk.png>
@@ -1563,27 +1570,26 @@ Package pdftex.def Info: figures/chap3/chap3_disk.png used on input line 322.
 (pdftex.def)             Requested size: 213.396pt x 71.13335pt.
  [40 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap3/chap3_m8n.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versi
-on1.0/figures/chap3/chap3_usb.png>]
-<figures/chap3/chap3_pcb.png, id=948, 555.2745pt x 477.58424pt>
+on1.0/figures/chap3/chap3_usb.png>] [41 <D:/Shan_5/shan_5/Graduation project/BI
+T_thesis/Draft/Version1.0/figures/chap3/chap3_usbpc.png> <D:/Shan_5/shan_5/Grad
+uation project/BIT_thesis/Draft/Version1.0/figures/chap3/chap3_disk.png>]
+<figures/chap3/chap3_pcb.png, id=970, 555.2745pt x 477.58424pt>
 File: figures/chap3/chap3_pcb.png Graphic file (type png)
 
 <use figures/chap3/chap3_pcb.png>
 Package pdftex.def Info: figures/chap3/chap3_pcb.png used on input line 348.
-(pdftex.def)             Requested size: 142.25824pt x 142.26343pt.
+(pdftex.def)             Requested size: 128.03241pt x 128.03854pt.
 
-<figures/chap3/chap3_hardware.png, id=949, 2244.385pt x 1971.365pt>
+<figures/chap3/chap3_hardware.png, id=971, 2244.385pt x 1971.365pt>
 File: figures/chap3/chap3_hardware.png Graphic file (type png)
 
 <use figures/chap3/chap3_hardware.png>
 Package pdftex.def Info: figures/chap3/chap3_hardware.png used on input line 35
 5.
-(pdftex.def)             Requested size: 142.26001pt x 142.251pt.
- [41 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap3/chap3_usbpc.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Ver
-sion1.0/figures/chap3/chap3_disk.png>])
-[42 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
-ap3/chap3_pcb.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versio
-n1.0/figures/chap3/chap3_hardware.png>]
+(pdftex.def)             Requested size: 128.01346pt x 128.0229pt.
+) [42 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/
+chap3/chap3_pcb.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Vers
+ion1.0/figures/chap3/chap3_hardware.png>]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
 er4.tex"
 µ⁄\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 4\hspace {0.25em plus
@@ -1596,25 +1602,40 @@ er4.tex"
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [49]
-[50] <figures/chap4/chap4_software.png, id=1063, 662.475pt x 1053.9375pt>
+[50] <figures/chap4/chap4_software.png, id=1080, 357.7365pt x 624.53325pt>
 File: figures/chap4/chap4_software.png Graphic file (type png)
 
 <use figures/chap4/chap4_software.png>
 Package pdftex.def Info: figures/chap4/chap4_software.png used on input line 43
 9.
-(pdftex.def)             Requested size: 299.41989pt x 476.34204pt.
- [51] [52 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figu
-res/chap4/chap4_software.png>] [53]
-Overfull \hbox (5.00267pt too wide) in paragraph at lines 474--475
+(pdftex.def)             Requested size: 299.41989pt x 522.74608pt.
+ [51]
+Overfull \hbox (3.03745pt too wide) in paragraph at lines 460--464
+[]\T1/ptm/m/n/12 int    sen-sor [MAX_DR_NUM_SNSR ];   $\OML/ztmcm/m/it/12 = \OM
+S/ztmcm/m/n/12  \OT1/ztmcm/m/n/12 3 \OML/ztmcm/m/it/12 gyro deg=s;   \OT1/ztmc
+m/m/n/12 3 \OML/ztmcm/m/it/12 accel m=s[]; scaled by \OT1/ztmcm/m/n/12 1000; \O
+MS/ztmcm/m/n/12 \OML/ztmcm/m/it/12 =$ 
+ []
+
+[52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: File t138.cmap not found on input line 469.
+
+[53 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap4/chap4_software.png>]
+Overfull \hbox (8.36266pt too wide) in paragraph at lines 474--475
 []\C19/zhsong/m/n/12/57 œ \C19/zhsong/m/n/12/43 L º \C19/zhsong/m/n/12/55 Í$\OM
 L/ztmcm/m/it/12 voidReceive[]GpsData[]byte\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12
  unsignedchar \OMS/ztmcm/m/n/12  \OML/ztmcm/m/it/12 data\OT1/ztmcm/m/n/12 )$\C
 19/zhsong/m/n/12/46  \C19/zhsong/m/n/12/55 ¬ \C19/zhsong/m/n/12/58 • \C19/zhso
 ng/m/n/12/60 ( \C19/zhsong/m/n/12/51  \C19/zhsong/m/n/12/47 ¨ \C19/zhsong/m/n/
-12/40 \OT1/ptm/m/n/12 NMEA0183\C19/zhsong/m/n/12/62 ä
+12/40 \T1/ptm/m/n/12 NMEA0183\C19/zhsong/m/n/12/62 ä
  []
 
-[54] <figures/chap4/chap4_Downloader.png, id=1088, 528.47438pt x 263.48438pt>
+[54] <figures/chap4/chap4_Downloader.png, id=1104, 528.47438pt x 263.48438pt>
 File: figures/chap4/chap4_Downloader.png Graphic file (type png)
 
 <use figures/chap4/chap4_Downloader.png>
@@ -1622,18 +1643,15 @@ Package pdftex.def Info: figures/chap4/chap4_Downloader.png used on input line
 511.
 (pdftex.def)             Requested size: 322.45381pt x 160.76543pt.
 
-<figures/chap4/chap4_flash.png, id=1090, 698.00775pt x 346.896pt>
+<figures/chap4/chap4_flash.png, id=1106, 698.00775pt x 346.896pt>
 File: figures/chap4/chap4_flash.png Graphic file (type png)
 
 <use figures/chap4/chap4_flash.png>
 Package pdftex.def Info: figures/chap4/chap4_flash.png used on input line 519.
 (pdftex.def)             Requested size: 322.45381pt x 160.25162pt.
  [55 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap4/chap4_Downloader.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap4/chap4_flash.png>]) [57]
+hap4/chap4_Downloader.png>] [56 <D:/Shan_5/shan_5/Graduation project/BIT_thesis
+/Draft/Version1.0/figures/chap4/chap4_flash.png>]) [57]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
 er5.tex" [58
 
@@ -1642,7 +1660,7 @@ er5.tex" [58
 ]
 µ⁄\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 5\hspace {0.25em plus
  0.125em minus 0.08em}\ignorespaces \ignorespaces ’¬
-<figures/chap4/chap4_monitor.png, id=1114, 905.18175pt x 521.5485pt>
+<figures/chap4/chap4_monitor.png, id=1130, 905.18175pt x 521.5485pt>
 File: figures/chap4/chap4_monitor.png Graphic file (type png)
 
 <use figures/chap4/chap4_monitor.png>
@@ -1650,7 +1668,7 @@ Package pdftex.def Info: figures/chap4/chap4_monitor.png used on input line 8.
 (pdftex.def)             Requested size: 414.58246pt x 238.88065pt.
  [59 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap4/chap4_monitor.png>]
-<figures/chap4/chap4_pbright.png, id=1121, 489.9906pt x 553.5882pt>
+<figures/chap4/chap4_pbright.png, id=1137, 489.9906pt x 553.5882pt>
 File: figures/chap4/chap4_pbright.png Graphic file (type png)
 
 <use figures/chap4/chap4_pbright.png>
@@ -1659,7 +1677,7 @@ Package pdftex.def Info: figures/chap4/chap4_pbright.png used on input line 28.
 (pdftex.def)             Requested size: 368.52165pt x 416.36426pt.
  [60 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap4/chap4_pbright.png>]
-<figures/chap5/chap5_platform.jpg, id=1129, 272.81924pt x 184.89075pt>
+<figures/chap5/chap5_platform.jpg, id=1145, 272.81924pt x 184.89075pt>
 File: figures/chap5/chap5_platform.jpg Graphic file (type jpg)
 
 <use figures/chap5/chap5_platform.jpg>
@@ -1671,7 +1689,7 @@ Overfull \hbox (52.16719pt too wide) in paragraph at lines 42--43
  [][] 
  []
 
-<figures/chap5/chap5_experiment.jpg, id=1130, 407.121pt x 552.8655pt>
+<figures/chap5/chap5_experiment.jpg, id=1146, 407.121pt x 552.8655pt>
 File: figures/chap5/chap5_experiment.jpg Graphic file (type jpg)
 
 <use figures/chap5/chap5_experiment.jpg>
@@ -1679,7 +1697,7 @@ Package pdftex.def Info: figures/chap5/chap5_experiment.jpg used on input line
 49.
 (pdftex.def)             Requested size: 128.03879pt x 170.71164pt.
 
-<figures/chap5/chap5_Trajectory3.png, id=1137, 620.91975pt x 524.55975pt>
+<figures/chap5/chap5_Trajectory3.png, id=1153, 620.91975pt x 524.55975pt>
 File: figures/chap5/chap5_Trajectory3.png Graphic file (type png)
 
 <use figures/chap5/chap5_Trajectory3.png>
@@ -1689,7 +1707,7 @@ Package pdftex.def Info: figures/chap5/chap5_Trajectory3.png used on input line
  [61 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
 hap5/chap5_platform.jpg> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
 Version1.0/figures/chap5/chap5_experiment.jpg>]
-<figures/chap5/chap5_pbright.png, id=1145, 301.72725pt x 241.50224pt>
+<figures/chap5/chap5_pbright.png, id=1162, 301.72725pt x 241.50224pt>
 File: figures/chap5/chap5_pbright.png Graphic file (type png)
 
 <use figures/chap5/chap5_pbright.png>
@@ -1697,14 +1715,14 @@ Package pdftex.def Info: figures/chap5/chap5_pbright.png used on input line 71.
 
 (pdftex.def)             Requested size: 227.62541pt x 199.16809pt.
 
-<figures/chap5/chap5_2D.png, id=1146, 459.96844pt x 352.31625pt>
+<figures/chap5/chap5_2D.png, id=1163, 459.96844pt x 352.31625pt>
 File: figures/chap5/chap5_2D.png Graphic file (type png)
 
 <use figures/chap5/chap5_2D.png>
 Package pdftex.def Info: figures/chap5/chap5_2D.png used on input line 81.
 (pdftex.def)             Requested size: 276.39299pt x 211.71393pt.
 
-<figures/chap5/chap5_errPos.png, id=1147, 988.44281pt x 551.81157pt>
+<figures/chap5/chap5_errPos.png, id=1164, 988.44281pt x 551.81157pt>
 File: figures/chap5/chap5_errPos.png Graphic file (type png)
 
 <use figures/chap5/chap5_errPos.png>
@@ -1723,17 +1741,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--96
 [62 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
 ap5/chap5_Trajectory3.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draf
 t/Version1.0/figures/chap5/chap5_pbright.png>]
-<figures/chap5/chap5_attitude.png, id=1155, 938.00438pt x 531.48563pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap5/chap5_2D.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versio
+n1.0/figures/chap5/chap5_errPos.png>]
+<figures/chap5/chap5_attitude.png, id=1180, 938.00438pt x 531.48563pt>
 File: figures/chap5/chap5_attitude.png Graphic file (type png)
 
 <use figures/chap5/chap5_attitude.png>
 Package pdftex.def Info: figures/chap5/chap5_attitude.png used on input line 99
 .
 (pdftex.def)             Requested size: 398.33887pt x 213.40146pt.
- [63 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap5/chap5_2D.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Versio
-n1.0/figures/chap5/chap5_errPos.png>]
-<figures/chap5/chap5_erratt.png, id=1165, 913.16156pt x 535.2497pt>
+
+<figures/chap5/chap5_erratt.png, id=1181, 913.16156pt x 535.2497pt>
 File: figures/chap5/chap5_erratt.png Graphic file (type png)
 
 <use figures/chap5/chap5_erratt.png>
@@ -1741,38 +1762,32 @@ Package pdftex.def Info: figures/chap5/chap5_erratt.png used on input line 107.
 
 (pdftex.def)             Requested size: 398.33676pt x 213.39369pt.
 
-<figures/chap5/chap5_velocity.png, id=1167, 1167.61218pt x 532.23843pt>
+<figures/chap5/chap5_velocity.png, id=1183, 1167.61218pt x 532.23843pt>
 File: figures/chap5/chap5_velocity.png Graphic file (type png)
 
 <use figures/chap5/chap5_velocity.png>
 Package pdftex.def Info: figures/chap5/chap5_velocity.png used on input line 11
 8.
 (pdftex.def)             Requested size: 455.2422pt x 233.30853pt.
-
-<figures/chap5/chap5_errVel.png, id=1168, 1005.00468pt x 528.47438pt>
+ [64 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
+hap5/chap5_attitude.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
+Version1.0/figures/chap5/chap5_erratt.png>] <figures/chap5/chap5_errVel.png, id
+=1192, 1005.00468pt x 528.47438pt>
 File: figures/chap5/chap5_errVel.png Graphic file (type png)
 
 <use figures/chap5/chap5_errVel.png>
 Package pdftex.def Info: figures/chap5/chap5_errVel.png used on input line 126.
 
 (pdftex.def)             Requested size: 455.23828pt x 233.31163pt.
- [64 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap5/chap5_attitude.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
-Version1.0/figures/chap5/chap5_erratt.png>]
+
 Overfull \hbox (4.72484pt too wide) in paragraph at lines 139--149
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [65 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/c
-hap5/chap5_velocity.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
-Version1.0/figures/chap5/chap5_errVel.png>]
-<figures/chap5/chap5_GNSSInv00.png, id=1190, 180.675pt x 325.215pt>
+[65 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
+ap5/chap5_velocity.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/V
+ersion1.0/figures/chap5/chap5_errVel.png>]
+<figures/chap5/chap5_GNSSInv00.png, id=1205, 180.675pt x 325.215pt>
 File: figures/chap5/chap5_GNSSInv00.png Graphic file (type png)
 
 <use figures/chap5/chap5_GNSSInv00.png>
@@ -1780,7 +1795,7 @@ Package pdftex.def Info: figures/chap5/chap5_GNSSInv00.png used on input line 1
 66.
 (pdftex.def)             Requested size: 128.03752pt x 184.94771pt.
 
-<figures/chap5/chap5_GNSSInv01.png, id=1191, 861.81975pt x 453.49425pt>
+<figures/chap5/chap5_GNSSInv01.png, id=1206, 861.81975pt x 453.49425pt>
 File: figures/chap5/chap5_GNSSInv01.png Graphic file (type png)
 
 <use figures/chap5/chap5_GNSSInv01.png>
@@ -1795,7 +1810,7 @@ Overfull \hbox (11.5219pt too wide) in paragraph at lines 173--174
 [66 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/ch
 ap5/chap5_GNSSInv00.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
 Version1.0/figures/chap5/chap5_GNSSInv01.png>]
-<figures/chap5/chap5_GNSSout.png, id=1200, 453.94594pt x 425.33907pt>
+<figures/chap5/chap5_GNSSout.png, id=1216, 453.94594pt x 425.33907pt>
 File: figures/chap5/chap5_GNSSout.png Graphic file (type png)
 
 <use figures/chap5/chap5_GNSSout.png>
@@ -1803,7 +1818,7 @@ Package pdftex.def Info: figures/chap5/chap5_GNSSout.png used on input line 183
 .
 (pdftex.def)             Requested size: 398.3446pt x 312.99364pt.
 
-<figures/chap5/chap5_Yawerr.png, id=1201, 664.73344pt x 215.30438pt>
+<figures/chap5/chap5_Yawerr.png, id=1217, 664.73344pt x 215.30438pt>
 File: figures/chap5/chap5_Yawerr.png Graphic file (type png)
 
 <use figures/chap5/chap5_Yawerr.png>
@@ -1811,8 +1826,8 @@ Package pdftex.def Info: figures/chap5/chap5_Yawerr.png used on input line 191.
 
 (pdftex.def)             Requested size: 398.34615pt x 170.71936pt.
 ) [67 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/Version1.0/figures/
-chap5/chap5_GNSSout.png> <D:/Shan_5/shan_5/Graduation project/BIT_thesis/Draft/
-Version1.0/figures/chap5/chap5_Yawerr.png>] [68]
+chap5/chap5_GNSSout.png>] [68 <D:/Shan_5/shan_5/Graduation project/BIT_thesis/D
+raft/Version1.0/figures/chap5/chap5_Yawerr.png>]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chapt
 er6.tex"
 µ⁄\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces 6\hspace {0.25em plus
@@ -1829,27 +1844,33 @@ bibs.tex"<<c1982.cmap>><<c1979.cmap>><<c1985.cmap>> [71
 
 ]<<c1966.cmap>> [72]<<c1923.cmap>>
 Underfull \hbox (badness 1454) in paragraph at lines 119--120
-[]\OT1/ptm/m/n/12 Hopkins R, Mi-o-la J, Sawyer W. The sil-i-con os-cil-lat-ing 
-ac-celerom-e-ter: A high-
+[]\T1/ptm/m/n/12 Hopkins R, Mi-o-la J, Sawyer W. The sil-i-con os-cil-lat-ing a
+c-celerom-e-ter: A high-
  []
 
 [73]pdfTeX warning (ext4): destination with the same identifier (name{cite.RSti
 rling\(2005\)}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \bibitem{RStirling(2005)}
+l.143 \bibitem{RStirling(2005)}
                                <<c1977.cmap>> [74]) [75]
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
-ack.tex" [76
+pubs.tex" [76
 
 
 
-]<<c1969.cmap>>) [77]
+]) [77]
+("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
+ack.tex" [78
+
+
+
+]<<c1969.cmap>>) [79]
 
 Package natbib Warning: There were multiply defined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
 
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\Thesis_of_sha
 wnu_WANG.aux"
@@ -1873,9 +1894,11 @@ Package natbib Warning: Citation(s) may have changed.
 
 )
 ("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
+pubs.aux")
+("D:\Shan_5\shan_5\Graduation project\BIT_thesis\Draft\Version1.0\chapter/chap-
 ack.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 
 
 Package rerunfilecheck Warning: File `Thesis_of_shawnu_WANG.out' has changed.
@@ -1883,21 +1906,24 @@ Package rerunfilecheck Warning: File `Thesis_of_shawnu_WANG.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Thesis_of_shawnu_WANG.out':
-(rerunfilecheck)             Before: 3A69F22F631817A3EFA2939CCAE49DC4;9047
-(rerunfilecheck)             After:  52A6DD01973841AB5D0C8CFC887C622F;3958.
+(rerunfilecheck)             Before: FDAAF563856C1A01C465738A9868D775;9245
+(rerunfilecheck)             After:  9B8C8DD6BF96F8121C5DD3C291EA9EA4;4034.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 21468 strings out of 495354
- 344420 string characters out of 3183859
- 398908 words of memory out of 3000000
- 23145 multiletter control sequences out of 15000+200000
- 178882 words of font info for 507 fonts, out of 3000000 for 9000
+ 21536 strings out of 495354
+ 344500 string characters out of 3183859
+ 397419 words of memory out of 3000000
+ 23280 multiletter control sequences out of 15000+200000
+ 177426 words of font info for 422 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,15n,58p,849b,1501s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,58p,849b,1485s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
 imsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS
 /Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:
@@ -1926,18 +1952,16 @@ imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
 /Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
 /WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
 .ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmbsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTE
-X/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mib10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><
-C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/
-times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKT
-eX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Thesis_of_shawnu_WANG.pdf (87 pages, 10900954 bytes).
+m/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols
+/msam10.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fon
+ts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><
+C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on Thesis_of_shawnu_WANG.pdf (91 pages, 10895414 bytes).
 PDF statistics:
- 1621 PDF objects out of 1728 (max. 8388607)
- 339 named destinations out of 1000 (max. 500000)
- 893 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1638 PDF objects out of 1728 (max. 8388607)
+ 346 named destinations out of 1000 (max. 500000)
+ 910 words of extra memory for PDF output out of 10000 (max. 10000000)
 

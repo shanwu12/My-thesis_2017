@@ -1,5 +1,3 @@
-% \documentclass[twoside,12pt,CJK]{cctbook}
-%\documentclass[12pt,cs4size,fancyhdr,hyperref,fntef,openany]{ctexbook}
 \documentclass[12pt,cs4size,fancyhdr,hyperref,fntef]{ctexbook}
 \input setup.tex
 
@@ -34,8 +32,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 
- \setcounter{page}{1}
- \setcounter{chapter}{0}
+\setcounter{page}{1}
+\setcounter{chapter}{0}
 \def\thepage{\arabic{page}}
 \include {chapter/chapter1}
 \include {chapter/chapter2}
@@ -44,6 +42,6 @@
 \include {chapter/chapter5}
 \include {chapter/chapter6}
 \include {chapter/chap-bibs}
-\include {chapter/chap-pubs}
+%\include {chapter/chap-pubs}
 \include {chapter/chap-ack}
 \end{document}

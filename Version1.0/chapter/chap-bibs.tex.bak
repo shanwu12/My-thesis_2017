@@ -13,26 +13,32 @@
 \bibitem{XiaoZQ(2017)}
 肖自乾,陈经优,符石. 大数据背景下智能交通系统发展综述[J]. 软件导刊,2017,(01):182-184.
 
-\bibitem{WangXiao(2006)}
-王笑京, 沈鸿飞, 汪林. 中国智能交通系统发展战略研究[J]. 交通运输系统工程与信息, 2006, 6(4): 9-12.
+\bibitem{LeungHF(2011)}
+Leung H, Faouzi N E E, Kurian A. Intelligent Transportation System (ITS)[J]. Information Fusion, 2011, 12(1):2-3.
 
 \bibitem{ZhangShiY(2010)}
 张士钰. 基于MEMS惯性传感器的车辆组合导航研究[D]. 南京: 南京航空航天大学, 2010: 1-6.
 
-\bibitem{KaPL(2007)}
-卡普兰. GPS原理与应用[M]. 第2版. 北京: 电子工业出版社, 2007: 4. 9
+\bibitem{Liumin(2014)}
+刘敏, 张国山, 邴志刚,等. 大型停车场中车辆定位问题研究~[J]. 系统仿真技术, 2014, 10(3): 191-196.
+
+\bibitem{HongleiCX(2012)}
+Hong L, Xing L. Accuracy improvement of GPS/MEMS-INS integrated navigation system during GPS signal outage for land vehicle navigation[J]. 系统工程与电子技术(英文版), 2012, 23(2):256-264.
+
+\bibitem{Liujiyu(2008)}
+刘基余. GPS卫星导航定位原理与方法[M]. 北京：科学出版社, 2008.
 
 \bibitem{FanXY(2010)}
 范晓燕, 周乾. GPS测量中多路径效应研究综述[J]. 工程地球物理学报, 2010, 07(3):382-386.
 
-\bibitem{ZhangHN(2013)}
-张昊楠. GPS动态变形监测中的多路径误差处理方法研究[D]. 中南大学, 2013.
-
-\bibitem{DaiWJ(2006)}
-戴吾蛟, 丁晓利, 朱建军,等. 基于经验模式分解的滤波去噪法及其在GPS多路径效应中的应用[J]. 测绘学报, 2006, 35(4): 321-327.
+\bibitem{MoreauMC(2012)}
+Moreau M C, Winternitz L. Introduction to GPS and Other Global Navigation Satellite Systems[J]. Febs Letters, 2012, 582(23-24):3415–3422.
 
 \bibitem{XiaoYC(2016)}
 肖应超. MEMS传感器发展现状与应用[J]. 中国高新技术企业,2016,(35):46-47.
+
+\bibitem{AlSultanS(2013)}
+Sultan S, Bayatti A H, Zedan H. Context-Aware Driver Behavior Detection System in Intelligent Transportation Systems[J]. IEEE Transactions on Vehicular Technology, 2013, 62(9):4264-4275.
 
 \bibitem{MaoB(2013)}
 毛奔. 微惯性系统及应用[M]. 哈尔滨工程大学出版社, 2013.
@@ -40,14 +46,26 @@
 \bibitem{QiGF(2015)}
 齐广峰, 吕军锋. MEMS惯性技术的发展及应用[J]. 电子设计工程, 2015, (1): 87-89.
 
+\bibitem{SunF(2011)}
+Sun F, Tang L. Improved particle filter algorithm for INS/GPS integrated navigation system[J]. Control Theory Applications, 2011, 34(4):2392-2396.
+
 \bibitem{CuiLZ(2014)}
 崔留争. MEMS-SINS/GPS组合导航关键技术研究[D]. 中国科学院大学, 2014.
 
-\bibitem{Veth M(2006)}
-Veth M, J Raquet. Fusion of Low-Cost Imaging and Inertial Senser for Navigation. Proceedings of the 19th International Technical Meeting of the satellite Division of The Institute of Navigation [C]. Fort Worth: The Institude of Navigation GNSS, 2006, 1193-1103.
+\bibitem{Dissanayake(2001)}
+Dissanayake G, Sukkarieh S, Nebot E, et al. The aiding of a low-cost strapdown inertial measurement unit using vehicle model constraints for land vehicle applications[J]. IEEE Transactions on Robotics  Automation, 2001, 17(5): 731-747.
 
-\bibitem{LiBowen(2014)}
-李博文, 姚丹亚. 低成本车载MEMS惯导导航定位方法[J]. 中国惯性技术学报, 2014, 22(6).
+\bibitem{CongLL(2015)}
+Cong L, Li E, Qin H, et al. A Performance Improvement Method for Low-Cost Land Vehicle GPS/MEMS-INS Attitude Determination.[J]. Sensors, 2015, 15(3):5722-46.
+
+\bibitem{Haojun(2015)}
+郝俊. 汽车智能辅助驾驶系统的发展与展望[J]. 科技与创新, 2015(24):39-40.
+
+\bibitem{Quentin(2001)}
+Quentin L, Vincent G, Bertrand M. Combining Gyroscopes, Magnetic Compass and GPS for Pedestrian Navigation[J]. International Symposium on Kinematic Systems in Geodesy, Geomatics and Navigation (KIS), Banff, Canada, 2001: 205-212.
+
+\bibitem{DaiWJ(2012)}
+戴吾蛟,伍锡锈,罗飞雪等.一种利用增广参数Kalman滤波的GPS多路径效应处理方法[J].武汉大学学报：信息科学版,2012,37(4):423-427.
 
 \bibitem{JiangS(2016)}
 江山. 最后一颗GPS-2F导航卫星发射[J]. 太空探索, 2016(3): 17-17.
@@ -55,11 +73,8 @@ Veth M, J Raquet. Fusion of Low-Cost Imaging and Inertial Senser for Navigation.
 \bibitem{ZhaoShuang(2013)}
 赵爽. 美国GPS系统发展现状[J]. 国际太空, 2013(4): 39-45.
 
-\bibitem{YangYX(2010)}
-杨元喜.北斗卫星导航系统的进展、贡献与挑战[J].测绘学报,2010,39(1):1-6.
-
-\bibitem{TangSS(2008)}
-谭述森. 北斗卫星导航系统的发展与思考[J]. 宇航学报, 2008, 29(2): 391-396.
+\bibitem{YangYX(2014)}
+杨元喜.北斗卫星导航系统的进展、贡献与挑战[J].测绘学报,2014,39(1):1-6.
 
 \bibitem{QinYong(2015)}
 秦永元, 张洪钺 , 汪叔华. 卡尔曼滤波与组合导航原理[M]. 西安: 西北工业大学出版社, 2015.
@@ -67,17 +82,32 @@ Veth M, J Raquet. Fusion of Low-Cost Imaging and Inertial Senser for Navigation.
 \bibitem{FuMengYin(2010)}
 付梦印, 邓志红, 张继伟. Kalman滤波理论及其在导航系统中的应用[M]. 科学出版社, 2010.
 
-\bibitem{Quentin(2001)}
-Quentin Ladetto, Vincent Gabaglio, Bertrand Merminod. Combining Gyroscopes, Magnetic Compass and GPS for Pedestrian Navigation[J]. International Symposium on Kinematic Systems in Geodesy, Geomatics and Navigation (KIS), Banff, Canada, 2001: 205-212.
+\bibitem{YangLL(2014)}
+Yang L, Li Y, Wu Y, et al. An enhanced MEMS-INS/GNSS integrated system with fault detection and exclusion capability for land vehicle navigation in urban areas[J]. GPS Solutions, 2014, 18(4):593-603.
+
+\bibitem{RStirling(2005)}
+Stirling R, Fyfe K, Lachapelle G. Evaluation of a new method of heading estimation for pedestrian dead reckoning using shoe mounted sensors[J]. The Journal of Navigation, 2005, 58(01): 31–45.
+
+\bibitem{LiBowen(2014)}
+李博文, 姚丹亚. 低成本车载MEMS惯导导航定位方法[J]. 中国惯性技术学报, 2014, 22(6).
 
 \bibitem{LiuZP(2011)}
 刘智平, 于帆, 陈国绍. 低成本组合导航系统的数据融合算法[J]. 现代电子技术, 2011, 34(4): 204-207.
 
-\bibitem{RStirling(2005)}
-R. Stirling, K. Fyfe, G. Lachapelle. Evaluation of a new method of heading estimation for pedestrian dead reckoning using shoe mounted sensors[J]. The Journal of Navigation, 2005, 58(01): 31–45.
+\bibitem{LiuHua(2013)}
+刘华, 刘彤, 张继伟. 陆地车辆GNSS/MEMS 惯性组合导航机体系约束算法研究[J]. 北京理工大学学报, 2013, 33(5): 510-515.
 
-\bibitem{TangKH(2007)}
-唐康华, 黄新生, 胡小平. 卫星/MIMU嵌入式导航接收机抗干扰性能分析[J]. 国防科技大学学报, 2007. 29(3): 50-55.
+\bibitem{LeeHK(2016)}
+Wang M, Chai H, Liu J, et al. BDS relative static positioning over long baseline improved by GEO multipath mitigation[J]. Advances in Space Research, 2016, 57(3):782-793.
+
+\bibitem{LuLL(2016)}
+卢兰兰,马洪涛,王晓君等.ARM+FPGA架构的北斗导航接收机电源管理设计[J].单片机与嵌入式系统应用,2016,16(11):54-57.
+
+\bibitem{YongY(2007)}
+Yong Y. Tightly Coupled MEMS INS/GPS Integration with INS Aided Receiver Tracking Loops[D]. CALGARY: University of Calagray, Canada, 2007.
+
+\bibitem{Xiongbo(2010)}
+熊波, 曲仕茹. 基于模糊控制的智能车辆自主行驶方法研究[J]. 交通运输系统工程与信息, 2010, 10(2):70-75.
 
 \bibitem{QinYY(2014)}
 秦永元. 惯性导航[M]. 科学出版社, 2014.
@@ -85,97 +115,79 @@ R. Stirling, K. Fyfe, G. Lachapelle. Evaluation of a new method of heading estim
 \bibitem{YanGM(2004)}
 严恭敏. 捷联惯导算法及车载组合导航系统研究[D]. 西北工业大学, 2004.
 
-\bibitem{GaoZhongY(2012)}
-高钟毓. 惯性导航系统技术 : Inertial navigation system technology[M]. 清华大学出版社, 2012.
-
-\bibitem{YongY(2007)}
-Yong Yang. Tightly Coupled MEMS INS/GPS Integration with INS Aided Receiver Tracking Loops[D]. CALGARY: University of Calagray, Canada, 2007.
-
-\bibitem{WelchG(1995)}
-Welch G, Bishop G. An Introduction to the Kalman Filter[J]. University of North Carolina at Chapel Hill, 1995(7): 127-132.
-
 \bibitem{DengZZ(2012)}
 邓志红, 付梦印, 张继伟, 肖烜. 惯性器件与惯性导航系统[M]. 科学出版社, 2012.
 
-\bibitem{JinLi(1994)}
-金莉, 李方锁. GPS/INS经典控制组合导航方案及仿真研究[C]. 中国自动化学会第十届青年学术年会论文集. 1994: 744-748.
-
-\bibitem{MinamiM(2003)}
-Minami M, Morikawa H, Aoyama T, et al. An adaptive multipath estimation/elimination technique for GPS signals reception[J]. Electronics Communications in Japan, 2003, 86(1): 74-82.
-
-\bibitem{AxelredP(1996)}
-Axelrad P, Comp C J, Macdoran P F. SNR-based multipath error correction for GPS differential phase[J]. Aerospace  Electronic Systems IEEE Transactions on, 1996, 32(2): 650-660.
-
-\bibitem{JBKuipers(1999)}
-J. B. Kuipers. Quaternions and Rotation Sequences: A Primer with Applications to Orbits, Aerospace and Virtual Reality[M]. Princeton University Press, 1999: 103-105.
-
-\bibitem{JiYu(2005)}
-季昱, 林俊超. ARM嵌入式应用系统开发典型实例[M]. 北京: 中国电力出版社, 2005.
-
-\bibitem{CuiXianQ(2006)}
-崔先强, 杨元喜, 高为广. 多种有色噪声自适应滤波算法的比较[J]. 武汉大学学报: 信息科学版, 2006, 31(8): 731-735.
-
-\bibitem{GarciaCE(2005)}
-Hopkins R, Miola J, Sawyer W. The silicon oscillating accelerometer: A high-performance MEMS accelerometer for precision navigation and strategic guidance application[R]. Cambridg：The Chaarles Stark Draper laboratory Inc, 2005: 970-979.
-
-
-\bibitem{MiaoYW(2013)}
-苗岳旺. SINS/GPS组合导航数据处理方法研究[D]. 中国人民解放军信息工程大学解放军信息工程大学, 2013.
-
-\bibitem{ItzikK(2010)}
-Itzik K, Sagi F, Tomer T. Pseudo-Measurements as Aiding to INS during GPS Outages[J]. Navigation, 2010, 57(1):25-34.
-
-\bibitem{EISheimy(2008)}
-El-Sheimy N, Hou H, Niu X. Analysis and Modeling of Inertial Sensors Using Allan Variance[J]. IEEE Transactions on Instrumentation  Measurement, 2008, 57(1): 140-149.
-
-\bibitem{LeeHK(2004)}
-Lee H K, Lee J G, Jee G I. GPS multipath detection based on sequence of successive-time double-differences[J]. IEEE Signal Processing Letters, 2004, 11(3): 316-319.
-
-\bibitem{GaoZY(2009)}
-高钟毓. 惯性导航系统初始化对准与标定最优化方法[J]. 中国惯性学报, 2009, 17(1): 1-7
-
-\bibitem{SavagePG(2012)}
-Savage P G. Strapdown inertial navigation integration algorithm design. I: Attitude algorithms.[J]. Journal of Guidance Control  Dynamics, 2012, 21(1):19-28.
-
-\bibitem{RStirling(2005)}
-R. Stirling, K. Fyfe, and G. Lachapelle. Evaluation of a new method of heading estimation for pedestrian dead reckoning using shoe mounted sensors[J]. The Journal of Navigation, 2005, 58(01): 31–45.
-
-\bibitem{HouH(2003)}
-Hou H, EI-Sheimy N. Inertial sensor error modeling using allan variance.Proceedings of ION GPS/GNSS 2003[C]. Portland: ION, 2003, 2860-2867.
-
-\bibitem{TangKangH(2007)}
-唐康华, 吴美平, 胡小平, MEMS-IMU/GPS组合导航中的多模态Kalman滤波器设计[J]. 中国惯性技术学报, 2007, 15(3): 307-311.
+\bibitem{GaoZhongY(2012)}
+高钟毓. 惯性导航系统技术 : Inertial navigation system technology[M]. 清华大学出版社, 2012.
 
 \bibitem{ShiJing(2010)}
 石静, 缪玲娟, 高伟熙. 提高MEMS惯导系统速度解算精度的方法研究[J]. 北京理工大学学报, 2010, 30(1): 50-54.
 
-\bibitem{LiuHua(2013)}
-刘华, 刘彤, 张继伟. 陆地车辆GNSS/MEMS 惯性组合导航机体系约束算法研究[J]. 北京理工大学学报, 2013, 33(5): 510-515.
-
-\bibitem{ZhangS(2008)}
-张石. ARM嵌入式系统教程[M]. 北京: 机械工业出版社, 2008: 90-98
-
-\bibitem{Dissanayake(2001)}
-Dissanayake G, Sukkarieh S, Nebot E, et al. The aiding of a low-cost strapdown inertial measurement unit using vehicle model constraints for land vehicle applications[J]. IEEE Transactions on Robotics  Automation, 2001, 17(5): 731-747.
-
-\bibitem{ShinEH(2001)}
-Shin E H. Accuracy Improvement of Low Cost INS/GPS for Land Applications[J]. Sheimy, 2001.
-
-\bibitem{GodhaS(2007)}
-Godha S, Cannon M E. GPS/MEMS INS integrated system for navigation in urban areas[J]. GPS Solutions, 2007, 11(3): 193-203.
-
-\bibitem{YangL(2014)}
-Yang L, Li Y, Wu Y, et al. An enhanced MEMS-INS/GNSS integrated system with fault detection and exclusion capability for land vehicle navigation in urban areas[J]. Gps Solutions, 2014, 18(4): 593-603.
-
-\bibitem{ZhaoYM(2011)}
-Zhao, Yueming. GPS/IMU Integrated System for Land Vehicle Navigation based on MEMS[J]. 2011.
-
-\bibitem{BonnifaitP(2001)}
-Bonnifait P, Bouron P, Crubille P, et al. Data fusion of four ABS sensors and GPS for an enhanced localization of car-like vehicles[C]. IEEE International Conference on Robotics  Automation. 2001: 1597-1602 vol. 2.
-
-\bibitem{Liusen(2006)}
-刘森. 嵌入式系统接口设计与Linux驱动程序开发[M]. 北京: 北京航空航天大学出版, 2006: 21 1-221.
+\bibitem{JBKuipers(1999)}
+J. B. Kuipers. Quaternions and Rotation Sequences: A Primer with Applications to Orbits, Aerospace and Virtual Reality[M]. Princeton University Press, 1999: 103-105.
 
 \bibitem{WangXL(2015)}
 王新龙. SINS/GPS 组合导航技术[M]. 北京航空航天大学出版社, 2015.
+
+\bibitem{GaoZY(2009)}
+高钟毓. 惯性导航系统初始化对准与标定最优化方法[J]. 中国惯性学报, 2009, 17(1): 1-7
+
+\bibitem{ZhangHN(2013)}
+张昊楠. GPS动态变形监测中的多路径误差处理方法研究[D]. 中南大学, 2013.
+
+\bibitem{ZhangYL(2014)}
+张亚莉, 孙绪保, 刘树国. 一种单频抗多路径效应的GPS圆极化微带天线[J]. 制导与引信, 2014, 35(2).
+
+\bibitem{Markley(2003)}
+Markley, Landis F. Quaternion Attitude Estimation Using Vector Observations", The[J]. Journal of the Astronautical Sciences, 2003, 52(1):221-238.
+
+\bibitem{MinamiM(2003)}
+Minami M, Morikawa H, Aoyama T, et al. An adaptive multipath estimation/elimination technique for GPS signals reception[J]. Electronics Communications in Japan, 2003, 86(1): 74-82.
+
+\bibitem{GarciaCE(2005)}
+Hopkins R, Miola J, Sawyer W. The silicon oscillating accelerometer: A high-performance MEMS accelerometer for precision navigation and strategic guidance application[R]. Cambridg：The Chaarles Stark Draper laboratory Inc, 2005: 970-979.
+
+\bibitem{MiaoYW(2013)}
+苗岳旺. SINS/GPS组合导航数据处理方法研究[D]. 中国人民解放军信息工程大学解放军信息工程大学, 2013.
+
+\bibitem{MaR(2010)}
+马芮. 基于微惯性导航系统的误差分析和补偿技术研究[D]. 清华大学, 2010.
+
+\bibitem{Zhangch(2005)}
+张春慧, 吴简彤, 何昆鹏,等. 四阶龙格-库塔法在捷联惯导系统姿态解算中的应用[J]. 声学与电子工程, 2005, 32(6):37-38.
+
+\bibitem{VicenteN(2011)}
+Vicente N, Rutkowski J. Qualitative analysis of the Novatel SPAN-CPT GPS receiver accuracy with and without the inertial measurement unit (IMU)[J]. Journal of Research and Applications in Agricultural Engineering, 2011, 56(4): 184-188.
+
+\bibitem{MaH(2007)}
+Ma H, Chen Y, Cui P. Development of Embedded Application Software for Vehicle Navigation System[J]. Computer Measurement Control, 2007, 15(2):188-187.
+
+\bibitem{ItzikK(2010)}
+Itzik K, Sagi F, Tomer T. Pseudo-Measurements as Aiding to INS during GPS Outages[J]. Navigation, 2010, 57(1):25-34.
+
+\bibitem{EISheimy(2014)}
+El-Sheimy N, Hou H, Niu X. Analysis and Modeling of Inertial Sensors Using Allan Variance[J]. IEEE Transactions on Instrumentation  Measurement, 2014, 57(1): 140-149.
+
+\bibitem{HuangZM(2011)}
+Huang Z M, Zhang G B. Hardware design of signal detection system based on dual-ARM[J]. Electronic Design Engineering, 2011.
+
+\bibitem{SavagePG(2012)}
+Savage P G. Strapdown inertial navigation integration algorithm design. I: Attitude algorithms.[J]. Journal of Guidance Control  Dynamics, 2012, 21(1):19-28.
+
+\bibitem{SavageP(2012)}
+Savage P G. Analytical Modeling of Sensor Quantization in Strapdown Inertial Navigation Error Equations[J]. Journal of Guidance Control Dynamics, 2012, 25(5):págs. 833-842.
+
+\bibitem{Tedaldi(2014)}
+Tedaldi D, Pretto A, Menegatti E. A robust and easy to implement method for IMU calibration without external equipments[J]. 2014:3042-3049.
+
+\bibitem{QuinchiaAG(2013)}
+Quinchia A G, Falco G, Falletti E, et al. A Comparison between Different Error Modeling of MEMS Applied to GPS/INS Integrated Systems[J]. Sensors, 2013, 13(8):9549.
+
+\bibitem{Snyder(2010)}
+Snyder C. Introduction to the Kalman Filter[J]. University of North Carolina at Chapel Hill, 2010, 8(7):127-132.
+
+\bibitem{Lindgren(2016)}
+Lindgren P, Fresk E, Lindner M, et al. Abstract timers and their implementation onto the ARM Cortex-M family of MCUs[J]. Acm Sigbed Review, 2016, 13(1):48-53.
+
 \end{thebibliography}
